@@ -2,6 +2,10 @@ import React, { Component } from "react"
 import Axios from "axios"
 import * as JsSearch from "js-search"
 import JSONData from "../../content/new_json_english.json"
+import SearchResultViewer from "../components/SearchResultViewer"
+import styles from './search-container-css-modules.module.css'
+
+
 
 
 class Search extends Component {
@@ -114,6 +118,7 @@ class Search extends Component {
       searchQuery,
     } = this.state
     const queryResults = searchQuery === `` ? [] : searchResults
+    const ShowSearchResult = this
 
     if (isLoading) {
       return (
@@ -143,107 +148,18 @@ class Search extends Component {
     return (
       <div>
         <div style={{ margin: `0 auto` }}>
-          <form onSubmit={this.handleSubmit}>
-            <div style={{ margin: `0 auto` }}>
-              <label htmlFor="Search" style={{ paddingRight: `10px` }}>
-                Enter your search here
-              </label>
+          <form className={styles.searchField} onSubmit={this.handleSubmit}>
+            <div className={styles.bar}>
               <input
+                className={styles.searchbar}
                 id="Search"
                 value={searchQuery}
                 onChange={this.searchData}
-                placeholder="Enter your search here"
-                style={{ margin: `0 auto`, width: `400px` }}
+                placeholder='Type Here, E.g. "Lifebuoy" OR "ice cream"'
               />
             </div>
           </form>
-          <div>
-            Number of items:
-            {queryResults.length}
-            <table
-              style={{
-                width: `100%`,
-                borderCollapse: `collapse`,
-                borderRadius: `4px`,
-                border: `1px solid #d3d3d3`,
-              }}
-            >
-              <thead style={{ border: `1px solid #808080` }}>
-                <tr>
-                  <th
-                    style={{
-                      textAlign: `left`,
-                      padding: `5px`,
-                      fontSize: `14px`,
-                      fontWeight: 600,
-                      borderBottom: `2px solid #d3d3d3`,
-                      cursor: `pointer`,
-                    }}
-                  >
-                    Brand Name
-                  </th>
-                  <th
-                    style={{
-                      textAlign: `left`,
-                      padding: `5px`,
-                      fontSize: `14px`,
-                      fontWeight: 600,
-                      borderBottom: `2px solid #d3d3d3`,
-                      cursor: `pointer`,
-                    }}
-                  >
-                    Brand Category
-                  </th>
-                  <th
-                    style={{
-                      textAlign: `left`,
-                      padding: `5px`,
-                      fontSize: `14px`,
-                      fontWeight: 600,
-                      borderBottom: `2px solid #d3d3d3`,
-                      cursor: `pointer`,
-                    }}
-                  >
-                    Is Indian?
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* eslint-disable */}
-                {queryResults.map((item, index) => {
-                  return (
-                    <tr key={`row_${item.name}_${index}`}>
-                      <td
-                        style={{
-                          fontSize: `14px`,
-                          border: `1px solid #d3d3d3`,
-                        }}
-                      >
-                        {item.name}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: `14px`,
-                          border: `1px solid #d3d3d3`,
-                        }}
-                      >
-                        {item.category}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: `14px`,
-                          border: `1px solid #d3d3d3`,
-                        }}
-                      >
-                        {item.isIndian ? "True" : "False"}
-                      </td>
-                    </tr>
-                  )
-                })}
-                {/* eslint-enable */}
-              </tbody>
-            </table>
-          </div>
+          <SearchResultViewer queryResults={queryResults}/>
         </div>
       </div>
     )
