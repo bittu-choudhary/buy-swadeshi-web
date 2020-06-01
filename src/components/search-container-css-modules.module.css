@@ -1,5 +1,4 @@
 .searchField, .searchContainer {
-  width: 50%;
   margin: auto;
 }
 
@@ -24,4 +23,32 @@
   font-size:16px;
   outline: none;
   
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  .bar{
+    width:400px;
+  }
+
+  .searchbar{
+    width:350px;
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+  .searchField, .searchContainer {
+    margin: auto;
+  }
+
+  .bar{
+    width:300px;
+  }
+
+  .searchbar{
+    width:250px;
+  }
+
 }
