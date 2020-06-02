@@ -18,11 +18,11 @@ export default function SearchResultViewer ( props  ) {
     {queryResults.length} */}
     <table
       style={{
+        borderSpacing: `0 5px`,
         marginTop: `1rem`,
         width: `100%`,
-        borderCollapse: `collapse`,
         borderRadius: `4px`,
-        border: `1px solid #d3d3d3`,
+        backgroundColor: `#ff9933`,
       }}
     >
       <thead style={{ border: `1px solid #808080` }}>
@@ -33,8 +33,10 @@ export default function SearchResultViewer ( props  ) {
               padding: `5px`,
               fontSize: `14px`,
               fontWeight: 600,
-              borderBottom: `2px solid #d3d3d3`,
               cursor: `pointer`,
+              borderTopLeftRadius: `5px`,
+              borderBottomLeftRadius: `5px`,
+              backgroundColor: `#ffffff`,
             }}
           >
             Brand Name
@@ -45,20 +47,22 @@ export default function SearchResultViewer ( props  ) {
               padding: `5px`,
               fontSize: `14px`,
               fontWeight: 600,
-              borderBottom: `2px solid #d3d3d3`,
               cursor: `pointer`,
+              backgroundColor: `#ffffff`,
             }}
           >
             Brand Category
           </th>
           <th
             style={{
-              textAlign: `left`,
+              textAlign: `center`,
               padding: `5px`,
               fontSize: `14px`,
               fontWeight: 600,
-              borderBottom: `2px solid #d3d3d3`,
               cursor: `pointer`,
+              borderTopRightRadius: `5px`,
+              borderBottomRightRadius: `5px`,
+              backgroundColor: `#ffffff`,
             }}
           >
             Is Indian?
@@ -67,7 +71,7 @@ export default function SearchResultViewer ( props  ) {
       </thead>
       <tbody>
         {/* eslint-disable */}
-        {queryResults.map((item, index) => {
+        {queryResults.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).map((item, index) => {
           console.log(item.isIndian)
           if (item.isIndian) {
             fontColor = "green"
@@ -81,7 +85,10 @@ export default function SearchResultViewer ( props  ) {
               <td
                 style={{
                   fontSize: `14px`,
-                  border: `1px solid #d3d3d3`,
+                  padding: `5px`,
+                  borderTopLeftRadius: `5px`,
+                  borderBottomLeftRadius: `5px`,
+                  backgroundColor: `#ffffff`,
                 }}
               >
                 {item.name}
@@ -89,15 +96,20 @@ export default function SearchResultViewer ( props  ) {
               <td
                 style={{
                   fontSize: `14px`,
-                  border: `1px solid #d3d3d3`,
+                  padding: `5px`,
+                  backgroundColor: `#ffffff`,
                 }}
               >
                 {item.category}
               </td>
               <td
                 style={{
+                  textAlign: `center`,
                   fontSize: `14px`,
-                  border: `1px solid #d3d3d3`,
+                  padding: `5px`,
+                  borderTopRightRadius: `5px`,
+                  borderBottomRightRadius: `5px`,
+                  backgroundColor: `#ffffff`,
                 }}
               >
                 {icon}
