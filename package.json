@@ -21,9 +21,12 @@
     "esm": "^3.2.25",
     "gatsby": "^2.21.37",
     "gatsby-plugin-google-fonts-v2": "0.0.6",
+    "gatsby-plugin-layout": "^1.1.13",
+    "i18next": "^19.0.0",
     "js-search": "^1.4.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-i18next": "^11.0.1",
     "react-icons": "^3.10.0"
   }
 }
