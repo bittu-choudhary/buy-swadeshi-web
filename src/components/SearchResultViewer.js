@@ -1,5 +1,4 @@
-import React, { Component } from "react"
-import * as JsSearch from "js-search"
+import React from "react"
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
 
@@ -31,7 +30,7 @@ export default function SearchResultViewer ( props  ) {
             style={{
               textAlign: `left`,
               padding: `5px`,
-              fontSize: `14px`,
+              fontSize: `18px`,
               fontWeight: 600,
               cursor: `pointer`,
               borderTopLeftRadius: `5px`,
@@ -45,7 +44,7 @@ export default function SearchResultViewer ( props  ) {
             style={{
               textAlign: `left`,
               padding: `5px`,
-              fontSize: `14px`,
+              fontSize: `18px`,
               fontWeight: 600,
               cursor: `pointer`,
               backgroundColor: `#ffffff`,
@@ -57,7 +56,7 @@ export default function SearchResultViewer ( props  ) {
             style={{
               textAlign: `center`,
               padding: `5px`,
-              fontSize: `14px`,
+              fontSize: `18px`,
               fontWeight: 600,
               cursor: `pointer`,
               borderTopRightRadius: `5px`,
@@ -84,7 +83,7 @@ export default function SearchResultViewer ( props  ) {
             <tr  style={{ color: fontColor }} key={`row_${item.name}_${index}`}>
               <td
                 style={{
-                  fontSize: `14px`,
+                  fontSize: `18px`,
                   padding: `5px`,
                   borderTopLeftRadius: `5px`,
                   borderBottomLeftRadius: `5px`,
@@ -95,7 +94,7 @@ export default function SearchResultViewer ( props  ) {
               </td>
               <td
                 style={{
-                  fontSize: `14px`,
+                  fontSize: `18px`,
                   padding: `5px`,
                   backgroundColor: `#ffffff`,
                 }}
@@ -105,7 +104,7 @@ export default function SearchResultViewer ( props  ) {
               <td
                 style={{
                   textAlign: `center`,
-                  fontSize: `14px`,
+                  fontSize: `18px`,
                   padding: `5px`,
                   borderTopRightRadius: `5px`,
                   borderBottomRightRadius: `5px`,
