@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import Axios from "axios"
 import * as JsSearch from "js-search"
 import JSONData from "../../content/new_json_english.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
+import Alert from 'react-bootstrap/Alert'
 
 
 
@@ -33,6 +33,7 @@ class Search extends Component {
         isLoading: false,
         isError: false,
         searchQuery: ``,
+        showAlert: true,
       } 
     }
     // this.state = { brandList: brandData.brands }
@@ -92,6 +93,7 @@ class Search extends Component {
       isLoading: false,
       isError: false,
       searchQuery: ``,
+      showAlert: true,
     }
     // this.setState({ search: dataToSearch, isLoading: false })
   }
@@ -101,6 +103,11 @@ class Search extends Component {
    * in which the results will be added to the state
    */
   searchData = e => {
+    if (e.target.value.length === 0) {
+      this.setState({showAlert: true})
+    } else {
+      this.setState({showAlert: false})
+    }
     const { search } = this.state
     const queryResult = search.search(e.target.value)
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
@@ -109,16 +116,26 @@ class Search extends Component {
     e.preventDefault()
   }
 
+  CreateAlert = (props) => {
+    if (this.state.showAlert) {
+      return (<div>
+        <div className={styles.fade, styles.alert, styles.alertSuccess } variant="success"><p><b>Find Swadeshi</b> is a tool to inform you which is Indian brand and which brand is taking our hard earned money outside India. <b> Type brand name below OR search your shop category like Shaving cream.</b></p></div>
+      </div>)
+    } else {
+      return (<div></div>)
+    }
+  } 
+
   render() {
     const {
       isError,
       isLoading,
-      brandList,
       searchResults,
       searchQuery,
+      showAlert,
     } = this.state
+    const {CreateAlert} = this
     const queryResults = searchQuery === `` ? [] : searchResults
-    const ShowSearchResult = this
 
     if (isLoading) {
       return (
@@ -147,6 +164,7 @@ class Search extends Component {
     }
     return (
       <div>
+        <CreateAlert/>
         <div style={{ margin: `0 auto` }}>
           <form className={styles.searchField} onSubmit={this.handleSubmit}>
             <div className={styles.bar}>
