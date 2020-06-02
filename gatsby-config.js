@@ -6,5 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Noto Sans JP',
+            variable: true,
+            weights: ['400, 700']
+          }
+        ]
+      }
+    }
+  ],
 }
