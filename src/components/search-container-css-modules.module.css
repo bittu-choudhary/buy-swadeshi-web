@@ -52,12 +52,150 @@ footer {
   border: 1px solid transparent;
   border-radius: .25rem;
   transition: opacity .15s linear;
+}
 
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 60px;
+    height: 15px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+    margin-right: 0;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+}
+
+.hindi-lang-toggle {
+  margin-right: 60px;
+  width: inherit;
+}
+
+.hindi-lang-toggle p{
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  margin-right: 60px;
+}
+
+
+.checkbox
+{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+}
+
+.knobs
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 55%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+/* Button 3 */
+.button .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 4px;
+    height: .2px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 3.5px 2px;
+    background-color: #03A9F4;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+.button .checkbox:active + .knobs:before
+{
+    width: 46px;
+    border-radius: 100px;
+}
+
+.button .checkbox:checked:active + .knobs:before
+{
+    margin-left: -26px;
+}
+
+.button .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 20px;
+    background-color: #F44336;
+}
+
+.button .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+
+.header-container {
+  height: 75px;
+}
+
+.footer-container {
+  height: 50px;
+}
+
+footer p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (min-width: 1000px) {
   .searchField, .searchContainer {
     width: 80%;
+  }
+
+  .alert-success  p{
+    height: 18px;
   }
 }
 
@@ -79,7 +217,31 @@ footer {
   header, footer p {
     font-size: 13px !important;
   }
+
+  .header-container {
+    height: 55px;
+  }
+
+  .footer-container {
+    height: 30px;
+  }
+
+  .alert-success p {
+    font-size: 14px;
+  }
+
+  .alert-success {
+    height: 70px;
+  }
 }
+
+@media only screen and (max-width: 350px) {
+  .alert-success p {
+    font-size: 12px;
+  }
+
+}
+
 
 @media only screen and (max-width: 300px) {
   header h1 {
@@ -87,6 +249,18 @@ footer {
   }
   header, footer p {
     font-size: 10px !important;
+  }
+
+  .header-container {
+    height: 45px;
+  }
+
+  .alert-success p {
+    font-size: 10px;
+  }
+
+  .alert-success {
+    height: 50px;
   }
 
 }

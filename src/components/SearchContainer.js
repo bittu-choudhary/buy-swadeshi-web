@@ -3,7 +3,8 @@ import * as JsSearch from "js-search"
 import JSONData from "../../content/new_json_english.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
-
+import { useTranslation } from "react-i18next"
+import { withTrans } from '../i18n/withTrans'
 
 
 
@@ -116,22 +117,23 @@ class Search extends Component {
   }
 
   CreateAlert = (props) => {
+    const { t } = this.props
     if (this.state.showAlert) {
       return (<div>
-        <div className={styles.fade, styles.alert, styles.alertSuccess } variant="success"><p><b>Find Swadeshi</b> is a tool to inform you which is Indian brand and which brand is taking our hard earned money outside India. <b> Type brand name below OR search your shop category like Shaving cream.</b></p></div>
+        <div className={styles.alertSuccess } variant="success"><p>{t('home_desc')}</p></div>
       </div>)
     } else {
       return (<div></div>)
     }
   } 
-
+  
   render() {
+    const { t } = this.props
     const {
       isError,
       isLoading,
       searchResults,
       searchQuery,
-      showAlert,
     } = this.state
     const {CreateAlert} = this
     const queryResults = searchQuery === `` ? [] : searchResults
@@ -172,7 +174,7 @@ class Search extends Component {
                 id="Search"
                 value={searchQuery}
                 onChange={this.searchData}
-                placeholder='Type Here, E.g. "Lifebuoy" OR "ice cream"'
+                placeholder={t('search_placeholder')}
               />
             </div>
           </form>
@@ -183,4 +185,4 @@ class Search extends Component {
   }
 }
 
-export default Search
+export default withTrans(Search)
