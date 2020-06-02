@@ -1,33 +1,6 @@
-@media only screen and (min-width: 1000px) {
-  .searchField, .searchContainer {
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  .searchField, .searchContainer {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  header h1 {
-    font-size: 1.3rem !important;
-  }
-
-  header, footer p {
-    font-size: 13px !important;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  header h1 {
-    font-size: 1rem !important;
-  }
-  header, footer p {
-    font-size: 10px !important;
-  }
-
+body {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  margin: 0px !important;
 }
 
 .searchField, .searchContainer {
@@ -63,8 +36,57 @@ tr td:first-child {
 
 footer {
   position: fixed;
-  bottom: 8px;
-  left: 8px;
-  right: 8px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   margin-bottom: 0px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: opacity .15s linear;
+
+}
+
+@media only screen and (min-width: 1000px) {
+  .searchField, .searchContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .searchField, .searchContainer {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .searchbar{
+    height:30px;
+  }
+
+  header, footer p {
+    font-size: 13px !important;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  header h1 {
+    font-size: 1rem !important;
+  }
+  header, footer p {
+    font-size: 10px !important;
+  }
+
 }
