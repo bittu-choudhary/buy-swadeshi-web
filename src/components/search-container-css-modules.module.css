@@ -1,10 +1,42 @@
+@media only screen and (min-width: 1000px) {
+  .searchField, .searchContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .searchField, .searchContainer {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header h1 {
+    font-size: 1.3rem !important;
+  }
+
+  header, footer p {
+    font-size: 13px !important;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  header h1 {
+    font-size: 1rem !important;
+  }
+  header, footer p {
+    font-size: 10px !important;
+  }
+
+}
+
 .searchField, .searchContainer {
   margin: auto;
 }
 
 .bar{
   margin:0 auto;
-  width:575px;
+  width:100%;
   border-radius:30px;
   border:1px solid #dcdcdc;
   text-align: center;
@@ -19,36 +51,20 @@
 .searchbar{
   height:45px;
   border:none;
-  width:500px;
+  width:80%;
   font-size:16px;
   outline: none;
   
 }
 
-
-@media only screen and (max-width: 450px) {
-
-  .bar{
-    width:400px;
-  }
-
-  .searchbar{
-    width:350px;
-  }
-
+tr td:first-child {
+  padding-left: 2% !important;
 }
 
-@media only screen and (max-width: 375px) {
-  .searchField, .searchContainer {
-    margin: auto;
-  }
-
-  .bar{
-    width:300px;
-  }
-
-  .searchbar{
-    width:250px;
-  }
-
+footer {
+  position: fixed;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  margin-bottom: 0px;
 }
