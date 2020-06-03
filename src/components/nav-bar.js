@@ -22,11 +22,11 @@ const NavBar = ({props}) => {
       display: `none`,
       padding: `24px`
     }}>
-      <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+      <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
       <a  href="https://www.google.com" target="_blank"  >
       <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`}} alt="">
       </Image></a>
-      <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{padding: `.075rem .375rem`}}>{t('share')}</Button>
+      <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
     </div>
   )
 }

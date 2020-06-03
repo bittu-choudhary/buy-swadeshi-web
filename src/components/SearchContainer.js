@@ -123,7 +123,7 @@ class Search extends Component {
   CreateAlert = (props) => {
     const { t } = this.props
     if (this.state.showAlert) {
-      return (<div style={{paddingTop: `2%`}}>
+      return (<div>
         <div className={styles.alertSuccess } variant="success"><p>{t('home_desc')}</p></div>
       </div>)
     } else {
@@ -142,12 +142,12 @@ class Search extends Component {
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+        <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
         <a  href="https://www.google.com" target="_blank"  >
           <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="">
           </Image>
           </a>      
-         <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{padding: `.075rem .375rem`}}>{t('share')}</Button>
+         <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
       </div>
     )
   }
@@ -192,7 +192,11 @@ class Search extends Component {
       <div>
         <NavBarBody/>
         <CreateAlert/>
-        <div style={{ marginTop: `64px` }}>
+        <div style={{ 
+          marginTop: `30px`,
+          paddingLeft: `24px`,
+          paddingRight: `24px` 
+          }}>
           <form className={styles.searchField} onSubmit={this.handleSubmit}>
             <div className={styles.bar}>
               <input
