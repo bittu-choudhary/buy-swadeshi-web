@@ -25,7 +25,7 @@ body {
   height:45px;
   border:none;
   width:80%;
-  font-size:16px;
+  font-size:14px;
   outline: none;
   
 }
@@ -57,18 +57,18 @@ footer {
 /* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
 
 
-.button
+.button-toggle
 {
     position: relative;
     top: 50%;
     width: 60px;
     height: 15px;
-    margin: -20px auto 0 auto;
+    margin: 0 auto 0 auto;
     overflow: hidden;
     margin-right: 0;
 }
 
-.button.r, .button.r .layer
+.button-toggle.r, .button-toggle.r .layer
 {
     border-radius: 100px;
 }
@@ -87,7 +87,7 @@ footer {
 }
 
 
-.checkbox
+.checkbox-toggle
 {
     position: relative;
     width: 55%;
@@ -124,13 +124,13 @@ footer {
 
 .layer
 {
-    width: 55%;
+    width: 48%;
     background-color: #ebf7fc;
     transition: 0.3s ease all;
     z-index: 1;
 }
 /* Button 3 */
-.button .knobs:before
+.button-toggle .knobs:before
 {
     content: '';
     position: absolute;
@@ -143,31 +143,31 @@ footer {
     font-weight: bold;
     text-align: center;
     line-height: 1;
-    padding: 3.5px 2px;
+    padding: 3.5px 3.5px;
     background-color: #03A9F4;
     border-radius: 50%;
     transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
 
-.button .checkbox:active + .knobs:before
+.button-toggle .checkbox-toggle:active + .knobs:before
 {
-    width: 46px;
+    width: 25px;
     border-radius: 100px;
 }
 
-.button .checkbox:checked:active + .knobs:before
+.button-toggle .checkbox-toggle:checked:active + .knobs:before
 {
     margin-left: -26px;
 }
 
-.button .checkbox:checked + .knobs:before
+.button-toggle .checkbox-toggle:checked + .knobs:before
 {
     content: '';
     left: 20px;
     background-color: #F44336;
 }
 
-.button .checkbox:checked ~ .layer
+.button-toggle .checkbox-toggle:checked ~ .layer
 {
     background-color: #fcebeb;
 }
@@ -180,6 +180,17 @@ footer {
   height: 50px;
 }
 
+.alert-success p {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-left: 15px;
+}
+
+
 footer p {
   margin: 0;
   position: absolute;
@@ -189,13 +200,30 @@ footer p {
   transform: translate(-50%, -50%);
 }
 
+
 @media only screen and (min-width: 1000px) {
   .searchField, .searchContainer {
     width: 80%;
   }
 
+  .alert-success {
+    height: 75px;
+  }
+
   .alert-success  p{
     height: 18px;
+  }
+  
+  .nav-bar-header {
+    display: block !important;
+  }
+
+  .nav-bar-body {
+    display: none !important;
+  }
+
+  header {
+    margin-bottom: 4rem;
   }
 }
 
@@ -237,6 +265,10 @@ footer p {
 
 @media only screen and (max-width: 350px) {
   .alert-success p {
+    font-size: 12px;
+  }
+
+  .searchbar {
     font-size: 12px;
   }
 
