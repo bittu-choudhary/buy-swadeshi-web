@@ -22,6 +22,7 @@ export default function SearchResultViewer ( props  ) {
         width: `100%`,
         borderRadius: `4px`,
         backgroundColor: `#ff9933`,
+        borderCollapse: `separate`
       }}
     >
       <thead style={{ border: `1px solid #808080` }}>
