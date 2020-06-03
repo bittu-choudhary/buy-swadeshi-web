@@ -29,12 +29,7 @@ const Header = ({props}) => {
         </div>
         <div style={ { width: `fit-content`, float: `right` }}>
           <NavBar/>
-          <div style={{
-            marginTop: `-68px`,
-            width: `fit-content`,
-            float: `right`,
-            padding: `24px`
-          }}>
+          <div className={styles.langToggleContainer}>
             <div style={{
               width: `fit-content`,
               float: `right`,
