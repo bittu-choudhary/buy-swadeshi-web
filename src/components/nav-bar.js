@@ -15,13 +15,7 @@ const NavBar = ({props}) => {
     GooglePlayBadge = GooglePlayBadgeHi
   }
   return (
-    <div className={styles.navBarHeader} style={{
-      width: `fit-content`,
-      marginRight: `80px`,
-      marginTop: `-90px`,
-      display: `none`,
-      padding: `24px`
-    }}>
+    <div className={styles.navBarHeader}>
       <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
       <a  href="https://www.google.com" target="_blank"  >
       <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`}} alt="">
