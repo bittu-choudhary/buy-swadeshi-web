@@ -126,7 +126,7 @@ footer {
 {
     width: 48%;
     background-color: #ebf7fc;
-    transition: 0.3s ease all;
+    transition: 0.1s ease all;
     z-index: 1;
 }
 /* Button 3 */
@@ -146,7 +146,7 @@ footer {
     padding: 3.5px 3.5px;
     background-color: #03A9F4;
     border-radius: 50%;
-    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    transition: 0.1s ease all/*, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);*/
 }
 
 .button-toggle .checkbox-toggle:active + .knobs:before
@@ -201,6 +201,12 @@ footer p {
 }
 
 
+@media only screen and (min-width: 700px) {
+  .alert-success {
+    height: 70px;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .searchField, .searchContainer {
     width: 80%;
@@ -211,7 +217,7 @@ footer p {
   }
 
   .alert-success  p{
-    height: 18px;
+    font-size: 18px;
   }
   
   .nav-bar-header {
