@@ -7,6 +7,9 @@ import { useTranslation } from "react-i18next"
 import { withTrans } from '../i18n/withTrans'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from  'react-bootstrap/Image'
+import GooglePlayBadgeEn from '../images/google-play-badge.png'
+import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 
 
 class Search extends Component {
@@ -129,14 +132,22 @@ class Search extends Component {
   } 
 
   NavBarBody = (props) => {
+    const { t , i18n} = this.props
+    let GooglePlayBadge = GooglePlayBadgeEn
+    if (i18n.language === "hi") {
+      GooglePlayBadge = GooglePlayBadgeHi
+    }
     return(
       <div className={styles.navBarBody} style={{
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button ref="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Feedback</Button>
-        <Button variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Download App</Button>
-        <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{padding: `.075rem .375rem`}}>Share</Button>
+        <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+        <a  href="https://www.google.com" target="_blank"  >
+          <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="">
+          </Image>
+          </a>      
+         <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{padding: `.075rem .375rem`}}>{t('share')}</Button>
       </div>
     )
   }
@@ -181,7 +192,7 @@ class Search extends Component {
       <div>
         <NavBarBody/>
         <CreateAlert/>
-        <div style={{ margin: `0 auto`, paddingTop: `3%` }}>
+        <div style={{ marginTop: `64px` }}>
           <form className={styles.searchField} onSubmit={this.handleSubmit}>
             <div className={styles.bar}>
               <input
