@@ -134,9 +134,9 @@ class Search extends Component {
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Feedback</Button>
+        <Button ref="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Feedback</Button>
         <Button variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Download App</Button>
-        <Button variant="info" style={{padding: `.075rem .375rem`}}>Share</Button>
+        <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{padding: `.075rem .375rem`}}>Share</Button>
       </div>
     )
   }
