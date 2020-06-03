@@ -17,22 +17,23 @@ const Header = ({props}) => {
   const { t, i18n } = useTranslation()
   return(
     <header style={{ backgroundColor: `rgb(255, 153, 51)`, backgroundSize: `contain` }}>
-        <div className={styles.headerContainer} style={ { margin: 'auto', width: 'fit-content'}}>
+        <div className={styles.headerContainer} style={ { padding: `24px`, margin: 'auto', width: 'fit-content', height: `inherit`}}>
           <div>
-            <h1 style={{  paddingTop: `5px`, marginTop: `0px`, marginBottom: `0px`, textAlign: `center` }}>
+            <h1 style={{ marginBottom: `0px`, textAlign: `center` }}>
             {t('site_title')}
             </h1>
           </div>
           <div>
-            <p style={ { marginTop: '0px', paddingBottom: '16px' }}>{t('site_subtitle')}</p>
+            <p style={ { margin: '0px' }}>{t('site_subtitle')}</p>
           </div>
         </div>
-        <div>
+        <div style={ { width: `fit-content`, float: `right` }}>
           <NavBar/>
           <div style={{
-            marginTop: `-15px`,
+            marginTop: `-68px`,
             width: `fit-content`,
-            float: `right`
+            float: `right`,
+            padding: `24px`
           }}>
             <div style={{
               width: `fit-content`,
