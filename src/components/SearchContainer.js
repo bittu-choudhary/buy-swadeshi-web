@@ -5,7 +5,8 @@ import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { useTranslation } from "react-i18next"
 import { withTrans } from '../i18n/withTrans'
-
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class Search extends Component {
@@ -119,13 +120,26 @@ class Search extends Component {
   CreateAlert = (props) => {
     const { t } = this.props
     if (this.state.showAlert) {
-      return (<div>
+      return (<div style={{paddingTop: `2%`}}>
         <div className={styles.alertSuccess } variant="success"><p>{t('home_desc')}</p></div>
       </div>)
     } else {
       return (<div></div>)
     }
   } 
+
+  NavBarBody = (props) => {
+    return(
+      <div className={styles.navBarBody} style={{
+        width: `fit-content`,
+        margin: `5% auto`
+      }}>
+        <Button variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Feedback</Button>
+        <Button variant="info" style={{marginRight: `6px`, padding: `.075rem .375rem`}}>Download App</Button>
+        <Button variant="info" style={{padding: `.075rem .375rem`}}>Share</Button>
+      </div>
+    )
+  }
   
   render() {
     const { t } = this.props
@@ -135,7 +149,7 @@ class Search extends Component {
       searchResults,
       searchQuery,
     } = this.state
-    const {CreateAlert} = this
+    const {CreateAlert, NavBarBody} = this
     const queryResults = searchQuery === `` ? [] : searchResults
 
     if (isLoading) {
@@ -165,8 +179,9 @@ class Search extends Component {
     }
     return (
       <div>
+        <NavBarBody/>
         <CreateAlert/>
-        <div style={{ margin: `0 auto` }}>
+        <div style={{ margin: `0 auto`, paddingTop: `3%` }}>
           <form className={styles.searchField} onSubmit={this.handleSubmit}>
             <div className={styles.bar}>
               <input
