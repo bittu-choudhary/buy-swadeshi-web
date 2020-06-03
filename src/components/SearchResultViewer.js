@@ -2,6 +2,7 @@ import React from "react"
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
 import { useTranslation } from "react-i18next"
+import styles from './search-container-css-modules.module.css'
 
 
 export default function SearchResultViewer ( props  ) {
@@ -16,7 +17,7 @@ export default function SearchResultViewer ( props  ) {
   return (<div>
     {/* Number of items:
     {queryResults.length} */}
-    <table
+    <table className={styles.searchResultTable}
       style={{
         borderSpacing: `0 5px`,
         marginTop: `1rem`,
