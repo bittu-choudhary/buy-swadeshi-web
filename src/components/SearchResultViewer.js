@@ -1,10 +1,11 @@
 import React from "react"
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
-
+import { useTranslation } from "react-i18next"
 
 
 export default function SearchResultViewer ( props  ) {
+  const { t } = useTranslation()
   console.log(props.queryResults)
   const queryResults = props.queryResults
   let fontColor = "red"
@@ -39,7 +40,7 @@ export default function SearchResultViewer ( props  ) {
               backgroundColor: `#ffffff`,
             }}
           >
-            Brand Name
+             {t('brand_name')}
           </th>
           <th
             style={{
@@ -51,7 +52,7 @@ export default function SearchResultViewer ( props  ) {
               backgroundColor: `#ffffff`,
             }}
           >
-            Brand Category
+             {t('brand_category')}
           </th>
           <th
             style={{
@@ -65,7 +66,7 @@ export default function SearchResultViewer ( props  ) {
               backgroundColor: `#ffffff`,
             }}
           >
-            Is Indian?
+             {t('is_indian')}
           </th>
         </tr>
       </thead>
