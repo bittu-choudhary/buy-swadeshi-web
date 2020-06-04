@@ -39,6 +39,7 @@ export default function SearchResultViewer ( props  ) {
               borderTopLeftRadius: `5px`,
               borderBottomLeftRadius: `5px`,
               backgroundColor: `#ffffff`,
+              width: `33%`
             }}
           >
              {t('brand_name')}
@@ -51,6 +52,7 @@ export default function SearchResultViewer ( props  ) {
               fontWeight: 600,
               cursor: `pointer`,
               backgroundColor: `#ffffff`,
+              width: `33%`
             }}
           >
              {t('brand_category')}
@@ -65,6 +67,7 @@ export default function SearchResultViewer ( props  ) {
               borderTopRightRadius: `5px`,
               borderBottomRightRadius: `5px`,
               backgroundColor: `#ffffff`,
+              width: `33%`
             }}
           >
              {t('is_indian')}
