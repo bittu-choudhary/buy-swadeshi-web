@@ -14,8 +14,11 @@ module.exports = {
     siteUrl: "https://www.buyswadeshi.store",
     ogImageUrl: "https://www.buyswadeshi.store/icon-512.png",
     ogTitle: "Find Swadeshi | Vocal for Local",
+    sitemap: 'https://www.buyswadeshi.store/sitemap.xml',
   },
   plugins: [
+    "gatsby-plugin-sitemap",
+    'gatsby-plugin-robots-txt',
     {      
       resolve: "gatsby-plugin-firebase",  
        options: {      
@@ -41,7 +44,6 @@ module.exports = {
        }   
       },
      },
-     'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
