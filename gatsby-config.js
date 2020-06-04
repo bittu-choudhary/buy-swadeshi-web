@@ -7,9 +7,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Find Swadeshi : Vocal for Local`,
+    title: `Find Swadeshi`,
     description: `One stop destination to know about Indian brands and products in your favourite category`,
     author: `Bittu Choudhary`,
+    titleTemplate: "%s | Vocal for Local",
   },
   plugins: [
     {      
