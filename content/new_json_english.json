@@ -2168,5 +2168,113 @@
 		"name": "Apple",
 		"isIndian": false,
 		"category": "Mobile Phone"
-	}]
+	},{
+  	"name": "Eno",
+  	"isIndian": false,
+  	"category": "Acidity Powder"
+  }, {
+  	"name": "Gas-O-Fast",
+  	"isIndian": true,
+  	"category": "Acidity Powder"
+  },{
+  	"name": "Mankind",
+  	"isIndian": true,
+  	"category": "Pharma medicine"
+  }, {
+  	"name": "Mortein",
+  	"isIndian": false,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "All out",
+  	"isIndian": false,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "Good night",
+  	"isIndian": true,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "Maxo",
+  	"isIndian": true,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "Ray Ban",
+  	"isIndian": false,
+  	"category": "Specs eye glasses"
+  }, {
+  	"name": "Fastrack",
+  	"isIndian": true,
+  	"category": "Specs eye glasses"
+  },{
+  	"name": "Titan eye plus",
+  	"isIndian": true,
+  	"category": "Specs eye glasses"
+  },{
+  	"name": "TVS",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Royal Enfield",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Honda",
+  	"isIndian": false,
+  	"category": "Bikes"
+  },{
+  	"name": "Hero",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Mahindra",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Bajaj",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Manforce",
+  	"isIndian": true ,
+  	"category": "Condoms"
+  },{
+  	"name": "Kamasutra" ,
+  	"isIndian": true,
+  	"category": "Condoms"
+  },{
+  	"name": "Durex",
+  	"isIndian": false,
+  	"category": "Condoms"
+  },{
+  	"name": "Kohinoor",
+  	"isIndian": false,
+  	"category": "Condoms"
+  },{
+  	"name": "Moods",
+  	"isIndian": true,
+  	"category": "Condoms"
+  },{
+  	"name": "Skore",
+  	"isIndian": true,
+  	"category": "Condoms"
+  },{
+  	"name": "Reebok",
+  	"isIndian": false,
+  	"category": "Shoes Chappal Bootpolic"
+  },{
+  	"name": "Fila",
+  	"isIndian": false,
+  	"category": "Shoes Chappal Bootpolic"
+  },{
+  	"name": "HnM",
+  	"isIndian": false,
+  	"category": "Readymade clothes"
+  },{
+  	"name": "Zara",
+  	"isIndian": false,
+  	"category": "Readymade clothes"
+  },{
+  	"name": "Kanak Atta",
+  	"isIndian": true,
+  	"category": "Food oil Food products"
+  }]
 }
