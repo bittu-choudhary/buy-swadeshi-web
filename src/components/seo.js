@@ -13,6 +13,8 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             titleTemplate
+            siteUrl
+            ogImageUrl
           }
         }
       }
@@ -20,6 +22,8 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaSiteUrl = site.siteMetadata.siteUrl
+  const ogImageUrl = site.siteMetadata.ogImageUrl
 
 
   return (
@@ -47,8 +51,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: metaSiteUrl,
+        },
+        {
+          property: `og:image`,
+          content: ogImageUrl,
+        },
+        {
+          property: `twitter:image`,
+          content: ogImageUrl,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `product`,
+        },
+        {
+          property: `twitter:url`,
+          content: metaSiteUrl,
         },
         {
           name: `twitter:title`,

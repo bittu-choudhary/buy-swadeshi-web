@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import * as JsSearch from "js-search"
-import JSONData from "../../content/new_json_english.json"
+import JSONData from "../../content/brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
