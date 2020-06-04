@@ -12,6 +12,31 @@ module.exports = {
     author: `Bittu Choudhary`,
   },
   plugins: [
+    {      
+      resolve: "gatsby-plugin-firebase",  
+       options: {      
+        features: {     
+         auth: false,       
+         database: false,  
+         firestore: false,
+         storage: false,    
+         messaging: false, 
+         functions: false,  
+         performance: false, 
+         analytics:true,    
+        }, 
+        credentials: {  
+         apiKey:'AIzaSyDJqesu1KoTaHC7PR_A7mw7OY1GFGYgAOA', 
+         authDomain:'buy-swadeshi.firebaseapp.com',        
+         databaseURL:'https://buy-swadeshi.firebaseio.com',          
+         projectId:'buy-swadeshi',           
+         storageBucket:'buy-swadeshi.appspot.com', 
+         messagingSenderId:'317395791078',           
+         appId:'1:317395791078:web:e7cf672acd3ee85171df27',   
+         measurementId:'G-H9FKSGL6P1', 
+       }   
+      },
+     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

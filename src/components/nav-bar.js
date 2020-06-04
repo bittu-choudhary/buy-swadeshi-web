@@ -6,6 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import Image from  'react-bootstrap/Image'
+import firebase from "gatsby-plugin-firebase"
+
+
+const sendFirebaseAnalytics = (event) => {
+  console.log(event)
+  firebase
+      .analytics()
+      .logEvent(event)
+}
+
 
 const NavBar = ({props}) => {
   const { t, i18n } = useTranslation()
@@ -13,13 +23,14 @@ const NavBar = ({props}) => {
   if (i18n.language === "hi") {
     GooglePlayBadge = GooglePlayBadgeHi
   }
+
   return (
     <div className={styles.navBarHeader}>
-      <Button rel="noreferrer" className={styles.navBarButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-      <a title="Download our Android app" rel="noreferrer" href="https://www.google.com" target="_blank"  >
+      <Button onClick={() => sendFirebaseAnalytics("clicked_feedback")} rel="noreferrer" className={styles.navBarButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+      <a onClick={() => sendFirebaseAnalytics("clicked_play_badge")}  title="Download our Android app" rel="noreferrer" href="https://www.google.com" target="_blank"  >
       <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`}} alt="Download our Android App">
       </Image></a>
-      <Button className={styles.navBarButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+      <Button onClick={() => sendFirebaseAnalytics("clicked_share")} className={styles.navBarButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
     </div>
   )
 }

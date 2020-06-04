@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from  'react-bootstrap/Image'
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
+import firebase from "gatsby-plugin-firebase"
 
 
 class Search extends Component {
@@ -94,6 +95,9 @@ class Search extends Component {
     } else {
       this.setState({showAlert: false})
     }
+    firebase
+        .analytics()
+        .logEvent(e.target.value)
     const { search } = this.state
     const queryResult = search.search(e.target.value)
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
@@ -113,6 +117,12 @@ class Search extends Component {
     }
   } 
 
+  SendFirebaseAnalytics = (event) => {
+    firebase
+        .analytics()
+        .logEvent(event)
+  }
+
   NavBarBody = (props) => {
     const { t , i18n} = this.props
     let GooglePlayBadge = GooglePlayBadgeEn
@@ -124,12 +134,12 @@ class Search extends Component {
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button  rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a title="Download our Android app"  rel="noreferrer" href="https://www.google.com" target="_blank"  >
+        <Button  onClick={() => this.SendFirebaseAnalytics("clicked_feedback")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+        <a onClick={() => this.SendFirebaseAnalytics("clicked_play_badge")} title="Download our Android app"  rel="noreferrer" href="https://www.google.com" target="_blank"  >
           <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
           </Image>
           </a>      
-         <Button className={styles.navButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+         <Button onClick={() => this.SendFirebaseAnalytics("clicked_share")} className={styles.navButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
       </div>
     )
   }

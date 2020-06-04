@@ -2,14 +2,23 @@ import React from 'react';
 import { useTranslation } from "react-i18next"
 import styles from './search-container-css-modules.module.css'
 import NavBar from './nav-bar'
+import firebase from "gatsby-plugin-firebase"
 
 
 const handleToggle = (val, i18n) => {
+  let event = ""
   if (val){
     i18n.changeLanguage('hi')
+    event = "lang_change_to_hi"
   } else {
     i18n.changeLanguage('en')
+    event = "lang_change_to_en"
   }
+
+  firebase
+      .analytics()
+      .logEvent(event)
+
 }
 
 const Header = ({props}) => {
