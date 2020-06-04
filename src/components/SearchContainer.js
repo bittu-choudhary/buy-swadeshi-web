@@ -27,7 +27,6 @@ class Search extends Component {
   constructor(props) {
     super (props)
     const brandData = JSONData
-    console.log(brandData.brands)
     if (!this.state) {
       this.state = {
         brandList: brandData.brands,
@@ -42,26 +41,11 @@ class Search extends Component {
     // this.state = { brandList: brandData.brands }
     this.rebuildIndex()
   }
-  // async componentDidMount() {
-  //   Axios.get(`http://ac11fd22fec6.ngrok.io/new_json_english.json`)
-  //     .then(result => {
-  //       const brandData = result.data
-  //       this.setState({ brandList: brandData.brands })
-  //       this.rebuildIndex()
-  //     })
-  //     .catch(err => {
-  //       this.setState({ isError: true })
-  //       console.log(`====================================`)
-  //       console.log(`Something bad happened while fetching the data\n${err}`)
-  //       console.log(`====================================`)
-  //     })
-  // }
 
   /**
    * rebuilds the overall index based on the options
    */
   rebuildIndex = () => {
-    console.log(this.state)
     const { brandList } = this.state
 
     const dataToSearch = new JsSearch.Search(`name`)
@@ -87,7 +71,6 @@ class Search extends Component {
 
     dataToSearch.addIndex(`name`) // sets the index attribute for the data
     dataToSearch.addIndex(`category`) // sets the index attribute for the data
-    console.log(brandList)
     dataToSearch.addDocuments(brandList) // adds the data to be searched
     this.state = {
       brandList: brandList,
@@ -141,9 +124,9 @@ class Search extends Component {
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a  rel="noreferrer" href="https://www.google.com" target="_blank"  >
-          <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="">
+        <Button  rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+        <a title="Download our Android app"  rel="noreferrer" href="https://www.google.com" target="_blank"  >
+          <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
           </Image>
           </a>      
          <Button className={styles.navButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>

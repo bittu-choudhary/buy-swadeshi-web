@@ -348,6 +348,16 @@ footer p {
 
 }
 
+.nav-bar-button {
+  color: #000 !important;
+  background-color: hsla(188, 78%, 46%, 1) !important;
+}
+
+.nav-button {
+  color: #000 !important;
+  background-color: hsla(188, 78%, 46%, 1) !important;
+}
+
 @media only screen and (max-width: 300px) {
   .nav-button {
     width: 70px !important;

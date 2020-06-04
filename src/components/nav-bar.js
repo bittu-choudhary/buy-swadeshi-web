@@ -15,11 +15,11 @@ const NavBar = ({props}) => {
   }
   return (
     <div className={styles.navBarHeader}>
-      <Button href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-      <a rel="noreferrer" href="https://www.google.com" target="_blank"  >
-      <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`}} alt="">
+      <Button rel="noreferrer" className={styles.navBarButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+      <a title="Download our Android app" rel="noreferrer" href="https://www.google.com" target="_blank"  >
+      <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`}} alt="Download our Android App">
       </Image></a>
-      <Button href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+      <Button className={styles.navBarButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
     </div>
   )
 }

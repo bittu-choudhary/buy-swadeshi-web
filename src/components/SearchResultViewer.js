@@ -7,7 +7,6 @@ import styles from './search-container-css-modules.module.css'
 
 export default function SearchResultViewer ( props  ) {
   const { t } = useTranslation()
-  console.log(props.queryResults)
   const queryResults = props.queryResults
   let fontColor = "red"
   let icon = <MdCheckCircle/>
@@ -77,7 +76,6 @@ export default function SearchResultViewer ( props  ) {
       <tbody>
         {/* eslint-disable */}
         {queryResults.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).map((item, index) => {
-          console.log(item.isIndian)
           if (item.isIndian) {
             fontColor = "green"
             icon = <MdCheckCircle/>

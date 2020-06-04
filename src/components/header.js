@@ -10,7 +10,6 @@ const handleToggle = (val, i18n) => {
   } else {
     i18n.changeLanguage('en')
   }
-  console.log(val)
 }
 
 const Header = ({props}) => {
