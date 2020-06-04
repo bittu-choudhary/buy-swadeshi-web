@@ -1,0 +1,2207 @@
+{
+  "brands" : [ {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Santoor"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Nirma"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Swastik"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Mysore Sandal"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Wipro Shikakai"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Medimix"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Ganga"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Cinthol"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Godrej No.1"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Margo"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Neem"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : true,
+    "name" : "Patanjali Soaps"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Lux"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Liril"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Lifebuoy"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Pears"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Rexona"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Hamam"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Jai"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Moti"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Camay"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Dove"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Ponds"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Palmolive"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Johnson & Johnson"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Clearasil"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Dettol"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Le Sancy"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Lakme"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Amway"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Savlon"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Amazon Solimo"
+  }, {
+    "category" : "Bath Soaps",
+    "isIndian" : false,
+    "name" : "Walmart Brand"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Nirma"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Exo"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Vimal"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Hepoline"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Diet"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Fena"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Ujala"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Shudh"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Ghadi"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Gentle"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Manjula"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Patanjali"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Pitambari"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Maxo"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Vimal"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "SASA and Home Products etc."
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Sunlight"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Wheel"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Ariel"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Trilo"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "501"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "OK"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Key"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Revel"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Amway"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Surf Excel"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : true,
+    "name" : "Ezee"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Rin"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Vim Bar"
+  }, {
+    "category" : "Detergent Soaps",
+    "isIndian" : false,
+    "name" : "Robin Blue"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Tips & Toes"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Shringar"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Cinthol"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Santoor"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Emami"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Boroplus"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Tulsi"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Vicco"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Arnica"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Hair and Care"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Hemani"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Parachute"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Fem"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Cadila"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Cipla"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Dabar"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Frankie"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Khandelwal"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Torrent Pharma"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Zandu Pharma"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Himalaya"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Maharishi Ayurveda"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Balsara"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "J.K."
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Sand"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Baidyanath"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Bhaskar"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Boroline"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Bajaj Sevashram"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Krack Cream"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Park Avenue"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Unichem"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "IPCA"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : true,
+    "name" : "Patanjali"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Johnson & Johnson"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Ponds"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Clearasil"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Brylcreem"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Fair & Lovely"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Velvet"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Medicare"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Lavender"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Nycil"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Shower to Shower"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Liril"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Dainik"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Organix"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Panteen"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Roots"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Head & Shoulder"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Amway"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Clinic Plus"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Nihar"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Glaxo"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Tresemme"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Loreal"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Cuticura"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Lakme"
+  }, {
+    "category" : "Beauty Products",
+    "isIndian" : false,
+    "name" : "Nivia."
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Babool"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Promise"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Dabur"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Meswak"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Ajay"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Herbodent"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Ajanta"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Eagle International"
+  }, {
+    "category" : "Toothpaste/toothpowder",
+    "isIndian" : true,
+    "name" : "Monkey Brand"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Baidyanath"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Emami"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Vicco"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Anchor"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Amar"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "ICPA"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Dentobac"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : true,
+    "name" : "Patanjali Ayurved"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Colgate"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Cibaca"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Closeup"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Pepsodent"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Signal"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Macleans"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Amway"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Aquafresh"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Oral-B"
+  }, {
+    "category" : "Toothpaste",
+    "isIndian" : false,
+    "name" : "Sensodyne."
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Godrej"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Emami"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Super-Max"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Ashok"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Vi-John"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Topaz"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Park Avenue"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Laser"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Vidyut"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "J.K"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : true,
+    "name" : "Cosmoplus"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Palmolive"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Nivea"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Ponds"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Gillette"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "7 O'Clock"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Erasmic"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Lakme"
+  }, {
+    "category" : "Shaving Cream/ Razer Blade",
+    "isIndian" : false,
+    "name" : "Axe Denim."
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Nutrin"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Shangrila"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Champion"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Ampro"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Parle"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Sathe"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Beiman"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Priyagold"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Monaco"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Krackjack"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Gits"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Shalimar"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Parry"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Ravalgaon"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Clasic"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Amul"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Nutramul"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Vijaya"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Safal"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Asian"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Verka"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Madhu"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Mahan"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Gopi"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Himgiri"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Vita"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : true,
+    "name" : "Patanjali & other Home Products etc."
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Nestle"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Cadbury"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Bournvita"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Horlicks"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Boost"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Milkmade"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Kissan"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Maggi"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Farex"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Anikspray"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Complan"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Kitkat"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Eclair"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Maltova"
+  }, {
+    "category" : "Biscuits Chocolate Milk's Products",
+    "isIndian" : false,
+    "name" : "Milo's"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Girnar"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Tata-Tea"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Asam-Tea"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Society"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Duncan"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Brahmaputra"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Tej"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Tata Coffee"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Tata-Tetley"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Amar"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "GS"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Parivar"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : true,
+    "name" : "Sapat and other Home Products etc."
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Brooke Bond"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Taj Mahal"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Red Label"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Diamond"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Lipton"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Green Label"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Nescafe"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Nestle"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Delta"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "bru"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Nescafe Sunrise"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "three flowers"
+  }, {
+    "category" : "Tea Coffee",
+    "isIndian" : false,
+    "name" : "Tazza."
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Guruji"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Onjus"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Jumpin"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Nero"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Pingo"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Frooti"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Sosyo"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Aswad"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Dabur"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Mala"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Bisleri"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Rasna"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Humdard"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Mapro"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Rainbow"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Jai Gajanan"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Haldiram"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Gokul"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Bikaner"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Weikfield"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Noga"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Priya"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Ashok"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Uma"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "H.P.M.C Product"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Him"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : true,
+    "name" : "Svitemblica"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Lehar"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Pepsi"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "7up"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Mirinda"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Team"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Coca-Cola"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "McDonald"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Mangola"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Goldspot"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Limca"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Citra"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Thumbs-up"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Sprite"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Fanta"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Crush"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Appy"
+  }, {
+    "category" : "Cold Drink",
+    "isIndian" : false,
+    "name" : "Cadbury."
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Amul"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Himalaya"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Nirula"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Vadilal"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Mother Dairy"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Vindi"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Verka"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Havmor"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Gocool"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : true,
+    "name" : "Natural"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Cadbury"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Dollop"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Nice"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Products Brook Brond"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Kwality Walls"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Baskin-Robbins"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Yankee-doodle"
+  }, {
+    "category" : "Ice-Cream",
+    "isIndian" : false,
+    "name" : "Cornetto"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Maruti"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Postmen"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Dhara"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Ginni"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Sweekar"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Rath"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Mohan"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Umang"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Vijaya"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Span"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Parachute"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Ashok"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Saffola"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Kohinoor"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Madhur"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Engine"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Gagan"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Amrit"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Vanaspati"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Ramdev"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "MDH"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Everest"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Bedekar"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Sahkar"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Lijjat"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Ganesh"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Shakti Bhog Atta"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Tata Salt"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Gemini"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Society Masale"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Tata Masale"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Ashirwad Atta"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : true,
+    "name" : "Patanjali Atta & Oil and other Home Products etc."
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Dalda"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Crystal"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Lipton"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Annapurna Salt"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Aata and Chapati"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Maggi"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Kissan"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Tarla"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Knorr"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Dalal"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Brook-Brond"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Pillsbury Atta"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Captain Cook Salt and Aata"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Modern Chapati"
+  }, {
+    "category" : "Food Oil Food Products",
+    "isIndian" : false,
+    "name" : "Kargil Aata."
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Videocon"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "BPL"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Onida"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Solar"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "ET&T"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "T-Series"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Nelco"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Western Electric"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Uptron"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Keltron"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Cosmic"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "TVS"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "IFB"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Godrej"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Crown"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Bajaj"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Usha"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Polar"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Surya"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Orient"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Cinny"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Tullu"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Crompton"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Loyde"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Blue Star"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Voltas"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Cool Home"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Khaitan"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "RR"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Eveready"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Geep"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Novino"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Nirlep"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "E light"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Jaico"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Titan"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Ajanta"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "HMT"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Maxima"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Alwin Ghadi"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Bengal"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Mysore"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Hawkins"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Prestige"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Pressure Cooker"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Wipro"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : true,
+    "name" : "Trupti and other Home Products etc."
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "GEC"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Philips"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Sony"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "TDK"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Nippo"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "National Panasonic"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Sharp"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "GE"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Whirlpool"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Samsung"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Toshiba"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "LG Hitachi"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Thomson"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Electrolux"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Akai"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Sansui"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Kenwood"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Aiwa"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Carrier"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Konica"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "tupperware"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Japan Life"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Omega"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Timex"
+  }, {
+    "category" : "Electrical Product Home Use Product/Watch",
+    "isIndian" : false,
+    "name" : "Rado"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Geeflo"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Wilson"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Camlin"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Revlon"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Rotomac"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Cello"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Stic"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Chandra"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Montex"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Camel"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Bittoo"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Plato"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Triveni"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Flora"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Apsara"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Natraj"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Hindustan"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "Lotus"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : true,
+    "name" : "and other Home Products etc."
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "Parker"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "Pilot"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "windser-button"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "faber-castell"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "Big"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "Montblanc"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "Kores"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "As"
+  }, {
+    "category" : "Writing Product",
+    "isIndian" : false,
+    "name" : "Rotring."
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Lakhani"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Liberty Standard"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Action"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Paragon"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Flash"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Corona"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Welcome"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Rexona"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Lotus"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Red-Tape"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Phoenix"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Viking"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Billy"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Carnauba"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Kiwi Shoe Polish"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Woodlands"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "Mochi"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : true,
+    "name" : "JJ Flex and other Home Products etc."
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Bata"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Puma"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Power"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Cherry-blossom"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Adidas"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Reebok"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Nike"
+  }, {
+    "category" : "Shoes Chappal Bootpolic",
+    "isIndian" : false,
+    "name" : "Lee-cooper."
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Peter England"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Van Heusen"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Lous Philip"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Colourplus"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Allen Solly"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Mafatlal"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Trends"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Cambridge"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Double bull"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Zodiac"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Arvind Denim"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Don"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Prolin"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "TT"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Lux"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Amul"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "VIP."
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Rupa"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Raymond"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Park Avenue"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Altimo"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Newport"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Killer"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Flying Machine"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Monte Carlo"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Duke: Tiger"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Kolkata"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Pantaloon"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Patanjali products"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : true,
+    "name" : "Ludhiana and Tirupur Products"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "All product of Lee"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Burlington"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Arrow"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Lacoste"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Levis"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Pepe Jeans"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Wrangler"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "United Colors of Benetton"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Reid & Taylor"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Byford"
+  }, {
+    "category" : "Readymade Clothes",
+    "isIndian" : false,
+    "name" : "Crocodile."
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : true,
+    "name" : "Micromax"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : true,
+    "name" : "Karbon"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : true,
+    "name" : "Di and Locally assembled"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "All Chinese Products Like Mi"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "Oppo"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "Vivo"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "LG"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "Samsung"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "Xiaomi"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "iphone"
+  }, {
+    "category" : "Mobile Phone",
+    "isIndian" : false,
+    "name" : "Apple"
+  }, {
+  	"name": "Eno",
+  	"isIndian": false,
+  	"category": "Acidity Powder"
+  }, {
+  	"name": "Gas-O-Fast",
+  	"isIndian": true,
+  	"category": "Acidity Powder"
+  },{
+  	"name": "Mankind",
+  	"isIndian": true,
+  	"category": "Pharma medicine"
+  }, {
+  	"name": "Mortein",
+  	"isIndian": false,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "All out",
+  	"isIndian": false,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "Good night",
+  	"isIndian": true,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "Maxo",
+  	"isIndian": true,
+  	"category": "Mosquito repellent"
+  }, {
+  	"name": "Ray Ban",
+  	"isIndian": false,
+  	"category": "Specs eye glasses"
+  }, {
+  	"name": "Fastrack",
+  	"isIndian": true,
+  	"category": "Specs eye glasses"
+  },{
+  	"name": "Titan eye plus",
+  	"isIndian": true,
+  	"category": "Specs eye glasses"
+  },{
+  	"name": "TVS",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Royal Enfield",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Honda",
+  	"isIndian": false,
+  	"category": "Bikes"
+  },{
+  	"name": "Hero",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Mahindra",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Bajaj",
+  	"isIndian": true,
+  	"category": "Bikes"
+  },{
+  	"name": "Manforce",
+  	"isIndian": true ,
+  	"category": "Condoms"
+  },{
+  	"name": "Kamasutra" ,
+  	"isIndian": true,
+  	"category": "Condoms"
+  },{
+  	"name": "Durex",
+  	"isIndian": false,
+  	"category": "Condoms"
+  },{
+  	"name": "Kohinoor",
+  	"isIndian": false,
+  	"category": "Condoms"
+  },{
+  	"name": "Moods",
+  	"isIndian": true,
+  	"category": "Condoms"
+  },{
+  	"name": "Skore",
+  	"isIndian": true,
+  	"category": "Condom"
+  },{
+  	"name": "Reebok",
+  	"isIndian": false,
+  	"category": "Shoes Chappal Bootpolic"
+  },{
+  	"name": "Fila",
+  	"isIndian": false,
+  	"category": "Shoes Chappal Bootpolic"
+  },{
+  	"name": "HnM",
+  	"isIndian": false,
+  	"category": "Readymade clothes"
+  },{
+  	"name": "Zara",
+  	"isIndian": false,
+  	"category": "Readymade clothes"
+  },{
+  	"name": "Kanak Atta",
+  	"isIndian": true,
+  	"category": "Food oil Food products"
+  }]
+}
