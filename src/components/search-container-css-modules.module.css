@@ -281,10 +281,6 @@ footer p {
     font-size: 1.3rem !important;
   }
 
-  .searchbar{
-    height:30px;
-  }
-
   header, footer p {
     font-size: 13px !important;
   }
@@ -344,6 +340,10 @@ footer p {
 
   .alert-success {
     height: 50px;
+  }
+
+  .searchbar{
+    height:30px;
   }
 
 }
