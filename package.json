@@ -29,6 +29,7 @@
     "gatsby-plugin-manifest": "^2.4.10",
     "gatsby-plugin-offline": "^3.2.8",
     "gatsby-plugin-react-helmet": "^3.3.3",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "i18next": "^19.0.0",
     "js-search": "^1.4.3",
     "react": "^16.11.0",

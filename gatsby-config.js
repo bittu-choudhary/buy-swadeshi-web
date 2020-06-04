@@ -8,9 +8,11 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Find Swadeshi`,
-    description: `One stop destination to know about Indian brands and products in your favourite category`,
+    description: `One stop destination to know about Indian brands and Indian products in your favourite category`,
     author: `Bittu Choudhary`,
     titleTemplate: "%s | Vocal for Local",
+    siteUrl: "https://www.buyswadeshi.store",
+    ogImageUrl: "https://www.buyswadeshi.store/icon-512.png",
   },
   plugins: [
     {      
@@ -38,6 +40,7 @@ module.exports = {
        }   
       },
      },
+     'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
