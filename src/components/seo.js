@@ -15,6 +15,7 @@ function SEO({ description, lang, meta, title }) {
             titleTemplate
             siteUrl
             ogImageUrl
+            ogTitle
           }
         }
       }
@@ -24,6 +25,7 @@ function SEO({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   const metaSiteUrl = site.siteMetadata.siteUrl
   const ogImageUrl = site.siteMetadata.ogImageUrl
+  const ogTitle = site.siteMetadata.ogTitle
 
 
   return (
@@ -40,7 +42,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: ogTitle,
         },
         {
           property: `og:description`,
@@ -72,7 +74,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: ogTitle,
         },
         {
           name: `twitter:description`,

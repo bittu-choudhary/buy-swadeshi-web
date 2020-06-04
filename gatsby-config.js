@@ -13,6 +13,7 @@ module.exports = {
     titleTemplate: "%s | Vocal for Local",
     siteUrl: "https://www.buyswadeshi.store",
     ogImageUrl: "https://www.buyswadeshi.store/icon-512.png",
+    ogTitle: "Find Swadeshi | Vocal for Local",
   },
   plugins: [
     {      
