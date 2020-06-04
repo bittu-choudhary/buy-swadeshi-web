@@ -10,7 +10,6 @@ import firebase from "gatsby-plugin-firebase"
 
 
 const sendFirebaseAnalytics = (event) => {
-  console.log(event)
   firebase
       .analytics()
       .logEvent(event)
