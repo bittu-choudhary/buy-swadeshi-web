@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import styles from './search-container-css-modules.module.css'
 
 const Footer = (props) => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   return (
     <footer className={styles.footerContainer} style={{ backgroundColor: `rgb(255, 153, 51)`, backgroundSize: `contain` }}>
       <div style={ { width: 'fit-content', margin: 'auto' }}>

@@ -3,7 +3,6 @@ import * as JsSearch from "js-search"
 import JSONData from "../../content/new_json_english.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
-import { useTranslation } from "react-i18next"
 import { withTrans } from '../i18n/withTrans'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -143,7 +142,7 @@ class Search extends Component {
         margin: `5% auto`
       }}>
         <Button className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a  href="https://www.google.com" target="_blank"  >
+        <a  rel="noreferrer" href="https://www.google.com" target="_blank"  >
           <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="">
           </Image>
           </a>      
