@@ -139,7 +139,7 @@ class Search extends Component {
           <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
           </Image>
           </a>      
-         <Button onClick={() => this.SendFirebaseAnalytics("clicked_share")} className={styles.navButton} href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+         <Button onClick={() => this.SendFirebaseAnalytics("clicked_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
       </div>
     )
   }
