@@ -55,7 +55,7 @@ class Search extends Component {
      *  defines a indexing strategy for the data
      * more more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
      */
-    dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
+    dataToSearch.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
 
     /**
      * defines the sanitizer for the search
@@ -135,7 +135,7 @@ class Search extends Component {
         margin: `5% auto`
       }}>
         <Button  onClick={() => this.SendFirebaseAnalytics("clicked_feedback")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a onClick={() => this.SendFirebaseAnalytics("clicked_play_badge")} title="Download our Android app"  rel="noreferrer" href="https://www.google.com" target="_blank"  >
+        <a onClick={() => this.SendFirebaseAnalytics("clicked_play_badge")} title="Download our Android app"  rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
           <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
           </Image>
           </a>      

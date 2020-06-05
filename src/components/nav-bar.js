@@ -26,10 +26,10 @@ const NavBar = ({props}) => {
   return (
     <div className={styles.navBarHeader}>
       <Button onClick={() => sendFirebaseAnalytics("clicked_feedback")} rel="noreferrer" className={styles.navBarButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `2px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-      <a onClick={() => sendFirebaseAnalytics("clicked_play_badge")}  title="Download our Android app" rel="noreferrer" href="https://www.google.com" target="_blank"  >
+      <a onClick={() => sendFirebaseAnalytics("clicked_play_badge")}  title="Download our Android app" rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
       <Image style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`}} alt="Download our Android App">
       </Image></a>
-      <Button onClick={() => sendFirebaseAnalytics("clicked_share")} className={styles.navBarButton} href={"whatsapp://send?text="+t('share_text')} data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+      <Button onClick={() => sendFirebaseAnalytics("clicked_share")} className={styles.navBarButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
     </div>
   )
 }
