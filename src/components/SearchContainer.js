@@ -97,7 +97,7 @@ class Search extends Component {
     }
     firebase
         .analytics()
-        .logEvent(e.target.value)
+        .logEvent("web_search", {query: e.target.value})
     const { search } = this.state
     const queryResult = search.search(e.target.value)
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
@@ -134,12 +134,12 @@ class Search extends Component {
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button  onClick={() => this.SendFirebaseAnalytics("clicked_feedback")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a onClick={() => this.SendFirebaseAnalytics("clicked_play_badge")} title="Download our Android app"  rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
+        <Button  onClick={() => this.SendFirebaseAnalytics("feedback_click")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+        <a onClick={() => this.SendFirebaseAnalytics("play_button_click")} title="Download our Android app"  rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
           <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
           </Image>
           </a>      
-         <Button onClick={() => this.SendFirebaseAnalytics("clicked_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+         <Button onClick={() => this.SendFirebaseAnalytics("web_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
       </div>
     )
   }
