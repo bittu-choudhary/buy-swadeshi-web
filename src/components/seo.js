@@ -62,11 +62,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image:width`,
-          content: 720,
+          content: `720`,
         },
         {
           property: `og:image:height`,
-          content: 720,
+          content: `720`,
         },
         {
           property: `twitter:image`,
