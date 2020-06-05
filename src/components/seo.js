@@ -61,6 +61,14 @@ function SEO({ description, lang, meta, title }) {
           content: ogImageUrl,
         },
         {
+          property: `og:image:width`,
+          content: 720,
+        },
+        {
+          property: `og:image:height`,
+          content: 720,
+        },
+        {
           property: `twitter:image`,
           content: ogImageUrl,
         },
