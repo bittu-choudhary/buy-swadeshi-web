@@ -10,8 +10,8 @@ import Image from  'react-bootstrap/Image'
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
+import IndexedBrandData from "../../content/indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
-import Nlp from "wink-nlp-utils"
 
 class Search extends Component {
   // state = {
@@ -41,76 +41,6 @@ class Search extends Component {
       } 
     }
     // this.state = { brandList: brandData.brands }
-    this.rebuildIndexNew()
-  }
-
-
-  rebuildIndexNew = () => {
-    const { brandList } = this.state
-    // console.log()
-    const engine = Bm25()
-    engine.defineConfig( { fldWeights: { name: 1, category: 2 } } )
-    brandList.map( ( doc, i ) => {
-      // Note, 'i' becomes the unique id for 'doc'
-      // console.log( doc )
-      engine.addDoc( doc, i )
-    } )
-    console.log(engine.consolidated)
-    engine.consolidate()
-    const consolidatedJson =  engine.exportJSON()
-    this.state = {
-      brandList: brandList,
-      search: [],
-      searchResults: [],
-      isLoading: false,
-      isError: false,
-      searchQuery: ``,
-      showAlert: true,
-      consolidatedJson: consolidatedJson
-    } 
-    console.log(engine.consolidated)
-  }
-
-  /**
-   * rebuilds the overall index based on the options
-   */
-  rebuildIndex = () => {
-    const { brandList } = this.state
-
-    const dataToSearch = new JsSearch.Search(`name`)
-
-    /**
-     *  defines a indexing strategy for the data
-     * more more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
-     */
-    dataToSearch.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
-
-    /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
-     *
-     */
-    dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer()
-
-    /**
-     * defines the search index
-     * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
-     */
-    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex(`name`)
-
-    dataToSearch.addIndex(`name`) // sets the index attribute for the data
-    dataToSearch.addIndex(`category`) // sets the index attribute for the data
-    dataToSearch.addDocuments(brandList) // adds the data to be searched
-    this.state = {
-      brandList: brandList,
-      search: dataToSearch,
-      searchResults: [],
-      isLoading: false,
-      isError: false,
-      searchQuery: ``,
-      showAlert: true,
-    }
-    // this.setState({ search: dataToSearch, isLoading: false })
   }
 
   /**
@@ -118,7 +48,7 @@ class Search extends Component {
    * in which the results will be added to the state
    */
   searchData = e => {
-    const { brandList, consolidatedJson } = this.state
+    const { brandList } = this.state
     if (e.target.value.length === 0) {
       this.setState({showAlert: true})
     } else {
@@ -131,7 +61,7 @@ class Search extends Component {
     // const queryResult = search.search(e.target.value)
     var queryResult = []
     const engine = Bm25()
-    engine.importJSON(consolidatedJson)
+    engine.importJSON(IndexedBrandData)
     const results = engine.search( e.target.value.toLowerCase() )
     results.map ((result) => {
       queryResult.push(brandList[result[0]])
