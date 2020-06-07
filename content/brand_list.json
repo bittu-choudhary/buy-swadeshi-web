@@ -1,5 +1,2597 @@
 {
   "brands" : [ {
+		"name": "इनो",
+		"isIndian": false,
+		"category": "गैस का चूर्ण"
+	}, {
+		"name": "गैस फ़ास्ट",
+		"isIndian": true,
+		"category": "गैस का चूर्ण"
+	},{
+		"name": "मैनकाइंड",
+		"isIndian": true,
+		"category": "दवाई"
+	}, {
+		"name": "मॉर्टिन",
+		"isIndian": false,
+		"category": "मच्छर कीटनाशक"
+	}, {
+		"name": "आल आउट",
+		"isIndian": false,
+		"category": "मच्छर कीटनाशक"
+	}, {
+		"name": "गुड नाईट",
+		"isIndian": true,
+		"category": "मच्छर कीटनाशक"
+	}, {
+		"name": "मक्सो",
+		"isIndian": true,
+		"category": "मच्छर कीटनाशक"
+	}, {
+		"name": "रे बन",
+		"isIndian": false,
+		"category": "आँखों के चश्मे "
+	}, {
+		"name": "फास्ट्रैक",
+		"isIndian": true,
+		"category": "आँखों के चश्मे "
+	},{
+		"name": "टाइटन ऑय प्लस",
+		"isIndian": true,
+		"category": "आँखों के चश्मे "
+	},{
+		"name": "टी वी स",
+		"isIndian": true,
+		"category": "बाइक्स"
+	},{
+		"name": "रॉयल एनफील्ड",
+		"isIndian": true,
+		"category": "बाइक्स"
+	},{
+		"name": "हौंडा",
+		"isIndian": false,
+		"category": "बाइक्स"
+	},{
+		"name": "हीरो",
+		"isIndian": true,
+		"category": "बाइक्स"
+	},{
+		"name": "महिंद्रा",
+		"isIndian": true,
+		"category": "बाइक्स"
+	},{
+		"name": "बजाज",
+		"isIndian": true,
+		"category": "बाइक्स"
+	},{
+		"name": "मैनफोर्स",
+		"isIndian": true ,
+		"category": "कंडोम्स "
+	},{
+		"name": "कामसूत्र" ,
+		"isIndian": true,
+		"category": "कंडोम्स "
+	},{
+		"name": "डुरेक्स",
+		"isIndian": false,
+		"category": "कंडोम्स "
+	},{
+		"name": "कोहिनूर",
+		"isIndian": false,
+		"category": "कंडोम्स "
+	},{
+		"name": "मूड्स",
+		"isIndian": true,
+		"category": "कंडोम्स "
+	},{
+		"name": "स्कोर",
+		"isIndian": true,
+		"category": "कंडोम्स"
+	},{
+		"name": "रीबॉक",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	},{
+		"name": "फिला",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	},{
+		"name": "एच ऍन एम",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	},{
+		"name": "ज़ारा",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	},{
+		"name": "कनक अट्टा",
+		"isIndian": true,
+		"category":  "खाद्यतेल खाद्यपदार्थ"
+	},{
+		"name": "गोदरेज",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "संतूर",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "निरमा",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "स्वस्तिक",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "मैसूर सैंडल",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "विप्रो-शिकाकाई",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "फ्रेश",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "अफगाण",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "कुटीर",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "होमाकोल",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "प्रिमियम",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "मीरा",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "मेडिमिक्स",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "पितांबरी",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "विमल",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "चंद्रिका",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "गंगा",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "सिथाल",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "वनश्री",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "सर्वोदय",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "नीम",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "अनुरा",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "अनुसया",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "सूर्योदय",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "पतंजलि तथा लघु-कुटीर उद्योग के अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "लक्स",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "लिरिल",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "लाइफबॉय",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "पियर्स",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "रेक्सोना",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "हमाम",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "जय",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "मोती",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "कैमे",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "डैव",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "पॉड्स",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "पामऑलिव",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "जॉन्सन",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "क्लिएरसिल",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "डेटॉल",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "लेसान्सी",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "जर्मन",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "गोल्डस्ट",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "लक्मे",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "अॅमवे",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "क्वांटम",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "मार्गो",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "फा",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "नीम",
+		"isIndian": false,
+		"category": "नहाने का साबुन"
+	}, {
+		"name": "स्वस्तिक",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "ससा",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "प्लस",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "निरमा",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "अॅक्टो",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "विमल",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "हीपोलीन",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "डेट",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "पितांबरी",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "बी.बी",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "फेना",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "उजाला",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "ईजी",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "घड़ी",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "जेंटिल",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "मंजुला",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "अनुरा",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "अन्य स्थानिक उत्पादन",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "पतंजलि",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "अन्य लघु-कुटीर उद्योग के अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "सनलाईट",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "व्हील",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "एरियल",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "चेक",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "डबल",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "ट्रीलो",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "501",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "ओके",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "की",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "रिबेल",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "अॅमवे",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "क्वांटम",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "सर्फ एक्सेल",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "रिन",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "विमबार",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "बिझ",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "रॉबिन ब्लू",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "और हिन्दुस्तान लीवर लिमिटेड के अन्य उत्पादन",
+		"isIndian": false,
+		"category": "कपड़े धोने का साबुन"
+	}, {
+		"name": "टिप्स एण्ड टोज",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "श्रृंगार",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "सिंधॉल",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "संतूर",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "इमामी",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "अफगाण",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "बोरोप्लस",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "तुलसी",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "वीको टर्मरिक",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "अर्निका",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "हेयर एण्ड केयर",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "हिमानी",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "पैराशूट",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "हिमताज",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "सिल्केशा",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "नाईल",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "बलसारा",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "जेके",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "डाबर झंड़",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "सांडू",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "बैजनाथ",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "हिमालय",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "भारकर",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "तन्वी",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "बोरोलीन",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "के राफेल",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "बजाज सेवाश्रम",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "प्रकाश",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "कोकोराज",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "प्रिमियम",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "मूल",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "क्रैक क्रीम आयुर",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "पार्क एवेन्यू",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "कासा नेचर इसेस",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "पतंजलि और लघु-कुटीर उद्योग के अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "जॉन्सन",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "पॉण्ड्स",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "क्लियरसिल",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "ब्रिलक्रीम",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "फेयर एंड लवली",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "वेल्वेट",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "मेडीकेयर",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "लेवेंडर",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "नायसिल",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "निविया",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "सॉकर टू शॉवर",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "क्यूटीकुरा",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "लिरिल",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "लैक्मे",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "डेनिम",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "ऑरगॉनिक्स",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "पेन्टीन",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "रूट्स",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "हेड एण्ड शोल्डर",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "अॅमवे",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "क्वांटम",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "क्लीनिक",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "निहार",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "कोको केयर",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "ग्लैक्सो",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "मॉरटिम",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "लीओरीयल",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "ट्रेसेमे",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "लॅक्मे आदि",
+		"isIndian": false,
+		"category": "सौंदर्य प्रसाधन औषधि"
+	}, {
+		"name": "बबूल",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "प्रॉमिस",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "विको",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "ओरा",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "अमर",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "अकर",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "डाबर",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "बंदर छाप टु जेल",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "चॉईस",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "मिसवाक",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "अजय",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "हर्बोडेंट",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "अजंता",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "गरवारे ब्रश",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "क्लासिक",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "ईगल",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "दंतपोला",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "वैद्यनाथ",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "युवराज",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "इमामी",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "पतंजलि",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "पुडंट",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "विठोबा दंतमंजन तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "कोलगेट",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "सिबाका",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "क्लोजअप",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "पेप्सोडेंट",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "सिग्नल",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "मॅक्लीन",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "अमवे",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "क्वांटम",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "अक्वा फ्रेश",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "ओरल-बी",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "फोर जेन्स",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "सेन्सोडाइन",
+		"isIndian": false,
+		"category": "टूथपेस्ट दंतमंजन टूथब्रश"
+	}, {
+		"name": "गोदरेज",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "अफगाण",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "इमामी",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "सुपर स्वदेशी सुपरमैक्स",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "अशोक",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "वी-जॉन",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "टोपाज",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "पनाना",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "प्रीमियम",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "पार्क एवेन्यू",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "लेझर",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "विद्युत",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "जे.के",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "कॉरमोप्लस तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "पामोलिव",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "निविया",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "पॉन्डस",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "प्लैटिनम",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "जिलेट",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "सेवेन-ओ-क्लाक",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "विलमैन",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "विल्टेज",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "इरॅरिमिक",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "लॅक्मे",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "डेनिम",
+		"isIndian": false,
+		"category": "दाढ़ी का साबुन ब्लेड्स"
+	}, {
+		"name": "साठे",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "बेकमेन",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "मोनेको",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "क्रेकजैक",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "गिट्स",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "शालीमार",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "पॅरी रावलगांव",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "निलगिरी",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "क्लासिक",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "अमूल",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "न्यूट्रामुल",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "मॉन्जीनिज",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "आरे",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "कॅमको",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "सम्राट",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "रॉयल",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "विजया",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "इंडाना",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "सफल",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "एशियन",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "विव्स ब्रेड",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "वेरका",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "सागर",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "सपन",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "प्रिया गोल्ड",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "न्यूट्रीन",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "शांग्रिला",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "चॅम्पियन",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "एम्प्रो",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "पार्ले",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "पतंजलि तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "नेस्ले",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "कॅडबरी",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "बोर्नविटा",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "हॉर्लिक्स",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "बूस्ट",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "मिल्कमेड",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "किसान",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "मैगी",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "फैरेक्स",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "अनिकस्प्रे",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "कॉम्प्लान",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "किटकैट",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "चार्ज",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "एक्लेयर",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "मॉडर्न ब्रेड",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "माल्टोवा",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "व्हिवा",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "माइलो",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "मिल्कफूड",
+		"isIndian": false,
+		"category": "बिस्कीट चॉकलेट दुग्ध उत्पादन ब्रेड"
+	}, {
+		"name": "गिरनार",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "हसमुख",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "टाटा टी",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "आसाम टी",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "सोसायटी",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "सपट (इस्टंट).डंका",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "बह्मपुत्र",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "एम.आर",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "शन",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "टिपस",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "इंडिया",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "अशोक",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "तेज",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "टाटा कॅफे",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "कन्सोलिडेटेट कॅफे",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "टाटा-टेटली",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "अमर-टी और अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "ब्रुक बॉन्ड",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "ताजमहल",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "रेड-लेबल",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "डायमंड",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "लिप्टन",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "ग्रीन लेबल",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "टाईगर",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "नेसकॅफे",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "नेसले",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "डेल्का",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "बू",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "सनराईज",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "श्री फ्लावर्स",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "ताजा",
+		"isIndian": false,
+		"category": "चाय कॉफी"
+	}, {
+		"name": "एनर्जी",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "सोसयो",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "कॅम्पाकोला",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "गुरूजी",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "ओन्जुस",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "जाम्पिन",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "नीरो",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "पिंगो",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "फ्ूटी",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "आस्वाद",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "डाबर",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "माला",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "रसना",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "हमदर्द",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "मैप्रो",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "रेनबो",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "कॅल्वर्ट",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "स्वीटेंब्लिका",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "रूह-अफजा",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "जय गजानन",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "हल्दीराम",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "गोकुल",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "बीकानेर",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "वेकफील्ड",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "नोगा",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "प्रिया",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "अशोक",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "उमा एच.पी.एम.सी उत्पाद",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "हिम तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "लेहर",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "पेप्सी",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "सेवन-अप",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "मिरिंडा",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "टीम",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "कोका-कोला",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "मैकडोवेल सोडा",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "मंगला",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "गोल्ड स्पॉट",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "लिम्का",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "सिट्रा",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "थम्स-अप",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "स्प्रिंट",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "डयूक्स",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "फॅन्टा",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "कॅडबरी",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "कनाडा ड्राय",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "क्रश",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "कॅडबरी अॅपी",
+		"isIndian": false,
+		"category": "शीतपेय शरबत चटनी अचार मुरब्बा"
+	}, {
+		"name": "बिसलेरी",
+		"isIndian": true,
+		"category": "पीने का पानी"
+	}, {
+		"name": "बैली",
+		"isIndian": true,
+		"category": "पीने का पानी"
+	}, {
+		"name": "नेचुरल",
+		"isIndian": true,
+		"category": "पीने का पानी"
+	}, {
+		"name": "अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "पीने का पानी"
+	}, {
+		"name": "एक्वाफिना",
+		"isIndian": false,
+		"category": "पीने का पानी"
+	}, {
+		"name": "किन्ले",
+		"isIndian": false,
+		"category": "पीने का पानी"
+	}, {
+		"name": "नेसले नेचुरल",
+		"isIndian": false,
+		"category": "पीने का पानी"
+	}, {
+		"name": "देनशों",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "जॉय",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "वाडीलाल",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "श्रीराम",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "पेस्तनजी",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "नेचर वर्ल्ड",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "गोकूल",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "अमूल",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "हिमालय",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "निरूला",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "करीना",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "मदर डेयरी",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "आरे",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "विंडी",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "हैव मोर",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "वेरका",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "नेचुरल तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "कॅडबरी",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "डॉलॉप",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "नाईस",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "ब्रुक ब्रांड के उत्पादन",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "क्वालिटी वॉल्स",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "कॉरनेली",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "बास्कीन-रॉबिन्स",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "यांकी-डूडल्स",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "कॉरनेट्टो",
+		"isIndian": false,
+		"category": "आईस्क्रीम"
+	}, {
+		"name": "सनफ्लावर मारूति",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "पोस्टमैन",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "धारा",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "रॉकेट",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "पत्नी",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "स्वीकार",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "कुर्सेला",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "सनडाप",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "रथ",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "मोहन",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "उमंग",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "विजया",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "सपन",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "पैराशूट",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "अशोक",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "सफोला",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "कोहिनूर",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "मधुर",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "इंजन",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "गगन",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "अमृत",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "वनस्पति",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "एमडीएच",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "एवरेस्ट",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "बेडेकर",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "कुबल",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "डाबर",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "सहकार",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "लिज्जत",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "गणेश",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "शक्तिमान आटा",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "टाटा नमक",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "निरमा नमक",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "जेमिनी",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "पतंजलि तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "डालडा",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "क्रिस्टल",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "लिप्टन",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "अन्नपूर्णा नमक",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "आटा और चपाती",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "मैगी",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "किसान",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "तरला",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "ब्रुक-चाड",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "पिल्सबरी आटा",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "कैप्टन कुक नमक और आटा",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "मॉडर्न चपाती",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "कारगिल आटा",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "लेज",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "लेहर",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "नॉर",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "मैक्डॉनाल्ड",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "बर्गर किंग",
+		"isIndian": false,
+		"category": "खाद्यतेल खाद्यपदार्थ"
+	}, {
+		"name": "विडियोकॉन",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "बी.पी.एल",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "ओनिडा",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सलोरा",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "एटीएंडटी",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टी-सीरीज",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "नेल्को",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "वेस्टर्न",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "अपट्रॉन",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "केल्ट्रान्",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "कॉस्मिक",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टीवीएस",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "गोदरेज",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "क्राउन",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "बजाज",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "उषा",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "पोलर",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "एकर",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सूर्या",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "ओरिएन्ट",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सिन्नी",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टूल्लू",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "क्रॉम्पटन",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "रवी",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "जय शंकर",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "कैलाश",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "श्रीराम",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "लॉयड इस",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "ब्लू स्टार",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "व्होल्टास",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "कूल होम",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "खेतान",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "जीप",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "नरवाना",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "एम्प्रो",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "निर्लेप",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "इलाईट",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "अंजली",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "जयको",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सुमीत",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "बंगाल",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "मैसूर",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "हॉकिंस",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "प्रेस्टीज",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "महाराजा",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "ज्ञान",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "प्रेशर कुकर",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "तृतीय",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "आईएफबी",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "आर.आर",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "फॅन",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "जीसी",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "फिलिप्स",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सोनी",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टीडीके",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "निप्पो",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "नेशनल - पैनासोनिक",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "शार्प",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "जीई",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "व्हर्लपूल",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सैमसंग",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "देवू",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "तोशिबा",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "एल जी हिताची",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "थॉमसन",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "इलेक्ट्रोलक्स",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "अकाई",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "सानसूई",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "केनवुड",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "आइवा",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "कैरियर",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टपरवेयर",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "जापान लाईफ",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "ओमेगा",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टाइमेक्स",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "राडो",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "पायनियर",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "व्हर्लपुल",
+		"isIndian": false,
+		"category": "विद्युत उपकरण गृहोपयोगी वस्तु"
+	}, {
+		"name": "टाइटन",
+		"isIndian": true,
+		"category": "घड़ियां"
+	}, {
+		"name": "अजन्ता",
+		"isIndian": true,
+		"category": "घड़ियां"
+	}, {
+		"name": "एचएमटी",
+		"isIndian": true,
+		"category": "घड़ियां"
+	}, {
+		"name": "मैक्सिमा",
+		"isIndian": true,
+		"category": "घड़ियां"
+	}, {
+		"name": "ऑल्विन",
+		"isIndian": true,
+		"category": "घड़ियां"
+	}, {
+		"name": "फास्ट-ट्रॅक",
+		"isIndian": true,
+		"category": "घड़ियां"
+	}, {
+		"name": "ओमेगा",
+		"isIndian": false,
+		"category": "घड़ियां"
+	}, {
+		"name": "टाईमेक्स",
+		"isIndian": false,
+		"category": "घड़ियां"
+	}, {
+		"name": "टीसीएल",
+		"isIndian": false,
+		"category": "घड़ियां"
+	}, {
+		"name": "जीफ्लो",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "विल्सन",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "कैम्लिन",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "रेव्हलॉन",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "रोटोमेक",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "सेलो",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "स्टिक",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "चंद्रा",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "मोटर्स",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "कैमल",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "बिट्ट प्लेटो",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "कोलो",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "त्रिवेणी",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "फ्लोरा",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "अप्सरा",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "नटराज",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "हिंदुस्तान",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "ओमेगा",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "लोटस",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "लिंक तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "पार्कर",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "पायलट",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "विंडसर-न्यूटन",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "फैबर-कैसेल",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "लगाकर",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "दिक",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "हॉट ब्लैक",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "कोरस",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "अस",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "रोटरिंग,[",
+		"isIndian": false,
+		"category": "लेखन सामग्री"
+	}, {
+		"name": "लखानी",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "लिबी स्टैन्डर्ड",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "एक्शन",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "पैरागॉन",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "फ्लॅश",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "करोना",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "वेलकम",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "रेक्सोना",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "रिलैक्सो",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "लोटस",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "रेड-टेप",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "फिनिक्स",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "वायरिंग",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "बिल्ली",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "कान्होबा",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "किवी शू पॉलिश",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "फ्लेक्स",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "बुडलेनड तथा अन्य स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "बाटा",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "प्यूमा",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "पॉवर",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "चेरी-ब्लॉसम",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "आदिदास",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "रीबॉक",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "नाइक",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "ली कूपर.",
+		"isIndian": false,
+		"category": "जूते चप्पल पॉलिश"
+	}, {
+		"name": "पीटर इंग्लैंड",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "व्हॅन हुसेन",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "अॅलेन सॉली",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "लुई फिलिप",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "कलरप्लस",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "मफतलाल",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "ट्रेंड",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "केम्ब्रिज",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "डबल बुल",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "झोडिएक",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "अरविंद डेनिम",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "डॉन",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "प्रोलीन",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "टीटी",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "लक्स",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "अमूल",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "वीआईपी",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "रूपा",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "रेमण्ड",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "पार्क एवेन्यू अल्टिमो",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "न्यूपोर्ट",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "किलर फ्लाईंग मशीन",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "ड्यूक्स",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "कोलकाता",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "लुधियाना",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "मॉन्टे काली",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "कॉटन किंग",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "लिनेन किंग तथा त्रिपुरा के सभी",
+		"isIndian": true,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "ली के सभी उत्पाद",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "ब्लिगटन",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "अॅरो",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "लकोस्ट",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "सॅनफिस्को",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "लेविस",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "पेपे जीन्स",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "रैंगलर",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "बेनेटोन",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "रीड एण्ड टेलर",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "बॉयफ्रेंड",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "क्रोकोडाइल",
+		"isIndian": false,
+		"category": "तैयार कपड़े"
+	}, {
+		"name": "माइक्रोमैक्स",
+		"isIndian": true,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "कारबन",
+		"isIndian": true,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "डी-आई और स्थानीय उत्पादन",
+		"isIndian": true,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "चीन के सारे उत्पाद",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "एम-आई",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "ओप्पो",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "वीवो",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "सैमसंग",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "झिओमी",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "आयफोन",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	}, {
+		"name": "एप्पल",
+		"isIndian": false,
+		"category": "मोबाईल फोन"
+	},{
     "category" : "Bath Soaps",
     "isIndian" : true,
     "name" : "Santoor"
