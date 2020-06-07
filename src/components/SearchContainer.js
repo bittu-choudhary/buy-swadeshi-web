@@ -10,7 +10,8 @@ import Image from  'react-bootstrap/Image'
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
-
+import Bm25 from "../library/wink-bm25-text-search"
+import Nlp from "wink-nlp-utils"
 
 class Search extends Component {
   // state = {
@@ -40,7 +41,34 @@ class Search extends Component {
       } 
     }
     // this.state = { brandList: brandData.brands }
-    this.rebuildIndex()
+    this.rebuildIndexNew()
+  }
+
+
+  rebuildIndexNew = () => {
+    const { brandList } = this.state
+    // console.log()
+    const engine = Bm25()
+    engine.defineConfig( { fldWeights: { name: 1, category: 2 } } )
+    brandList.map( ( doc, i ) => {
+      // Note, 'i' becomes the unique id for 'doc'
+      // console.log( doc )
+      engine.addDoc( doc, i )
+    } )
+    console.log(engine.consolidated)
+    engine.consolidate()
+    const consolidatedJson =  engine.exportJSON()
+    this.state = {
+      brandList: brandList,
+      search: [],
+      searchResults: [],
+      isLoading: false,
+      isError: false,
+      searchQuery: ``,
+      showAlert: true,
+      consolidatedJson: consolidatedJson
+    } 
+    console.log(engine.consolidated)
   }
 
   /**
@@ -90,16 +118,26 @@ class Search extends Component {
    * in which the results will be added to the state
    */
   searchData = e => {
+    const { brandList, consolidatedJson } = this.state
     if (e.target.value.length === 0) {
       this.setState({showAlert: true})
     } else {
       this.setState({showAlert: false})
     }
-    firebase
-        .analytics()
-        .logEvent("web_search", {query: e.target.value})
-    const { search } = this.state
-    const queryResult = search.search(e.target.value)
+    // firebase
+    //     .analytics()
+    //     .logEvent("web_search", {query: e.target.value})
+    // const { search } = this.state
+    // const queryResult = search.search(e.target.value)
+    var queryResult = []
+    const engine = Bm25()
+    engine.importJSON(consolidatedJson)
+    const results = engine.search( e.target.value.toLowerCase() )
+    results.map ((result) => {
+      queryResult.push(brandList[result[0]])
+    })
+    // console.log( '%d entries found.', results.length )
+    // console.log(queryResult[0])
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
   }
   handleSubmit = e => {
