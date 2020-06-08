@@ -7,15 +7,18 @@ import firebase from "gatsby-plugin-firebase"
 
 const handleToggle = (val, i18n) => {
   let event = "lang_toggle"
+  let new_lang = ""
   if (val){
     i18n.changeLanguage('hi')
+    new_lang = "hi"
   } else {
     i18n.changeLanguage('en')
+    new_lang = "en"
   }
   if (process.env.NODE_ENV !== "development") {
     firebase
       .analytics()
-      .logEvent(event)
+      .logEvent(event, {selection: new_lang})
   }
 
 }
