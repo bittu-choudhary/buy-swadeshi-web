@@ -68,6 +68,13 @@ class Search extends Component {
     results.map ((result) => {
       queryResult.push(brandList[result[0]])
     })
+    if (process.env.NODE_ENV !== "development") {
+      if(queryResult.length === 0) {
+        firebase
+            .analytics()
+            .logEvent("no_result", {query: e.target.value})
+      }
+    }
     // console.log( '%d entries found.', results.length )
     // console.log(queryResult[0])
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
