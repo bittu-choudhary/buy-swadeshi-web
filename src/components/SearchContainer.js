@@ -10,7 +10,8 @@ import Image from  'react-bootstrap/Image'
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
-
+import IndexedBrandData from "../../content/indexed_data.json"
+import Bm25 from "../library/wink-bm25-text-search"
 
 class Search extends Component {
   // state = {
@@ -40,49 +41,6 @@ class Search extends Component {
       } 
     }
     // this.state = { brandList: brandData.brands }
-    this.rebuildIndex()
-  }
-
-  /**
-   * rebuilds the overall index based on the options
-   */
-  rebuildIndex = () => {
-    const { brandList } = this.state
-
-    const dataToSearch = new JsSearch.Search(`name`)
-
-    /**
-     *  defines a indexing strategy for the data
-     * more more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
-     */
-    dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
-
-    /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
-     *
-     */
-    dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer()
-
-    /**
-     * defines the search index
-     * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
-     */
-    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex(`name`)
-
-    dataToSearch.addIndex(`name`) // sets the index attribute for the data
-    dataToSearch.addIndex(`category`) // sets the index attribute for the data
-    dataToSearch.addDocuments(brandList) // adds the data to be searched
-    this.state = {
-      brandList: brandList,
-      search: dataToSearch,
-      searchResults: [],
-      isLoading: false,
-      isError: false,
-      searchQuery: ``,
-      showAlert: true,
-    }
-    // this.setState({ search: dataToSearch, isLoading: false })
   }
 
   /**
@@ -90,16 +48,35 @@ class Search extends Component {
    * in which the results will be added to the state
    */
   searchData = e => {
+    const { brandList } = this.state
     if (e.target.value.length === 0) {
       this.setState({showAlert: true})
     } else {
       this.setState({showAlert: false})
     }
-    firebase
-        .analytics()
-        .logEvent(e.target.value)
-    const { search } = this.state
-    const queryResult = search.search(e.target.value)
+    if (process.env.NODE_ENV !== "development") {
+      firebase
+          .analytics()
+          .logEvent("web_search", {query: e.target.value})
+    }
+    // const { search } = this.state
+    // const queryResult = search.search(e.target.value)
+    var queryResult = []
+    const engine = Bm25()
+    engine.importJSON(IndexedBrandData)
+    const results = engine.search( e.target.value.toLowerCase() )
+    results.map ((result) => {
+      queryResult.push(brandList[result[0]])
+    })
+    if (process.env.NODE_ENV !== "development") {
+      if(queryResult.length === 0) {
+        firebase
+            .analytics()
+            .logEvent("no_result", {query: e.target.value})
+      }
+    }
+    // console.log( '%d entries found.', results.length )
+    // console.log(queryResult[0])
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
   }
   handleSubmit = e => {
@@ -118,9 +95,11 @@ class Search extends Component {
   } 
 
   SendFirebaseAnalytics = (event) => {
-    firebase
+    if (process.env.NODE_ENV !== "development") {
+      firebase
         .analytics()
         .logEvent(event)
+    }
   }
 
   NavBarBody = (props) => {
@@ -134,12 +113,12 @@ class Search extends Component {
         width: `fit-content`,
         margin: `5% auto`
       }}>
-        <Button  onClick={() => this.SendFirebaseAnalytics("clicked_feedback")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a onClick={() => this.SendFirebaseAnalytics("clicked_play_badge")} title="Download our Android app"  rel="noreferrer" href="https://www.google.com" target="_blank"  >
+        <Button  onClick={() => this.SendFirebaseAnalytics("feedback_click")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
+        <a onClick={() => this.SendFirebaseAnalytics("play_button_click")} title="Download our Android app"  rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
           <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
           </Image>
           </a>      
-         <Button onClick={() => this.SendFirebaseAnalytics("clicked_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
+         <Button onClick={() => this.SendFirebaseAnalytics("web_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
       </div>
     )
   }
