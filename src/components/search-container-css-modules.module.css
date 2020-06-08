@@ -1,0 +1,374 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  margin: 0px !important;
+}
+
+.searchField, .searchContainer {
+  margin: auto;
+}
+
+.bar{
+  margin:0 auto;
+  width:100%;
+  border-radius:30px;
+  border:1px solid #dcdcdc;
+  text-align: center;
+}
+.bar:hover{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline:none;
+}
+.searchbar{
+  height:45px;
+  border:none;
+  width:80%;
+  font-size:14px;
+  outline: none;
+  
+}
+
+tr td:first-child {
+  padding-left: 2% !important;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: opacity .15s linear;
+}
+
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+
+.button-toggle
+{
+    position: relative;
+    top: 50%;
+    width: 60px;
+    height: 15px;
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+    margin-right: 0;
+}
+
+.button-toggle.r, .button-toggle.r .layer
+{
+    border-radius: 100px;
+}
+
+.hindi-lang-toggle {
+  margin-right: 60px;
+  width: inherit;
+}
+
+.hindi-lang-toggle p{
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  margin-right: 60px;
+}
+
+
+.checkbox-toggle
+{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+}
+
+.knobs
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 48%;
+    background-color: #ebf7fc;
+    transition: 0.1s ease all;
+    z-index: 1;
+}
+/* Button 3 */
+.button-toggle .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 4px;
+    height: .2px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 3.5px 3.5px;
+    background-color: #03A9F4;
+    border-radius: 50%;
+    transition: 0.1s ease all/*, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);*/
+}
+
+.button-toggle .checkbox-toggle:active + .knobs:before
+{
+    width: 25px;
+    border-radius: 100px;
+}
+
+.button-toggle .checkbox-toggle:checked:active + .knobs:before
+{
+    margin-left: -26px;
+}
+
+.button-toggle .checkbox-toggle:checked + .knobs:before
+{
+    content: '';
+    left: 20px;
+    background-color: #F44336;
+}
+
+.button-toggle .checkbox-toggle:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+
+.header-container {
+  height: 75px;
+}
+
+.footer-container {
+  height: 50px;
+}
+
+.alert-success p {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-left: 15px;
+}
+
+
+footer p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.lang-toggle-container {
+  margin-top: -68px;
+  width: fit-content;
+  float: right;
+  padding: 24px;
+}
+
+.nav-bar-header {
+  width: fit-content;
+  margin-right: 80px;
+  margin-top: -90px;
+  display: none;
+  padding: 24px;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+  .searchField, .searchContainer {
+    width: 80%;
+  }
+
+  .alert-success {
+    height: 75px;
+  }
+
+  .alert-success  p{
+    font-size: 18px;
+  }
+  
+  .nav-bar-header {
+    display: block !important;
+  }
+
+  .nav-bar-body {
+    display: none !important;
+  }
+
+  header {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .searchField, .searchContainer {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .lang-toggle-container {
+    margin-top: -30px;
+    width: fit-content;
+    float: right;
+    margin-right: 14px;
+    padding: 0;
+  }
+
+  .nav-bar-header {
+    width: fit-content;
+    margin-right: 75px;
+    margin-top: -50px;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .alert-success p {
+    font-size: 14px;
+  }
+
+  .alert-success {
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header h1 {
+    font-size: 1.3rem !important;
+  }
+
+  header, footer p {
+    font-size: 13px !important;
+  }
+
+  .header-container {
+    height: 55px;
+  }
+
+  .footer-container {
+    height: 30px;
+  }
+
+  .lang-toggle-container {
+    margin-top: -25px;
+    width: fit-content;
+    float: right;
+    margin-right: 10px;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .alert-success p {
+    font-size: 12px;
+  }
+
+  .searchbar {
+    font-size: 12px;
+  }
+
+  .lang-toggle-container {
+    margin-top: -25px;
+    width: fit-content;
+    float: right;
+    margin-right: 10px;
+    padding: 0;
+  }
+
+}
+
+
+@media only screen and (max-width: 300px) {
+  header h1 {
+    font-size: 1rem !important;
+  }
+  header, footer p {
+    font-size: 10px !important;
+  }
+
+  .header-container {
+    height: 45px;
+  }
+
+  .alert-success p {
+    font-size: 10px;
+  }
+
+  .alert-success {
+    height: 50px;
+  }
+
+  .searchbar{
+    height:30px;
+  }
+
+}
+
+.nav-bar-button {
+  color: #000 !important;
+  background-color: hsla(188, 78%, 46%, 1) !important;
+}
+
+.nav-button {
+  color: #000 !important;
+  background-color: hsla(188, 78%, 46%, 1) !important;
+}
+
+@media only screen and (max-width: 300px) {
+  .nav-button {
+    width: 70px !important;
+    font-size: 10px !important;
+  }
+
+  .nav-app-button {
+    width: 75px !important;
+  }
+
+  .search-result-table th, td{
+    font-size: 14px !important;
+  }
+}
