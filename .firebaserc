@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "buy-swadeshi"
+    "default": "buy-swadeshi-staging-dc42b",
+    "staging": "buy-swadeshi-staging-dc42b",
+    "production": "buy-swadeshi"
   }
 }
