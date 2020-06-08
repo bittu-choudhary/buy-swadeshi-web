@@ -10,9 +10,11 @@ import firebase from "gatsby-plugin-firebase"
 
 
 const sendFirebaseAnalytics = (event) => {
-  firebase
+  if (process.env.NODE_ENV !== "development") {
+    firebase
       .analytics()
       .logEvent(event)
+  }
 }
 
 
