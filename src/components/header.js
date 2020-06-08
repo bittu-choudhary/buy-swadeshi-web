@@ -12,10 +12,11 @@ const handleToggle = (val, i18n) => {
   } else {
     i18n.changeLanguage('en')
   }
-
-  firebase
+  if (process.env.NODE_ENV !== "development") {
+    firebase
       .analytics()
       .logEvent(event)
+  }
 
 }
 

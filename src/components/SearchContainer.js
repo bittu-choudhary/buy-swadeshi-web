@@ -54,9 +54,11 @@ class Search extends Component {
     } else {
       this.setState({showAlert: false})
     }
-    // firebase
-    //     .analytics()
-    //     .logEvent("web_search", {query: e.target.value})
+    if (process.env.NODE_ENV !== "development") {
+      firebase
+          .analytics()
+          .logEvent("web_search", {query: e.target.value})
+    }
     // const { search } = this.state
     // const queryResult = search.search(e.target.value)
     var queryResult = []
@@ -86,9 +88,11 @@ class Search extends Component {
   } 
 
   SendFirebaseAnalytics = (event) => {
-    firebase
+    if (process.env.NODE_ENV !== "development") {
+      firebase
         .analytics()
         .logEvent(event)
+    }
   }
 
   NavBarBody = (props) => {
