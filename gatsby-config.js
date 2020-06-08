@@ -6,9 +6,36 @@
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
-require("dotenv").config({
-  path: `.env.${activeEnv}`,
-})
+// require("dotenv").config({
+//   path: `.env.${activeEnv}`,
+// })
+
+var firebaseConfig = {}
+if(activeEnv === "staging") {
+  console.log("Setting firebase to Staging")
+  firebaseConfig = {
+    apiKey:'AIzaSyCpS2mzO07wG9dXZZQtZG5SsXTmNTkOp0Y',
+    authDomain: "buy-swadeshi-staging-dc42b.firebaseapp.com" ,
+    databaseURL: "https://buy-swadeshi-staging-dc42b.firebaseio.com",
+    projectId: "buy-swadeshi-staging-dc42b",
+    storageBucket: "buy-swadeshi-staging-dc42b.appspot.com",
+    messagingSenderId:'363613678462',
+    appId: "1:363613678462:web:8f56f650da710989c5e12f",
+    measurementId: "G-1PBKZD3JE3",
+  }
+} else if (activeEnv === "production") {
+  console.log("Setting firebase to Production")
+  firebaseConfig = {
+    apiKey:'AIzaSyDJqesu1KoTaHC7PR_A7mw7OY1GFGYgAOA',
+    authDomain:'buy-swadeshi.firebaseapp.com',
+    databaseURL:'https://buy-swadeshi.firebaseio.com',
+    projectId:'buy-swadeshi',
+    storageBucket:'buy-swadeshi.appspot.com',
+    messagingSenderId:'317395791078',
+    appId:'1:317395791078:web:e7cf672acd3ee85171df27',
+    measurementId:'G-H9FKSGL6P1',
+  }
+}
 
 module.exports = {
   /* Your site config here */
@@ -38,16 +65,7 @@ module.exports = {
          performance: false, 
          analytics:true,    
         }, 
-        credentials: {  
-         apiKey: process.env.API_KEY, 
-         authDomain: process.env.AUTH_DOMAIN,        
-         databaseURL: process.env.DATABASE_URL,          
-         projectId: process.env.PROJECT_ID,           
-         storageBucket: process.env.STORAGE_BUCKET, 
-         messagingSenderId:  process.env.MESSAGING_SENDER_ID,           
-         appId: process.env.APP_ID,   
-         measurementId: process.env.MEASUREMENT_ID, 
-       }   
+        credentials: firebaseConfig   
       },
      },
     {
