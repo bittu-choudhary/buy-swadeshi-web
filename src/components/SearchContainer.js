@@ -12,6 +12,7 @@ import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
 import IndexedBrandData from "../../content/indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
+import Categories from "../components/Categories"
 
 class Search extends Component {
   // state = {
@@ -38,6 +39,7 @@ class Search extends Component {
         isError: false,
         searchQuery: ``,
         showAlert: true,
+        showCategory: true,
       } 
     }
     // this.state = { brandList: brandData.brands }
@@ -50,9 +52,9 @@ class Search extends Component {
   searchData = e => {
     const { brandList } = this.state
     if (e.target.value.length === 0) {
-      this.setState({showAlert: true})
+      this.setState({showAlert: true, showCategory: true})
     } else {
-      this.setState({showAlert: false})
+      this.setState({showAlert: false, showCategory: false})
     }
     if (process.env.NODE_ENV !== "development") {
       firebase
@@ -181,6 +183,7 @@ class Search extends Component {
           </form>
           <SearchResultViewer queryResults={queryResults}/>
         </div>
+        <Categories showComponent={this.state.showCategory}/>
       </div>
     )
   }
