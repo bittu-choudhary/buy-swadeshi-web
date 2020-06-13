@@ -40,6 +40,7 @@ class Search extends Component {
         searchQuery: ``,
         showAlert: true,
         showCategory: true,
+        selectedCategory: undefined,
       } 
     }
     // this.state = { brandList: brandData.brands }
@@ -52,7 +53,7 @@ class Search extends Component {
   searchData = e => {
     const { brandList } = this.state
     if (e.target.value.length === 0) {
-      this.setState({showAlert: true, showCategory: true})
+      this.setState({showCategory: true})
     } else {
       this.setState({showAlert: false, showCategory: false})
     }
@@ -83,6 +84,14 @@ class Search extends Component {
   }
   handleSubmit = e => {
     e.preventDefault()
+  }
+
+  selectCategory = (category) => {
+    this.setState({showAlert: false, selectedCategory: category})
+  }
+
+  home = () => {
+    this.setState({showAlert: true, selectedCategory: undefined})
   }
 
   CreateAlert = (props) => {
@@ -183,7 +192,7 @@ class Search extends Component {
           </form>
           <SearchResultViewer queryResults={queryResults}/>
         </div>
-        <Categories showComponent={this.state.showCategory}/>
+        <Categories clickToHome={this.home} selectCategory={this.selectCategory} selectedCategory={this.state.selectedCategory} showComponent={this.state.showCategory}/>
       </div>
     )
   }
