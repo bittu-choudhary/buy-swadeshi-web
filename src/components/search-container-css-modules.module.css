@@ -7,13 +7,28 @@ body {
   margin: auto;
 }
 
-.card {
+.card, .product-col {
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  border: solid rgb(181, 181, 181);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.card-transition {
   transition: box-shadow 0.5s;
   will-change: transform;
 }
 
-.card:hover {
+.card:hover, .product-col:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.3);
 }
 
