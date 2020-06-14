@@ -158,7 +158,6 @@ const Categories = (props) => {
   if (selectedCategory === undefined) {
     marginTop = `50px`
   }
-  console.log(`bnana - > ${selectedCategory}`)
   if (showComponent) {
     return (
       <Container style={{marginTop: marginTop}}>
