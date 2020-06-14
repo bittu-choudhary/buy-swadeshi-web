@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import * as JsSearch from "js-search"
-import JSONData from "../../content/brand_list.json"
+import JSONData from "../../content/new_brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
@@ -10,9 +10,11 @@ import Image from  'react-bootstrap/Image'
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
-import IndexedBrandData from "../../content/indexed_data.json"
+import IndexedBrandData from "../../content/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
 import Categories from "../components/Categories"
+
+var _ = require('lodash') 
 
 class Search extends Component {
   // state = {
@@ -68,8 +70,27 @@ class Search extends Component {
     const engine = Bm25()
     engine.importJSON(IndexedBrandData)
     const results = engine.search( e.target.value.toLowerCase() )
-    results.map ((result) => {
-      queryResult.push(brandList[result[0]])
+    results.map ((indexedResult) => {
+      var resultObjectId = indexedResult[0].split("_type")[0]
+      var resultType = indexedResult[0].split("_type")[1]
+      var resultData = {}
+      switch (resultType) {
+        case "Category":
+          resultData = _.pick(JSONData.categories[resultObjectId], ['id', 'name', 'image']) // extract id, name, image from object
+          resultData["type"] = "category"
+          break;
+        case "Company":
+          resultData = _.pick(JSONData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian']) 
+          resultData["type"] = "company"
+          break;
+        case "Product":
+          resultData = _.pick(JSONData.products[resultObjectId], ['id', 'name', 'image', 'isIndian']) 
+          resultData["type"] = "product"
+          break;
+        default:
+          break;
+      }
+      queryResult.push(resultData)
     })
     if (process.env.NODE_ENV !== "development") {
       if(queryResult.length === 0) {
@@ -87,7 +108,10 @@ class Search extends Component {
   }
 
   selectCategory = (category) => {
-    this.setState({showAlert: false, selectedCategory: category})
+    console.log(category)
+    if (category !== undefined) {
+      this.setState({searchQuery: ``, showAlert: false, selectedCategory: category, showCategory: true})
+    }
   }
 
   home = () => {
@@ -190,7 +214,7 @@ class Search extends Component {
               />
             </div>
           </form>
-          <SearchResultViewer queryResults={queryResults}/>
+          <SearchResultViewer  selectCategory={this.selectCategory} queryResults={queryResults}/>
         </div>
         <Categories clickToHome={this.home} selectCategory={this.selectCategory} selectedCategory={this.state.selectedCategory} showComponent={this.state.showCategory}/>
       </div>
