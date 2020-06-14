@@ -9,18 +9,30 @@ import Col from 'react-bootstrap/Col';
 const PopulateResultCol = (props) => {
   let icon = <MdCancel/>
   let fontColor = `red`
-  const {index, results} = props
+  const {index, results, selectCategory} = props
   let loopLength = index + 5 <results.length ? index + 5 : (results.length - 1)
   let col = []
   for (let i = index; i <= loopLength ; i++ ) {
     const resultId = results[i]
-    console.log(resultId)
-    if (resultId.isIndian) {
-      icon = <MdCheckCircle/>
-      fontColor = `green`
+    // console.log(resultId)
+    let remark
+    let clickId
+    if (resultId.type === "category") {
+      remark = <span style={{color: `#155724`}} className={styles.searchResultIndianIcon} > See products
+                </span>
+      clickId = resultId.id
+    } else {
+      if (resultId.isIndian) {
+        icon = <MdCheckCircle/>
+        fontColor = `green`
+      }
+      clickId = undefined
+      remark = <span style={{color: fontColor}} className={styles.searchResultIndianIcon} >Indian &nbsp;
+                  {icon}
+                </span>
     }
     col.push(
-      <Col style={{ padding: `1px`}} key={resultId.name} id={resultId.name} xs={6} md={6} lg={2} xl={2}>
+      <Col onClick={() => selectCategory(clickId)} style={{ padding: `1px`}} key={resultId.name} id={resultId.name} xs={6} md={6} lg={2} xl={2}>
         <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
           <Row style={{height: `20%`}}>
             <div className={styles.searchResultTitle}>
@@ -32,9 +44,7 @@ const PopulateResultCol = (props) => {
           </Row>
           <Row style={{height: `60%`}}></Row>
           <Row style={{height: `20%`}}>
-            <span style={{color: fontColor}} className={styles.searchResultIndianIcon} >Indian &nbsp;
-                {icon}
-              </span>
+            {remark}
           </Row>
         </div>
       </Col>
@@ -46,7 +56,7 @@ const PopulateResultCol = (props) => {
 }
 
 const DisplayResults = (props) => {
-  const {queryResults} = props
+  const {queryResults, selectCategory} = props
   // console.log(selectedCategory)
   // const products = CategoriesData.categories[`${selectedCategory}`]["products"]
   // console.log(products)
@@ -54,7 +64,7 @@ const DisplayResults = (props) => {
   const rows =resultsSortedArr.map((result, index) => {
     if( index%6 === 0) {
       return (<Row id={`res_row_` + index} key={`res_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`, paddingBottom: `5px`}}>
-        <PopulateResultCol index={index} results={resultsSortedArr}/>
+        <PopulateResultCol index={index} results={resultsSortedArr} selectCategory={selectCategory} />
       </Row>)
     }
   })
@@ -63,7 +73,7 @@ const DisplayResults = (props) => {
 
 export default function SearchResultViewer ( props  ) {
   const { t } = useTranslation()
-  const queryResults = props.queryResults
+  const {queryResults, selectCategory} = props
   let fontColor = "red"
   let icon = <MdCheckCircle/>
 
@@ -73,7 +83,7 @@ export default function SearchResultViewer ( props  ) {
 
   return (
     <div class="container" style={{paddingTop: `50px`}}>
-      <DisplayResults queryResults={queryResults} />
+      <DisplayResults queryResults={queryResults} selectCategory={selectCategory} />
     </div>
   )
   
