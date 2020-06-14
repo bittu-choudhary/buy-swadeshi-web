@@ -253,6 +253,24 @@ footer p {
   transform: translate(-50%,-50%);
 }
 
+.search-result-title {
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.search-result-indian-icon {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  padding-right: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  right: 0;
+  position: absolute;
+}
+
 
 @media only screen and (min-width: 1000px) {
   .searchField, .searchContainer {
@@ -360,6 +378,9 @@ footer p {
     border-radius: 15px;
     height: 140px;
   }
+  .search-result-indian-icon {
+    padding-top: 0;
+  }
 
 }
 
@@ -386,6 +407,14 @@ footer p {
 
   .searchbar{
     height:30px;
+  }
+
+  .search-result-indian-icon {
+    font-size: 10px;
+  }
+  
+  .search-result-title p {
+    font-size: 10px;
   }
 
 }
