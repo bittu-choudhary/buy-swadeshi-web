@@ -13,6 +13,8 @@ import CategoriesData from "../../content/new_brand_list.json"
 import CartIcon from '../images/cart-icon.png'
 import CartIcon2 from '../images/cart-icon-2.png'
 import Search from "./SearchContainer"
+import { MdCancel } from "react-icons/md"
+import { MdCheckCircle } from "react-icons/md"
 
 var _ = require('lodash') 
 
@@ -72,17 +74,40 @@ const PopulateProductCol = (props) => {
   const {index, products} = props
   let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
   let col = []
+  let icon = <MdCancel/>
+  let fontColor = `red`
   for (let i = index; i <= loopLength ; i++ ) {
     const productId = products[i]
+    let remark
+    let caption = `Product`
+    if (productId.isIndian) {
+      icon = <MdCheckCircle/>
+      fontColor = `green`
+    }
+    remark = <span style={{color: fontColor}} className={styles.searchResultIndianIcon} >Indian &nbsp;
+                  {icon}
+                </span>
     col.push(
-      <Col style={{ padding: `1px`}} key={productId.id} id={productId.id} xs={6} md={6} lg={2} xl={2}>
+      <Col  style={{ padding: `1px`}} key={productId.id} id={productId.id} xs={6} md={6} lg={2} xl={2}>
         <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
-          <div className={styles.categoryTitle}>
-            <p style={{textAlign: `center`}}>
-              {productId.name}
-            </p>
-              {/* <Image src={CartIcon} thumbnail /> */}
-          </div>
+          <Row style={{height: `20%`}}>
+            <div className={styles.searchResultTitle} style={{textAlign: `center`}}>
+              <p style={{textAlign: `center`, marginBottom: `0px`}}>
+                {productId.name}
+              </p>
+              <span 
+              style={{
+                fontSize: `12px`,
+                color: `gray`}}>
+              {caption}
+            </span>
+                {/* <Image src={CartIcon} thumbnail /> */}
+            </div>
+          </Row>
+          <Row style={{height: `60%`}}></Row>
+          <Row style={{height: `20%`}}>
+            {remark}
+          </Row>
         </div>
       </Col>
     )
