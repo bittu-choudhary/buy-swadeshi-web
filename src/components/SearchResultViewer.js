@@ -17,11 +17,18 @@ const PopulateResultCol = (props) => {
     // console.log(resultId)
     let remark
     let clickId
+    let caption
     if (resultId.type === "category") {
-      remark = <span style={{color: `#155724`}} className={styles.searchResultIndianIcon} > See products
+      remark = <span style={{color: `#155724`}} className={styles.searchResultIndianIcon} > See Products
                 </span>
       clickId = resultId.id
+      caption = `Category`
     } else {
+      if (resultId.type === `product`){
+        caption = `Product`
+      } else {
+        caption = `Company`
+      }
       if (resultId.isIndian) {
         icon = <MdCheckCircle/>
         fontColor = `green`
@@ -32,13 +39,19 @@ const PopulateResultCol = (props) => {
                 </span>
     }
     col.push(
-      <Col onClick={() => selectCategory(clickId)} style={{ padding: `1px`}} key={resultId.name} id={resultId.name} xs={6} md={6} lg={2} xl={2}>
+      <Col onClick={() => selectCategory(clickId)} style={{ padding: `1px`}} key={resultId.id} id={resultId.id} xs={6} md={6} lg={2} xl={2}>
         <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
           <Row style={{height: `20%`}}>
-            <div className={styles.searchResultTitle}>
-              <p style={{textAlign: `center`}}>
+            <div className={styles.searchResultTitle} style={{textAlign: `center`}}>
+              <p style={{textAlign: `center`, marginBottom: `0px`}}>
                 {resultId.name}
               </p>
+              <span 
+              style={{
+                fontSize: `12px`,
+                color: `gray`}}>
+              {caption}
+            </span>
                 {/* <Image src={CartIcon} thumbnail /> */}
             </div>
           </Row>
@@ -60,11 +73,14 @@ const DisplayResults = (props) => {
   // console.log(selectedCategory)
   // const products = CategoriesData.categories[`${selectedCategory}`]["products"]
   // console.log(products)
-  const resultsSortedArr = queryResults.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
-  const rows =resultsSortedArr.map((result, index) => {
+  let order = { product: 1, category: 2, company: 3 };
+  queryResults.sort(function (a, b) {
+    return order[a.type] - order[b.type];
+  })
+  const rows =queryResults.map((result, index) => {
     if( index%6 === 0) {
       return (<Row id={`res_row_` + index} key={`res_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`, paddingBottom: `5px`}}>
-        <PopulateResultCol index={index} results={resultsSortedArr} selectCategory={selectCategory} />
+        <PopulateResultCol index={index} results={queryResults} selectCategory={selectCategory} />
       </Row>)
     }
   })
