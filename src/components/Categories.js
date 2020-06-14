@@ -8,7 +8,8 @@ import Col from  'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import ReactDOM from 'react-dom'
 import { useSpring, useSprings, animated, interpolate } from 'react-spring'
-import CategoriesData from "../../content/sample-buy-swadeshi.json"
+import CategoriesData from "../../content/new_brand_list.json"
+
 import CartIcon from '../images/cart-icon.png'
 import CartIcon2 from '../images/cart-icon-2.png'
 import Search from "./SearchContainer"
@@ -96,7 +97,11 @@ const DisplayProducts = (props) => {
   console.log(selectedCategory)
   const products = CategoriesData.categories[`${selectedCategory}`]["products"]
   console.log(products)
-  const productsSortedArr = products.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
+  let productsArr = []
+  for (var key in products){
+    productsArr.push(products[key])
+  }
+  const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
   const rows = productsSortedArr.map((product, index) => {
     if( index%6 === 0) {
       return (<Row id={`pro_row_` + index} key={`pro_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`, paddingBottom: `5px`}}>
