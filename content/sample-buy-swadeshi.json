@@ -333,7 +333,7 @@
     },
     "category_name_7" : {
       "name" : "category name 7",
-      "id" : "category name 7",
+      "id" : "category_name_7",
       "image" : "https://blah-blah.com/blah.jpg",
       "products" : [
         {
@@ -388,7 +388,7 @@
     },
     "category_name_8" : {
       "name" : "category name 8",
-      "id" : "category name 8",
+      "id" : "category_name_8",
       "image" : "https://blah-blah.com/blah.jpg",
       "products" : [
         {
