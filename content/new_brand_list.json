@@ -1,0 +1,1141 @@
+{
+    "version": "xxxx",
+    "categories": {
+        "clothing_H7B": {
+            "name": "Clothing",
+            "id": "clothing_H7B",
+            "image": "",
+            "children": {},
+            "products": {
+                "park_avenue_mDv": {
+                    "name": "Park Avenue",
+                    "id": "park_avenue_mDv",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "spyker_Tul": {
+                    "name": "Spyker",
+                    "id": "spyker_Tul",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "flying_machine_nYb": {
+                    "name": "Flying Machine",
+                    "id": "flying_machine_nYb",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "newport_DPO": {
+                    "name": "Newport",
+                    "id": "newport_DPO",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "quads_r1M": {
+                    "name": "Quads",
+                    "id": "quads_r1M",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "ruf_&_tuf_jrm": {
+                    "name": "Ruf & Tuf",
+                    "id": "ruf_&_tuf_jrm",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "excalibur_LQa": {
+                    "name": "Excalibur",
+                    "id": "excalibur_LQa",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "is_5IZ": {
+                    "name": "Is",
+                    "id": "is_5IZ",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "creyate_5Ew": {
+                    "name": "Creyate",
+                    "id": "creyate_5Ew",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "arvind_rtw_ZCa": {
+                    "name": "Arvind RTW",
+                    "id": "arvind_rtw_ZCa",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "monte_carlo_lDn": {
+                    "name": "Monte Carlo",
+                    "id": "monte_carlo_lDn",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "westside_HQS": {
+                    "name": "Westside",
+                    "id": "westside_HQS",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "allen_solly_xF3": {
+                    "name": "Allen Solly",
+                    "id": "allen_solly_xF3",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "indian_terrain_7Dl": {
+                    "name": "Indian Terrain",
+                    "id": "indian_terrain_7Dl",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "gini_&_jony_e8x": {
+                    "name": "Gini & Jony",
+                    "id": "gini_&_jony_e8x",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "van_husen_LZO": {
+                    "name": "Van Husen",
+                    "id": "van_husen_LZO",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "killer_jMY": {
+                    "name": "Killer",
+                    "id": "killer_jMY",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "parx_Tdc": {
+                    "name": "Parx",
+                    "id": "parx_Tdc",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "belmonte_wUo": {
+                    "name": "Belmonte",
+                    "id": "belmonte_wUo",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "oxemberg_j4p": {
+                    "name": "Oxemberg",
+                    "id": "oxemberg_j4p",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "provogue_OHE": {
+                    "name": "Provogue",
+                    "id": "provogue_OHE",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "louis_philippe_eT2": {
+                    "name": "Louis Philippe",
+                    "id": "louis_philippe_eT2",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "and_designs_tiA": {
+                    "name": "And Designs",
+                    "id": "and_designs_tiA",
+                    "image": "",
+                    "isIndian": ""
+                }
+            }
+        },
+        "accessories_Rsy": {
+            "name": "Accessories",
+            "id": "accessories_Rsy",
+            "image": "",
+            "children": {},
+            "products": {
+                "caprese_gbz": {
+                    "name": "Caprese",
+                    "id": "caprese_gbz",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "hidesign_xnn": {
+                    "name": "HiDesign",
+                    "id": "hidesign_xnn",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "knotty_derby_and_arden_shoes_8bI": {
+                    "name": "Knotty Derby and Arden Shoes",
+                    "id": "knotty_derby_and_arden_shoes_8bI",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "da_milano_IM2": {
+                    "name": "Da Milano",
+                    "id": "da_milano_IM2",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "lavie_YJ5": {
+                    "name": "Lavie",
+                    "id": "lavie_YJ5",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "franco_leone_cNJ": {
+                    "name": "Franco Leone",
+                    "id": "franco_leone_cNJ",
+                    "image": "",
+                    "isIndian": ""
+                }
+            }
+        },
+        "tea_and_coffee_xbi": {
+            "name": "Tea and Coffee",
+            "id": "tea_and_coffee_xbi",
+            "image": "",
+            "children": {},
+            "products": {
+                "blue_tokai_0XR": {
+                    "name": "Blue Tokai",
+                    "id": "blue_tokai_0XR",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "the_flying_squirrel_Fp5": {
+                    "name": "The Flying Squirrel",
+                    "id": "the_flying_squirrel_Fp5",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "the_indian_bean_OMs": {
+                    "name": "The Indian Bean",
+                    "id": "the_indian_bean_OMs",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "panduranga_coffee_works_GLd": {
+                    "name": "Panduranga Coffee Works",
+                    "id": "panduranga_coffee_works_GLd",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "leo_coffee_india_2rR": {
+                    "name": "Leo Coffee India",
+                    "id": "leo_coffee_india_2rR",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "halli_berri_1iJ": {
+                    "name": "Halli Berri",
+                    "id": "halli_berri_1iJ",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "cafe_coffee_day_hgl": {
+                    "name": "Cafe Coffee Day",
+                    "id": "cafe_coffee_day_hgl",
+                    "image": "",
+                    "isIndian": ""
+                }
+            }
+        }
+    },
+    "companies": {
+        "raymond_group_Xvl": {
+            "name": "Raymond Group",
+            "id": "raymond_group_Xvl",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "park_avenue_mDv": {
+                    "name": "Park Avenue",
+                    "id": "park_avenue_mDv",
+                    "image": ""
+                },
+                "parx_Tdc": {
+                    "name": "Parx",
+                    "id": "parx_Tdc",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "vip_industries_XGn": {
+            "name": "VIP Industries",
+            "id": "vip_industries_XGn",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "caprese_gbz": {
+                    "name": "Caprese",
+                    "id": "caprese_gbz",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "metdist_group_HSt": {
+            "name": "Metdist Group",
+            "id": "metdist_group_HSt",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "spyker_Tul": {
+                    "name": "Spyker",
+                    "id": "spyker_Tul",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "arvind_mills_HPG": {
+            "name": "Arvind Mills",
+            "id": "arvind_mills_HPG",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "flying_machine_nYb": {
+                    "name": "Flying Machine",
+                    "id": "flying_machine_nYb",
+                    "image": ""
+                },
+                "newport_DPO": {
+                    "name": "Newport",
+                    "id": "newport_DPO",
+                    "image": ""
+                },
+                "quads_r1M": {
+                    "name": "Quads",
+                    "id": "quads_r1M",
+                    "image": ""
+                },
+                "ruf_&_tuf_jrm": {
+                    "name": "Ruf & Tuf",
+                    "id": "ruf_&_tuf_jrm",
+                    "image": ""
+                },
+                "excalibur_LQa": {
+                    "name": "Excalibur",
+                    "id": "excalibur_LQa",
+                    "image": ""
+                },
+                "is_5IZ": {
+                    "name": "Is",
+                    "id": "is_5IZ",
+                    "image": ""
+                },
+                "creyate_5Ew": {
+                    "name": "Creyate",
+                    "id": "creyate_5Ew",
+                    "image": ""
+                },
+                "arvind_rtw_ZCa": {
+                    "name": "Arvind RTW",
+                    "id": "arvind_rtw_ZCa",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "oswal_woolen_mills_limited_McB": {
+            "name": "Oswal Woolen Mills Limited",
+            "id": "oswal_woolen_mills_limited_McB",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "monte_carlo_lDn": {
+                    "name": "Monte Carlo",
+                    "id": "monte_carlo_lDn",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "tata_group_oX5": {
+            "name": "Tata Group",
+            "id": "tata_group_oX5",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "westside_HQS": {
+                    "name": "Westside",
+                    "id": "westside_HQS",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "aditya_birla_group_FMi": {
+            "name": "Aditya Birla Group",
+            "id": "aditya_birla_group_FMi",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "allen_solly_xF3": {
+                    "name": "Allen Solly",
+                    "id": "allen_solly_xF3",
+                    "image": ""
+                },
+                "van_husen_LZO": {
+                    "name": "Van Husen",
+                    "id": "van_husen_LZO",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "hidesign_34Q": {
+            "name": "HiDesign",
+            "id": "hidesign_34Q",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "hidesign_xnn": {
+                    "name": "HiDesign",
+                    "id": "hidesign_xnn",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "indian_terrain_fashions_limited_rOL": {
+            "name": "Indian Terrain Fashions Limited",
+            "id": "indian_terrain_fashions_limited_rOL",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "indian_terrain_7Dl": {
+                    "name": "Indian Terrain",
+                    "id": "indian_terrain_7Dl",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "lakhani_brothers_hmv": {
+            "name": "Lakhani Brothers",
+            "id": "lakhani_brothers_hmv",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "gini_&_jony_e8x": {
+                    "name": "Gini & Jony",
+                    "id": "gini_&_jony_e8x",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "kewal_kiran_clothing_limited_1q7": {
+            "name": "Kewal Kiran Clothing Limited",
+            "id": "kewal_kiran_clothing_limited_1q7",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "killer_jMY": {
+                    "name": "Killer",
+                    "id": "killer_jMY",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "sknl_Fzd": {
+            "name": "SKNL",
+            "id": "sknl_Fzd",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "belmonte_wUo": {
+                    "name": "Belmonte",
+                    "id": "belmonte_wUo",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "da_milano_leathers_pvt_ltd_sk7": {
+            "name": "DA MILANO LEATHERS PVT LTD",
+            "id": "da_milano_leathers_pvt_ltd_sk7",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "da_milano_IM2": {
+                    "name": "Da Milano",
+                    "id": "da_milano_IM2",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "siyaram's_FWf": {
+            "name": "Siyaram's",
+            "id": "siyaram's_FWf",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "oxemberg_j4p": {
+                    "name": "Oxemberg",
+                    "id": "oxemberg_j4p",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "provogue_india_hSm": {
+            "name": "Provogue India",
+            "id": "provogue_india_hSm",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "provogue_OHE": {
+                    "name": "Provogue",
+                    "id": "provogue_OHE",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "planet_retail_company_PyJ": {
+            "name": "Planet Retail Company",
+            "id": "planet_retail_company_PyJ",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "lavie_YJ5": {
+                    "name": "Lavie",
+                    "id": "lavie_YJ5",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "madura_fashion_and_lifestyle_ZJM": {
+            "name": "Madura Fashion and Lifestyle",
+            "id": "madura_fashion_and_lifestyle_ZJM",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "louis_philippe_eT2": {
+                    "name": "Louis Philippe",
+                    "id": "louis_philippe_eT2",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "franco_leone_limited_sGT": {
+            "name": "Franco Leone Limited",
+            "id": "franco_leone_limited_sGT",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "franco_leone_cNJ": {
+                    "name": "Franco Leone",
+                    "id": "franco_leone_cNJ",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "blue_tokai_k2b": {
+            "name": "Blue Tokai",
+            "id": "blue_tokai_k2b",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "blue_tokai_0XR": {
+                    "name": "Blue Tokai",
+                    "id": "blue_tokai_0XR",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "the_flying_squirrel_vn1": {
+            "name": "The Flying Squirrel",
+            "id": "the_flying_squirrel_vn1",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "the_flying_squirrel_Fp5": {
+                    "name": "The Flying Squirrel",
+                    "id": "the_flying_squirrel_Fp5",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "the_indian_bean_dhx": {
+            "name": "The Indian Bean",
+            "id": "the_indian_bean_dhx",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "the_indian_bean_OMs": {
+                    "name": "The Indian Bean",
+                    "id": "the_indian_bean_OMs",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "panduranga_coffee_works_B15": {
+            "name": "Panduranga Coffee Works",
+            "id": "panduranga_coffee_works_B15",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "panduranga_coffee_works_GLd": {
+                    "name": "Panduranga Coffee Works",
+                    "id": "panduranga_coffee_works_GLd",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "leo_coffee_india_UEI": {
+            "name": "Leo Coffee India",
+            "id": "leo_coffee_india_UEI",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "leo_coffee_india_2rR": {
+                    "name": "Leo Coffee India",
+                    "id": "leo_coffee_india_2rR",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "halli_berri_46N": {
+            "name": "Halli Berri",
+            "id": "halli_berri_46N",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "halli_berri_1iJ": {
+                    "name": "Halli Berri",
+                    "id": "halli_berri_1iJ",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        },
+        "coffee_day_enterprises_2yq": {
+            "name": "Coffee Day Enterprises",
+            "id": "coffee_day_enterprises_2yq",
+            "image": "",
+            "isIndian": "",
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "cafe_coffee_day_hgl": {
+                    "name": "Cafe Coffee Day",
+                    "id": "cafe_coffee_day_hgl",
+                    "image": ""
+                }
+            },
+            "categories": {}
+        }
+    },
+    "products": {
+        "park_avenue_mDv": {
+            "name": "Park Avenue",
+            "id": "park_avenue_mDv",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Raymond Group",
+                "id": "raymond_group_Xvl",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "caprese_gbz": {
+            "name": "Caprese",
+            "id": "caprese_gbz",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "VIP Industries",
+                "id": "vip_industries_XGn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "spyker_Tul": {
+            "name": "Spyker",
+            "id": "spyker_Tul",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Metdist Group",
+                "id": "metdist_group_HSt",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "flying_machine_nYb": {
+            "name": "Flying Machine",
+            "id": "flying_machine_nYb",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "newport_DPO": {
+            "name": "Newport",
+            "id": "newport_DPO",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "quads_r1M": {
+            "name": "Quads",
+            "id": "quads_r1M",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "ruf_&_tuf_jrm": {
+            "name": "Ruf & Tuf",
+            "id": "ruf_&_tuf_jrm",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "excalibur_LQa": {
+            "name": "Excalibur",
+            "id": "excalibur_LQa",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "is_5IZ": {
+            "name": "Is",
+            "id": "is_5IZ",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "creyate_5Ew": {
+            "name": "Creyate",
+            "id": "creyate_5Ew",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "arvind_rtw_ZCa": {
+            "name": "Arvind RTW",
+            "id": "arvind_rtw_ZCa",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Arvind Mills",
+                "id": "arvind_mills_HPG",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "monte_carlo_lDn": {
+            "name": "Monte Carlo",
+            "id": "monte_carlo_lDn",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Oswal Woolen Mills Limited",
+                "id": "oswal_woolen_mills_limited_McB",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "westside_HQS": {
+            "name": "Westside",
+            "id": "westside_HQS",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Tata Group",
+                "id": "tata_group_oX5",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "allen_solly_xF3": {
+            "name": "Allen Solly",
+            "id": "allen_solly_xF3",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Aditya Birla Group",
+                "id": "aditya_birla_group_FMi",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "hidesign_xnn": {
+            "name": "HiDesign",
+            "id": "hidesign_xnn",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "HiDesign",
+                "id": "hidesign_34Q",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "indian_terrain_7Dl": {
+            "name": "Indian Terrain",
+            "id": "indian_terrain_7Dl",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Indian Terrain Fashions Limited",
+                "id": "indian_terrain_fashions_limited_rOL",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "gini_&_jony_e8x": {
+            "name": "Gini & Jony",
+            "id": "gini_&_jony_e8x",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Lakhani Brothers",
+                "id": "lakhani_brothers_hmv",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "knotty_derby_and_arden_shoes_8bI": {
+            "name": "Knotty Derby and Arden Shoes",
+            "id": "knotty_derby_and_arden_shoes_8bI",
+            "image": "",
+            "isIndian": "",
+            "company": {}
+        },
+        "van_husen_LZO": {
+            "name": "Van Husen",
+            "id": "van_husen_LZO",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Aditya Birla Group",
+                "id": "aditya_birla_group_FMi",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "killer_jMY": {
+            "name": "Killer",
+            "id": "killer_jMY",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Kewal Kiran Clothing Limited",
+                "id": "kewal_kiran_clothing_limited_1q7",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "parx_Tdc": {
+            "name": "Parx",
+            "id": "parx_Tdc",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Raymond Group",
+                "id": "raymond_group_Xvl",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "belmonte_wUo": {
+            "name": "Belmonte",
+            "id": "belmonte_wUo",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "SKNL",
+                "id": "sknl_Fzd",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "da_milano_IM2": {
+            "name": "Da Milano",
+            "id": "da_milano_IM2",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "DA MILANO LEATHERS PVT LTD",
+                "id": "da_milano_leathers_pvt_ltd_sk7",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "oxemberg_j4p": {
+            "name": "Oxemberg",
+            "id": "oxemberg_j4p",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Siyaram's",
+                "id": "siyaram's_FWf",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "provogue_OHE": {
+            "name": "Provogue",
+            "id": "provogue_OHE",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Provogue India",
+                "id": "provogue_india_hSm",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "lavie_YJ5": {
+            "name": "Lavie",
+            "id": "lavie_YJ5",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Planet Retail Company",
+                "id": "planet_retail_company_PyJ",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "louis_philippe_eT2": {
+            "name": "Louis Philippe",
+            "id": "louis_philippe_eT2",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Madura Fashion and Lifestyle",
+                "id": "madura_fashion_and_lifestyle_ZJM",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "franco_leone_cNJ": {
+            "name": "Franco Leone",
+            "id": "franco_leone_cNJ",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Franco Leone Limited",
+                "id": "franco_leone_limited_sGT",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "and_designs_tiA": {
+            "name": "And Designs",
+            "id": "and_designs_tiA",
+            "image": "",
+            "isIndian": "",
+            "company": {}
+        },
+        "blue_tokai_0XR": {
+            "name": "Blue Tokai",
+            "id": "blue_tokai_0XR",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Blue Tokai",
+                "id": "blue_tokai_k2b",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "the_flying_squirrel_Fp5": {
+            "name": "The Flying Squirrel",
+            "id": "the_flying_squirrel_Fp5",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "The Flying Squirrel",
+                "id": "the_flying_squirrel_vn1",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "the_indian_bean_OMs": {
+            "name": "The Indian Bean",
+            "id": "the_indian_bean_OMs",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "The Indian Bean",
+                "id": "the_indian_bean_dhx",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "panduranga_coffee_works_GLd": {
+            "name": "Panduranga Coffee Works",
+            "id": "panduranga_coffee_works_GLd",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Panduranga Coffee Works",
+                "id": "panduranga_coffee_works_B15",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "leo_coffee_india_2rR": {
+            "name": "Leo Coffee India",
+            "id": "leo_coffee_india_2rR",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Leo Coffee India",
+                "id": "leo_coffee_india_UEI",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "halli_berri_1iJ": {
+            "name": "Halli Berri",
+            "id": "halli_berri_1iJ",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Halli Berri",
+                "id": "halli_berri_46N",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "cafe_coffee_day_hgl": {
+            "name": "Cafe Coffee Day",
+            "id": "cafe_coffee_day_hgl",
+            "image": "",
+            "isIndian": "",
+            "company": {
+                "name": "Coffee Day Enterprises",
+                "id": "coffee_day_enterprises_2yq",
+                "image": ""
+            },
+            "categories": {}
+        }
+    }
+}
