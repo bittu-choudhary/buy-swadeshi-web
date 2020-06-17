@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import * as JsSearch from "js-search"
-import JSONData from "../../content/new_brand_list.json"
+import JSONData from "../../content/raw data/new_brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
@@ -10,9 +10,12 @@ import Image from  'react-bootstrap/Image'
 import GooglePlayBadgeEn from '../images/google-play-badge.png'
 import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
-import IndexedBrandData from "../../content/new_indexed_data.json"
+import IndexedBrandData from "../../content/indexed data/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
 import Categories from "../components/Categories"
+import NavBar from './nav-bar'
+import HomePageMessage from './home-page-message'
+
 
 var _ = require('lodash') 
 
@@ -118,44 +121,12 @@ class Search extends Component {
     this.setState({showAlert: true, selectedCategory: undefined})
   }
 
-  CreateAlert = (props) => {
-    const { t } = this.props
-    if (this.state.showAlert) {
-      return (<div>
-        <div className={styles.alertSuccess } variant="success"><p>{t('home_desc')}</p></div>
-      </div>)
-    } else {
-      return (<div></div>)
-    }
-  } 
-
   SendFirebaseAnalytics = (event) => {
     if (process.env.NODE_ENV !== "development") {
       firebase
         .analytics()
         .logEvent(event)
     }
-  }
-
-  NavBarBody = (props) => {
-    const { t , i18n} = this.props
-    let GooglePlayBadge = GooglePlayBadgeEn
-    if (i18n.language === "hi") {
-      GooglePlayBadge = GooglePlayBadgeHi
-    }
-    return(
-      <div className={styles.navBarBody} style={{
-        width: `fit-content`,
-        margin: `5% auto`
-      }}>
-        <Button  onClick={() => this.SendFirebaseAnalytics("feedback_click")} rel="noreferrer" className={styles.navButton} href="https://forms.gle/fB2VUuEHCfpadnrv8" target="_blank" variant="info" style={{ width: `85px`, marginRight: `6px`, padding: `.075rem .375rem`}}>{t('feedback')}</Button>
-        <a onClick={() => this.SendFirebaseAnalytics("play_button_click")} title="Download our Android app"  rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
-          <Image className={styles.navAppButton} style={{ marginRight: `2px`, padding: `.075rem .375rem`}} src={GooglePlayBadge} style={{width: `112px`, marginRight: `6px`}} alt="Download our Android App">
-          </Image>
-          </a>      
-         <Button onClick={() => this.SendFirebaseAnalytics("web_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')}</Button>
-      </div>
-    )
   }
   
   render() {
@@ -166,7 +137,6 @@ class Search extends Component {
       searchResults,
       searchQuery,
     } = this.state
-    const {CreateAlert, NavBarBody} = this
     const queryResults = searchQuery === `` ? [] : searchResults
 
     if (isLoading) {
@@ -196,8 +166,8 @@ class Search extends Component {
     }
     return (
       <div>
-        <NavBarBody/>
-        <CreateAlert/>
+        <NavBar fromHeader={false}/>
+        <HomePageMessage showAlert={this.state.showAlert}/>
         <div style={{ 
           marginTop: `30px`,
           paddingLeft: `24px`,
