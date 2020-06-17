@@ -8,7 +8,7 @@ import Col from  'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import ReactDOM from 'react-dom'
 import { useSpring, useSprings, animated, interpolate } from 'react-spring'
-import CategoriesData from "../../content/new_brand_list.json"
+import CategoriesData from "../../content/raw data/new_brand_list.json"
 
 import CartIcon from '../images/cart-icon.png'
 import CartIcon2 from '../images/cart-icon-2.png'
