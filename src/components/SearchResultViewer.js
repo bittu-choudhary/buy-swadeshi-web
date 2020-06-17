@@ -5,11 +5,14 @@ import { useTranslation } from "react-i18next"
 import styles from './search-container-css-modules.module.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from "gatsby"
+
+var _ = require('lodash') 
 
 const PopulateResultCol = (props) => {
   let icon = <MdCancel/>
   let fontColor = `red`
-  const {index, results, selectCategory} = props
+  const {index, results} = props
   let loopLength = index + 5 <results.length ? index + 5 : (results.length - 1)
   let col = []
   for (let i = index; i <= loopLength ; i++ ) {
@@ -39,27 +42,32 @@ const PopulateResultCol = (props) => {
                 </span>
     }
     col.push(
-      <Col onClick={() => selectCategory(clickId)} style={{ padding: `1px`}} key={resultId.id} id={resultId.id} xs={6} md={6} lg={2} xl={2}>
-        <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
-          <Row style={{height: `20%`}}>
-            <div className={styles.searchResultTitle} style={{textAlign: `center`}}>
-              <p style={{textAlign: `center`, marginBottom: `0px`}}>
-                {resultId.name}
-              </p>
-              <span 
-              style={{
-                fontSize: `12px`,
-                color: `gray`}}>
-              {caption}
-            </span>
-                {/* <Image src={CartIcon} thumbnail /> */}
-            </div>
-          </Row>
-          <Row style={{height: `60%`}}></Row>
-          <Row style={{height: `20%`}}>
-            {remark}
-          </Row>
-        </div>
+      <Col style={{ padding: `1px`}} key={resultId.id} id={resultId.id} xs={6} md={6} lg={2} xl={2}>
+        <Link
+          to={`/${_.lowerCase(caption)}/${resultId.name}`}
+          style={{ textDecoration: `none`, color: `inherit` }}
+        >
+          <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
+            <Row style={{height: `20%`}}>
+              <div className={styles.searchResultTitle} style={{textAlign: `center`}}>
+                <p style={{textAlign: `center`, marginBottom: `0px`}}>
+                  {resultId.name}
+                </p>
+                <span 
+                style={{
+                  fontSize: `12px`,
+                  color: `gray`}}>
+                {caption}
+              </span>
+                  {/* <Image src={CartIcon} thumbnail /> */}
+              </div>
+            </Row>
+            <Row style={{height: `60%`}}></Row>
+            <Row style={{height: `20%`}}>
+              {remark}
+            </Row>
+          </div>
+        </Link>
       </Col>
     )
   }
@@ -69,7 +77,7 @@ const PopulateResultCol = (props) => {
 }
 
 const DisplayResults = (props) => {
-  const {queryResults, selectCategory} = props
+  const {queryResults} = props
   // console.log(selectedCategory)
   // const products = CategoriesData.categories[`${selectedCategory}`]["products"]
   // console.log(products)
@@ -80,7 +88,7 @@ const DisplayResults = (props) => {
   const rows =queryResults.map((result, index) => {
     if( index%6 === 0) {
       return (<Row id={`res_row_` + index} key={`res_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`, paddingBottom: `5px`}}>
-        <PopulateResultCol index={index} results={queryResults} selectCategory={selectCategory} />
+        <PopulateResultCol index={index} results={queryResults} />
       </Row>)
     }
   })
@@ -89,7 +97,7 @@ const DisplayResults = (props) => {
 
 export default function SearchResultViewer ( props  ) {
   const { t } = useTranslation()
-  const {queryResults, selectCategory} = props
+  const {queryResults} = props
   let fontColor = "red"
   let icon = <MdCheckCircle/>
 
@@ -99,7 +107,7 @@ export default function SearchResultViewer ( props  ) {
 
   return (
     <div class="container" style={{paddingTop: `50px`}}>
-      <DisplayResults queryResults={queryResults} selectCategory={selectCategory} />
+      <DisplayResults queryResults={queryResults} />
     </div>
   )
 }
