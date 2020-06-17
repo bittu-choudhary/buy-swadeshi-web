@@ -4,17 +4,10 @@ import JSONData from "../../content/raw data/new_brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from  'react-bootstrap/Image'
-import GooglePlayBadgeEn from '../images/google-play-badge.png'
-import GooglePlayBadgeHi from '../images/google-play-badge-hi.png'
 import firebase from "gatsby-plugin-firebase"
 import IndexedBrandData from "../../content/indexed data/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
-import Categories from "../components/Categories"
-import NavBar from './nav-bar'
-import HomePageMessage from './home-page-message'
 
 
 var _ = require('lodash') 
@@ -35,6 +28,7 @@ class Search extends Component {
   constructor(props) {
     super (props)
     const brandData = JSONData
+    const {toggleMessage} = props
     if (!this.state) {
       this.state = {
         brandList: brandData.brands,
@@ -43,9 +37,6 @@ class Search extends Component {
         isLoading: false,
         isError: false,
         searchQuery: ``,
-        showAlert: true,
-        showCategory: true,
-        selectedCategory: undefined,
       } 
     }
     // this.state = { brandList: brandData.brands }
@@ -57,10 +48,12 @@ class Search extends Component {
    */
   searchData = e => {
     const { brandList } = this.state
+    const {toggleMessage, toggleCategoryView} =  this.props
     if (e.target.value.length === 0) {
-      this.setState({showCategory: true})
+      toggleCategoryView(true)
     } else {
-      this.setState({showAlert: false, showCategory: false})
+      toggleMessage(false)
+      toggleCategoryView(false)
     }
     if (process.env.NODE_ENV !== "development") {
       firebase
@@ -110,17 +103,6 @@ class Search extends Component {
     e.preventDefault()
   }
 
-  selectCategory = (category) => {
-    console.log(category)
-    if (category !== undefined) {
-      this.setState({searchQuery: ``, showAlert: false, selectedCategory: category, showCategory: true})
-    }
-  }
-
-  home = () => {
-    this.setState({showAlert: true, selectedCategory: undefined})
-  }
-
   SendFirebaseAnalytics = (event) => {
     if (process.env.NODE_ENV !== "development") {
       firebase
@@ -165,9 +147,7 @@ class Search extends Component {
       )
     }
     return (
-      <div>
-        <NavBar fromHeader={false}/>
-        <HomePageMessage showAlert={this.state.showAlert}/>
+      <>
         <div style={{ 
           marginTop: `30px`,
           paddingLeft: `24px`,
@@ -184,10 +164,9 @@ class Search extends Component {
               />
             </div>
           </form>
-          <SearchResultViewer  selectCategory={this.selectCategory} queryResults={queryResults}/>
+          <SearchResultViewer queryResults={queryResults}/>
         </div>
-        <Categories clickToHome={this.home} selectCategory={this.selectCategory} selectedCategory={this.state.selectedCategory} showComponent={this.state.showCategory}/>
-      </div>
+      </>
     )
   }
 }
