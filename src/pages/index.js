@@ -1,18 +1,28 @@
-import React from "react"
-import Search from "../components/SearchContainer"
-import styles from '../components/search-container-css-modules.module.css'
+import React, { Component } from "react"
 import Layout from '../components/layout'
-import SEO from "../components/seo"
+import Categories from "../components/Categories"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO/>
-    <div style={{marginBottom: '6rem'}}>
-      <div className={styles.searchContainer}>
-        <Search />
-      </div>
-    </div>
-  </Layout>
-)
+class IndexPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      showCategory: true,
+     };
+  }
+
+
+  toggleCategoryView = (newVal) => {
+    this.setState({showCategory: newVal})
+  }
+
+
+  render() {
+    return (
+      <Layout showMessage={true} toggleCategoryView={this.toggleCategoryView}>
+        {this.state.showCategory && <Categories/>}
+      </Layout>
+    )
+  }
+}
 
 export default IndexPage
