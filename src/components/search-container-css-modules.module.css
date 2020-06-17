@@ -271,6 +271,23 @@ footer p {
   position: absolute;
 }
 
+.nav-bar-body {
+  width: fit-content;
+  margin: 5% auto
+}
+
+.feedback-button {
+  width: 85px !important;
+  margin-right: 6px !important;
+  padding: .075rem .375rem !important;
+}
+
+.play-store-button {
+  margin-right: 6px;
+  width: 112px;
+}
+
+
 
 @media only screen and (min-width: 1000px) {
   .searchField, .searchContainer {
@@ -291,6 +308,14 @@ footer p {
 
   .nav-bar-body {
     display: none !important;
+  }
+
+  .feedback-button {
+    margin-right: 2px !important;
+  }
+
+  .play-store-button {
+    margin-right: 0;
   }
 
   header {
