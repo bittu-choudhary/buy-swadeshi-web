@@ -2,27 +2,36 @@
 const write = require("write");
 const path = require("path");
 const Bm25 = require( "./src/library/wink-bm25-text-search")
-const JSONData = require("./content/new_brand_list.json")
+const JSONData = require("./content/raw data/new_brand_list.json")
 
 var _ = require('lodash') 
 const brandList = JSONData.brands
 const engine = Bm25()
 engine.defineConfig( { fldWeights: { name: 1} } )
+const pageObj = []
+
 for (var key in JSONData) {
   if (key === "version") {
     continue
   }
   for (const dataPoints in JSONData[key]) {
+    let slug;
     var dataPointType;
     switch (key) {
       case "categories":
         dataPointType = "_typeCategory"
+        slug = `/category/${JSONData[key][dataPoints]["name"]}/`
+        pageObj.push({type: `category`, slug: slug, id: JSONData[key][dataPoints]["id"] })
         break;
       case "companies":
         dataPointType = "_typeCompany"
+        slug = `/company/${JSONData[key][dataPoints]["name"]}/`
+        pageObj.push({type: `company`, slug: slug, id: JSONData[key][dataPoints]["id"] })
         break;
       case "products":
         dataPointType = "_typeProduct"
+        slug = `/product/${JSONData[key][dataPoints]["name"]}/`
+        pageObj.push({type: `product`, slug: slug, id: JSONData[key][dataPoints]["id"] })
         break;
       default:
         break;
@@ -34,4 +43,42 @@ for (var key in JSONData) {
 }
 engine.consolidate()
 const consolidatedJson =  engine.exportJSON()
-write.sync("./content/new_indexed_data.json", JSON.stringify(consolidatedJson))
+write.sync("./content/indexed data/new_indexed_data.json", JSON.stringify(consolidatedJson))
+
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+// exports.onCreateNode = ({ node, getNode, actions }) => {
+//   const { createNodeField } = actions
+//   if (node.internal.type === `RawDataJson`) {
+//     for (var product in node.products ) {
+//       const productNode = node.products[product]
+//       const slug = `/product/${productNode.name}/`
+//       pageObj.push({type: `product`, slug: slug})
+//       console.log(slug)
+//     }
+//     for (var company in node.companies ) {
+//       const companyNode = node.companies[company]
+//       const slug = `/company/${companyNode.name}/`
+//       pageObj.push({type: `company`, slug: slug})
+//       console.log(slug)
+//     }
+//   }
+// }
+
+console.log(pageObj)
+exports.createPages = async ({ actions }) => {
+  const { createPage } = actions
+
+  pageObj.forEach((node) => {
+    createPage({
+      path: node.slug,
+      component: path.resolve(`./src/templates/${node.type}.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+        id: node.id,
+      },
+    })
+  })
+}
