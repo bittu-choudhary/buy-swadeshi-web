@@ -3,21 +3,12 @@ import { useTranslation } from "react-i18next"
 import styles from './search-container-css-modules.module.css'
 import Row from 'react-bootstrap/Row';
 import { Link } from "gatsby"
-import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import ReactDOM from 'react-dom'
-import { useSpring, useSprings, animated, interpolate } from 'react-spring'
+import { useSprings, animated } from 'react-spring'
 import CategoriesData from "../../content/raw data/new_brand_list.json"
 
-import CartIcon from '../images/cart-icon.png'
-import CartIcon2 from '../images/cart-icon-2.png'
-import Search from "./SearchContainer"
-import { MdCancel } from "react-icons/md"
-import { MdCheckCircle } from "react-icons/md"
-
-var _ = require('lodash') 
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.08]
 const trans = (x, y, s) => `perspective(600px) scale(${s})`

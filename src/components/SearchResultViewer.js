@@ -19,12 +19,10 @@ const PopulateResultCol = (props) => {
     const resultId = results[i]
     // console.log(resultId)
     let remark
-    let clickId
     let caption
     if (resultId.type === "category") {
       remark = <span style={{color: `#155724`}} className={styles.searchResultIndianIcon} > See Products
                 </span>
-      clickId = resultId.id
       caption = `Category`
     } else {
       if (resultId.type === `product`){
@@ -36,7 +34,6 @@ const PopulateResultCol = (props) => {
         icon = <MdCheckCircle/>
         fontColor = `green`
       }
-      clickId = undefined
       remark = <span style={{color: fontColor}} className={styles.searchResultIndianIcon} >Indian &nbsp;
                   {icon}
                 </span>
@@ -98,8 +95,6 @@ const DisplayResults = (props) => {
 export default function SearchResultViewer ( props  ) {
   const { t } = useTranslation()
   const {queryResults} = props
-  let fontColor = "red"
-  let icon = <MdCheckCircle/>
 
   if (queryResults.length === 0) {
     return <div></div>

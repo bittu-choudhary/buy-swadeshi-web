@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import * as JsSearch from "js-search"
 import JSONData from "../../content/raw data/new_brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
@@ -28,7 +27,6 @@ class Search extends Component {
   constructor(props) {
     super (props)
     const brandData = JSONData
-    const {toggleMessage} = props
     if (!this.state) {
       this.state = {
         brandList: brandData.brands,
@@ -47,13 +45,12 @@ class Search extends Component {
    * in which the results will be added to the state
    */
   searchData = e => {
-    const { brandList } = this.state
-    const {toggleMessage, toggleCategoryView} =  this.props
+    const {toggleMessage, toggleView} =  this.props
     if (e.target.value.length === 0) {
-      toggleCategoryView(true)
+      toggleView(true)
     } else {
       toggleMessage(false)
-      toggleCategoryView(false)
+      toggleView(false)
     }
     if (process.env.NODE_ENV !== "development") {
       firebase
