@@ -32,6 +32,8 @@
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sitemap": "^2.4.4",
+    "gatsby-source-filesystem": "^2.3.11",
+    "gatsby-transformer-json": "^2.4.5",
     "i18next": "^19.0.0",
     "js-search": "^1.4.3",
     "lodash": "^4.17.15",
