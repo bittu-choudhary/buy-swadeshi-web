@@ -6,8 +6,6 @@
 
 import React, { Component } from "react"
 import Layout from '../components/layout'
-import Categories from "../components/Categories"
-import { useTranslation } from "react-i18next"
 import styles from '../components/search-container-css-modules.module.css'
 import Row from 'react-bootstrap/Row';
 import { Link } from "gatsby"
@@ -15,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
-import CategoriesData from "../../content/raw data/new_brand_list.json"
+import JsonData from "../../content/raw data/new_brand_list.json"
 
 var _ = require('lodash') 
 
@@ -92,7 +90,7 @@ class Category extends Component {
     const {selectedCategory} = props
     const { PopulateProductCol} = this
     console.log(selectedCategory)
-    const products = CategoriesData.categories[`${selectedCategory}`]["products"]
+    const products = JsonData.categories[`${selectedCategory}`]["products"]
     console.log(products)
     let productsArr = []
     for (var key in products){
@@ -101,7 +99,7 @@ class Category extends Component {
     const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
     const rows = productsSortedArr.map((product, index) => {
       if( index%6 === 0) {
-        return (<Row id={`pro_row_` + index} key={`pro_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`, paddingBottom: `5px`}}>
+        return (<Row className={styles.pageContent} id={`pro_row_` + index} key={`pro_row_` + index} style={{paddingBottom: `5px`}}>
           <PopulateProductCol index={index} products={productsSortedArr}/>
         </Row>)
       }
@@ -112,11 +110,11 @@ class Category extends Component {
   render() {
     const {pageContext} = this.props
     const { DisplayProducts} = this
-    const category =  CategoriesData.categories[`${pageContext.id}`]
+    const category =  JsonData.categories[`${pageContext.id}`]
   
     return (
-      <Layout showMessage={false} toggleCategoryView={this.toggleCategoryView}>
-      {this.state.showCategory && <><Row>
+      <Layout showMessage={false} toggleView={this.toggleCategoryView}>
+      {this.state.showCategory && <><Row className={styles.homeLink}>
         <Col>
           <ul style={{listStyle: `none`, paddingLeft: `0`}}>
             <li style={{display: `inline-block`}}>
@@ -136,7 +134,7 @@ class Category extends Component {
           {/* <p style={{color: `rgb(181, 181, 181)`, marginBottom: `0px`}}>Back to home</p> */}
         </Col>
       </Row>
-      <Row>
+      <Row className={styles.pageTitle}>
         <Col>
           <p>{_.startCase(category.name)}</p>
         </Col>

@@ -18,7 +18,7 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout showMessage={true} toggleCategoryView={this.toggleCategoryView}>
+      <Layout showMessage={true} toggleView={this.toggleCategoryView}>
         {this.state.showCategory && <Categories/>}
       </Layout>
     )

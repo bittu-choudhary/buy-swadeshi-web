@@ -34,16 +34,15 @@ class Layout extends Component {
   }
 
   render() {
-    const {toggleMessage} = this.props
     return (
       <div>
         <Header/>
         <SEO/>
-        <div style={{marginBottom: '6rem'}}>
+        <div style={{marginBottom: '6rem', overflow: `auto`}}>
           <div className={styles.searchContainer}>
             <NavBar fromHeader={false}/>
             <HomePageMessage showAlert={this.state.showMessage}/>
-            <Search toggleMessage={this.toggleMessage} toggleCategoryView={this.props.toggleCategoryView}/>
+            <Search toggleMessage={this.toggleMessage} toggleView={this.props.toggleView}/>
             {this.props.children}
           </div>
         </div>
