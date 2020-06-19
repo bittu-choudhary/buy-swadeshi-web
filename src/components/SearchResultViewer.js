@@ -6,6 +6,7 @@ import styles from './search-container-css-modules.module.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "gatsby"
+import Image from 'react-bootstrap/Image'
 
 var _ = require('lodash') 
 
@@ -21,7 +22,7 @@ const PopulateResultCol = (props) => {
     let remark
     let caption
     if (resultId.type === "category") {
-      remark = <span style={{color: `#155724`}} className={styles.searchResultIndianIcon} > See Products
+      remark = <span style={{color: `#155724`, bottom: `0px`}} className={styles.searchResultIndianIcon} > See Products
                 </span>
       caption = `Category`
     } else {
@@ -34,33 +35,46 @@ const PopulateResultCol = (props) => {
         icon = <MdCheckCircle/>
         fontColor = `green`
       }
-      remark = <span style={{color: fontColor}} className={styles.searchResultIndianIcon} >Indian &nbsp;
+      remark = <span style={{color: fontColor, bottom: `0px`}} className={styles.searchResultIndianIcon} >Indian &nbsp;
                   {icon}
                 </span>
     }
     col.push(
-      <Col style={{ padding: `1px`}} key={resultId.id} id={resultId.id} xs={6} md={6} lg={2} xl={2}>
+      <Col style={{ padding: `1px`, padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={2} xl={2}>
         <Link
           to={`/${_.lowerCase(caption)}/${resultId.name}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
-          <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
-            <Row style={{height: `20%`}}>
-              <div className={styles.searchResultTitle} style={{textAlign: `center`}}>
-                <p style={{textAlign: `center`, marginBottom: `0px`}}>
-                  {resultId.name}
-                </p>
-                <span 
-                style={{
-                  fontSize: `12px`,
-                  color: `gray`}}>
-                {caption}
-              </span>
-                  {/* <Image src={CartIcon} thumbnail /> */}
-              </div>
+          <div style={{borderRadius: `0px`}} className={styles.categoryCol + " " + styles.productCol }>
+            <Row>
+              <Col className={`col-12` }>
+                <div className={`container`} style={{width: `fit-content`, height: `80px`}}>
+                  <Image className={styles.productImage} style={{
+                    border: `0px`,
+                    borderRadius: `0px`,
+                    maxHeight: `100%`,
+                    padding: `0px !important`,
+                  }} thumbnail src={`http://cdn.grofers.com/app/images/products/normal/pro_380157.jpg?ts=1582006627`}></Image>
+                </div>
+              </Col>
             </Row>
-            <Row style={{height: `60%`}}></Row>
-            <Row style={{height: `20%`}}>
+            <Row>
+              <Col className={`col-12` +" " + styles.searchResultTitle}>
+                <div style={{textAlign: `center`}}>
+                  <p style={{textAlign: `center`, marginBottom: `0px`}}>
+                    {resultId.name}
+                  </p>
+                  <span 
+                  style={{
+                    fontSize: `12px`,
+                    color: `gray`}}>
+                  {caption}
+                </span>
+                    {/* <Image src={CartIcon} thumbnail /> */}
+                </div>
+              </Col>
+            </Row>
+            <Row>
               {remark}
             </Row>
           </div>
@@ -84,7 +98,7 @@ const DisplayResults = (props) => {
   })
   const rows =queryResults.map((result, index) => {
     if( index%6 === 0) {
-      return (<Row id={`res_row_` + index} key={`res_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`, paddingBottom: `5px`}}>
+      return (<Row id={`res_row_` + index} key={`res_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`}}>
         <PopulateResultCol index={index} results={queryResults} />
       </Row>)
     }
@@ -101,7 +115,7 @@ export default function SearchResultViewer ( props  ) {
   }
 
   return (
-    <div class="container" style={{paddingTop: `50px`}}>
+    <div class="container" style={{paddingTop: `50px` , paddingLeft: `0px`, paddingRight: `0px`}}>
       <DisplayResults queryResults={queryResults} />
     </div>
   )

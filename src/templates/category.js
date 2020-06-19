@@ -14,6 +14,8 @@ import Col from  'react-bootstrap/Col'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
 import JsonData from "../../content/raw data/new_brand_list.json"
+import Image from 'react-bootstrap/Image'
+
 
 var _ = require('lodash') 
 
@@ -44,11 +46,11 @@ class Category extends Component {
         icon = <MdCheckCircle/>
         fontColor = `green`
       }
-      remark = <span style={{color: fontColor}} className={styles.searchResultIndianIcon} >Indian &nbsp;
+      remark = <span style={{color: fontColor, bottom: `0px`}} className={styles.searchResultIndianIcon} >Indian &nbsp;
                     {icon}
                   </span>
       col.push(
-        <Col  style={{ padding: `1px`}} key={productId.id} id={productId.id} xs={6} md={6} lg={2} xl={2}>
+        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={6} md={4} lg={2} xl={2}>
           <Link
           to={`/product/${productId.name}`}
           style={{
@@ -56,23 +58,36 @@ class Category extends Component {
               color: `inherit`
             }}
           >
-            <div className={styles.categoryCol + " " + styles.productCol } style={{border:`1px solid #dcdcdc` }} >
-              <Row style={{height: `20%`}}>
-                <div className={styles.searchResultTitle} style={{textAlign: `center`}}>
-                  <p style={{textAlign: `center`, marginBottom: `0px`}}>
-                    {productId.name}
-                  </p>
-                  <span 
-                  style={{
-                    fontSize: `12px`,
-                    color: `gray`}}>
-                  {caption}
-                </span>
-                    {/* <Image src={CartIcon} thumbnail /> */}
-                </div>
+            <div style={{borderRadius: `0px`}} className={styles.categoryCol + " " + styles.productCol } >
+              <Row >
+                <Col  className={`col-12` }>
+                  <div className={`container`} style={{width: `fit-content`, height: `80px`}}>
+                    <Image className={styles.productImage} style={{
+                      border: `0px`,
+                      borderRadius: `0px`,
+                      maxHeight: `100%`,
+                      padding: `0px !important`,
+                    }} thumbnail src={`http://cdn.grofers.com/app/images/products/normal/pro_380157.jpg?ts=1582006627`}></Image>
+                  </div>
+                </Col>
               </Row>
-              <Row style={{height: `60%`}}></Row>
-              <Row style={{height: `20%`}}>
+              <Row style={{fontSize: `14px`}}>
+                <Col className={`col-12` +" " + styles.searchResultTitle}>
+                  <div style={{textAlign: `center`}}>
+                    <p style={{textAlign: `center`, marginBottom: `0px`}}>
+                      {productId.name}
+                    </p>
+                    <span 
+                    style={{
+                      fontSize: `12px`,
+                      color: `gray`}}>
+                    {caption}
+                  </span>
+                      {/* <Image src={CartIcon} thumbnail /> */}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
                 {remark}
               </Row>
             </div>
@@ -99,7 +114,7 @@ class Category extends Component {
     const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
     const rows = productsSortedArr.map((product, index) => {
       if( index%6 === 0) {
-        return (<Row className={styles.pageContent} id={`pro_row_` + index} key={`pro_row_` + index} style={{paddingBottom: `5px`}}>
+        return (<Row className={styles.pageContent} id={`pro_row_` + index} key={`pro_row_` + index} >
           <PopulateProductCol index={index} products={productsSortedArr}/>
         </Row>)
       }
