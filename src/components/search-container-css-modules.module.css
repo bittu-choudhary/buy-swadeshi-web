@@ -7,8 +7,12 @@ body {
   margin: auto;
 }
 
-.card, .product-col {
+.card {
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.product-col {
+  border: 1px solid #dcdcdc;
 }
 
 .arrow {
@@ -28,8 +32,12 @@ body {
   will-change: transform;
 }
 
-.card:hover, .product-col:hover {
+.card:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.3);
+}
+
+.product-col:hover {
+  border: 1px solid black;
 }
 
 .bar{
@@ -317,6 +325,10 @@ footer p {
   margin-bottom: 12px;
 }
 
+.search-result-title{
+  font-size: 14px;
+}
+
 .product-attr-wrapper, .company-attr-wrapper {
   margin-top: 5px;
 }
@@ -463,11 +475,16 @@ footer p {
   }
 
   .category-col {
-    border-radius: 15px;
-    height: 140px;
+    height: 160px;
   }
   .search-result-indian-icon {
     padding-top: 0;
+    font-size: 12px;
+  }
+
+  .search-result-title{
+    font-size: 12px;
+    line-height: 16px;
   }
 
 }
