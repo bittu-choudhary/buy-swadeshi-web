@@ -34,10 +34,62 @@ class Product extends Component {
     let product = JsonData.products[`${props.productId}`]
     let icon = <MdCancel/>
     let fontColor = `red`
+    let alt_or_other = "Alternate"
+    let altIndianBrands = []
+    let categoriesList = []
+    for (var category in product.categories) {
+      var categoryEndPoint = _.lowerCase(product.categories[category]["name"])
+      categoriesList.push(
+        <Link
+              to={`/category/${categoryEndPoint}`}
+              style={{ textDecoration: `none`, color: `maroon` }}
+            >
+          <span className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{product.categories[category]["name"]} &nbsp;
+          </span>
+        </Link>
+      )
+      let categoryProducts = JsonData.categories[category].products
+      let index = 0
+      for (var altProductId in categoryProducts) {
+        let altProduct = categoryProducts[altProductId]
+        if (index == 10) {
+          altIndianBrands.push(
+            <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+              <Link
+                to={`/category/${categoryEndPoint}?isIndian=true`}
+                style={{ textDecoration: `none`, color: `maroon` }}
+              >
+                See more
+              </Link> &nbsp;
+            </span>
+          )
+          break
+        } 
+        index = index + 1
+        if (altProductId === props.productId) {
+          continue 
+        }
+        if (altProduct.isIndian) {
+          var altProEndPoint = _.lowerCase(altProduct.name)
+          altIndianBrands.push(
+            <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+              <Link
+                to={`/product/${altProEndPoint}`}
+                style={{ textDecoration: `none`, color: `maroon` }}
+              >
+                {altProduct.name},
+              </Link> &nbsp;
+            </span>
+          )
+        }
+      }
+    }
     if (product.isIndian) {
       icon = <MdCheckCircle/>
       fontColor = `green`
+      alt_or_other = `Other`
     }
+    var companyEndPoint = _.lowerCase(product.company.name)
     return(
       <>
         <div className={styles.pageContent + " " + `container-fluid`}>
@@ -75,33 +127,38 @@ class Product extends Component {
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6}  style={{height: `60px`}}>
+            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
-                  <span>Unit</span>
+                  <span>Company</span>
                 </div>
-                <div className={styles.productAttrDesc}>
-                  10 Kg
+                <div className={styles.productAttrDesc + " " + styles.altBrand}>
+                  <Link
+                    to={`/company/${companyEndPoint}`}
+                    style={{ textDecoration: `none`, color: `maroon` }}
+                  >
+                    {product.company.name}
+                  </Link>
                 </div>
               </div>
             </Col>
             <Col className={"float-left col-6" + " " + styles.productAttrWrapper}  md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
-                  <span>Shelf Life</span>
+                  <span>Categories</span>
                 </div>
                 <div className={styles.productAttrDesc}>
-                  3 months
+                  {categoriesList}
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
-                  <span>Company</span>
+                  <span>{alt_or_other} Indian Brands</span>
                 </div>
                 <div className={styles.productAttrDesc}>
-                  ITC Limited
+                  {altIndianBrands}
                 </div>
               </div>
             </Col>
