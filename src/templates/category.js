@@ -16,9 +16,9 @@ import { MdCheckCircle } from "react-icons/md"
 import JsonData from "../../content/raw data/new_brand_list.json"
 import Image from 'react-bootstrap/Image'
 
-
+const queryString = require('query-string');
 var _ = require('lodash') 
-
+let isIndianParam
 class Category extends Component {
   constructor(props) {
     super(props);
@@ -42,6 +42,11 @@ class Category extends Component {
       const productId = products[i]
       let remark
       let caption = `Product`
+      if (isIndianParam !== undefined) {
+        if (`${productId.isIndian}` !== `${isIndianParam}`) {
+          continue
+        }
+      }
       if (productId.isIndian) {
         icon = <MdCheckCircle/>
         fontColor = `green`
@@ -49,10 +54,11 @@ class Category extends Component {
       remark = <span style={{color: fontColor, bottom: `0px`}} className={styles.searchResultIndianIcon} >Indian &nbsp;
                     {icon}
                   </span>
+      var productEndPoint = _.lowerCase(productId.name)
       col.push(
         <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={6} md={4} lg={2} xl={2}>
           <Link
-          to={`/product/${productId.name}`}
+          to={`/product/${productEndPoint}`}
           style={{
               textDecoration: `none`,
               color: `inherit`
@@ -104,9 +110,7 @@ class Category extends Component {
   DisplayProducts = (props) => {
     const {selectedCategory} = props
     const { PopulateProductCol} = this
-    console.log(selectedCategory)
     const products = JsonData.categories[`${selectedCategory}`]["products"]
-    console.log(products)
     let productsArr = []
     for (var key in products){
       productsArr.push(products[key])
@@ -126,7 +130,7 @@ class Category extends Component {
     const {pageContext} = this.props
     const { DisplayProducts} = this
     const category =  JsonData.categories[`${pageContext.id}`]
-  
+    isIndianParam = queryString.parse(this.props.location.search).isIndian
     return (
       <Layout showMessage={false} toggleView={this.toggleCategoryView}>
       {this.state.showCategory && <><Row className={styles.homeLink}>
