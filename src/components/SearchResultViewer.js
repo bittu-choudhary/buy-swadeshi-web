@@ -39,11 +39,11 @@ const PopulateResultCol = (props) => {
                   {icon}
                 </span>
     }
-    var resultEndPoint = _.lowerCase(resultId.name)
+    var resultEndPoint = _.snakeCase(resultId.name)
     col.push(
-      <Col style={{ padding: `1px`, padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={2} xl={2}>
+      <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={2} xl={2}>
         <Link
-          to={`/${_.lowerCase(caption)}/${resultEndPoint}`}
+          to={`/${_.snakeCase(caption)}/${resultEndPoint}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
           <div style={{borderRadius: `0px`}} className={styles.categoryCol + " " + styles.productCol }>

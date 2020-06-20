@@ -54,7 +54,7 @@ class Category extends Component {
       remark = <span style={{color: fontColor, bottom: `0px`}} className={styles.searchResultIndianIcon} >Indian &nbsp;
                     {icon}
                   </span>
-      var productEndPoint = _.lowerCase(productId.name)
+      var productEndPoint = _.snakeCase(productId.name)
       col.push(
         <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={6} md={4} lg={2} xl={2}>
           <Link

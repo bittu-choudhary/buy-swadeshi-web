@@ -38,7 +38,7 @@ class Company extends Component {
     let altIndianCompanies = []
     let categoriesList = []
     for (var category in company.categories) {
-      var categoryEndPoint = _.lowerCase(company.categories[category]["name"])
+      var categoryEndPoint = _.snakeCase(company.categories[category]["name"])
       categoriesList.push(
         <Link
               to={`/category/${categoryEndPoint}`}
@@ -52,7 +52,7 @@ class Company extends Component {
       let index = 0
       for (var altCompanyId in categoryCompanies) {
         let altCompany = categoryCompanies[altCompanyId]
-        if (index == 10) {
+        if (index === 10) {
           altIndianCompanies.push(
             <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
               <Link
@@ -70,7 +70,7 @@ class Company extends Component {
           continue 
         }
         if (altCompany.isIndian) {
-          var altCompanyEndPoint = _.lowerCase(altCompany.name)
+          var altCompanyEndPoint = _.snakeCase(altCompany.name)
           altIndianCompanies.push(
             <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
               <Link
