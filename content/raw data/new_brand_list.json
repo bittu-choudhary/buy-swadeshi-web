@@ -1,9 +1,9 @@
 {
     "version": "xxxx",
     "categories": {
-        "clothing_H7B": {
-            "name": "Clothing",
-            "id": "clothing_H7B",
+        "clothing_and_accessories_CRa": {
+            "name": "Clothing and Accessories",
+            "id": "clothing_and_accessories_CRa",
             "image": "",
             "children": {},
             "products": {
@@ -11,133 +11,169 @@
                     "name": "Park Avenue",
                     "id": "park_avenue_mDv",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "caprese_gbz": {
+                    "name": "Caprese",
+                    "id": "caprese_gbz",
+                    "image": "",
+                    "isIndian": true
                 },
                 "spyker_Tul": {
                     "name": "Spyker",
                     "id": "spyker_Tul",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "flying_machine_nYb": {
                     "name": "Flying Machine",
                     "id": "flying_machine_nYb",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "newport_DPO": {
                     "name": "Newport",
                     "id": "newport_DPO",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "quads_r1M": {
                     "name": "Quads",
                     "id": "quads_r1M",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "ruf_&_tuf_jrm": {
                     "name": "Ruf & Tuf",
                     "id": "ruf_&_tuf_jrm",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "excalibur_LQa": {
                     "name": "Excalibur",
                     "id": "excalibur_LQa",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "is_5IZ": {
                     "name": "Is",
                     "id": "is_5IZ",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "creyate_5Ew": {
                     "name": "Creyate",
                     "id": "creyate_5Ew",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "arvind_rtw_ZCa": {
                     "name": "Arvind RTW",
                     "id": "arvind_rtw_ZCa",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "monte_carlo_lDn": {
                     "name": "Monte Carlo",
                     "id": "monte_carlo_lDn",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "westside_HQS": {
                     "name": "Westside",
                     "id": "westside_HQS",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "allen_solly_xF3": {
                     "name": "Allen Solly",
                     "id": "allen_solly_xF3",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "hidesign_xnn": {
+                    "name": "HiDesign",
+                    "id": "hidesign_xnn",
+                    "image": "",
+                    "isIndian": true
                 },
                 "indian_terrain_7Dl": {
                     "name": "Indian Terrain",
                     "id": "indian_terrain_7Dl",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "gini_&_jony_e8x": {
                     "name": "Gini & Jony",
                     "id": "gini_&_jony_e8x",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "knotty_derby_and_arden_shoes_8bI": {
+                    "name": "Knotty Derby and Arden Shoes",
+                    "id": "knotty_derby_and_arden_shoes_8bI",
+                    "image": "",
+                    "isIndian": true
                 },
                 "van_husen_LZO": {
                     "name": "Van Husen",
                     "id": "van_husen_LZO",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "killer_jMY": {
                     "name": "Killer",
                     "id": "killer_jMY",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "parx_Tdc": {
                     "name": "Parx",
                     "id": "parx_Tdc",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "belmonte_wUo": {
                     "name": "Belmonte",
                     "id": "belmonte_wUo",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "da_milano_IM2": {
+                    "name": "Da Milano",
+                    "id": "da_milano_IM2",
+                    "image": "",
+                    "isIndian": true
                 },
                 "oxemberg_j4p": {
                     "name": "Oxemberg",
                     "id": "oxemberg_j4p",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
                 "provogue_OHE": {
                     "name": "Provogue",
                     "id": "provogue_OHE",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "lavie_YJ5": {
+                    "name": "Lavie",
+                    "id": "lavie_YJ5",
+                    "image": "",
+                    "isIndian": true
                 },
                 "louis_philippe_eT2": {
                     "name": "Louis Philippe",
                     "id": "louis_philippe_eT2",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "franco_leone_cNJ": {
+                    "name": "Franco Leone",
+                    "id": "franco_leone_cNJ",
+                    "image": "",
+                    "isIndian": true
                 },
                 "and_designs_tiA": {
                     "name": "And Designs",
@@ -145,54 +181,120 @@
                     "image": "",
                     "isIndian": ""
                 }
-            }
-        },
-        "accessories_Rsy": {
-            "name": "Accessories",
-            "id": "accessories_Rsy",
-            "image": "",
-            "children": {},
-            "products": {
-                "caprese_gbz": {
-                    "name": "Caprese",
-                    "id": "caprese_gbz",
+            },
+            "companies": {
+                "raymond_group_Xvl": {
+                    "name": "Raymond Group",
+                    "id": "raymond_group_Xvl",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
-                "hidesign_xnn": {
+                "vip_industries_XGn": {
+                    "name": "VIP Industries",
+                    "id": "vip_industries_XGn",
+                    "image": "",
+                    "isIndian": true
+                },
+                "metdist_group_HSt": {
+                    "name": "Metdist Group",
+                    "id": "metdist_group_HSt",
+                    "image": "",
+                    "isIndian": true
+                },
+                "arvind_mills_HPG": {
+                    "name": "Arvind Mills",
+                    "id": "arvind_mills_HPG",
+                    "image": "",
+                    "isIndian": true
+                },
+                "oswal_woolen_mills_limited_McB": {
+                    "name": "Oswal Woolen Mills Limited",
+                    "id": "oswal_woolen_mills_limited_McB",
+                    "image": "",
+                    "isIndian": true
+                },
+                "tata_group_oX5": {
+                    "name": "Tata Group",
+                    "id": "tata_group_oX5",
+                    "image": "",
+                    "isIndian": true
+                },
+                "aditya_birla_group_FMi": {
+                    "name": "Aditya Birla Group",
+                    "id": "aditya_birla_group_FMi",
+                    "image": "",
+                    "isIndian": true
+                },
+                "hidesign_34Q": {
                     "name": "HiDesign",
-                    "id": "hidesign_xnn",
+                    "id": "hidesign_34Q",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
-                "knotty_derby_and_arden_shoes_8bI": {
-                    "name": "Knotty Derby and Arden Shoes",
-                    "id": "knotty_derby_and_arden_shoes_8bI",
+                "indian_terrain_fashions_limited_rOL": {
+                    "name": "Indian Terrain Fashions Limited",
+                    "id": "indian_terrain_fashions_limited_rOL",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
-                "da_milano_IM2": {
-                    "name": "Da Milano",
-                    "id": "da_milano_IM2",
+                "lakhani_brothers_hmv": {
+                    "name": "Lakhani Brothers",
+                    "id": "lakhani_brothers_hmv",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
-                "lavie_YJ5": {
-                    "name": "Lavie",
-                    "id": "lavie_YJ5",
+                "kewal_kiran_clothing_limited_1q7": {
+                    "name": "Kewal Kiran Clothing Limited",
+                    "id": "kewal_kiran_clothing_limited_1q7",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
                 },
-                "franco_leone_cNJ": {
-                    "name": "Franco Leone",
-                    "id": "franco_leone_cNJ",
+                "sknl_Fzd": {
+                    "name": "SKNL",
+                    "id": "sknl_Fzd",
                     "image": "",
-                    "isIndian": ""
+                    "isIndian": true
+                },
+                "da_milano_leathers_pvt_ltd_sk7": {
+                    "name": "DA MILANO LEATHERS PVT LTD",
+                    "id": "da_milano_leathers_pvt_ltd_sk7",
+                    "image": "",
+                    "isIndian": true
+                },
+                "siyaram's_FWf": {
+                    "name": "Siyaram's",
+                    "id": "siyaram's_FWf",
+                    "image": "",
+                    "isIndian": true
+                },
+                "provogue_india_hSm": {
+                    "name": "Provogue India",
+                    "id": "provogue_india_hSm",
+                    "image": "",
+                    "isIndian": true
+                },
+                "planet_retail_company_PyJ": {
+                    "name": "Planet Retail Company",
+                    "id": "planet_retail_company_PyJ",
+                    "image": "",
+                    "isIndian": true
+                },
+                "madura_fashion_and_lifestyle_ZJM": {
+                    "name": "Madura Fashion and Lifestyle",
+                    "id": "madura_fashion_and_lifestyle_ZJM",
+                    "image": "",
+                    "isIndian": true
+                },
+                "franco_leone_limited_sGT": {
+                    "name": "Franco Leone Limited",
+                    "id": "franco_leone_limited_sGT",
+                    "image": "",
+                    "isIndian": true
                 }
             }
         },
         "tea_and_coffee_xbi": {
-            "name": "Tea and Coffee",
+            "name": "Tea and coffee",
             "id": "tea_and_coffee_xbi",
             "image": "",
             "children": {},
@@ -238,6 +340,1059 @@
                     "id": "cafe_coffee_day_hgl",
                     "image": "",
                     "isIndian": ""
+                },
+                "brooke_bond_3_roses_2B7": {
+                    "name": "Brooke Bond 3 Roses",
+                    "id": "brooke_bond_3_roses_2B7",
+                    "image": "",
+                    "isIndian": false
+                },
+                "brooke_bond_red_label_5ys": {
+                    "name": "Brooke Bond Red Label",
+                    "id": "brooke_bond_red_label_5ys",
+                    "image": "",
+                    "isIndian": false
+                },
+                "brooke_bond_taaza_r0l": {
+                    "name": "Brooke Bond Taaza",
+                    "id": "brooke_bond_taaza_r0l",
+                    "image": "",
+                    "isIndian": false
+                },
+                "brooke_bond_taj_mahal_17K": {
+                    "name": "Brooke Bond Taj Mahal",
+                    "id": "brooke_bond_taj_mahal_17K",
+                    "image": "",
+                    "isIndian": false
+                },
+                "bru_CYR": {
+                    "name": "Bru",
+                    "id": "bru_CYR",
+                    "image": "",
+                    "isIndian": false
+                }
+            },
+            "companies": {
+                "blue_tokai_k2b": {
+                    "name": "Blue Tokai",
+                    "id": "blue_tokai_k2b",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "the_flying_squirrel_vn1": {
+                    "name": "The Flying Squirrel",
+                    "id": "the_flying_squirrel_vn1",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "the_indian_bean_dhx": {
+                    "name": "The Indian Bean",
+                    "id": "the_indian_bean_dhx",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "panduranga_coffee_works_B15": {
+                    "name": "Panduranga Coffee Works",
+                    "id": "panduranga_coffee_works_B15",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "leo_coffee_india_UEI": {
+                    "name": "Leo Coffee India",
+                    "id": "leo_coffee_india_UEI",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "halli_berri_46N": {
+                    "name": "Halli Berri",
+                    "id": "halli_berri_46N",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "coffee_day_enterprises_2yq": {
+                    "name": "Coffee Day Enterprises",
+                    "id": "coffee_day_enterprises_2yq",
+                    "image": "",
+                    "isIndian": ""
+                },
+                "hindustan_unilever_BXn": {
+                    "name": "Hindustan Unilever",
+                    "id": "hindustan_unilever_BXn",
+                    "image": "",
+                    "isIndian": false
+                }
+            }
+        },
+        "mobile_apps_b9p": {
+            "name": "Mobile Apps",
+            "id": "mobile_apps_b9p",
+            "image": "",
+            "children": {},
+            "products": {
+                "helo_ovs": {
+                    "name": "Helo",
+                    "id": "helo_ovs",
+                    "image": "",
+                    "isIndian": false
+                },
+                "helo_lite_z2X": {
+                    "name": "Helo Lite",
+                    "id": "helo_lite_z2X",
+                    "image": "",
+                    "isIndian": false
+                },
+                "shareit_RPe": {
+                    "name": "SHAREit",
+                    "id": "shareit_RPe",
+                    "image": "",
+                    "isIndian": false
+                },
+                "shareit_lite_Q8w": {
+                    "name": "SHAREit Lite",
+                    "id": "shareit_lite_Q8w",
+                    "image": "",
+                    "isIndian": false
+                },
+                "watchit_wvH": {
+                    "name": "WATCHit",
+                    "id": "watchit_wvH",
+                    "image": "",
+                    "isIndian": false
+                },
+                "tiktok_fW4": {
+                    "name": "TikTok",
+                    "id": "tiktok_fW4",
+                    "image": "",
+                    "isIndian": false
+                },
+                "tiktok_wall_picture_a8h": {
+                    "name": "TikTok Wall Picture",
+                    "id": "tiktok_wall_picture_a8h",
+                    "image": "",
+                    "isIndian": false
+                },
+                "tiktok_lite_fk6": {
+                    "name": "TikTok Lite",
+                    "id": "tiktok_lite_fk6",
+                    "image": "",
+                    "isIndian": false
+                },
+                "kwai_5QB": {
+                    "name": "Kwai",
+                    "id": "kwai_5QB",
+                    "image": "",
+                    "isIndian": false
+                },
+                "ucbrowser_Nfx": {
+                    "name": "UCBrowser",
+                    "id": "ucbrowser_Nfx",
+                    "image": "",
+                    "isIndian": false
+                },
+                "ucbrowser_mini_CJI": {
+                    "name": "UCBrowser Mini",
+                    "id": "ucbrowser_mini_CJI",
+                    "image": "",
+                    "isIndian": false
+                },
+                "uc_browser_turbo_EDb": {
+                    "name": "UC Browser Turbo",
+                    "id": "uc_browser_turbo_EDb",
+                    "image": "",
+                    "isIndian": false
+                },
+                "uc_cricket_FOv": {
+                    "name": "UC Cricket",
+                    "id": "uc_cricket_FOv",
+                    "image": "",
+                    "isIndian": false
+                },
+                "liveme_zsq": {
+                    "name": "LiveMe",
+                    "id": "liveme_zsq",
+                    "image": "",
+                    "isIndian": false
+                },
+                "bigo_live_Iai": {
+                    "name": "Bigo Live",
+                    "id": "bigo_live_Iai",
+                    "image": "",
+                    "isIndian": false
+                },
+                "vigo_video_LjF": {
+                    "name": "Vigo Video",
+                    "id": "vigo_video_LjF",
+                    "image": "",
+                    "isIndian": false
+                },
+                "vigo_video_live_photo_yqb": {
+                    "name": "Vigo Video Live Photo",
+                    "id": "vigo_video_live_photo_yqb",
+                    "image": "",
+                    "isIndian": false
+                },
+                "airbrush:_easy_photo_editor_74i": {
+                    "name": "AirBrush: Easy Photo Editor",
+                    "id": "airbrush:_easy_photo_editor_74i",
+                    "image": "",
+                    "isIndian": false
+                },
+                "beautyplus_jX9": {
+                    "name": "BeautyPlus",
+                    "id": "beautyplus_jX9",
+                    "image": "",
+                    "isIndian": false
+                },
+                "makeupplus_dv5": {
+                    "name": "MakeupPlus",
+                    "id": "makeupplus_dv5",
+                    "image": "",
+                    "isIndian": false
+                },
+                "meitu__4P8": {
+                    "name": "Meitu ",
+                    "id": "meitu__4P8",
+                    "image": "",
+                    "isIndian": false
+                },
+                "beautycam_MZV": {
+                    "name": "BeautyCam",
+                    "id": "beautycam_MZV",
+                    "image": "",
+                    "isIndian": false
+                },
+                "o2cam_CNg": {
+                    "name": "O2Cam",
+                    "id": "o2cam_CNg",
+                    "image": "",
+                    "isIndian": false
+                },
+                "airvid_video_filters_&_frames_vXp": {
+                    "name": "AirVid Video Filters & Frames",
+                    "id": "airvid_video_filters_&_frames_vXp",
+                    "image": "",
+                    "isIndian": false
+                },
+                "plusme_camera_tJu": {
+                    "name": "PlusMe Camera",
+                    "id": "plusme_camera_tJu",
+                    "image": "",
+                    "isIndian": false
+                },
+                "meipai_FX8": {
+                    "name": "Meipai",
+                    "id": "meipai_FX8",
+                    "image": "",
+                    "isIndian": false
+                },
+                "pomelo__zVz": {
+                    "name": "Pomelo ",
+                    "id": "pomelo__zVz",
+                    "image": "",
+                    "isIndian": false
+                },
+                "selfiecity_Wrr": {
+                    "name": "SelfieCity",
+                    "id": "selfiecity_Wrr",
+                    "image": "",
+                    "isIndian": false
+                },
+                "airbrush_2go_CDd": {
+                    "name": "AirBrush 2Go",
+                    "id": "airbrush_2go_CDd",
+                    "image": "",
+                    "isIndian": false
+                },
+                "boxxcam_djV": {
+                    "name": "BOXxCAM",
+                    "id": "boxxcam_djV",
+                    "image": "",
+                    "isIndian": false
+                },
+                "xender_3yc": {
+                    "name": "Xender",
+                    "id": "xender_3yc",
+                    "image": "",
+                    "isIndian": false
+                },
+                "cam_scanner_4fK": {
+                    "name": "Cam Scanner",
+                    "id": "cam_scanner_4fK",
+                    "image": "",
+                    "isIndian": false
+                },
+                "camcard_free_mWP": {
+                    "name": "CamCard Free",
+                    "id": "camcard_free_mWP",
+                    "image": "",
+                    "isIndian": false
+                },
+                "ludo_world_89b": {
+                    "name": "Ludo World",
+                    "id": "ludo_world_89b",
+                    "image": "",
+                    "isIndian": false
+                },
+                "arena_of_valor_F0j": {
+                    "name": "Arena of Valor",
+                    "id": "arena_of_valor_F0j",
+                    "image": "",
+                    "isIndian": false
+                },
+                "chess_rush_9Sr": {
+                    "name": "Chess Rush",
+                    "id": "chess_rush_9Sr",
+                    "image": "",
+                    "isIndian": false
+                },
+                "clash_of_kings_FDm": {
+                    "name": "Clash of Kings",
+                    "id": "clash_of_kings_FDm",
+                    "image": "",
+                    "isIndian": false
+                },
+                "clash_of_kings:the_west_ogd": {
+                    "name": "Clash of Kings:The West",
+                    "id": "clash_of_kings:the_west_ogd",
+                    "image": "",
+                    "isIndian": false
+                },
+                "clash_of_queens_ZFX": {
+                    "name": "Clash of Queens",
+                    "id": "clash_of_queens_ZFX",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zombie_world_slg_3d_oyO": {
+                    "name": "Zombie World SLG 3D",
+                    "id": "zombie_world_slg_3d_oyO",
+                    "image": "",
+                    "isIndian": false
+                },
+                "heroes_war_lk3": {
+                    "name": "Heroes War",
+                    "id": "heroes_war_lk3",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mobile_legends_6Ic": {
+                    "name": "Mobile Legends",
+                    "id": "mobile_legends_6Ic",
+                    "image": "",
+                    "isIndian": false
+                },
+                "clubfactory_vGo": {
+                    "name": "ClubFactory",
+                    "id": "clubfactory_vGo",
+                    "image": "",
+                    "isIndian": false
+                },
+                "shein_02r": {
+                    "name": "Shein",
+                    "id": "shein_02r",
+                    "image": "",
+                    "isIndian": false
+                },
+                "romwe_Dbg": {
+                    "name": "Romwe",
+                    "id": "romwe_Dbg",
+                    "image": "",
+                    "isIndian": false
+                },
+                "applock_DFt": {
+                    "name": "AppLock",
+                    "id": "applock_DFt",
+                    "image": "",
+                    "isIndian": false
+                },
+                "vmate_0or": {
+                    "name": "VMate",
+                    "id": "vmate_0or",
+                    "image": "",
+                    "isIndian": false
+                },
+                "game_of_sultans_EWO": {
+                    "name": "Game of Sultans",
+                    "id": "game_of_sultans_EWO",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mafia_city_qwz": {
+                    "name": "Mafia City",
+                    "id": "mafia_city_qwz",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wechat_Gpu": {
+                    "name": "Wechat",
+                    "id": "wechat_Gpu",
+                    "image": "",
+                    "isIndian": false
+                },
+                "qq_nmw": {
+                    "name": "QQ",
+                    "id": "qq_nmw",
+                    "image": "",
+                    "isIndian": false
+                },
+                "baidu_Frc": {
+                    "name": "Baidu",
+                    "id": "baidu_Frc",
+                    "image": "",
+                    "isIndian": false
+                },
+                "360_mobile_guard_Oz2": {
+                    "name": "360 Mobile Guard",
+                    "id": "360_mobile_guard_Oz2",
+                    "image": "",
+                    "isIndian": false
+                },
+                "taobao_E1w": {
+                    "name": "Taobao",
+                    "id": "taobao_E1w",
+                    "image": "",
+                    "isIndian": false
+                },
+                "sina_weibo_7cW": {
+                    "name": "Sina Weibo",
+                    "id": "sina_weibo_7cW",
+                    "image": "",
+                    "isIndian": false
+                },
+                "weibo_8Xx": {
+                    "name": "Weibo",
+                    "id": "weibo_8Xx",
+                    "image": "",
+                    "isIndian": false
+                },
+                "uc_news_98L": {
+                    "name": "UC News",
+                    "id": "uc_news_98L",
+                    "image": "",
+                    "isIndian": false
+                },
+                "newsdog_qo7": {
+                    "name": "NewsDog",
+                    "id": "newsdog_qo7",
+                    "image": "",
+                    "isIndian": false
+                },
+                "vivavideo-_qu_video_inc_dbj": {
+                    "name": "VivaVideo- QU Video Inc",
+                    "id": "vivavideo-_qu_video_inc_dbj",
+                    "image": "",
+                    "isIndian": false
+                },
+                "parallel_space_v01": {
+                    "name": "Parallel Space",
+                    "id": "parallel_space_v01",
+                    "image": "",
+                    "isIndian": false
+                },
+                "apus_browser_tf3": {
+                    "name": "APUS Browser",
+                    "id": "apus_browser_tf3",
+                    "image": "",
+                    "isIndian": false
+                },
+                "perfect_corp_HZl": {
+                    "name": "Perfect Corp",
+                    "id": "perfect_corp_HZl",
+                    "image": "",
+                    "isIndian": false
+                },
+                "virus_cleaner_(hi_security_lab)_yV5": {
+                    "name": "Virus Cleaner (Hi Security Lab)",
+                    "id": "virus_cleaner_(hi_security_lab)_yV5",
+                    "image": "",
+                    "isIndian": false
+                },
+                "cm_browser_4Ok": {
+                    "name": "CM Browser",
+                    "id": "cm_browser_4Ok",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mi_community_vPe": {
+                    "name": "Mi Community",
+                    "id": "mi_community_vPe",
+                    "image": "",
+                    "isIndian": false
+                },
+                "vault-hide_4k7": {
+                    "name": "Vault-Hide",
+                    "id": "vault-hide_4k7",
+                    "image": "",
+                    "isIndian": false
+                },
+                "youcam_makeup_msA": {
+                    "name": "YouCam Makeup",
+                    "id": "youcam_makeup_msA",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mi_store_fZP": {
+                    "name": "Mi Store",
+                    "id": "mi_store_fZP",
+                    "image": "",
+                    "isIndian": false
+                },
+                "du_battery_saver_Pf8": {
+                    "name": "DU Battery Saver",
+                    "id": "du_battery_saver_Pf8",
+                    "image": "",
+                    "isIndian": false
+                },
+                "du_cleaner_2CA": {
+                    "name": "DU Cleaner",
+                    "id": "du_cleaner_2CA",
+                    "image": "",
+                    "isIndian": false
+                },
+                "baidu_map_9xk": {
+                    "name": "Baidu Map",
+                    "id": "baidu_map_9xk",
+                    "image": "",
+                    "isIndian": false
+                },
+                "photo_wonder_Nsm": {
+                    "name": "Photo Wonder",
+                    "id": "photo_wonder_Nsm",
+                    "image": "",
+                    "isIndian": false
+                },
+                "qq_music_XMn": {
+                    "name": "QQ Music",
+                    "id": "qq_music_XMn",
+                    "image": "",
+                    "isIndian": false
+                },
+                "qq_mail_3rI": {
+                    "name": "QQ Mail",
+                    "id": "qq_mail_3rI",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wesync_SEI": {
+                    "name": "WeSync",
+                    "id": "wesync_SEI",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mail_master_VZ6": {
+                    "name": "Mail Master",
+                    "id": "mail_master_VZ6",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mi_video_call-xiaomi_qfR": {
+                    "name": "Mi Video call-Xiaomi",
+                    "id": "mi_video_call-xiaomi_qfR",
+                    "image": "",
+                    "isIndian": false
+                },
+                "pleco_Jgo": {
+                    "name": "Pleco",
+                    "id": "pleco_Jgo",
+                    "image": "",
+                    "isIndian": false
+                },
+                "china_metro_cvR": {
+                    "name": "China Metro",
+                    "id": "china_metro_cvR",
+                    "image": "",
+                    "isIndian": false
+                },
+                "all_video_downloader_al4": {
+                    "name": "All video downloader",
+                    "id": "all_video_downloader_al4",
+                    "image": "",
+                    "isIndian": false
+                },
+                "vigo_lite_dIP": {
+                    "name": "Vigo Lite",
+                    "id": "vigo_lite_dIP",
+                    "image": "",
+                    "isIndian": false
+                },
+                "udictionary_5H2": {
+                    "name": "Udictionary",
+                    "id": "udictionary_5H2",
+                    "image": "",
+                    "isIndian": false
+                },
+                "livu_CpL": {
+                    "name": "Livu",
+                    "id": "livu_CpL",
+                    "image": "",
+                    "isIndian": false
+                },
+                "uplive_QEy": {
+                    "name": "Uplive",
+                    "id": "uplive_QEy",
+                    "image": "",
+                    "isIndian": false
+                },
+                "kings_of_avalon_gSj": {
+                    "name": "Kings of Avalon",
+                    "id": "kings_of_avalon_gSj",
+                    "image": "",
+                    "isIndian": false
+                },
+                "guns_of_glory_1gu": {
+                    "name": "Guns of glory",
+                    "id": "guns_of_glory_1gu",
+                    "image": "",
+                    "isIndian": false
+                },
+                "castle_cash_8W2": {
+                    "name": "Castle Cash",
+                    "id": "castle_cash_8W2",
+                    "image": "",
+                    "isIndian": false
+                },
+                "nonolive_nRD": {
+                    "name": "NonoLive",
+                    "id": "nonolive_nRD",
+                    "image": "",
+                    "isIndian": false
+                },
+                "dating.com_h6c": {
+                    "name": "Dating.com",
+                    "id": "dating.com_h6c",
+                    "image": "",
+                    "isIndian": false
+                },
+                "web_novel_suB": {
+                    "name": "Web Novel",
+                    "id": "web_novel_suB",
+                    "image": "",
+                    "isIndian": false
+                },
+                "hello_yo_4L8": {
+                    "name": "Hello Yo",
+                    "id": "hello_yo_4L8",
+                    "image": "",
+                    "isIndian": false
+                },
+                "lagecy_of_discord_mJl": {
+                    "name": "Lagecy of discord",
+                    "id": "lagecy_of_discord_mJl",
+                    "image": "",
+                    "isIndian": false
+                },
+                "last_empire_5ov": {
+                    "name": "Last empire",
+                    "id": "last_empire_5ov",
+                    "image": "",
+                    "isIndian": false
+                },
+                "art_of_conquest_ZCv": {
+                    "name": "Art of conquest",
+                    "id": "art_of_conquest_ZCv",
+                    "image": "",
+                    "isIndian": false
+                },
+                "flash_keyboard_8jk": {
+                    "name": "Flash Keyboard",
+                    "id": "flash_keyboard_8jk",
+                    "image": "",
+                    "isIndian": false
+                },
+                "turbo_vpn_uxK": {
+                    "name": "Turbo VPN",
+                    "id": "turbo_vpn_uxK",
+                    "image": "",
+                    "isIndian": false
+                },
+                "viva_video_owg": {
+                    "name": "viva Video",
+                    "id": "viva_video_owg",
+                    "image": "",
+                    "isIndian": false
+                },
+                "cheez_kqZ": {
+                    "name": "Cheez",
+                    "id": "cheez_kqZ",
+                    "image": "",
+                    "isIndian": false
+                },
+                "alibaba.com_THW": {
+                    "name": "Alibaba.com",
+                    "id": "alibaba.com_THW",
+                    "image": "",
+                    "isIndian": false
+                },
+                "applock_lite_CXX": {
+                    "name": "AppLock lite",
+                    "id": "applock_lite_CXX",
+                    "image": "",
+                    "isIndian": false
+                },
+                "aliexpress_v4y": {
+                    "name": "AliExpress",
+                    "id": "aliexpress_v4y",
+                    "image": "",
+                    "isIndian": false
+                },
+                "itao_DRH": {
+                    "name": "iTao",
+                    "id": "itao_DRH",
+                    "image": "",
+                    "isIndian": false
+                },
+                "es_file_manager_xwI": {
+                    "name": "ES File Manager",
+                    "id": "es_file_manager_xwI",
+                    "image": "",
+                    "isIndian": false
+                },
+                "file_explorer_file_manager_btG": {
+                    "name": "File Explorer File Manager",
+                    "id": "file_explorer_file_manager_btG",
+                    "image": "",
+                    "isIndian": false
+                },
+                "music_player_ZN3": {
+                    "name": "Music Player",
+                    "id": "music_player_ZN3",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mi_pay_5GN": {
+                    "name": "mi pay",
+                    "id": "mi_pay_5GN",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mi_remote_control_3w2": {
+                    "name": "mi remote control",
+                    "id": "mi_remote_control_3w2",
+                    "image": "",
+                    "isIndian": false
+                },
+                "banggood_16t": {
+                    "name": "banggood",
+                    "id": "banggood_16t",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mi_credit_rDT": {
+                    "name": "Mi Credit",
+                    "id": "mi_credit_rDT",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wps_office_e3T": {
+                    "name": "WPS Office",
+                    "id": "wps_office_e3T",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wps_office_lite_FMn": {
+                    "name": "WPS Office Lite",
+                    "id": "wps_office_lite_FMn",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wps_pdf_cdU": {
+                    "name": "WPS PDF",
+                    "id": "wps_pdf_cdU",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wps_office_extra_45X": {
+                    "name": "WPS Office Extra",
+                    "id": "wps_office_extra_45X",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wps_premium_subscription_Jv8": {
+                    "name": "WPS Premium Subscription",
+                    "id": "wps_premium_subscription_Jv8",
+                    "image": "",
+                    "isIndian": false
+                },
+                "wps_pdf_fill_DuO": {
+                    "name": "WPS PDF Fill",
+                    "id": "wps_pdf_fill_DuO",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zapya_-_file_transfer,_sharing_music_playlist_Bcy": {
+                    "name": "Zapya - File Transfer, Sharing Music Playlist",
+                    "id": "zapya_-_file_transfer,_sharing_music_playlist_Bcy",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zapya_webshare_-_file_sharing_in_web_browser_hGC": {
+                    "name": "Zapya WebShare - File Sharing in Web Browser",
+                    "id": "zapya_webshare_-_file_sharing_in_web_browser_hGC",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zapya_go_-_from_file_transfer_to_private_social_jnF": {
+                    "name": "Zapya Go - From File Transfer to Private Social",
+                    "id": "zapya_go_-_from_file_transfer_to_private_social_jnF",
+                    "image": "",
+                    "isIndian": false
+                },
+                "recorderz_-_screen_recorder_by_zapya_DVp": {
+                    "name": "RecorderZ - Screen Recorder by Zapya",
+                    "id": "recorderz_-_screen_recorder_by_zapya_DVp",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zapya_doodle_Kmx": {
+                    "name": "Zapya Doodle",
+                    "id": "zapya_doodle_Kmx",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zapya_air_hockey_s4S": {
+                    "name": "Zapya Air Hockey",
+                    "id": "zapya_air_hockey_s4S",
+                    "image": "",
+                    "isIndian": false
+                },
+                "screenlockz_by_zapya_JeT": {
+                    "name": "ScreenLockZ by Zapya",
+                    "id": "screenlockz_by_zapya_JeT",
+                    "image": "",
+                    "isIndian": false
+                },
+                "zapya_minigame_DLl": {
+                    "name": "Zapya MiniGame",
+                    "id": "zapya_minigame_DLl",
+                    "image": "",
+                    "isIndian": false
+                },
+                "mydearest_tjm": {
+                    "name": "MyDearest",
+                    "id": "mydearest_tjm",
+                    "image": "",
+                    "isIndian": false
+                },
+                "applockz_by_zapya_qjm": {
+                    "name": "AppLockZ by Zapya",
+                    "id": "applockz_by_zapya_qjm",
+                    "image": "",
+                    "isIndian": false
+                },
+                "filez_-_easy_file_manager_p30": {
+                    "name": "FileZ - Easy File Manager",
+                    "id": "filez_-_easy_file_manager_p30",
+                    "image": "",
+                    "isIndian": false
+                },
+                "dingtalk_FRY": {
+                    "name": "DingTalk",
+                    "id": "dingtalk_FRY",
+                    "image": "",
+                    "isIndian": false
+                },
+                "dingtalk_lite_NZT": {
+                    "name": "DingTalk Lite",
+                    "id": "dingtalk_lite_NZT",
+                    "image": "",
+                    "isIndian": false
+                }
+            },
+            "companies": {}
+        },
+        "home_care_qB7": {
+            "name": "Home Care",
+            "id": "home_care_qB7",
+            "image": "",
+            "children": {},
+            "products": {
+                "active_wheel_dJL": {
+                    "name": "Active Wheel",
+                    "id": "active_wheel_dJL",
+                    "image": "",
+                    "isIndian": false
+                },
+                "cif_BjM": {
+                    "name": "Cif",
+                    "id": "cif_BjM",
+                    "image": "",
+                    "isIndian": false
+                },
+                "comfort_xyC": {
+                    "name": "Comfort",
+                    "id": "comfort_xyC",
+                    "image": "",
+                    "isIndian": false
+                },
+                "domex_0Py": {
+                    "name": "Domex",
+                    "id": "domex_0Py",
+                    "image": "",
+                    "isIndian": false
+                }
+            },
+            "companies": {
+                "hindustan_unilever_BXn": {
+                    "name": "Hindustan Unilever",
+                    "id": "hindustan_unilever_BXn",
+                    "image": "",
+                    "isIndian": false
+                }
+            }
+        },
+        "personal_care_and_beauty__4PW": {
+            "name": "Personal Care and Beauty ",
+            "id": "personal_care_and_beauty__4PW",
+            "image": "",
+            "children": {},
+            "products": {
+                "clinic_plus_NHi": {
+                    "name": "Clinic Plus",
+                    "id": "clinic_plus_NHi",
+                    "image": "",
+                    "isIndian": false
+                },
+                "close_up_uin": {
+                    "name": "Close Up",
+                    "id": "close_up_uin",
+                    "image": "",
+                    "isIndian": false
+                },
+                "dove_Nqg": {
+                    "name": "Dove",
+                    "id": "dove_Nqg",
+                    "image": "",
+                    "isIndian": false
+                },
+                "elle_18_knr": {
+                    "name": "Elle 18",
+                    "id": "elle_18_knr",
+                    "image": "",
+                    "isIndian": false
+                },
+                "fair_&_lovely_LCw": {
+                    "name": "Fair & Lovely",
+                    "id": "fair_&_lovely_LCw",
+                    "image": "",
+                    "isIndian": false
+                },
+                "hamam_agl": {
+                    "name": "Hamam",
+                    "id": "hamam_agl",
+                    "image": "",
+                    "isIndian": false
+                },
+                "indulekha_Qfb": {
+                    "name": "Indulekha",
+                    "id": "indulekha_Qfb",
+                    "image": "",
+                    "isIndian": false
+                },
+                "lakmé_x0w": {
+                    "name": "Lakmé",
+                    "id": "lakmé_x0w",
+                    "image": "",
+                    "isIndian": false
+                }
+            },
+            "companies": {
+                "hindustan_unilever_BXn": {
+                    "name": "Hindustan Unilever",
+                    "id": "hindustan_unilever_BXn",
+                    "image": "",
+                    "isIndian": false
+                }
+            }
+        },
+        "food_avf": {
+            "name": "Food",
+            "id": "food_avf",
+            "image": "",
+            "children": {},
+            "products": {
+                "cornetto_9KF": {
+                    "name": "Cornetto",
+                    "id": "cornetto_9KF",
+                    "image": "",
+                    "isIndian": false
+                },
+                "kissan_5q3": {
+                    "name": "Kissan",
+                    "id": "kissan_5q3",
+                    "image": "",
+                    "isIndian": false
+                },
+                "knorr_vrh": {
+                    "name": "Knorr",
+                    "id": "knorr_vrh",
+                    "image": "",
+                    "isIndian": false
+                },
+                "kwality_wall’s_KIv": {
+                    "name": "Kwality Wall’s",
+                    "id": "kwality_wall’s_KIv",
+                    "image": "",
+                    "isIndian": false
+                }
+            },
+            "companies": {
+                "hindustan_unilever_BXn": {
+                    "name": "Hindustan Unilever",
+                    "id": "hindustan_unilever_BXn",
+                    "image": "",
+                    "isIndian": false
+                }
+            }
+        },
+        "beverages_d2b": {
+            "name": "Beverages",
+            "id": "beverages_d2b",
+            "image": "",
+            "children": {},
+            "products": {
+                "horlicks_iUx": {
+                    "name": "Horlicks",
+                    "id": "horlicks_iUx",
+                    "image": "",
+                    "isIndian": false
+                },
+                "horlicks_cardia+_t15": {
+                    "name": "Horlicks Cardia+",
+                    "id": "horlicks_cardia+_t15",
+                    "image": "",
+                    "isIndian": false
+                },
+                "horlicks_growth+_xZv": {
+                    "name": "Horlicks Growth+",
+                    "id": "horlicks_growth+_xZv",
+                    "image": "",
+                    "isIndian": false
+                },
+                "horlicks_lite_wzj": {
+                    "name": "Horlicks Lite",
+                    "id": "horlicks_lite_wzj",
+                    "image": "",
+                    "isIndian": false
+                },
+                "horlicks_protein+_G2L": {
+                    "name": "Horlicks Protein+",
+                    "id": "horlicks_protein+_G2L",
+                    "image": "",
+                    "isIndian": false
+                },
+                "junior_horlicks_1A0": {
+                    "name": "Junior Horlicks",
+                    "id": "junior_horlicks_1A0",
+                    "image": "",
+                    "isIndian": false
+                }
+            },
+            "companies": {
+                "hindustan_unilever_BXn": {
+                    "name": "Hindustan Unilever",
+                    "id": "hindustan_unilever_BXn",
+                    "image": "",
+                    "isIndian": false
                 }
             }
         }
@@ -247,7 +1402,7 @@
             "name": "Raymond Group",
             "id": "raymond_group_Xvl",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -263,13 +1418,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "vip_industries_XGn": {
             "name": "VIP Industries",
             "id": "vip_industries_XGn",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -280,13 +1441,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "metdist_group_HSt": {
             "name": "Metdist Group",
             "id": "metdist_group_HSt",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -297,13 +1464,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "arvind_mills_HPG": {
             "name": "Arvind Mills",
             "id": "arvind_mills_HPG",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -349,13 +1522,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "oswal_woolen_mills_limited_McB": {
             "name": "Oswal Woolen Mills Limited",
             "id": "oswal_woolen_mills_limited_McB",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -366,13 +1545,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "tata_group_oX5": {
             "name": "Tata Group",
             "id": "tata_group_oX5",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -383,13 +1568,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "aditya_birla_group_FMi": {
             "name": "Aditya Birla Group",
             "id": "aditya_birla_group_FMi",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -405,13 +1596,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "hidesign_34Q": {
             "name": "HiDesign",
             "id": "hidesign_34Q",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -422,13 +1619,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "indian_terrain_fashions_limited_rOL": {
             "name": "Indian Terrain Fashions Limited",
             "id": "indian_terrain_fashions_limited_rOL",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -439,13 +1642,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "lakhani_brothers_hmv": {
             "name": "Lakhani Brothers",
             "id": "lakhani_brothers_hmv",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -456,13 +1665,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "kewal_kiran_clothing_limited_1q7": {
             "name": "Kewal Kiran Clothing Limited",
             "id": "kewal_kiran_clothing_limited_1q7",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -473,13 +1688,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "sknl_Fzd": {
             "name": "SKNL",
             "id": "sknl_Fzd",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -490,13 +1711,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "da_milano_leathers_pvt_ltd_sk7": {
             "name": "DA MILANO LEATHERS PVT LTD",
             "id": "da_milano_leathers_pvt_ltd_sk7",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -507,13 +1734,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "siyaram's_FWf": {
             "name": "Siyaram's",
             "id": "siyaram's_FWf",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -524,13 +1757,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "provogue_india_hSm": {
             "name": "Provogue India",
             "id": "provogue_india_hSm",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -541,13 +1780,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "planet_retail_company_PyJ": {
             "name": "Planet Retail Company",
             "id": "planet_retail_company_PyJ",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -558,13 +1803,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "madura_fashion_and_lifestyle_ZJM": {
             "name": "Madura Fashion and Lifestyle",
             "id": "madura_fashion_and_lifestyle_ZJM",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -575,13 +1826,19 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "franco_leone_limited_sGT": {
             "name": "Franco Leone Limited",
             "id": "franco_leone_limited_sGT",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "address": "",
             "email": "",
             "phone_number": "",
@@ -592,7 +1849,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "blue_tokai_k2b": {
             "name": "Blue Tokai",
@@ -609,7 +1872,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "the_flying_squirrel_vn1": {
             "name": "The Flying Squirrel",
@@ -626,7 +1895,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "the_indian_bean_dhx": {
             "name": "The Indian Bean",
@@ -643,7 +1918,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "panduranga_coffee_works_B15": {
             "name": "Panduranga Coffee Works",
@@ -660,7 +1941,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "leo_coffee_india_UEI": {
             "name": "Leo Coffee India",
@@ -677,7 +1964,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "halli_berri_46N": {
             "name": "Halli Berri",
@@ -694,7 +1987,13 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "coffee_day_enterprises_2yq": {
             "name": "Coffee Day Enterprises",
@@ -711,7 +2010,356 @@
                     "image": ""
                 }
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "hindustan_unilever_BXn": {
+            "name": "Hindustan Unilever",
+            "id": "hindustan_unilever_BXn",
+            "image": "",
+            "isIndian": false,
+            "address": "",
+            "email": "",
+            "phone_number": "",
+            "products": {
+                "active_wheel_dJL": {
+                    "name": "Active Wheel",
+                    "id": "active_wheel_dJL",
+                    "image": ""
+                },
+                "annapurna_L7d": {
+                    "name": "Annapurna",
+                    "id": "annapurna_L7d",
+                    "image": ""
+                },
+                "aviance_unT": {
+                    "name": "Aviance",
+                    "id": "aviance_unT",
+                    "image": ""
+                },
+                "axe_eIN": {
+                    "name": "Axe",
+                    "id": "axe_eIN",
+                    "image": ""
+                },
+                "boost_pEm": {
+                    "name": "Boost",
+                    "id": "boost_pEm",
+                    "image": ""
+                },
+                "breeze_(soap)_KuS": {
+                    "name": "Breeze (soap)",
+                    "id": "breeze_(soap)_KuS",
+                    "image": ""
+                },
+                "brooke_bond_3_roses_2B7": {
+                    "name": "Brooke Bond 3 Roses",
+                    "id": "brooke_bond_3_roses_2B7",
+                    "image": ""
+                },
+                "brooke_bond_red_label_5ys": {
+                    "name": "Brooke Bond Red Label",
+                    "id": "brooke_bond_red_label_5ys",
+                    "image": ""
+                },
+                "brooke_bond_taaza_r0l": {
+                    "name": "Brooke Bond Taaza",
+                    "id": "brooke_bond_taaza_r0l",
+                    "image": ""
+                },
+                "brooke_bond_taj_mahal_17K": {
+                    "name": "Brooke Bond Taj Mahal",
+                    "id": "brooke_bond_taj_mahal_17K",
+                    "image": ""
+                },
+                "bru_CYR": {
+                    "name": "Bru",
+                    "id": "bru_CYR",
+                    "image": ""
+                },
+                "brylcreem_2zg": {
+                    "name": "Brylcreem",
+                    "id": "brylcreem_2zg",
+                    "image": ""
+                },
+                "cif_BjM": {
+                    "name": "Cif",
+                    "id": "cif_BjM",
+                    "image": ""
+                },
+                "citra_TXe": {
+                    "name": "Citra",
+                    "id": "citra_TXe",
+                    "image": ""
+                },
+                "clear_HSc": {
+                    "name": "Clear",
+                    "id": "clear_HSc",
+                    "image": ""
+                },
+                "clinic_plus_NHi": {
+                    "name": "Clinic Plus",
+                    "id": "clinic_plus_NHi",
+                    "image": ""
+                },
+                "close_up_uin": {
+                    "name": "Close Up",
+                    "id": "close_up_uin",
+                    "image": ""
+                },
+                "comfort_xyC": {
+                    "name": "Comfort",
+                    "id": "comfort_xyC",
+                    "image": ""
+                },
+                "cornetto_9KF": {
+                    "name": "Cornetto",
+                    "id": "cornetto_9KF",
+                    "image": ""
+                },
+                "domex_0Py": {
+                    "name": "Domex",
+                    "id": "domex_0Py",
+                    "image": ""
+                },
+                "dove_Nqg": {
+                    "name": "Dove",
+                    "id": "dove_Nqg",
+                    "image": ""
+                },
+                "elle_18_knr": {
+                    "name": "Elle 18",
+                    "id": "elle_18_knr",
+                    "image": ""
+                },
+                "fair_&_lovely_LCw": {
+                    "name": "Fair & Lovely",
+                    "id": "fair_&_lovely_LCw",
+                    "image": ""
+                },
+                "hamam_agl": {
+                    "name": "Hamam",
+                    "id": "hamam_agl",
+                    "image": ""
+                },
+                "horlicks_iUx": {
+                    "name": "Horlicks",
+                    "id": "horlicks_iUx",
+                    "image": ""
+                },
+                "horlicks_cardia+_t15": {
+                    "name": "Horlicks Cardia+",
+                    "id": "horlicks_cardia+_t15",
+                    "image": ""
+                },
+                "horlicks_growth+_xZv": {
+                    "name": "Horlicks Growth+",
+                    "id": "horlicks_growth+_xZv",
+                    "image": ""
+                },
+                "horlicks_lite_wzj": {
+                    "name": "Horlicks Lite",
+                    "id": "horlicks_lite_wzj",
+                    "image": ""
+                },
+                "horlicks_protein+_G2L": {
+                    "name": "Horlicks Protein+",
+                    "id": "horlicks_protein+_G2L",
+                    "image": ""
+                },
+                "indulekha_Qfb": {
+                    "name": "Indulekha",
+                    "id": "indulekha_Qfb",
+                    "image": ""
+                },
+                "junior_horlicks_1A0": {
+                    "name": "Junior Horlicks",
+                    "id": "junior_horlicks_1A0",
+                    "image": ""
+                },
+                "kissan_5q3": {
+                    "name": "Kissan",
+                    "id": "kissan_5q3",
+                    "image": ""
+                },
+                "knorr_vrh": {
+                    "name": "Knorr",
+                    "id": "knorr_vrh",
+                    "image": ""
+                },
+                "kwality_wall’s_KIv": {
+                    "name": "Kwality Wall’s",
+                    "id": "kwality_wall’s_KIv",
+                    "image": ""
+                },
+                "lakmé_x0w": {
+                    "name": "Lakmé",
+                    "id": "lakmé_x0w",
+                    "image": ""
+                },
+                "lever_ayush_Uit": {
+                    "name": "Lever ayush",
+                    "id": "lever_ayush_Uit",
+                    "image": ""
+                },
+                "lifebuoy_JEE": {
+                    "name": "Lifebuoy",
+                    "id": "lifebuoy_JEE",
+                    "image": ""
+                },
+                "lipton_Cx1": {
+                    "name": "Lipton",
+                    "id": "lipton_Cx1",
+                    "image": ""
+                },
+                "liril_vOI": {
+                    "name": "Liril",
+                    "id": "liril_vOI",
+                    "image": ""
+                },
+                "love_&_care_rFq": {
+                    "name": "Love & Care",
+                    "id": "love_&_care_rFq",
+                    "image": ""
+                },
+                "love_beauty_and_planet_c3w": {
+                    "name": "Love Beauty and Planet",
+                    "id": "love_beauty_and_planet_c3w",
+                    "image": ""
+                },
+                "lux_Ocl": {
+                    "name": "Lux",
+                    "id": "lux_Ocl",
+                    "image": ""
+                },
+                "magnum_2TZ": {
+                    "name": "Magnum",
+                    "id": "magnum_2TZ",
+                    "image": ""
+                },
+                "mother's_horlicks_saM": {
+                    "name": "Mother's Horlicks",
+                    "id": "mother's_horlicks_saM",
+                    "image": ""
+                },
+                "pears_C9c": {
+                    "name": "Pears",
+                    "id": "pears_C9c",
+                    "image": ""
+                },
+                "pepsodent_ee2": {
+                    "name": "Pepsodent",
+                    "id": "pepsodent_ee2",
+                    "image": ""
+                },
+                "pond’s_ltN": {
+                    "name": "Pond’s",
+                    "id": "pond’s_ltN",
+                    "image": ""
+                },
+                "pure_derm_FRV": {
+                    "name": "Pure Derm",
+                    "id": "pure_derm_FRV",
+                    "image": ""
+                },
+                "pureit_aiN": {
+                    "name": "Pureit",
+                    "id": "pureit_aiN",
+                    "image": ""
+                },
+                "rexona_0w5": {
+                    "name": "Rexona",
+                    "id": "rexona_0w5",
+                    "image": ""
+                },
+                "rin_bdh": {
+                    "name": "Rin",
+                    "id": "rin_bdh",
+                    "image": ""
+                },
+                "sunlight_7Et": {
+                    "name": "Sunlight",
+                    "id": "sunlight_7Et",
+                    "image": ""
+                },
+                "sunsilk_cgp": {
+                    "name": "Sunsilk",
+                    "id": "sunsilk_cgp",
+                    "image": ""
+                },
+                "sure_dVy": {
+                    "name": "Sure",
+                    "id": "sure_dVy",
+                    "image": ""
+                },
+                "surf_excel_Zp3": {
+                    "name": "Surf excel",
+                    "id": "surf_excel_Zp3",
+                    "image": ""
+                },
+                "tigi_aLW": {
+                    "name": "TIGI",
+                    "id": "tigi_aLW",
+                    "image": ""
+                },
+                "toni&guy_Y3N": {
+                    "name": "TONI&GUY",
+                    "id": "toni&guy_Y3N",
+                    "image": ""
+                },
+                "tresemmé_nzt": {
+                    "name": "TRESemmé",
+                    "id": "tresemmé_nzt",
+                    "image": ""
+                },
+                "vaseline_T2c": {
+                    "name": "Vaseline",
+                    "id": "vaseline_T2c",
+                    "image": ""
+                },
+                "vim_B67": {
+                    "name": "Vim",
+                    "id": "vim_B67",
+                    "image": ""
+                },
+                "women's_horlicks_faD": {
+                    "name": "Women's Horlicks",
+                    "id": "women's_horlicks_faD",
+                    "image": ""
+                }
+            },
+            "categories": {
+                "home_care_qB7": {
+                    "name": "Home Care",
+                    "id": "home_care_qB7",
+                    "image": ""
+                },
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                },
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                },
+                "food_avf": {
+                    "name": "Food",
+                    "id": "food_avf",
+                    "image": ""
+                },
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
         }
     },
     "products": {
@@ -719,332 +2367,494 @@
             "name": "Park Avenue",
             "id": "park_avenue_mDv",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Raymond Group",
                 "id": "raymond_group_Xvl",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "caprese_gbz": {
             "name": "Caprese",
             "id": "caprese_gbz",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "VIP Industries",
                 "id": "vip_industries_XGn",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "spyker_Tul": {
             "name": "Spyker",
             "id": "spyker_Tul",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Metdist Group",
                 "id": "metdist_group_HSt",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "flying_machine_nYb": {
             "name": "Flying Machine",
             "id": "flying_machine_nYb",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "newport_DPO": {
             "name": "Newport",
             "id": "newport_DPO",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "quads_r1M": {
             "name": "Quads",
             "id": "quads_r1M",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "ruf_&_tuf_jrm": {
             "name": "Ruf & Tuf",
             "id": "ruf_&_tuf_jrm",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "excalibur_LQa": {
             "name": "Excalibur",
             "id": "excalibur_LQa",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "is_5IZ": {
             "name": "Is",
             "id": "is_5IZ",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "creyate_5Ew": {
             "name": "Creyate",
             "id": "creyate_5Ew",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "arvind_rtw_ZCa": {
             "name": "Arvind RTW",
             "id": "arvind_rtw_ZCa",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Arvind Mills",
                 "id": "arvind_mills_HPG",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "monte_carlo_lDn": {
             "name": "Monte Carlo",
             "id": "monte_carlo_lDn",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Oswal Woolen Mills Limited",
                 "id": "oswal_woolen_mills_limited_McB",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "westside_HQS": {
             "name": "Westside",
             "id": "westside_HQS",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Tata Group",
                 "id": "tata_group_oX5",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "allen_solly_xF3": {
             "name": "Allen Solly",
             "id": "allen_solly_xF3",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Aditya Birla Group",
                 "id": "aditya_birla_group_FMi",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "hidesign_xnn": {
             "name": "HiDesign",
             "id": "hidesign_xnn",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "HiDesign",
                 "id": "hidesign_34Q",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "indian_terrain_7Dl": {
             "name": "Indian Terrain",
             "id": "indian_terrain_7Dl",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Indian Terrain Fashions Limited",
                 "id": "indian_terrain_fashions_limited_rOL",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "gini_&_jony_e8x": {
             "name": "Gini & Jony",
             "id": "gini_&_jony_e8x",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Lakhani Brothers",
                 "id": "lakhani_brothers_hmv",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "knotty_derby_and_arden_shoes_8bI": {
             "name": "Knotty Derby and Arden Shoes",
             "id": "knotty_derby_and_arden_shoes_8bI",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {}
         },
         "van_husen_LZO": {
             "name": "Van Husen",
             "id": "van_husen_LZO",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Aditya Birla Group",
                 "id": "aditya_birla_group_FMi",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "killer_jMY": {
             "name": "Killer",
             "id": "killer_jMY",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Kewal Kiran Clothing Limited",
                 "id": "kewal_kiran_clothing_limited_1q7",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "parx_Tdc": {
             "name": "Parx",
             "id": "parx_Tdc",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Raymond Group",
                 "id": "raymond_group_Xvl",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "belmonte_wUo": {
             "name": "Belmonte",
             "id": "belmonte_wUo",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "SKNL",
                 "id": "sknl_Fzd",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "da_milano_IM2": {
             "name": "Da Milano",
             "id": "da_milano_IM2",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "DA MILANO LEATHERS PVT LTD",
                 "id": "da_milano_leathers_pvt_ltd_sk7",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "oxemberg_j4p": {
             "name": "Oxemberg",
             "id": "oxemberg_j4p",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Siyaram's",
                 "id": "siyaram's_FWf",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "provogue_OHE": {
             "name": "Provogue",
             "id": "provogue_OHE",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Provogue India",
                 "id": "provogue_india_hSm",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "lavie_YJ5": {
             "name": "Lavie",
             "id": "lavie_YJ5",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Planet Retail Company",
                 "id": "planet_retail_company_PyJ",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "louis_philippe_eT2": {
             "name": "Louis Philippe",
             "id": "louis_philippe_eT2",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Madura Fashion and Lifestyle",
                 "id": "madura_fashion_and_lifestyle_ZJM",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "franco_leone_cNJ": {
             "name": "Franco Leone",
             "id": "franco_leone_cNJ",
             "image": "",
-            "isIndian": "",
+            "isIndian": true,
             "company": {
                 "name": "Franco Leone Limited",
                 "id": "franco_leone_limited_sGT",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "clothing_and_accessories_CRa": {
+                    "name": "Clothing and Accessories",
+                    "id": "clothing_and_accessories_CRa",
+                    "image": ""
+                }
+            }
         },
         "and_designs_tiA": {
             "name": "And Designs",
@@ -1063,7 +2873,13 @@
                 "id": "blue_tokai_k2b",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "the_flying_squirrel_Fp5": {
             "name": "The Flying Squirrel",
@@ -1075,7 +2891,13 @@
                 "id": "the_flying_squirrel_vn1",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "the_indian_bean_OMs": {
             "name": "The Indian Bean",
@@ -1087,7 +2909,13 @@
                 "id": "the_indian_bean_dhx",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "panduranga_coffee_works_GLd": {
             "name": "Panduranga Coffee Works",
@@ -1099,7 +2927,13 @@
                 "id": "panduranga_coffee_works_B15",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "leo_coffee_india_2rR": {
             "name": "Leo Coffee India",
@@ -1111,7 +2945,13 @@
                 "id": "leo_coffee_india_UEI",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "halli_berri_1iJ": {
             "name": "Halli Berri",
@@ -1123,7 +2963,13 @@
                 "id": "halli_berri_46N",
                 "image": ""
             },
-            "categories": {}
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
         },
         "cafe_coffee_day_hgl": {
             "name": "Cafe Coffee Day",
@@ -1133,6 +2979,1802 @@
             "company": {
                 "name": "Coffee Day Enterprises",
                 "id": "coffee_day_enterprises_2yq",
+                "image": ""
+            },
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and Coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "helo_ovs": {
+            "name": "Helo",
+            "id": "helo_ovs",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "helo_lite_z2X": {
+            "name": "Helo Lite",
+            "id": "helo_lite_z2X",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "shareit_RPe": {
+            "name": "SHAREit",
+            "id": "shareit_RPe",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "shareit_lite_Q8w": {
+            "name": "SHAREit Lite",
+            "id": "shareit_lite_Q8w",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "watchit_wvH": {
+            "name": "WATCHit",
+            "id": "watchit_wvH",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "tiktok_fW4": {
+            "name": "TikTok",
+            "id": "tiktok_fW4",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "tiktok_wall_picture_a8h": {
+            "name": "TikTok Wall Picture",
+            "id": "tiktok_wall_picture_a8h",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "tiktok_lite_fk6": {
+            "name": "TikTok Lite",
+            "id": "tiktok_lite_fk6",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "kwai_5QB": {
+            "name": "Kwai",
+            "id": "kwai_5QB",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "ucbrowser_Nfx": {
+            "name": "UCBrowser",
+            "id": "ucbrowser_Nfx",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "ucbrowser_mini_CJI": {
+            "name": "UCBrowser Mini",
+            "id": "ucbrowser_mini_CJI",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "uc_browser_turbo_EDb": {
+            "name": "UC Browser Turbo",
+            "id": "uc_browser_turbo_EDb",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "uc_cricket_FOv": {
+            "name": "UC Cricket",
+            "id": "uc_cricket_FOv",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "liveme_zsq": {
+            "name": "LiveMe",
+            "id": "liveme_zsq",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "bigo_live_Iai": {
+            "name": "Bigo Live",
+            "id": "bigo_live_Iai",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "vigo_video_LjF": {
+            "name": "Vigo Video",
+            "id": "vigo_video_LjF",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "vigo_video_live_photo_yqb": {
+            "name": "Vigo Video Live Photo",
+            "id": "vigo_video_live_photo_yqb",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "airbrush:_easy_photo_editor_74i": {
+            "name": "AirBrush: Easy Photo Editor",
+            "id": "airbrush:_easy_photo_editor_74i",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "beautyplus_jX9": {
+            "name": "BeautyPlus",
+            "id": "beautyplus_jX9",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "makeupplus_dv5": {
+            "name": "MakeupPlus",
+            "id": "makeupplus_dv5",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "meitu__4P8": {
+            "name": "Meitu ",
+            "id": "meitu__4P8",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "beautycam_MZV": {
+            "name": "BeautyCam",
+            "id": "beautycam_MZV",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "o2cam_CNg": {
+            "name": "O2Cam",
+            "id": "o2cam_CNg",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "airvid_video_filters_&_frames_vXp": {
+            "name": "AirVid Video Filters & Frames",
+            "id": "airvid_video_filters_&_frames_vXp",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "plusme_camera_tJu": {
+            "name": "PlusMe Camera",
+            "id": "plusme_camera_tJu",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "meipai_FX8": {
+            "name": "Meipai",
+            "id": "meipai_FX8",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "pomelo__zVz": {
+            "name": "Pomelo ",
+            "id": "pomelo__zVz",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "selfiecity_Wrr": {
+            "name": "SelfieCity",
+            "id": "selfiecity_Wrr",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "airbrush_2go_CDd": {
+            "name": "AirBrush 2Go",
+            "id": "airbrush_2go_CDd",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "boxxcam_djV": {
+            "name": "BOXxCAM",
+            "id": "boxxcam_djV",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "xender_3yc": {
+            "name": "Xender",
+            "id": "xender_3yc",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "cam_scanner_4fK": {
+            "name": "Cam Scanner",
+            "id": "cam_scanner_4fK",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "camcard_free_mWP": {
+            "name": "CamCard Free",
+            "id": "camcard_free_mWP",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "ludo_world_89b": {
+            "name": "Ludo World",
+            "id": "ludo_world_89b",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "arena_of_valor_F0j": {
+            "name": "Arena of Valor",
+            "id": "arena_of_valor_F0j",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "chess_rush_9Sr": {
+            "name": "Chess Rush",
+            "id": "chess_rush_9Sr",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "clash_of_kings_FDm": {
+            "name": "Clash of Kings",
+            "id": "clash_of_kings_FDm",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "clash_of_kings:the_west_ogd": {
+            "name": "Clash of Kings:The West",
+            "id": "clash_of_kings:the_west_ogd",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "clash_of_queens_ZFX": {
+            "name": "Clash of Queens",
+            "id": "clash_of_queens_ZFX",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zombie_world_slg_3d_oyO": {
+            "name": "Zombie World SLG 3D",
+            "id": "zombie_world_slg_3d_oyO",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "heroes_war_lk3": {
+            "name": "Heroes War",
+            "id": "heroes_war_lk3",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mobile_legends_6Ic": {
+            "name": "Mobile Legends",
+            "id": "mobile_legends_6Ic",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "clubfactory_vGo": {
+            "name": "ClubFactory",
+            "id": "clubfactory_vGo",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "shein_02r": {
+            "name": "Shein",
+            "id": "shein_02r",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "romwe_Dbg": {
+            "name": "Romwe",
+            "id": "romwe_Dbg",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "applock_DFt": {
+            "name": "AppLock",
+            "id": "applock_DFt",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "vmate_0or": {
+            "name": "VMate",
+            "id": "vmate_0or",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "game_of_sultans_EWO": {
+            "name": "Game of Sultans",
+            "id": "game_of_sultans_EWO",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mafia_city_qwz": {
+            "name": "Mafia City",
+            "id": "mafia_city_qwz",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wechat_Gpu": {
+            "name": "Wechat",
+            "id": "wechat_Gpu",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "qq_nmw": {
+            "name": "QQ",
+            "id": "qq_nmw",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "baidu_Frc": {
+            "name": "Baidu",
+            "id": "baidu_Frc",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "360_mobile_guard_Oz2": {
+            "name": "360 Mobile Guard",
+            "id": "360_mobile_guard_Oz2",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "taobao_E1w": {
+            "name": "Taobao",
+            "id": "taobao_E1w",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "sina_weibo_7cW": {
+            "name": "Sina Weibo",
+            "id": "sina_weibo_7cW",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "weibo_8Xx": {
+            "name": "Weibo",
+            "id": "weibo_8Xx",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "uc_news_98L": {
+            "name": "UC News",
+            "id": "uc_news_98L",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "newsdog_qo7": {
+            "name": "NewsDog",
+            "id": "newsdog_qo7",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "vivavideo-_qu_video_inc_dbj": {
+            "name": "VivaVideo- QU Video Inc",
+            "id": "vivavideo-_qu_video_inc_dbj",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "parallel_space_v01": {
+            "name": "Parallel Space",
+            "id": "parallel_space_v01",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "apus_browser_tf3": {
+            "name": "APUS Browser",
+            "id": "apus_browser_tf3",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "perfect_corp_HZl": {
+            "name": "Perfect Corp",
+            "id": "perfect_corp_HZl",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "virus_cleaner_(hi_security_lab)_yV5": {
+            "name": "Virus Cleaner (Hi Security Lab)",
+            "id": "virus_cleaner_(hi_security_lab)_yV5",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "cm_browser_4Ok": {
+            "name": "CM Browser",
+            "id": "cm_browser_4Ok",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mi_community_vPe": {
+            "name": "Mi Community",
+            "id": "mi_community_vPe",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "vault-hide_4k7": {
+            "name": "Vault-Hide",
+            "id": "vault-hide_4k7",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "youcam_makeup_msA": {
+            "name": "YouCam Makeup",
+            "id": "youcam_makeup_msA",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mi_store_fZP": {
+            "name": "Mi Store",
+            "id": "mi_store_fZP",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "du_battery_saver_Pf8": {
+            "name": "DU Battery Saver",
+            "id": "du_battery_saver_Pf8",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "du_cleaner_2CA": {
+            "name": "DU Cleaner",
+            "id": "du_cleaner_2CA",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "baidu_map_9xk": {
+            "name": "Baidu Map",
+            "id": "baidu_map_9xk",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "photo_wonder_Nsm": {
+            "name": "Photo Wonder",
+            "id": "photo_wonder_Nsm",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "qq_music_XMn": {
+            "name": "QQ Music",
+            "id": "qq_music_XMn",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "qq_mail_3rI": {
+            "name": "QQ Mail",
+            "id": "qq_mail_3rI",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wesync_SEI": {
+            "name": "WeSync",
+            "id": "wesync_SEI",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mail_master_VZ6": {
+            "name": "Mail Master",
+            "id": "mail_master_VZ6",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mi_video_call-xiaomi_qfR": {
+            "name": "Mi Video call-Xiaomi",
+            "id": "mi_video_call-xiaomi_qfR",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "pleco_Jgo": {
+            "name": "Pleco",
+            "id": "pleco_Jgo",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "china_metro_cvR": {
+            "name": "China Metro",
+            "id": "china_metro_cvR",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "all_video_downloader_al4": {
+            "name": "All video downloader",
+            "id": "all_video_downloader_al4",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "vigo_lite_dIP": {
+            "name": "Vigo Lite",
+            "id": "vigo_lite_dIP",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "udictionary_5H2": {
+            "name": "Udictionary",
+            "id": "udictionary_5H2",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "livu_CpL": {
+            "name": "Livu",
+            "id": "livu_CpL",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "uplive_QEy": {
+            "name": "Uplive",
+            "id": "uplive_QEy",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "kings_of_avalon_gSj": {
+            "name": "Kings of Avalon",
+            "id": "kings_of_avalon_gSj",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "guns_of_glory_1gu": {
+            "name": "Guns of glory",
+            "id": "guns_of_glory_1gu",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "castle_cash_8W2": {
+            "name": "Castle Cash",
+            "id": "castle_cash_8W2",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "nonolive_nRD": {
+            "name": "NonoLive",
+            "id": "nonolive_nRD",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "dating.com_h6c": {
+            "name": "Dating.com",
+            "id": "dating.com_h6c",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "web_novel_suB": {
+            "name": "Web Novel",
+            "id": "web_novel_suB",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "hello_yo_4L8": {
+            "name": "Hello Yo",
+            "id": "hello_yo_4L8",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "lagecy_of_discord_mJl": {
+            "name": "Lagecy of discord",
+            "id": "lagecy_of_discord_mJl",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "last_empire_5ov": {
+            "name": "Last empire",
+            "id": "last_empire_5ov",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "art_of_conquest_ZCv": {
+            "name": "Art of conquest",
+            "id": "art_of_conquest_ZCv",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "flash_keyboard_8jk": {
+            "name": "Flash Keyboard",
+            "id": "flash_keyboard_8jk",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "turbo_vpn_uxK": {
+            "name": "Turbo VPN",
+            "id": "turbo_vpn_uxK",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "viva_video_owg": {
+            "name": "viva Video",
+            "id": "viva_video_owg",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "cheez_kqZ": {
+            "name": "Cheez",
+            "id": "cheez_kqZ",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "alibaba.com_THW": {
+            "name": "Alibaba.com",
+            "id": "alibaba.com_THW",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "applock_lite_CXX": {
+            "name": "AppLock lite",
+            "id": "applock_lite_CXX",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "aliexpress_v4y": {
+            "name": "AliExpress",
+            "id": "aliexpress_v4y",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "itao_DRH": {
+            "name": "iTao",
+            "id": "itao_DRH",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "es_file_manager_xwI": {
+            "name": "ES File Manager",
+            "id": "es_file_manager_xwI",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "file_explorer_file_manager_btG": {
+            "name": "File Explorer File Manager",
+            "id": "file_explorer_file_manager_btG",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "music_player_ZN3": {
+            "name": "Music Player",
+            "id": "music_player_ZN3",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mi_pay_5GN": {
+            "name": "mi pay",
+            "id": "mi_pay_5GN",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mi_remote_control_3w2": {
+            "name": "mi remote control",
+            "id": "mi_remote_control_3w2",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "banggood_16t": {
+            "name": "banggood",
+            "id": "banggood_16t",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mi_credit_rDT": {
+            "name": "Mi Credit",
+            "id": "mi_credit_rDT",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wps_office_e3T": {
+            "name": "WPS Office",
+            "id": "wps_office_e3T",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wps_office_lite_FMn": {
+            "name": "WPS Office Lite",
+            "id": "wps_office_lite_FMn",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wps_pdf_cdU": {
+            "name": "WPS PDF",
+            "id": "wps_pdf_cdU",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wps_office_extra_45X": {
+            "name": "WPS Office Extra",
+            "id": "wps_office_extra_45X",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wps_premium_subscription_Jv8": {
+            "name": "WPS Premium Subscription",
+            "id": "wps_premium_subscription_Jv8",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "wps_pdf_fill_DuO": {
+            "name": "WPS PDF Fill",
+            "id": "wps_pdf_fill_DuO",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zapya_-_file_transfer,_sharing_music_playlist_Bcy": {
+            "name": "Zapya - File Transfer, Sharing Music Playlist",
+            "id": "zapya_-_file_transfer,_sharing_music_playlist_Bcy",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zapya_webshare_-_file_sharing_in_web_browser_hGC": {
+            "name": "Zapya WebShare - File Sharing in Web Browser",
+            "id": "zapya_webshare_-_file_sharing_in_web_browser_hGC",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zapya_go_-_from_file_transfer_to_private_social_jnF": {
+            "name": "Zapya Go - From File Transfer to Private Social",
+            "id": "zapya_go_-_from_file_transfer_to_private_social_jnF",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "recorderz_-_screen_recorder_by_zapya_DVp": {
+            "name": "RecorderZ - Screen Recorder by Zapya",
+            "id": "recorderz_-_screen_recorder_by_zapya_DVp",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zapya_doodle_Kmx": {
+            "name": "Zapya Doodle",
+            "id": "zapya_doodle_Kmx",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zapya_air_hockey_s4S": {
+            "name": "Zapya Air Hockey",
+            "id": "zapya_air_hockey_s4S",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "screenlockz_by_zapya_JeT": {
+            "name": "ScreenLockZ by Zapya",
+            "id": "screenlockz_by_zapya_JeT",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "zapya_minigame_DLl": {
+            "name": "Zapya MiniGame",
+            "id": "zapya_minigame_DLl",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "mydearest_tjm": {
+            "name": "MyDearest",
+            "id": "mydearest_tjm",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "applockz_by_zapya_qjm": {
+            "name": "AppLockZ by Zapya",
+            "id": "applockz_by_zapya_qjm",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "filez_-_easy_file_manager_p30": {
+            "name": "FileZ - Easy File Manager",
+            "id": "filez_-_easy_file_manager_p30",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "dingtalk_FRY": {
+            "name": "DingTalk",
+            "id": "dingtalk_FRY",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "dingtalk_lite_NZT": {
+            "name": "DingTalk Lite",
+            "id": "dingtalk_lite_NZT",
+            "image": "",
+            "isIndian": false,
+            "company": {}
+        },
+        "active_wheel_dJL": {
+            "name": "Active Wheel",
+            "id": "active_wheel_dJL",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "home_care_qB7": {
+                    "name": "Home Care",
+                    "id": "home_care_qB7",
+                    "image": ""
+                }
+            }
+        },
+        "annapurna_L7d": {
+            "name": "Annapurna",
+            "id": "annapurna_L7d",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "aviance_unT": {
+            "name": "Aviance",
+            "id": "aviance_unT",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "axe_eIN": {
+            "name": "Axe",
+            "id": "axe_eIN",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "boost_pEm": {
+            "name": "Boost",
+            "id": "boost_pEm",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "breeze_(soap)_KuS": {
+            "name": "Breeze (soap)",
+            "id": "breeze_(soap)_KuS",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "brooke_bond_3_roses_2B7": {
+            "name": "Brooke Bond 3 Roses",
+            "id": "brooke_bond_3_roses_2B7",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "brooke_bond_red_label_5ys": {
+            "name": "Brooke Bond Red Label",
+            "id": "brooke_bond_red_label_5ys",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "brooke_bond_taaza_r0l": {
+            "name": "Brooke Bond Taaza",
+            "id": "brooke_bond_taaza_r0l",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "brooke_bond_taj_mahal_17K": {
+            "name": "Brooke Bond Taj Mahal",
+            "id": "brooke_bond_taj_mahal_17K",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "bru_CYR": {
+            "name": "Bru",
+            "id": "bru_CYR",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "tea_and_coffee_xbi": {
+                    "name": "Tea and coffee",
+                    "id": "tea_and_coffee_xbi",
+                    "image": ""
+                }
+            }
+        },
+        "brylcreem_2zg": {
+            "name": "Brylcreem",
+            "id": "brylcreem_2zg",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "cif_BjM": {
+            "name": "Cif",
+            "id": "cif_BjM",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "home_care_qB7": {
+                    "name": "Home Care",
+                    "id": "home_care_qB7",
+                    "image": ""
+                }
+            }
+        },
+        "citra_TXe": {
+            "name": "Citra",
+            "id": "citra_TXe",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "clear_HSc": {
+            "name": "Clear",
+            "id": "clear_HSc",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "clinic_plus_NHi": {
+            "name": "Clinic Plus",
+            "id": "clinic_plus_NHi",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "close_up_uin": {
+            "name": "Close Up",
+            "id": "close_up_uin",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "comfort_xyC": {
+            "name": "Comfort",
+            "id": "comfort_xyC",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "home_care_qB7": {
+                    "name": "Home Care",
+                    "id": "home_care_qB7",
+                    "image": ""
+                }
+            }
+        },
+        "cornetto_9KF": {
+            "name": "Cornetto",
+            "id": "cornetto_9KF",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "food_avf": {
+                    "name": "Food",
+                    "id": "food_avf",
+                    "image": ""
+                }
+            }
+        },
+        "domex_0Py": {
+            "name": "Domex",
+            "id": "domex_0Py",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "home_care_qB7": {
+                    "name": "Home Care",
+                    "id": "home_care_qB7",
+                    "image": ""
+                }
+            }
+        },
+        "dove_Nqg": {
+            "name": "Dove",
+            "id": "dove_Nqg",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "elle_18_knr": {
+            "name": "Elle 18",
+            "id": "elle_18_knr",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "fair_&_lovely_LCw": {
+            "name": "Fair & Lovely",
+            "id": "fair_&_lovely_LCw",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "hamam_agl": {
+            "name": "Hamam",
+            "id": "hamam_agl",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "horlicks_iUx": {
+            "name": "Horlicks",
+            "id": "horlicks_iUx",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
+        },
+        "horlicks_cardia+_t15": {
+            "name": "Horlicks Cardia+",
+            "id": "horlicks_cardia+_t15",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
+        },
+        "horlicks_growth+_xZv": {
+            "name": "Horlicks Growth+",
+            "id": "horlicks_growth+_xZv",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
+        },
+        "horlicks_lite_wzj": {
+            "name": "Horlicks Lite",
+            "id": "horlicks_lite_wzj",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
+        },
+        "horlicks_protein+_G2L": {
+            "name": "Horlicks Protein+",
+            "id": "horlicks_protein+_G2L",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
+        },
+        "indulekha_Qfb": {
+            "name": "Indulekha",
+            "id": "indulekha_Qfb",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "junior_horlicks_1A0": {
+            "name": "Junior Horlicks",
+            "id": "junior_horlicks_1A0",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "beverages_d2b": {
+                    "name": "Beverages",
+                    "id": "beverages_d2b",
+                    "image": ""
+                }
+            }
+        },
+        "kissan_5q3": {
+            "name": "Kissan",
+            "id": "kissan_5q3",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "food_avf": {
+                    "name": "Food",
+                    "id": "food_avf",
+                    "image": ""
+                }
+            }
+        },
+        "knorr_vrh": {
+            "name": "Knorr",
+            "id": "knorr_vrh",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "food_avf": {
+                    "name": "Food",
+                    "id": "food_avf",
+                    "image": ""
+                }
+            }
+        },
+        "kwality_wall’s_KIv": {
+            "name": "Kwality Wall’s",
+            "id": "kwality_wall’s_KIv",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "food_avf": {
+                    "name": "Food",
+                    "id": "food_avf",
+                    "image": ""
+                }
+            }
+        },
+        "lakmé_x0w": {
+            "name": "Lakmé",
+            "id": "lakmé_x0w",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {
+                "personal_care_and_beauty__4PW": {
+                    "name": "Personal Care and Beauty ",
+                    "id": "personal_care_and_beauty__4PW",
+                    "image": ""
+                }
+            }
+        },
+        "lever_ayush_Uit": {
+            "name": "Lever ayush",
+            "id": "lever_ayush_Uit",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "lifebuoy_JEE": {
+            "name": "Lifebuoy",
+            "id": "lifebuoy_JEE",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "lipton_Cx1": {
+            "name": "Lipton",
+            "id": "lipton_Cx1",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "liril_vOI": {
+            "name": "Liril",
+            "id": "liril_vOI",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "love_&_care_rFq": {
+            "name": "Love & Care",
+            "id": "love_&_care_rFq",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "love_beauty_and_planet_c3w": {
+            "name": "Love Beauty and Planet",
+            "id": "love_beauty_and_planet_c3w",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "lux_Ocl": {
+            "name": "Lux",
+            "id": "lux_Ocl",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "magnum_2TZ": {
+            "name": "Magnum",
+            "id": "magnum_2TZ",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "mother's_horlicks_saM": {
+            "name": "Mother's Horlicks",
+            "id": "mother's_horlicks_saM",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "pears_C9c": {
+            "name": "Pears",
+            "id": "pears_C9c",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "pepsodent_ee2": {
+            "name": "Pepsodent",
+            "id": "pepsodent_ee2",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "pond’s_ltN": {
+            "name": "Pond’s",
+            "id": "pond’s_ltN",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "pure_derm_FRV": {
+            "name": "Pure Derm",
+            "id": "pure_derm_FRV",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "pureit_aiN": {
+            "name": "Pureit",
+            "id": "pureit_aiN",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "rexona_0w5": {
+            "name": "Rexona",
+            "id": "rexona_0w5",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "rin_bdh": {
+            "name": "Rin",
+            "id": "rin_bdh",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "sunlight_7Et": {
+            "name": "Sunlight",
+            "id": "sunlight_7Et",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "sunsilk_cgp": {
+            "name": "Sunsilk",
+            "id": "sunsilk_cgp",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "sure_dVy": {
+            "name": "Sure",
+            "id": "sure_dVy",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "surf_excel_Zp3": {
+            "name": "Surf excel",
+            "id": "surf_excel_Zp3",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "tigi_aLW": {
+            "name": "TIGI",
+            "id": "tigi_aLW",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "toni&guy_Y3N": {
+            "name": "TONI&GUY",
+            "id": "toni&guy_Y3N",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "tresemmé_nzt": {
+            "name": "TRESemmé",
+            "id": "tresemmé_nzt",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "vaseline_T2c": {
+            "name": "Vaseline",
+            "id": "vaseline_T2c",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "vim_B67": {
+            "name": "Vim",
+            "id": "vim_B67",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
+                "image": ""
+            },
+            "categories": {}
+        },
+        "women's_horlicks_faD": {
+            "name": "Women's Horlicks",
+            "id": "women's_horlicks_faD",
+            "image": "",
+            "isIndian": false,
+            "company": {
+                "name": "Hindustan Unilever",
+                "id": "hindustan_unilever_BXn",
                 "image": ""
             },
             "categories": {}
