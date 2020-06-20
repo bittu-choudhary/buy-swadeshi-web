@@ -40,6 +40,10 @@ body {
   border: 1px solid black;
 }
 
+.alt-brand:hover{
+  text-decoration: underline;
+}
+
 .bar{
   margin:0 auto;
   width:100%;
