@@ -11,8 +11,6 @@ import Image from 'react-bootstrap/Image'
 var _ = require('lodash') 
 
 const PopulateResultCol = (props) => {
-  let icon = <MdCancel/>
-  let fontColor = `red`
   const {index, results} = props
   let loopLength = index + 5 <results.length ? index + 5 : (results.length - 1)
   let col = []
@@ -21,6 +19,8 @@ const PopulateResultCol = (props) => {
     // console.log(resultId)
     let remark
     let caption
+    let icon = <MdCancel/>
+    let fontColor = `red`
     if (resultId.type === "category") {
       remark = <span style={{color: `#155724`, bottom: `0px`}} className={styles.searchResultIndianIcon} > See Products
                 </span>
@@ -39,10 +39,11 @@ const PopulateResultCol = (props) => {
                   {icon}
                 </span>
     }
+    var resultEndPoint = _.lowerCase(resultId.name)
     col.push(
       <Col style={{ padding: `1px`, padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={2} xl={2}>
         <Link
-          to={`/${_.lowerCase(caption)}/${resultId.name}`}
+          to={`/${_.lowerCase(caption)}/${resultEndPoint}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
           <div style={{borderRadius: `0px`}} className={styles.categoryCol + " " + styles.productCol }>
