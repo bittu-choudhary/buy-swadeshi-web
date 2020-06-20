@@ -34,6 +34,56 @@ class Company extends Component {
     let company = JsonData.companies[`${props.companyId}`]
     let icon = <MdCancel/>
     let fontColor = `red`
+    let alt_or_other = "Alternate"
+    let altIndianCompanies = []
+    let categoriesList = []
+    for (var category in company.categories) {
+      var categoryEndPoint = _.lowerCase(company.categories[category]["name"])
+      categoriesList.push(
+        <Link
+              to={`/category/${categoryEndPoint}`}
+              style={{ textDecoration: `none`, color: `maroon` }}
+            >
+          <span className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{company.categories[category]["name"]} &nbsp;
+          </span>
+        </Link>
+      )
+      let categoryCompanies = JsonData.categories[category].companies
+      let index = 0
+      for (var altCompanyId in categoryCompanies) {
+        let altCompany = categoryCompanies[altCompanyId]
+        if (index == 10) {
+          altIndianCompanies.push(
+            <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
+              <Link
+                to={`/category/${categoryEndPoint}?isIndian=true`}
+                style={{ textDecoration: `none`, color: `maroon` }}
+              >
+                See more
+              </Link> &nbsp;
+            </span>
+          )
+          break
+        } 
+        index = index + 1
+        if (altCompanyId === props.companyId) {
+          continue 
+        }
+        if (altCompany.isIndian) {
+          var altCompanyEndPoint = _.lowerCase(altCompany.name)
+          altIndianCompanies.push(
+            <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
+              <Link
+                to={`/company/${altCompanyEndPoint}`}
+                style={{ textDecoration: `none`, color: `maroon` }}
+              >
+                {altCompany.name},
+              </Link> &nbsp;
+            </span>
+          )
+        }
+      }
+    }
     if (company.isIndian) {
       icon = <MdCheckCircle/>
       fontColor = `green`
@@ -75,33 +125,23 @@ class Company extends Component {
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6}  style={{height: `60px`}}>
+            <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6}  style={{height: `fit-content`}}>
               <div className={styles.companyAttr}>
                 <div className={styles.companyAttrKey}>
-                  <span>Unit</span>
+                  <span>Categories</span>
                 </div>
                 <div className={styles.companyAttrDesc}>
-                  10 Kg
+                  {categoriesList}
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.companyAttrWrapper}  md={6} style={{height: `60px`}}>
+            <Col className={"float-left col-12" + " " + styles.companyAttrWrapper}  md={6} style={{height: `fit-content`}}>
               <div className={styles.companyAttr}>
                 <div className={styles.companyAttrKey}>
-                  <span>Shelf Life</span>
+                  <span>{alt_or_other} Indian Companies</span>
                 </div>
                 <div className={styles.companyAttrDesc}>
-                  3 months
-                </div>
-              </div>
-            </Col>
-            <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6} style={{height: `60px`}}>
-              <div className={styles.companyAttr}>
-                <div className={styles.companyAttrKey}>
-                  <span>Company</span>
-                </div>
-                <div className={styles.companyAttrDesc}>
-                  ITC Limited
+                  {altIndianCompanies}
                 </div>
               </div>
             </Col>
