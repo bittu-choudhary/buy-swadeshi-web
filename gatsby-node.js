@@ -17,20 +17,21 @@ for (var key in JSONData) {
   for (const dataPoints in JSONData[key]) {
     let slug;
     var dataPointType;
+    var endPoint = _.lowerCase(JSONData[key][dataPoints]["name"])
     switch (key) {
       case "categories":
         dataPointType = "_typeCategory"
-        slug = `/category/${JSONData[key][dataPoints]["name"]}/`
+        slug = `/category/${endPoint}/`
         pageObj.push({type: `category`, slug: slug, id: JSONData[key][dataPoints]["id"] })
         break;
       case "companies":
         dataPointType = "_typeCompany"
-        slug = `/company/${JSONData[key][dataPoints]["name"]}/`
+        slug = `/company/${endPoint}/`
         pageObj.push({type: `company`, slug: slug, id: JSONData[key][dataPoints]["id"] })
         break;
       case "products":
         dataPointType = "_typeProduct"
-        slug = `/product/${JSONData[key][dataPoints]["name"]}/`
+        slug = `/product/${endPoint}/`
         pageObj.push({type: `product`, slug: slug, id: JSONData[key][dataPoints]["id"] })
         break;
       default:
