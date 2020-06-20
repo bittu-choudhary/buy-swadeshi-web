@@ -14,6 +14,7 @@ const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWid
 const trans = (x, y, s) => `perspective(600px) scale(${s})`
 const CategoriesDataArr = Object.keys(CategoriesData.categories)
 const bgColorArr = [`#fdeae4`, `#e8eefb`, `#fff9dd`, `#e8f3dd`, `#e8e8e8`, `#fdebf9`, `#e8f3dd`, `#e8e8e8`, `#e8eefb`, `#d0efed`]
+var _ = require('lodash') 
 
 const PopulateCategoriesCol = (props) => {
   const {index} = props
@@ -26,10 +27,12 @@ const PopulateCategoriesCol = (props) => {
   for (let i = index; i <= loopLength ; i++ ) {
     const categoryId = CategoriesData.categories[CategoriesDataArr[i]]
     let springIndex = (index === 0) ? 6 : index
+    var categoryEndPoint = _.lowerCase(categoryId.name)
+    console.log(categoryEndPoint)
     col.push(
       <Col key={categoryId.id} id={categoryId.id} style={{padding: `10px`}} xs={6} md={6} lg={2} xl={2}>
         <Link
-          to={`/category/${categoryId.name}`}
+          to={`/category/${categoryEndPoint}`}
           style={{
                 textDecoration: `none`,
                 color: `inherit`
