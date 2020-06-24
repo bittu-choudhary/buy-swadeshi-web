@@ -79,7 +79,8 @@ class Category extends Component {
               </Row>
               <Row style={{fontSize: `14px`}}>
                 <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
-                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#f9f1bb`, border: `#f9f1bb`, color: `black`, fontSize: `.85rem`}}>{productId.name}</Button>
+                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#f9f1bb`, border: `#f9f1bb`, color: `black`, fontSize: `.85rem`, height: `29px`,
+    overflow: `scroll`}}>{productId.name}</Button>
                   {/* <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
                       {productId.name}

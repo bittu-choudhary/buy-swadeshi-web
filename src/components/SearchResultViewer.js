@@ -68,7 +68,8 @@ const PopulateResultCol = (props) => {
             </Row>
             <Row>
               <Col style={{minHeight: `24px`}} xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
-                 <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#f9f1bb`, border: `#f9f1bb`, color: `black`, fontSize: `.85rem`}}>{resultId.name}
+                 <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#f9f1bb`, border: `#f9f1bb`, color: `black`, fontSize: `.85rem`, height: `29px`,
+    overflow: `scroll`}}>{resultId.name}
                  <span 
                     style={{
                       fontSize: `12px`,
