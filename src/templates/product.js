@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
+import productPlaceHolder from '../images/product-placeholder-white-bg-480.png'
 
 var _ = require('lodash') 
 
@@ -99,7 +100,7 @@ class Product extends Component {
                 <Image className={styles.productImage} style={{
                   border: `0px`,
                   borderRadius: `0px`,
-                }} thumbnail src={`https://cdn.grofers.com/app/images/products/sliding_image/333324b.jpg?ts=1588911583`}></Image>
+                }} thumbnail src={productPlaceHolder}></Image>
               </div>
             </Col>
             <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>

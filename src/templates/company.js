@@ -15,6 +15,8 @@ import Col from  'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
+import companyPlaceHolder from '../images/company-icon-360.png'
+
 
 var _ = require('lodash') 
 
@@ -97,7 +99,7 @@ class Company extends Component {
                 <Image className={styles.companyImage} style={{
                   border: `0px`,
                   borderRadius: `0px`,
-                }} thumbnail src={`https://cdn.grofers.com/app/images/products/sliding_image/333324b.jpg?ts=1588911583`}></Image>
+                }} thumbnail src={companyPlaceHolder}></Image>
               </div>
             </Col>
             <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6}  style={{height: `fit-content`}}>
