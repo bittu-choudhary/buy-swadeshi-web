@@ -15,6 +15,7 @@ import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
 import JsonData from "../../content/raw data/new_brand_list.json"
 import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button';
 
 const queryString = require('query-string');
 var _ = require('lodash') 
@@ -36,11 +37,12 @@ class Category extends Component {
     const {index, products} = props
     let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
     let col = []
-    let icon = <MdCancel/>
-    let fontColor = `red`
+    let fontColor = `black`
+    let btnColor = `#f0745b`
     for (let i = index; i <= loopLength ; i++ ) {
       const productId = products[i]
       let remark
+      let remarkText = "Not Indian"
       let caption = `Product`
       if (isIndianParam !== undefined) {
         if (`${productId.isIndian}` !== `${isIndianParam}`) {
@@ -48,15 +50,14 @@ class Category extends Component {
         }
       }
       if (productId.isIndian) {
-        icon = <MdCheckCircle/>
-        fontColor = `green`
+        btnColor = `#85c8ab`
+        remarkText = "Indian"
       }
-      remark = <span style={{color: fontColor, bottom: `0px`}} className={styles.searchResultIndianIcon} >Indian &nbsp;
-                    {icon}
+      remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}
                   </span>
       var productEndPoint = _.snakeCase(productId.name)
       col.push(
-        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={6} md={4} lg={4} xl={4}>
+        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={12} md={4} lg={4} xl={4}>
           <Link
           to={`/product/${productEndPoint}`}
           style={{
@@ -64,8 +65,8 @@ class Category extends Component {
               color: `inherit`
             }}
           >
-            <div style={{borderRadius: `0px`}} className={styles.categoryCol + " " + styles.productCol } >
-              <Row >
+            <div style={{borderRadius: `0px`}} className={`contianer` + " " + styles.categoryCol + " " + styles.productCol } >
+              <Row className={styles.productCardImage} >
                 <Col  className={`col-12` }>
                   <div className={`container`} style={{width: `fit-content`, height: `80px`}}>
                     <Image className={styles.productImage} style={{
@@ -78,16 +79,16 @@ class Category extends Component {
                 </Col>
               </Row>
               <Row style={{fontSize: `14px`}}>
-                <Col className={`col-12` +" " + styles.searchResultTitle}>
+                <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                   <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
                       {productId.name}
                     </p>
                   </div>
                 </Col>
-              </Row>
-              <Row>
-                {remark}
+                <Col xs={12} md={12} lg={6} xl={6} className={styles.isIndianBtn} >
+                  <Button className={`btn-sm` + ` ` + styles.btnCustomBlock } style={{backgroundColor: btnColor, border: btnColor}}>{remark}</Button>
+                </Col>
               </Row>
             </div>
           </Link>

@@ -258,12 +258,6 @@ footer p {
   transform: translate(-50%,-50%);
 }
 
-.search-result-title {
-  margin-top: 4%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
 .search-result-indian-icon {
   text-align: center;
@@ -325,11 +319,21 @@ footer p {
 }
 
 .search-result-title{
-  font-size: 14px;
+  font-size: 13px;
+  padding-right: 0px !important;
+  padding-left: 5px !important;
 }
 
 .product-attr-wrapper, .company-attr-wrapper {
   margin-top: 5px;
+}
+
+.product-card-image {
+  height: 75%
+}
+
+.btn-custom-block{
+  width: 80%;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -413,6 +417,23 @@ footer p {
     height: 240px !important;
   }
 
+  .search-result-title{
+    padding: 5px;
+  }
+
+  .is-indian-btn {
+    padding-left: 24px !important; 
+    padding-right: 24px !important;
+  }
+
+  .product-card-image {
+    height: 60%
+  }
+  .btn-custom-block{
+    width: 100%;
+    display: block;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -449,6 +470,12 @@ footer p {
     margin-right: 10px;
     padding: 0;
   }
+
+  .search-result-title{
+    font-size: 13px;
+    line-height: 14px;
+  }
+
 }
 
 @media only screen and (max-width: 350px) {
@@ -478,7 +505,7 @@ footer p {
 
   .search-result-title{
     font-size: 12px;
-    line-height: 16px;
+    line-height: 14px;
   }
 
 }
@@ -524,12 +551,14 @@ footer p {
 
 .nav-bar-button {
   color: #000 !important;
-  background-color: hsla(188, 78%, 46%, 1) !important;
+  background-color: #99a056 !important;
+  border: #99a056 !important;
 }
 
 .nav-button {
   color: #000 !important;
-  background-color: hsla(188, 78%, 46%, 1) !important;
+  background-color: #99a056 !important;
+  border: #99a056 !important;
 }
 
 @media only screen and (max-width: 300px) {

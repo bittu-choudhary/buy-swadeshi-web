@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "gatsby"
 import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
 
 var _ = require('lodash') 
 
@@ -18,36 +19,34 @@ const PopulateResultCol = (props) => {
     const resultId = results[i]
     // console.log(resultId)
     let remark
+    let remarkText = "Not Indian"
     let caption
-    let icon = <MdCancel/>
-    let fontColor = `red`
+    let fontColor = `black`
+    let btnColor = `#f0745b`
     if (resultId.type === "category") {
-      remark = <span style={{color: `#155724`, bottom: `0px`}} className={styles.searchResultIndianIcon} > See Products
-                </span>
-      caption = `Category`
+      remark = <span style={{color: fontColor, bottom: `0px`}} >See Brands</span>
+      caption = ` (Category)`
     } else {
       if (resultId.type === `product`){
-        caption = `Product`
+        caption = ` (P)`
       } else {
-        caption = `Company`
+        caption = ` (C)`
       }
       if (resultId.isIndian) {
-        icon = <MdCheckCircle/>
-        fontColor = `green`
+        btnColor = `#85c8ab`
+        remarkText = "Indian"
       }
-      remark = <span style={{color: fontColor, bottom: `0px`}} className={styles.searchResultIndianIcon} >Indian &nbsp;
-                  {icon}
-                </span>
+      remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}</span>
     }
     var resultEndPoint = _.snakeCase(resultId.name)
     col.push(
-      <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={4} xl={4}>
+      <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={12} md={4} lg={4} xl={4}>
         <Link
           to={`/${_.snakeCase(caption)}/${resultEndPoint}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
-          <div className={styles.categoryCol + " " + styles.productCol }>
-            <Row>
+          <div style={{borderRadius: `0px`}} className={`container` + ` ` + styles.categoryCol + " " + styles.productCol }>
+            <Row className={styles.productCardImage}>
               <Col className={`col-12` }>
                 <div className={`container`} style={{width: `fit-content`, height: `80px`}}>
                   <Image className={styles.productImage} style={{
@@ -60,23 +59,23 @@ const PopulateResultCol = (props) => {
               </Col>
             </Row>
             <Row>
-              <Col className={`col-12` +" " + styles.searchResultTitle}>
+              <Col style={{minHeight: `24px`}} xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                 <div style={{textAlign: `center`}}>
                   <p style={{textAlign: `center`, marginBottom: `0px`}}>
                     {resultId.name}
+                    <span 
+                    style={{
+                      fontSize: `12px`,
+                      color: `gray`}}>
+                      {caption}
+                    </span>
                   </p>
-                  <span 
-                  style={{
-                    fontSize: `12px`,
-                    color: `gray`}}>
-                  {caption}
-                </span>
                     {/* <Image src={CartIcon} thumbnail /> */}
                 </div>
               </Col>
-            </Row>
-            <Row>
-              {remark}
+              <Col xs={12} md={12} lg={6} xl={6} className={styles.isIndianBtn  + ` ` + styles.searchResultTitle}>
+                  <Button className={`btn-sm` + ` ` + styles.btnCustomBlock } style={{backgroundColor: btnColor, border: btnColor}}>{remark}</Button>
+                </Col>
             </Row>
           </div>
         </Link>
