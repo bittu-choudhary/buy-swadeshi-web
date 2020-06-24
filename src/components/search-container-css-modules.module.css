@@ -319,6 +319,7 @@ footer p {
 }
 
 .search-result-title{
+  min-height: 29px !important;
   font-size: 13px;
   padding-right: 0px !important;
   padding-left: 5px !important;
@@ -369,11 +370,60 @@ footer p {
     margin-bottom: 4rem;
   }
 
+  .search-result-title  {
+    margin-left: 20px;
+  }
+
+  .is-indian-btn {
+    position: absolute !important;
+    right: -20px;
+    max-width: 130px !important;
+  }
+
 }
 
 @media only screen and (min-width: 1300px) {
+
   .searchField, .searchContainer {
     width: 50%;
+  }
+
+  .search-result-title  {
+    margin-left: 13px;
+  }
+
+  .is-indian-btn {
+    position: absolute !important;
+    right: -25px;
+    max-width: 130px !important;
+  }
+}
+@media only screen and (min-width: 1500px) {
+
+  .is-indian-btn  {
+    max-width: fit-content !important;
+    
+  }
+
+  .is-indian-btn button {
+    width: 80px !important;
+  }
+
+  .search-result-title {
+    max-width: 114px !important;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 1890px) {
+
+  .is-indian-btn {
+    max-width: 145px !important;
+  }
+
+  .search-result-title {
+    max-width: 166px !important;
+    margin-left: 30px;
   }
 }
 
@@ -419,6 +469,8 @@ footer p {
 
   .search-result-title{
     padding: 5px;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 
   .is-indian-btn {
@@ -432,6 +484,10 @@ footer p {
   .btn-custom-block{
     width: 100%;
     display: block;
+  }
+
+  .category-col {
+    min-height: 180px;
   }
 
 }

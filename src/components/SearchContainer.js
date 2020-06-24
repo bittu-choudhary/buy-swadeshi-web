@@ -146,9 +146,7 @@ class Search extends Component {
     return (
       <>
         <div style={{ 
-          marginTop: `30px`,
-          paddingLeft: `24px`,
-          paddingRight: `24px` 
+          marginTop: `30px`
           }}>
           <form className={styles.searchField} onSubmit={this.handleSubmit}>
             <div className={styles.bar}>

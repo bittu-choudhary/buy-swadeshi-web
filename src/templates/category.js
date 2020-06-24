@@ -11,11 +11,10 @@ import Row from 'react-bootstrap/Row';
 import { Link } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
-import { MdCancel } from "react-icons/md"
-import { MdCheckCircle } from "react-icons/md"
 import JsonData from "../../content/raw data/new_brand_list.json"
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
+import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 
 const queryString = require('query-string');
 var _ = require('lodash') 
@@ -67,24 +66,25 @@ class Category extends Component {
           >
             <div style={{borderRadius: `0px`}} className={`contianer` + " " + styles.categoryCol + " " + styles.productCol } >
               <Row className={styles.productCardImage} >
-                <Col  className={`col-12` }>
-                  <div className={`container`} style={{width: `fit-content`, height: `80px`}}>
+                <Col  className={`col-12` } style={{height: `100%`}}>
+                  <div className={`container`} style={{width: `fit-content`, height: `100%`}}>
                     <Image className={styles.productImage} style={{
                       border: `0px`,
                       borderRadius: `0px`,
                       maxHeight: `100%`,
                       padding: `0px !important`,
-                    }} thumbnail src={`http://cdn.grofers.com/app/images/products/normal/pro_380157.jpg?ts=1582006627`}></Image>
+                    }} thumbnail src={productPlaceHolder}></Image>
                   </div>
                 </Col>
               </Row>
               <Row style={{fontSize: `14px`}}>
                 <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
-                  <div style={{textAlign: `center`}}>
+                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#f9f1bb`, border: `#f9f1bb`, color: `black`, fontSize: `.85rem`}}>{productId.name}</Button>
+                  {/* <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
                       {productId.name}
                     </p>
-                  </div>
+                  </div> */}
                 </Col>
                 <Col xs={12} md={12} lg={6} xl={6} className={styles.isIndianBtn} >
                   <Button className={`btn-sm` + ` ` + styles.btnCustomBlock } style={{backgroundColor: btnColor, border: btnColor}}>{remark}</Button>
@@ -95,6 +95,11 @@ class Category extends Component {
         </Col>
       )
     }
+    // idth: fit-content;
+    // margin: auto;
+    // background-color: #d4edda;
+    // min-width: 109px;
+    // min-height: 29px;
     return (
       col
     )
