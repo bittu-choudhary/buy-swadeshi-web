@@ -41,12 +41,12 @@ const PopulateResultCol = (props) => {
     }
     var resultEndPoint = _.snakeCase(resultId.name)
     col.push(
-      <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={2} xl={2}>
+      <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={6} md={4} lg={4} xl={4}>
         <Link
           to={`/${_.snakeCase(caption)}/${resultEndPoint}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
-          <div style={{borderRadius: `0px`}} className={styles.categoryCol + " " + styles.productCol }>
+          <div className={styles.categoryCol + " " + styles.productCol }>
             <Row>
               <Col className={`col-12` }>
                 <div className={`container`} style={{width: `fit-content`, height: `80px`}}>
@@ -116,7 +116,11 @@ export default function SearchResultViewer ( props  ) {
   }
 
   return (
-    <div class="container" style={{paddingTop: `50px` , paddingLeft: `0px`, paddingRight: `0px`}}>
+    <div class="container" style={{
+      padding: `8px`,
+      marginTop: `40px`,
+      backgroundColor: `#f7f5f5`,
+      borderRadius: `14px`}}>
       <DisplayResults queryResults={queryResults} />
     </div>
   )

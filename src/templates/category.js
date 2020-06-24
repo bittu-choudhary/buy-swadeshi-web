@@ -56,7 +56,7 @@ class Category extends Component {
                   </span>
       var productEndPoint = _.snakeCase(productId.name)
       col.push(
-        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={6} md={4} lg={2} xl={2}>
+        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={6} md={4} lg={4} xl={4}>
           <Link
           to={`/product/${productEndPoint}`}
           style={{
@@ -83,13 +83,6 @@ class Category extends Component {
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
                       {productId.name}
                     </p>
-                    <span 
-                    style={{
-                      fontSize: `12px`,
-                      color: `gray`}}>
-                    {caption}
-                  </span>
-                      {/* <Image src={CartIcon} thumbnail /> */}
                   </div>
                 </Col>
               </Row>
@@ -117,10 +110,38 @@ class Category extends Component {
     }
     const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
     const rows = productsSortedArr.map((product, index) => {
+      var topLeft = `0px`
+      var bottomLeft = `0px`
+      var topRight = `0px`
+      var bottomRight = `0px`
+      var topPadding = `0px`
+      var bottomPadding = `0px`
+      if (index === 0){
+        topLeft = `14px`
+        topRight = `14px`
+        topPadding = `8px`
+      } else if ((((productsSortedArr.length - 1) - index * 6) <= 6)) {
+        bottomLeft = `14px`
+        bottomRight = `14px`
+        bottomPadding = `8px`
+      }
       if( index%6 === 0) {
-        return (<Row className={styles.pageContent} id={`pro_row_` + index} key={`pro_row_` + index} >
-          <PopulateProductCol index={index} products={productsSortedArr}/>
-        </Row>)
+        console.log(index)
+        return (
+          <div  key={`pro_row_` + index} style={{
+            backgroundColor: `#f7f5f5`,
+            borderTopLeftRadius: topLeft,
+            borderTopRightRadius: topRight,
+            borderBottomLeftRadius: bottomLeft,
+            borderBottomRightRadius: bottomRight,
+            paddingTop: topPadding,
+            paddingBottom: bottomPadding
+          }}>
+            <Row className={styles.pageContent} id={`pro_row_` + index} >
+              <PopulateProductCol index={index} products={productsSortedArr}/>
+            </Row>
+          </div>
+        )
       }
     })
     return (rows)
@@ -141,7 +162,7 @@ class Category extends Component {
                 to={`/`}
                 style={{ textDecoration: `none`, color: `inherit` }}
               >
-                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} class="name">Home</span>
+                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} className={`name`}>Home</span>
               </Link>
             </li>
             <li style={{display: `inline-block`}}>
