@@ -17,8 +17,8 @@ const PopulateResultCol = (props) => {
   const {index, results} = props
   let loopLength = index + 5 <results.length ? index + 5 : (results.length - 1)
   let col = []
-  let placeholder = productPlaceHolder
   for (let i = index; i <= loopLength ; i++ ) {
+    let resultImage = productPlaceHolder
     const resultId = results[i]
     // console.log(resultId)
     let remark
@@ -35,13 +35,16 @@ const PopulateResultCol = (props) => {
         nameSpace = `product`
       } else {
         nameSpace = `company`
-        placeholder = companyPlaceHolder
+        resultImage = companyPlaceHolder
       }
       if (resultId.isIndian) {
         btnColor = `#85c8ab`
         remarkText = "Indian"
       }
       remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}</span>
+    }
+    if  (resultId.image !== "") {
+      resultImage = resultId.image
     }
     var searchSlugName = resultId.name
     if (searchSlugName && searchSlugName.split(" ").length === 1){
@@ -66,7 +69,7 @@ const PopulateResultCol = (props) => {
                     borderRadius: `0px`,
                     maxHeight: `100%`,
                     padding: `0px !important`,
-                  }} thumbnail src={placeholder}></Image>
+                  }} thumbnail src={resultImage}></Image>
                 </div>
               </Col>
             </Row>

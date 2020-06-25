@@ -39,6 +39,7 @@ class Company extends Component {
     let alt_or_other = "Alternate"
     let altIndianCompanies = []
     let categoriesList = []
+    let companyImage = ((company.image !== "") ? company.image : companyPlaceHolder)
     for (var category in company.categories) {
       var categorySlugName = company.categories[category]["name"]
       if (categorySlugName && categorySlugName.split(" ").length === 1){
@@ -107,7 +108,7 @@ class Company extends Component {
                 <Image className={styles.companyImage} style={{
                   border: `0px`,
                   borderRadius: `0px`,
-                }} thumbnail src={companyPlaceHolder}></Image>
+                }} thumbnail src={companyImage}></Image>
               </div>
             </Col>
             <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6}  style={{height: `fit-content`}}>

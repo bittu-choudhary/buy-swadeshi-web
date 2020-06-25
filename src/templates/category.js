@@ -40,6 +40,7 @@ class Category extends Component {
     let btnColor = `#f0745b`
     for (let i = index; i <= loopLength ; i++ ) {
       const productId = products[i]
+      let productImage = ((productId.image !== "") ? productId.image : productPlaceHolder)
       let remark
       let remarkText = "Not Indian"
       let caption = `Product`
@@ -77,7 +78,7 @@ class Category extends Component {
                       borderRadius: `0px`,
                       maxHeight: `100%`,
                       padding: `0px !important`,
-                    }} thumbnail src={productPlaceHolder}></Image>
+                    }} thumbnail src={productImage}></Image>
                   </div>
                 </Col>
               </Row>

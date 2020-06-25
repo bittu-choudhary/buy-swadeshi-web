@@ -494,11 +494,11 @@ footer p {
 
 @media only screen and (max-width: 767px) {
   .product-attr-key, .company-attr-key{
-    font-size: 12px;
+    font-size: 14px;
   }
   
   .product-attr-desc, .company-attr-desc{
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -532,6 +532,16 @@ footer p {
     line-height: 14px;
   }
 
+}
+
+@media only screen and (max-width: 400px) {
+  .product-attr-key, .company-attr-key{
+    font-size: 12px;
+  }
+  
+  .product-attr-desc, .company-attr-desc{
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 350px) {

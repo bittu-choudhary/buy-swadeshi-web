@@ -33,6 +33,7 @@ class Product extends Component {
 
   DisplayProductInfo = (props) => {
     let product = JsonData.products[`${props.productId}`]
+    let productImage = (product.image !== "" ? product.image : productPlaceHolder)
     let icon = <MdCancel/>
     let fontColor = `red`
     let alt_or_other = "Alternate"
@@ -112,7 +113,7 @@ class Product extends Component {
                 <Image className={styles.productImage} style={{
                   border: `0px`,
                   borderRadius: `0px`,
-                }} thumbnail src={productPlaceHolder}></Image>
+                }} thumbnail src={productImage}></Image>
               </div>
             </Col>
             <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>
