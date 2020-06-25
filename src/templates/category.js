@@ -19,6 +19,8 @@ import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 const queryString = require('query-string');
 var _ = require('lodash') 
 let isIndianParam
+let allc
+let cid
 class Category extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,7 @@ class Category extends Component {
   }
 
   PopulateProductCol = (props) => {
-    const {index, products} = props
+    const {index, products, namespace} = props
     let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
     let col = []
     let fontColor = `#a52014`
@@ -49,6 +51,7 @@ class Category extends Component {
           continue
         }
       }
+      console.log(products)
       if (productId.isIndian) {
         btnColor = `#ccf6e3`
         fontColor = `#176f52`
@@ -64,7 +67,7 @@ class Category extends Component {
       col.push(
         <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={12} md={4} lg={4} xl={4}>
           <Link
-          to={`/product/${productEndPoint}`}
+          to={`/${namespace}/${productEndPoint}`}
           style={{
               textDecoration: `none`,
               color: `inherit`
@@ -116,10 +119,53 @@ class Category extends Component {
   DisplayProducts = (props) => {
     const {selectedCategory} = props
     const { PopulateProductCol} = this
-    const products = JsonData.categories[`${selectedCategory}`]["products"]
+    let products
+    let namespace
     let productsArr = []
-    for (var key in products){
-      productsArr.push(products[key])
+    if (cid !== undefined) {
+      products = JsonData.companies[`${cid}`].products
+      for (var key in products){
+        if (JsonData.products[products[key].id].categories[selectedCategory] === undefined) {
+          continue
+        }
+        products[key]['isIndian'] = true
+        productsArr.push(products[key])
+      }
+      namespace = "product"
+    } else {
+      if (isIndianParam !== undefined) {
+        if (allc !== undefined) {
+          products = JsonData.categories[`${selectedCategory}`].companies
+          for (var key in products){
+            if (!products[key].isIndian) {
+              continue
+            }
+            productsArr.push(products[key])
+          }
+          namespace = "company"
+        } else {
+          products = JsonData.categories[`${selectedCategory}`]["products"]
+          for (var key in products){
+            if (!products[key].isIndian) {
+              continue
+            }
+            productsArr.push(products[key])
+          }
+          namespace = "product"
+        }
+      } else if (allc !== undefined) {
+        products = JsonData.categories[`${selectedCategory}`]["companies"]
+        for (var key in products){
+          productsArr.push(products[key])
+        }
+        namespace = "company"
+      } else {
+        const products = JsonData.categories[`${selectedCategory}`]["products"]
+        for (var key in products){
+          productsArr.push(products[key])
+        }
+        namespace = "product"
+      }
     }
     const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
     const rows = productsSortedArr.map((product, index) => {
@@ -151,7 +197,7 @@ class Category extends Component {
             paddingBottom: bottomPadding
           }}>
             <Row className={styles.pageContent} id={`pro_row_` + index} >
-              <PopulateProductCol index={index} products={productsSortedArr}/>
+              <PopulateProductCol namespace={namespace} index={index} products={productsSortedArr}/>
             </Row>
           </div>
         )
@@ -161,10 +207,28 @@ class Category extends Component {
   }
 
   render() {
+    let subHeading
     const {pageContext} = this.props
     const { DisplayProducts} = this
     const category =  JsonData.categories[`${pageContext.id}`]
     isIndianParam = queryString.parse(this.props.location.search).isIndian
+    cid = queryString.parse(this.props.location.search).cid
+    allc = queryString.parse(this.props.location.search).allc
+    if (cid !== undefined) {
+      subHeading = `All products from ${JsonData.companies[`${cid}`].name}`
+    } else {
+      if (isIndianParam !== undefined) {
+        if (allc !== undefined) {
+          subHeading = "All Indian companies"
+        } else {
+          subHeading = "All Indian products"
+        }
+      } else if (allc !== undefined) {
+        subHeading = "All companies"
+      } else {
+        subHeading = "All products"
+      }
+    }
     return (
       <Layout showMessage={false} toggleView={this.toggleCategoryView}>
       {this.state.showCategory && <><Row className={styles.homeLink}>
@@ -189,7 +253,9 @@ class Category extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(category.name)}</p>
+          <p>{_.startCase(category.name)} <span style={{  fontSize: `12px`, color: `rgb(181, 181, 181)`}}>
+            {subHeading}
+          </span></p>
         </Col>
       </Row>
       <DisplayProducts selectedCategory={pageContext.id}/>
