@@ -32,7 +32,6 @@ const PopulateCategoriesCol = (props) => {
       categorySlugName = ` The ` + categorySlugName
     }
     var categoryEndPoint = _.snakeCase(categorySlugName)
-    console.log(categoryEndPoint)
     col.push(
       <Col key={categoryId.id} id={categoryId.id} style={{padding: `10px`}} xs={6} md={6} lg={2} xl={2}>
         <Link

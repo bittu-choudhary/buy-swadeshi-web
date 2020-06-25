@@ -51,7 +51,6 @@ class Category extends Component {
           continue
         }
       }
-      console.log(products)
       if (productId.isIndian) {
         btnColor = `#ccf6e3`
         fontColor = `#176f52`
@@ -185,7 +184,6 @@ class Category extends Component {
         bottomPadding = `8px`
       }
       if( index%6 === 0) {
-        console.log(index)
         return (
           <div  key={`pro_row_` + index} style={{
             backgroundColor: `#f7f5f5`,
