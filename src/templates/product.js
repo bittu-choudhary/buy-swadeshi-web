@@ -65,17 +65,23 @@ class Product extends Component {
       for (var altProductId in categoryProducts) {
         let altProduct = categoryProducts[altProductId]
         if (index === 10) {
+          let seeMoreText = "See more"
+          let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true`
+          if (altIndianBrands.length === 0) {
+            seeMoreText = "No Indian prduct found"
+            seeMoreLink = "#"
+          }
           altIndianBrands.push(
             <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
               <Row>
                 <Link
-                  to={`/category/${categoryEndPoint}?isIndian=true`}
+                  to={seeMoreLink}
                   style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
                 >
                   <Col xs={12} md={12} lg={12} xl={12} style={{
                     marginTop: `10px`
                   }}>
-                    <p>See more</p>
+                    <p>{seeMoreText}</p>
                   </Col>
                 </Link> &nbsp;
               </Row>
