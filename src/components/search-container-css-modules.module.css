@@ -337,6 +337,16 @@ footer p {
   width: 80%;
 }
 
+.other-brand-scroller, .other-company-scroller {
+  background-color: #ccf6e3;
+  padding-top: 8px;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #176f52
+}
+
 @media only screen and (min-width: 1000px) {
   .searchField, .searchContainer {
     width: 80%;
