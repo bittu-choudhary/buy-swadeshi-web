@@ -36,8 +36,8 @@ class Category extends Component {
     const {index, products} = props
     let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
     let col = []
-    let fontColor = `black`
-    let btnColor = `#f0745b`
+    let fontColor = `#a52014`
+    let btnColor = `#ffdeda`
     for (let i = index; i <= loopLength ; i++ ) {
       const productId = products[i]
       let productImage = ((productId.image !== "") ? productId.image : productPlaceHolder)
@@ -50,10 +50,11 @@ class Category extends Component {
         }
       }
       if (productId.isIndian) {
-        btnColor = `#85c8ab`
+        btnColor = `#ccf6e3`
+        fontColor = `#176f52`
         remarkText = "Indian"
       }
-      remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}
+      remark = <span style={{color: fontColor , bottom: `0px`}} >{remarkText}
                   </span>
       var productSlugName = productId.name
       if (productSlugName && productSlugName.split(" ").length === 1){
@@ -84,7 +85,7 @@ class Category extends Component {
               </Row>
               <Row style={{fontSize: `14px`}}>
                 <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
-                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#f9f1bb`, border: `#f9f1bb`, color: `black`, fontSize: `.85rem`, height: `29px`,
+                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
     overflow: `scroll`}}>{productId.name}</Button>
                   {/* <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
