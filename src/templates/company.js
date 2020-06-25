@@ -16,6 +16,8 @@ import Image from 'react-bootstrap/Image'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
 import companyPlaceHolder from '../images/company-icon-360.png'
+import companyPlaceHolderGreen from '../images/company-icon-light-green.png'
+import Button from 'react-bootstrap/Button';
 
 
 var _ = require('lodash') 
@@ -35,10 +37,13 @@ class Company extends Component {
   DisplayCompanyInfo = (props) => {
     let company = JsonData.companies[`${props.companyId}`]
     let icon = <MdCancel/>
-    let fontColor = `red`
     let alt_or_other = "Alternate"
     let altIndianCompanies = []
     let categoriesList = []
+    let remark
+    let remarkText = "Not Indian"
+    let btnColor = `#ffdeda`
+    let fontColor = `#a52014`
     let companyImage = ((company.image !== "") ? company.image : companyPlaceHolder)
     for (var category in company.categories) {
       var categorySlugName = company.categories[category]["name"]
@@ -61,14 +66,20 @@ class Company extends Component {
         let altCompany = categoryCompanies[altCompanyId]
         if (index === 10) {
           altIndianCompanies.push(
-            <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
-              <Link
-                to={`/category/${categoryEndPoint}?isIndian=true`}
-                style={{ textDecoration: `none`, color: `maroon` }}
-              >
-                See more
-              </Link> &nbsp;
-            </span>
+            <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
+              <Row>
+                <Link
+                  to={`/category/${categoryEndPoint}?isIndian=true&allc=true`}
+                  style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+                >
+                  <Col xs={12} md={12} lg={12} xl={12} style={{
+                    marginTop: `10px`
+                  }}>
+                    <p>See more</p>
+                  </Col>
+                </Link> &nbsp;
+              </Row>
+            </Col>
           )
           break
         } 
@@ -83,22 +94,66 @@ class Company extends Component {
           }
           var altCompanyEndPoint = _.snakeCase(altCompanySlugName)
           altIndianCompanies.push(
-            <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
-              <Link
-                to={`/company/${altCompanyEndPoint}`}
-                style={{ textDecoration: `none`, color: `maroon` }}
-              >
-                {altCompany.name},
-              </Link> &nbsp;
-            </span>
+            <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
+              <Row>
+                <Col xs={2} md={2} lg={2} xl={2} style={{
+                    borderRightColor: `white`,
+                    borderRightStyle: `solid`,
+                    borderRightWidth: `2px`
+                  }}>
+                  <Link
+                    to={`/category/${categoryEndPoint}?isIndian=true&allc=true`}
+                    style={{ textDecoration: `none`}}
+                  >
+                    <Image  style={{
+                        border: `0px`,
+                        borderRadius: `0px`,
+                        padding: `0px`,
+                        height: `auto !important`,
+                        maxWidth: `100%`
+                        }} thumbnail src={companyPlaceHolderGreen}>
+                    </Image>
+                  </Link>
+                </Col>
+                <Col xs={6} md={6} lg={6} xl={6} style={{
+                    borderRightColor: `white`,
+                    borderRightStyle: `solid`,
+                    borderRightWidth: `2px`,
+                    maxHeight: `40px`,
+                    overflow: `scroll`
+                  }}>
+                  <Link
+                    to={`/company/${altCompanyEndPoint}`}
+                    style={{ textDecoration: `none`, color: `#176f52`}}
+                  >
+                    <p>{altCompany.name}</p>
+                  </Link>
+                </Col>
+                <Col xs={4} md={4} lg={4} xl={4} style={{
+                  maxHeight: `40px`
+                }}>
+                  <Link
+                    to={`/category/${categoryEndPoint}?cid=${company.id}`}
+                    style={{ textDecoration: `none`, color: `#176f52`}}
+                  >
+                   <p>See Products</p>
+                  </Link>
+                </Col>
+              </Row>
+            </Col>
           )
         }
       }
     }
     if (company.isIndian) {
-      icon = <MdCheckCircle/>
+      remarkText = "Indian"
+      btnColor = `#ccf6e3`
+      fontColor = `#176f52`
       fontColor = `green`
+      alt_or_other = "Other"
     }
+    remark = <span style={{color: fontColor , bottom: `0px`}} >{remarkText}
+                  </span>
     return(
       <>
         <div className={styles.pageContent + " " + `container-fluid`}>
@@ -111,28 +166,16 @@ class Company extends Component {
                 }} thumbnail src={companyImage}></Image>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6}  style={{height: `fit-content`}}>
-              <div className={styles.companyAttr}>
-                <div className={styles.companyAttrKey}>
-                  <span>Key Features</span>
-                </div>
-                <div className={styles.companyAttrDesc}>
-                  Made with superior quality wheat 
-                  <br/>Prepares soft and delicious roti
-                  <br/>Rich source of Fibre
-                  <br/>Consists of heavier in feel quality flour
-                </div>
-              </div>
-            </Col>
             <Col className={"float-left col-6" + " " + styles.companyAttrWrapper} md={6} style={{height: `60px`}}>
               <div className={styles.companyAttr}>
-                <div className={styles.companyAttrKey}>
+                {/* <div className={styles.companyAttrKey}>
                   <span>Is Indian?</span>
-                </div>
+                </div> */}
                 <div className={styles.companyAttrDesc}>
-                  <span style={{color: fontColor, fontWeight: `bold`}} >Indian &nbsp;
+                  <Button style={{backgroundColor: btnColor, border: btnColor, marginTop: `10px`}}>{remark}</Button>
+                  {/* <span style={{color: fontColor, fontWeight: `bold`}} >Indian &nbsp;
                     {icon}
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </Col>
@@ -151,9 +194,9 @@ class Company extends Component {
                 <div className={styles.companyAttrKey}>
                   <span>{alt_or_other} Indian Companies</span>
                 </div>
-                <div className={styles.companyAttrDesc}>
+                <Row style={{height: `200px`, overflow: `scroll`, marginRight: `0px`, marginLeft: `0px`}}>
                   {altIndianCompanies}
-                </div>
+                </Row>
               </div>
             </Col>
             <Col className={"float-left col-12" + " " + styles.companyAttrWrapper} md={12}  style={{height: `fit-content`}}>
