@@ -16,6 +16,9 @@ import Col from  'react-bootstrap/Col'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
 import productPlaceHolder from '../images/product-placeholder-white-bg-480.png'
+import productPlaceHolderTrans from '../images/product-placeholder-light-green.png'
+import Button from 'react-bootstrap/Button';
+
 
 var _ = require('lodash') 
 
@@ -35,10 +38,13 @@ class Product extends Component {
     let product = JsonData.products[`${props.productId}`]
     let productImage = (product.image !== "" ? product.image : productPlaceHolder)
     let icon = <MdCancel/>
-    let fontColor = `red`
     let alt_or_other = "Alternate"
     let altIndianBrands = []
     let categoriesList = []
+    let remark
+    let remarkText = "Not Indian"
+    let btnColor = `#ffdeda`
+    let fontColor = `#a52014`
     for (var category in product.categories) {
       var categorySlugName = product.categories[category]["name"]
       if (categorySlugName && categorySlugName.split(" ").length === 1){
@@ -60,14 +66,28 @@ class Product extends Component {
         let altProduct = categoryProducts[altProductId]
         if (index === 10) {
           altIndianBrands.push(
-            <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-              <Link
-                to={`/category/${categoryEndPoint}?isIndian=true`}
-                style={{ textDecoration: `none`, color: `maroon` }}
-              >
-                See more
-              </Link> &nbsp;
-            </span>
+            <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+              <Row>
+                <Link
+                  to={`/category/${categoryEndPoint}?isIndian=true`}
+                  style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+                >
+                  <Col xs={12} md={12} lg={12} xl={12} style={{
+                    marginTop: `10px`
+                  }}>
+                    <p>See more</p>
+                  </Col>
+                </Link> &nbsp;
+              </Row>
+            </Col>
+            // <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+            //   <Link
+            //     to={`/category/${categoryEndPoint}?isIndian=true`}
+            //     style={{ textDecoration: `none`, color: `maroon` }}
+            //   >
+            //     See more
+            //   </Link> &nbsp;
+            // </span>
           )
           break
         } 
@@ -81,24 +101,81 @@ class Product extends Component {
             altProductSlugName = ` The ` + altProductSlugName
           }
           var altProEndPoint = _.snakeCase(altProductSlugName)
+          var altProCompany = JsonData.products[altProduct.id].company
+          var altProCompanySlugName = altProCompany.name
+          if (altProCompanySlugName && altProCompanySlugName.split(" ").length === 1){
+            altProCompanySlugName = ` The ` + altProCompanySlugName
+          }
+          var altProCompanyEndPoint = _.snakeCase(altProCompanySlugName)
+          // altIndianBrands.push(
+          //   <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+          //     <Link
+          //       to={`/product/${altProEndPoint}`}
+          //       style={{ textDecoration: `none`, color: `maroon` }}
+          //     >
+          //       {altProduct.name},
+          //     </Link> &nbsp;
+          //   </span>
+          // )
           altIndianBrands.push(
-            <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-              <Link
-                to={`/product/${altProEndPoint}`}
-                style={{ textDecoration: `none`, color: `maroon` }}
-              >
-                {altProduct.name},
-              </Link> &nbsp;
-            </span>
+            <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+              <Row>
+                  <Col xs={2} md={2} lg={2} xl={2} style={{
+                      borderRightColor: `white`,
+                      borderRightStyle: `solid`,
+                      borderRightWidth: `2px`
+                    }}>
+                    <Link
+                      to={`/category/${categoryEndPoint}?isIndian=true`}
+                      style={{ textDecoration: `none`}}
+                    >
+                      <Image  style={{
+                          border: `0px`,
+                          borderRadius: `0px`,
+                          padding: `0px`,
+                          height: `auto !important`,
+                          maxWidth: `100%`
+                          }} thumbnail src={productPlaceHolderTrans}>
+                      </Image>
+                    </Link>
+                  </Col>
+                  <Col xs={6} md={6} lg={6} xl={6} style={{
+                      borderRightColor: `white`,
+                      borderRightStyle: `solid`,
+                      borderRightWidth: `2px`
+                    }}>
+                    <Link
+                      to={`/product/${altProEndPoint}`}
+                      style={{ textDecoration: `none`, color: `#176f52`}}
+                    >
+                      <p>{altProduct.name}</p>
+                    </Link>
+                  </Col>
+                  <Col xs={4} md={4} lg={4} xl={4} style={{
+                    maxHeight: `40px`,
+                    overflow: `scroll`
+                  }}>
+                    <Link
+                      to={`/company/${altProCompanyEndPoint}`}
+                      style={{ textDecoration: `none`, color: `#176f52`}}
+                    >
+                      <p>{altProCompany.name}</p>
+                    </Link>
+                  </Col>
+              </Row>
+            </Col>
           )
         }
       }
     }
     if (product.isIndian) {
-      icon = <MdCheckCircle/>
-      fontColor = `green`
+      remarkText = "Indian"
+      btnColor = `#ccf6e3`
+      fontColor = `#176f52`
       alt_or_other = `Other`
     }
+    remark = <span style={{color: fontColor , bottom: `0px`}} >{remarkText}
+                  </span>
     var compamySlugName = product.company.name
     if (compamySlugName && compamySlugName.split(" ").length === 1){
       compamySlugName = ` The ` + compamySlugName
@@ -116,7 +193,7 @@ class Product extends Component {
                 }} thumbnail src={productImage}></Image>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>
+            {/* <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
                   <span>Key Features</span>
@@ -128,16 +205,17 @@ class Product extends Component {
                   <br/>Consists of heavier in feel quality flour
                 </div>
               </div>
-            </Col>
+            </Col> */}
             <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
-                <div className={styles.productAttrKey}>
+                {/* <div className={styles.productAttrKey}>
                   <span>Is Indian?</span>
-                </div>
+                </div> */}
                 <div className={styles.productAttrDesc}>
-                  <span style={{color: fontColor, fontWeight: `bold`}} >Indian &nbsp;
+                  <Button style={{backgroundColor: btnColor, border: btnColor, marginTop: `10px`}}>{remark}</Button>
+                  {/* <span style={{color: fontColor, fontWeight: `bold`}} >Indian &nbsp;
                     {icon}
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </Col>
@@ -166,15 +244,94 @@ class Product extends Component {
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={6}>
               <div className={styles.productAttr}>
+                  <div className={styles.productAttrKey}>
+                    <span>{alt_or_other} Indian Brands</span>
+                  </div>
+                  <Row style={{height: `200px`, overflow: `scroll`, marginRight: `0px`, marginLeft: `0px`}}>
+                    {altIndianBrands}
+                    {/* <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                      <Row>
+                        <Col xs={2} md={2} lg={2} xl={2}>
+                          <Image className={styles.productImage} style={{
+                              border: `0px`,
+                              borderRadius: `0px`,
+                              padding: `0px`
+                              }} thumbnail src={productPlaceHolderTrans}>
+                          </Image>
+                        </Col>
+                        <Col xs={6} md={6} lg={6} xl={6}>
+                          <p>Traditional Chakki Grinding</p>
+                        </Col>
+                        <Col xs={4} md={4} lg={4} xl={4}>
+                          <p>Traditional Chakki</p>
+                        </Col>
+                      </Row>
+                    </Col>
+                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                      <Row>
+                        <Col xs={2} md={2} lg={2} xl={2}>
+                          <p>C11</p>
+                        </Col>
+                        <Col xs={6} md={6} lg={6} xl={6}>
+                          <p>C12</p>
+                        </Col>
+                        <Col xs={4} md={4} lg={4} xl={4}>
+                          <p>C13</p>
+                        </Col>
+                      </Row>
+                    </Col>
+                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                      <Row>
+                        <Col xs={2} md={2} lg={2} xl={2}>
+                          <p>C11</p>
+                        </Col>
+                        <Col xs={6} md={6} lg={6} xl={6}>
+                          <p>C12</p>
+                        </Col>
+                        <Col xs={4} md={4} lg={4} xl={4}>
+                          <p>C13</p>
+                        </Col>
+                      </Row>
+                    </Col>
+                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                      <Row>
+                        <Col xs={2} md={2} lg={2} xl={2}>
+                          <p>C11</p>
+                        </Col>
+                        <Col xs={6} md={6} lg={6} xl={6}>
+                          <p>C12</p>
+                        </Col>
+                        <Col xs={4} md={4} lg={4} xl={4}>
+                          <p>C13</p>
+                        </Col>
+                      </Row>
+                    </Col>
+                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                      <Row>
+                        <Col xs={2} md={2} lg={2} xl={2}>
+                          <p>C11</p>
+                        </Col>
+                        <Col xs={6} md={6} lg={6} xl={6}>
+                          <p>C12</p>
+                        </Col>
+                        <Col xs={4} md={4} lg={4} xl={4}>
+                          <p>C13</p>
+                        </Col>
+                      </Row>
+                    </Col> */}
+                  </Row>
+                </div>
+
+              {/* <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
                   <span>{alt_or_other} Indian Brands</span>
                 </div>
                 <div className={styles.productAttrDesc}>
                   {altIndianBrands}
                 </div>
-              </div>
+              </div> */}
             </Col>
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12}  style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
