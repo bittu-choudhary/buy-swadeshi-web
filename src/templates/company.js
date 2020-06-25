@@ -40,7 +40,11 @@ class Company extends Component {
     let altIndianCompanies = []
     let categoriesList = []
     for (var category in company.categories) {
-      var categoryEndPoint = _.snakeCase(company.categories[category]["name"])
+      var categorySlugName = company.categories[category]["name"]
+      if (categorySlugName && categorySlugName.split(" ").length === 1){
+        categorySlugName = ` The ` + categorySlugName
+      }
+      var categoryEndPoint = _.snakeCase(categorySlugName)
       categoriesList.push(
         <Link
               to={`/category/${categoryEndPoint}`}
@@ -72,7 +76,11 @@ class Company extends Component {
           continue 
         }
         if (altCompany.isIndian) {
-          var altCompanyEndPoint = _.snakeCase(altCompany.name)
+          var altCompanySlugName = altCompany.name
+          if (altCompanySlugName && altCompanySlugName.split(" ").length === 1){
+            altCompanySlugName = ` The ` + altCompanySlugName
+          }
+          var altCompanyEndPoint = _.snakeCase(altCompanySlugName)
           altIndianCompanies.push(
             <span className={styles.altBrand} key={altCompany.name} style={{bottom: `0px`}}  >
               <Link

@@ -17,7 +17,11 @@ for (var key in JSONData) {
   for (const dataPoints in JSONData[key]) {
     let slug;
     var dataPointType;
-    var endPoint = _.snakeCase(JSONData[key][dataPoints]["name"])
+    var dataPointSlugName = JSONData[key][dataPoints]["name"]
+    if (dataPointSlugName.split(" ").length === 1){
+      dataPointSlugName = ` The ` + dataPointSlugName
+    }
+    var endPoint = _.snakeCase(dataPointSlugName)
     switch (key) {
       case "categories":
         dataPointType = "_typeCategory"

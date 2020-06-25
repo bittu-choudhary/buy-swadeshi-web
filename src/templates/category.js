@@ -54,7 +54,11 @@ class Category extends Component {
       }
       remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}
                   </span>
-      var productEndPoint = _.snakeCase(productId.name)
+      var productSlugName = productId.name
+      if (productSlugName && productSlugName.split(" ").length === 1){
+        productSlugName = ` The ` + productSlugName
+      }
+      var productEndPoint = _.snakeCase(productSlugName)
       col.push(
         <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={12} md={4} lg={4} xl={4}>
           <Link

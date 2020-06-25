@@ -43,7 +43,11 @@ const PopulateResultCol = (props) => {
       }
       remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}</span>
     }
-    var resultEndPoint = _.snakeCase(resultId.name)
+    var searchSlugName = resultId.name
+    if (searchSlugName && searchSlugName.split(" ").length === 1){
+      searchSlugName = ` The ` + searchSlugName
+    }
+    var resultEndPoint = _.snakeCase(searchSlugName)
     col.push(
       <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={12} md={4} lg={4} xl={4}>
         <Link

@@ -39,7 +39,11 @@ class Product extends Component {
     let altIndianBrands = []
     let categoriesList = []
     for (var category in product.categories) {
-      var categoryEndPoint = _.snakeCase(product.categories[category]["name"])
+      var categorySlugName = product.categories[category]["name"]
+      if (categorySlugName && categorySlugName.split(" ").length === 1){
+        categorySlugName = ` The ` + categorySlugName
+      }
+      var categoryEndPoint = _.snakeCase(categorySlugName)
       categoriesList.push(
         <Link
               to={`/category/${categoryEndPoint}`}
@@ -71,7 +75,11 @@ class Product extends Component {
           continue 
         }
         if (altProduct.isIndian) {
-          var altProEndPoint = _.snakeCase(altProduct.name)
+          var altProductSlugName = altProduct.name
+          if (altProductSlugName && altProductSlugName.split(" ").length === 1){
+            altProductSlugName = ` The ` + altProductSlugName
+          }
+          var altProEndPoint = _.snakeCase(altProductSlugName)
           altIndianBrands.push(
             <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
               <Link
@@ -90,7 +98,11 @@ class Product extends Component {
       fontColor = `green`
       alt_or_other = `Other`
     }
-    var companyEndPoint = _.snakeCase(product.company.name)
+    var compamySlugName = product.company.name
+    if (compamySlugName && compamySlugName.split(" ").length === 1){
+      compamySlugName = ` The ` + compamySlugName
+    }
+    var companyEndPoint = _.snakeCase(compamySlugName)
     return(
       <>
         <div className={styles.pageContent + " " + `container-fluid`}>
