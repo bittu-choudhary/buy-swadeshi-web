@@ -76,6 +76,7 @@ const PopulateCategoriesCol = (props) => {
 
 const PopulateCategoriesRow = (props) => {
   CategoriesDataArr = CategoriesDataArr.filter(item => CategoriesData.categories[item].isParent === true)
+  CategoriesDataArr = CategoriesDataArr.sort((a, b) => CategoriesData.categories[a].name.localeCompare(CategoriesData.categories[b].name))
   const rows = CategoriesDataArr.map((item, index) => {
     if( index%6 === 0) {
       return (<Row id={`cat_row_` + index} key={`cat_row_` + index} style={{padding: `5px`}}>
