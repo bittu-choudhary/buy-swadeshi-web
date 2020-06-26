@@ -3,8 +3,12 @@ body {
   margin: 0px !important;
 }
 
-.searchField, .searchContainer {
+.search-field, .search-container {
   margin: auto;
+}
+
+.home-nav {
+  margin-left: 0px !important;
 }
 
 .product-col {
@@ -360,7 +364,7 @@ footer p {
 }
 
 @media only screen and (min-width: 1000px) {
-  .searchField, .searchContainer {
+  .search-field, .search-container {
     width: 80%;
   }
 
@@ -406,7 +410,7 @@ footer p {
 
 @media only screen and (min-width: 1300px) {
 
-  .searchField, .searchContainer {
+  .search-field, .search-container {
     width: 50%;
   }
 
@@ -473,6 +477,11 @@ footer p {
 
   .alert-success {
     height: 70px;
+  }
+
+  .search-field {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .home-link{
