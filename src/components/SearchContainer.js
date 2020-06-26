@@ -1,11 +1,11 @@
 import React, { Component } from "react"
-import JSONData from "../../content/raw data/new_brand_list.json"
+import JSONData from "../../content/raw-data/new_brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from "gatsby-plugin-firebase"
-import IndexedBrandData from "../../content/indexed data/new_indexed_data.json"
+import IndexedBrandData from "../../content/indexed-data/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
 
 

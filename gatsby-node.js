@@ -2,7 +2,7 @@
 const write = require("write");
 const path = require("path");
 const Bm25 = require( "./src/library/wink-bm25-text-search")
-const JSONData = require("./content/raw data/new_brand_list.json")
+const JSONData = require("./content/raw-data/new_brand_list.json")
 
 var _ = require('lodash')
 const brandList = JSONData.brands
@@ -48,7 +48,7 @@ for (var key in JSONData) {
 }
 engine.consolidate()
 const consolidatedJson =  engine.exportJSON()
-write.sync("./content/indexed data/new_indexed_data.json", JSON.stringify(consolidatedJson))
+write.sync("./content/indexed-data/new_indexed_data.json", JSON.stringify(consolidatedJson))
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 

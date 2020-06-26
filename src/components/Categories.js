@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import { useSprings, animated } from 'react-spring'
-import CategoriesData from "../../content/raw data/new_brand_list.json"
+import CategoriesData from "../../content/raw-data/new_brand_list.json"
 import firebase from "gatsby-plugin-firebase"
 
 

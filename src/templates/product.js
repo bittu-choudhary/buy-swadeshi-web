@@ -6,7 +6,7 @@
 
 import React, { Component } from "react"
 import Layout from '../components/layout'
-import JsonData from "../../content/raw data/new_brand_list.json"
+import JsonData from "../../content/raw-data/new_brand_list.json"
 import styles from '../components/search-container-css-modules.module.css'
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image'

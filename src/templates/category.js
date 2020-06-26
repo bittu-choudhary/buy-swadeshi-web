@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/Row';
 import { Link } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
-import JsonData from "../../content/raw data/new_brand_list.json"
+import JsonData from "../../content/raw-data/new_brand_list.json"
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
 import productPlaceHolder from '../images/product-placeholder-white-bg.png'
