@@ -13,9 +13,9 @@ import firebase from "gatsby-plugin-firebase"
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.08]
 const trans = (x, y, s) => `perspective(600px) scale(${s})`
-const CategoriesDataArr = Object.keys(CategoriesData.categories)
+let CategoriesDataArr = Object.keys(CategoriesData.categories)
 const bgColorArr = [`#fdeae4`, `#e8eefb`, `#fff9dd`, `#e8f3dd`, `#e8e8e8`, `#fdebf9`, `#e8f3dd`, `#e8e8e8`, `#e8eefb`, `#d0efed`]
-var _ = require('lodash') 
+var _ = require('lodash')
 
 const sendFirebaseAnalytics = (event, catId) => {
   if (process.env.NODE_ENV !== "development") {
@@ -23,7 +23,6 @@ const sendFirebaseAnalytics = (event, catId) => {
       .analytics()
       .logEvent(event, {category_id: catId})
   }
-  console.log(`Logging ${event} with param ${catId}`)
 }
 
 
@@ -76,6 +75,7 @@ const PopulateCategoriesCol = (props) => {
 }
 
 const PopulateCategoriesRow = (props) => {
+  CategoriesDataArr = CategoriesDataArr.filter(item => CategoriesData.categories[item].isParent === true)
   const rows = CategoriesDataArr.map((item, index) => {
     if( index%6 === 0) {
       return (<Row id={`cat_row_` + index} key={`cat_row_` + index} style={{padding: `5px`}}>
@@ -103,7 +103,7 @@ const Categories = (props) => {
     <Container style={{marginTop: `50px`}}>
       <CategoryList/>
     </Container>
-  ) 
+  )
 }
 
 export default Categories
