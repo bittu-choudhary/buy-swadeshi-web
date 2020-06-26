@@ -76,54 +76,21 @@ class Product extends Component {
               to={`/category/${categoryEndPoint}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{product.categories[category]["name"]} &nbsp;
-          </span>
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{product.categories[category]["name"]}, </span>
         </Link>
       )
       if (product.categories[category].isParent) {
         let categoryProducts = JsonData.categories[category].products
         let index = 0
+        let altProCount = 0
         for (var altProductId in categoryProducts) {
           let altProduct = categoryProducts[altProductId]
-          if (index === 10) {
-            let seeMoreText = "See more"
-            let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true`
-            if (altIndianBrands.length === 0) {
-              seeMoreText = "No Indian prduct found"
-              seeMoreLink = "#"
-            }
-            altIndianBrands.push(
-              <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                <Row>
-                  <Link
-                    to={seeMoreLink}
-                    style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
-                  >
-                    <Col xs={12} md={12} lg={12} xl={12} style={{
-                      marginTop: `10px`
-                    }}
-                    onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
-                      <p>{seeMoreText}</p>
-                    </Col>
-                  </Link> &nbsp;
-                </Row>
-              </Col>
-              // <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-              //   <Link
-              //     to={`/category/${categoryEndPoint}?isIndian=true`}
-              //     style={{ textDecoration: `none`, color: `maroon` }}
-              //   >
-              //     See more
-              //   </Link> &nbsp;
-              // </span>
-            )
-            break
-          }
           index = index + 1
           if (altProductId === props.productId) {
             continue
           }
           if (altProduct.isIndian) {
+            altProCount = altProCount + 1
             var altProductSlugName = altProduct.name
             if (altProductSlugName && altProductSlugName.split(" ").length === 1){
               altProductSlugName = ` The ` + altProductSlugName
@@ -172,7 +139,9 @@ class Product extends Component {
                     <Col xs={6} md={6} lg={6} xl={6} style={{
                         borderRightColor: `white`,
                         borderRightStyle: `solid`,
-                        borderRightWidth: `2px`
+                        borderRightWidth: `2px`,
+                        maxHeight: `40px`,
+                        overflow: `scroll`
                       }}
                       onClick={() => this.sendFirebaseAnalytics(`product`,  altProduct.id)}>
                       <Link
@@ -198,7 +167,50 @@ class Product extends Component {
               </Col>
             )
           }
+
+          if ( (Object.keys(categoryProducts).length === index) ||  (altProCount === 10)) {
+            console.log(`inside if`)
+            let seeMoreText = "See more"
+            let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true`
+            if (altIndianBrands.length === 0) {
+              seeMoreText = "No Indian prduct found"
+              seeMoreLink = "#"
+            } else if ((altIndianBrands.length === 10)) {
+              console.log(`inside after if`)
+              altIndianBrands.push(
+                <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                  <Row>
+                    <Link
+                      to={seeMoreLink}
+                      style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+                    >
+                      <Col xs={12} md={12} lg={12} xl={12} style={{
+                        marginTop: `10px`
+                      }}
+                      onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
+                        <p>{seeMoreText}</p>
+                      </Col>
+                    </Link> &nbsp;
+                  </Row>
+                </Col>
+                // <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+                //   <Link
+                //     to={`/category/${categoryEndPoint}?isIndian=true`}
+                //     style={{ textDecoration: `none`, color: `maroon` }}
+                //   >
+                //     See more
+                //   </Link> &nbsp;
+                // </span>
+              )
+              console.log(`inside if after push`)
+              console.log(altIndianBrands[altIndianBrands.length -1])
+              break
+            }
+          }
         }
+        console.log(Object.keys(categoryProducts).length)
+        console.log(index)
+        console.log(altProCount)
       }
       
     }
@@ -270,12 +282,15 @@ class Product extends Component {
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-6" + " " + styles.productAttrWrapper}  md={6} style={{height: `60px`}}>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper}  md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
                   <span>Categories</span>
                 </div>
-                <div className={styles.productAttrDesc}>
+                <div className={styles.productAttrDesc} style={{
+                  overflow: `scroll`,
+                  maxHeight: `60px`
+                }}>
                   {categoriesList}
                 </div>
               </div>
