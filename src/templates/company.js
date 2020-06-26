@@ -258,7 +258,7 @@ class Company extends Component {
       <Layout showMessage={false} toggleView={this.toggleCompanyView}>
       {this.state.showCompany && <><Row className={styles.homeLink}>
         <Col>
-          <ul style={{listStyle: `none`, paddingLeft: `0`}}>
+          <ul  className={styles.homeNav} style={{listStyle: `none`, paddingLeft: `0`}}>
             <li style={{display: `inline-block`}}>
               <Link
                 to={`/`}

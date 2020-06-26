@@ -406,7 +406,7 @@ class Product extends Component {
       <Layout showMessage={false} toggleView={this.toggleProductView}>
       {this.state.showProduct && <><Row className={styles.homeLink}>
         <Col>
-          <ul style={{listStyle: `none`, paddingLeft: `0`}}>
+          <ul className={styles.homeNav} style={{listStyle: `none`, paddingLeft: `0`}}>
             <li style={{display: `inline-block`}}>
               <Link
                 to={`/`}

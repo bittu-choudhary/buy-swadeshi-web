@@ -297,7 +297,7 @@ class Category extends Component {
       <Layout showMessage={false} toggleView={this.toggleCategoryView}>
       {this.state.showCategory && <><Row className={styles.homeLink}>
         <Col>
-          <ul style={{listStyle: `none`, paddingLeft: `0`}}>
+          <ul  className={styles.homeNav} style={{listStyle: `none`, paddingLeft: `0`}}>
             <li style={{display: `inline-block`}}>
               <Link
                 to={`/`}
