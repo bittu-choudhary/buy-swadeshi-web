@@ -12,7 +12,7 @@ import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 import companyPlaceHolder from '../images/company-icon.png'
 import firebase from "gatsby-plugin-firebase"
 
-var _ = require('lodash') 
+var _ = require('lodash')
 
 const sendFirebaseAnalytics = (type, resourceId) => {
   if (process.env.NODE_ENV !== "development") {
@@ -30,7 +30,6 @@ const sendFirebaseAnalytics = (type, resourceId) => {
       .logEvent(`company_clk`, {company_id: resourceId})
     }
   }
-  console.log(`Logging ${type} with param ${resourceId}`)
 }
 
 const PopulateResultCol = (props) => {
@@ -40,7 +39,6 @@ const PopulateResultCol = (props) => {
   for (let i = index; i <= loopLength ; i++ ) {
     let resultImage = productPlaceHolder
     const resultId = results[i]
-    // console.log(resultId)
     let remark
     let remarkText = "Not Indian"
     let caption = ""
@@ -98,7 +96,7 @@ const PopulateResultCol = (props) => {
               <Col style={{minHeight: `24px`}} xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
     overflow: `scroll`}}>{resultId.name}
-                 <span 
+                 <span
                     style={{
                       fontSize: `12px`,
                       color: `gray`}}>
@@ -108,7 +106,7 @@ const PopulateResultCol = (props) => {
                 {/* <div style={{textAlign: `center`}}>
                   <p style={{textAlign: `center`, marginBottom: `0px`}}>
                     {resultId.name}
-                    <span 
+                    <span
                     style={{
                       fontSize: `12px`,
                       color: `gray`}}>
@@ -134,9 +132,6 @@ const PopulateResultCol = (props) => {
 
 const DisplayResults = (props) => {
   const {queryResults} = props
-  // console.log(selectedCategory)
-  // const products = CategoriesData.categories[`${selectedCategory}`]["products"]
-  // console.log(products)
   let order = { product: 1, category: 2, company: 3 };
   queryResults.sort(function (a, b) {
     return order[a.type] - order[b.type];

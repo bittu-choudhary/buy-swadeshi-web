@@ -9,7 +9,7 @@ import IndexedBrandData from "../../content/indexed data/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
 
 
-var _ = require('lodash') 
+var _ = require('lodash')
 
 class Search extends Component {
   // state = {
@@ -35,7 +35,7 @@ class Search extends Component {
         isLoading: false,
         isError: false,
         searchQuery: ``,
-      } 
+      }
     }
     // this.state = { brandList: brandData.brands }
   }
@@ -73,11 +73,11 @@ class Search extends Component {
           resultData["type"] = "category"
           break;
         case "Company":
-          resultData = _.pick(JSONData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian']) 
+          resultData = _.pick(JSONData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian'])
           resultData["type"] = "company"
           break;
         case "Product":
-          resultData = _.pick(JSONData.products[resultObjectId], ['id', 'name', 'image', 'isIndian']) 
+          resultData = _.pick(JSONData.products[resultObjectId], ['id', 'name', 'image', 'isIndian'])
           resultData["type"] = "product"
           break;
         default:
@@ -92,8 +92,6 @@ class Search extends Component {
             .logEvent("no_result", {query: e.target.value})
       }
     }
-    // console.log( '%d entries found.', results.length )
-    // console.log(queryResult[0])
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
   }
   handleSubmit = e => {
@@ -107,7 +105,7 @@ class Search extends Component {
         .logEvent(event)
     }
   }
-  
+
   render() {
     const { t } = this.props
     const {
@@ -145,7 +143,7 @@ class Search extends Component {
     }
     return (
       <>
-        <div style={{ 
+        <div style={{
           marginTop: `30px`
           }}>
           <form className={styles.searchField} onSubmit={this.handleSubmit}>

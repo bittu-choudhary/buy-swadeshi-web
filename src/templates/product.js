@@ -21,7 +21,7 @@ import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
 
 
-var _ = require('lodash') 
+var _ = require('lodash')
 
 
 class Product extends Component {
@@ -48,7 +48,6 @@ class Product extends Component {
         .logEvent(`company_clk`, {company_id: resourceId})
       }
     }
-    console.log(`Logging ${type} with param ${resourceId}`)
   }
 
   toggleProductView = (newVal) => {
@@ -118,10 +117,10 @@ class Product extends Component {
             // </span>
           )
           break
-        } 
+        }
         index = index + 1
         if (altProductId === props.productId) {
-          continue 
+          continue
         }
         if (altProduct.isIndian) {
           var altProductSlugName = altProduct.name
@@ -231,7 +230,7 @@ class Product extends Component {
                   <span>Key Features</span>
                 </div>
                 <div className={styles.productAttrDesc}>
-                  Made with superior quality wheat 
+                  Made with superior quality wheat
                   <br/>Prepares soft and delicious roti
                   <br/>Rich source of Fibre
                   <br/>Consists of heavier in feel quality flour

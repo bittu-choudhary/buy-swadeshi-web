@@ -21,7 +21,7 @@ import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
 
 
-var _ = require('lodash') 
+var _ = require('lodash')
 
 class Company extends Component {
   constructor(props) {
@@ -47,7 +47,6 @@ class Company extends Component {
         .logEvent(`company_clk`, {company_id: resourceId})
       }
     }
-    console.log(`Logging ${type} with param ${resourceId}`)
   }
 
   toggleCompanyView = (newVal) => {
@@ -102,10 +101,10 @@ class Company extends Component {
             </Col>
           )
           break
-        } 
+        }
         index = index + 1
         if (altCompanyId === props.companyId) {
-          continue 
+          continue
         }
         if (altCompany.isIndian) {
           var altCompanySlugName = altCompany.name

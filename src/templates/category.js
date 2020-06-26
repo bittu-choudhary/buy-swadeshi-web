@@ -18,14 +18,14 @@ import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 import firebase from "gatsby-plugin-firebase"
 
 const queryString = require('query-string');
-var _ = require('lodash') 
+var _ = require('lodash')
 let isIndianParam
 let allc
 let cid
 class Category extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       selectedCategory: props.pageContext.id,
       showCategory: true,
      };
@@ -47,7 +47,6 @@ class Category extends Component {
         .logEvent(`company_clk`, {company_id: resourceId})
       }
     }
-    console.log(`Logging ${type} with param ${resourceId}`)
   }
 
   toggleCategoryView = (newVal) => {
@@ -85,7 +84,7 @@ class Category extends Component {
       var productEndPoint = _.snakeCase(productSlugName)
       col.push(
         <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={12} md={4} lg={4} xl={4}
-        
+
           onClick={() => this.sendFirebaseAnalytics(namespace, productId.id)}>
           <Link
           to={`/${namespace}/${productEndPoint}`}
@@ -137,7 +136,7 @@ class Category extends Component {
     )
   }
 
-  
+
   DisplayProducts = (props) => {
     const {selectedCategory} = props
     const { PopulateProductCol} = this

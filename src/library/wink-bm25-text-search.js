@@ -125,7 +125,6 @@ var bm25fIMS = function () {
           allSubStrings.push(subToken.toLowerCase())
           var lastSubString = subToken
           var remainningTokens = splitToken.slice(i + 1)
-          // console.log(remainningTokens)
           remainningTokens.map((literals) => {
             lastSubString = lastSubString + literals
             allSubStrings.push(lastSubString.toLowerCase())
@@ -136,7 +135,6 @@ var bm25fIMS = function () {
         })
       } )
      var tkns =  allSubStrings
-    // console.log(tkns)
     // Temp token holder.
     var t;
     for ( var i = 0, imax = tkns.length; i < imax; i += 1 ) {
@@ -377,7 +375,6 @@ var bm25fIMS = function () {
       n = invertedIdx[ i ].length;
       idf[ i ] = Math.log( ( ( totalDocs - n + 0.5 ) / ( n + 0.5 ) ) + k );
       // To be uncommented to probe values!
-      // console.log( '%s, %d, %d, %d, %d', t, totalDocs, n, k, idf[ t ] );
     }
     avgCorpusLength = totalCorpusLength / totalDocs;
     // Consolidate: update document frequencies.
@@ -391,7 +388,6 @@ var bm25fIMS = function () {
           ( Math.abs( ( freq * ( k1 + 1 ) ) / ( ( k1 * normalizationFactor ) + freq ) ) *
           idf[ t ] ).toFixed( freqPrecision );
         // To be uncommented to probe values!
-        // console.log( '%s, %s, %d', id, t, documents[ id ].freq[ t ] );
       }
     }
     // Set `consolidated` as `true`.
@@ -459,7 +455,6 @@ var bm25fIMS = function () {
           results[ id ] = documents[ id ].freq[ t ] + ( results[ id ] || 0 );
         }
         // To be uncommented to probe values!
-        /* console.log( '%s, %d, %d, %d', t, documents[ id ].freq[ t ], idf[ t ], results[ id ] ); */
       }
     }
     // Convert to a table in `[ id, score ]` format; sort and slice required number

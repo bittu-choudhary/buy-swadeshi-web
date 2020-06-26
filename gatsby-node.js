@@ -4,7 +4,7 @@ const path = require("path");
 const Bm25 = require( "./src/library/wink-bm25-text-search")
 const JSONData = require("./content/raw data/new_brand_list.json")
 
-var _ = require('lodash') 
+var _ = require('lodash')
 const brandList = JSONData.brands
 const engine = Bm25()
 engine.defineConfig( { fldWeights: { name: 1} } )
@@ -51,24 +51,6 @@ const consolidatedJson =  engine.exportJSON()
 write.sync("./content/indexed data/new_indexed_data.json", JSON.stringify(consolidatedJson))
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === `RawDataJson`) {
-//     for (var product in node.products ) {
-//       const productNode = node.products[product]
-//       const slug = `/product/${productNode.name}/`
-//       pageObj.push({type: `product`, slug: slug})
-//       console.log(slug)
-//     }
-//     for (var company in node.companies ) {
-//       const companyNode = node.companies[company]
-//       const slug = `/company/${companyNode.name}/`
-//       pageObj.push({type: `company`, slug: slug})
-//       console.log(slug)
-//     }
-//   }
-// }
 
 console.log(pageObj)
 exports.createPages = async ({ actions }) => {
