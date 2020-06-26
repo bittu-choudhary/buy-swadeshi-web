@@ -284,6 +284,7 @@ footer p {
 .play-store-button {
   margin-right: 6px;
   width: 112px;
+  margin-bottom: 0px !important;
 }
 
 .page-content{
