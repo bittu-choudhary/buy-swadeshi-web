@@ -100,9 +100,9 @@ class Category extends Component {
     const {index, products, namespace} = props
     let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
     let col = []
-    let fontColor = `#a52014`
-    let btnColor = `#ffdeda`
     for (let i = index; i <= loopLength ; i++ ) {
+      let fontColor = `#a52014`
+      let btnColor = `#ffdeda`
       const productId = products[i]
       let productImage = ((productId.image !== "") ? productId.image : productPlaceHolder)
       let remark
@@ -138,8 +138,8 @@ class Category extends Component {
           >
             <div style={{borderRadius: `0px`}} className={`contianer` + " " + styles.categoryCol + " " + styles.productCol } >
               <Row className={styles.productCardImage} >
-                <Col  className={`col-12` } style={{height: `100%`}}>
-                  <div className={`container`} style={{width: `fit-content`, height: `100%`}}>
+                <Col  className={`col-12`} style={{height: `100%`}}>
+                  <div className={`container`  + ` ` + styles.catListImage} style={{width: `fit-content`, height: `100%`}}>
                     <Image loading={`lazy`} className={styles.productImage} style={{
                       border: `0px`,
                       borderRadius: `0px`,
