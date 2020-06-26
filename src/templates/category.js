@@ -16,19 +16,62 @@ import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
 import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 import firebase from "gatsby-plugin-firebase"
+import chunk from "lodash/chunk"
+import presets from "../utils/presets"
+import { rhythm, scale } from "../utils/typography"
+
 
 const queryString = require('query-string');
 var _ = require('lodash')
 let isIndianParam
 let allc
 let cid
+
+// This would normally be in a Redux store or some other global data store.
+if (typeof window !== `undefined`) {
+  window.postsToShow = 12
+}
+
 class Category extends Component {
+
   constructor(props) {
     super(props);
+    let postsToShow = 12
+    if (typeof window !== `undefined`) {
+      postsToShow = window.postsToShow
+    }
     this.state = {
       selectedCategory: props.pageContext.id,
       showCategory: true,
+      showingMore: postsToShow > 12,
+      postsToShow,
      };
+  }
+
+  update() {
+    const distanceToBottom =
+      document.documentElement.offsetHeight -
+      (window.scrollY + window.innerHeight)
+    if (distanceToBottom < 100) {
+      this.setState({ postsToShow: this.state.postsToShow + 12 })
+    }
+    this.ticking = false
+  }
+
+  handleScroll = () => {
+    if (!this.ticking) {
+      this.ticking = true
+      requestAnimationFrame(() => this.update())
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener(`scroll`, this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(`scroll`, this.handleScroll)
+    window.postsToShow = this.state.postsToShow
   }
 
   sendFirebaseAnalytics = (type, resourceId) => {
@@ -97,7 +140,7 @@ class Category extends Component {
               <Row className={styles.productCardImage} >
                 <Col  className={`col-12` } style={{height: `100%`}}>
                   <div className={`container`} style={{width: `fit-content`, height: `100%`}}>
-                    <Image className={styles.productImage} style={{
+                    <Image loading={`lazy`} className={styles.productImage} style={{
                       border: `0px`,
                       borderRadius: `0px`,
                       maxHeight: `100%`,
@@ -188,7 +231,10 @@ class Category extends Component {
         namespace = "product"
       }
     }
-    const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
+    console.log(productsArr)
+    const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).slice(0, this.state.postsToShow)
+    // const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
+    console.log(productsSortedArr[0].name)
     const rows = productsSortedArr.map((product, index) => {
       var topLeft = `0px`
       var bottomLeft = `0px`
