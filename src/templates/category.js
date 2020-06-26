@@ -15,6 +15,7 @@ import JsonData from "../../content/raw data/new_brand_list.json"
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
 import productPlaceHolder from '../images/product-placeholder-white-bg.png'
+import firebase from "gatsby-plugin-firebase"
 
 const queryString = require('query-string');
 var _ = require('lodash') 
@@ -28,6 +29,25 @@ class Category extends Component {
       selectedCategory: props.pageContext.id,
       showCategory: true,
      };
+  }
+
+  sendFirebaseAnalytics = (type, resourceId) => {
+    if (process.env.NODE_ENV !== "development") {
+      if (type === `category`){
+        firebase
+        .analytics()
+        .logEvent(`category_clk`, {category_id: resourceId})
+      } else if (type === `product`) {
+        firebase
+        .analytics()
+        .logEvent(`product_clk`, {product_id: resourceId})
+      } else {
+        firebase
+        .analytics()
+        .logEvent(`company_clk`, {company_id: resourceId})
+      }
+    }
+    console.log(`Logging ${type} with param ${resourceId}`)
   }
 
   toggleCategoryView = (newVal) => {
@@ -64,7 +84,9 @@ class Category extends Component {
       }
       var productEndPoint = _.snakeCase(productSlugName)
       col.push(
-        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={12} md={4} lg={4} xl={4}>
+        <Col  style={{ padding: `5px`}} key={productId.id} id={productId.id} xs={12} md={4} lg={4} xl={4}
+        
+          onClick={() => this.sendFirebaseAnalytics(namespace, productId.id)}>
           <Link
           to={`/${namespace}/${productEndPoint}`}
           style={{
@@ -88,7 +110,8 @@ class Category extends Component {
               <Row style={{fontSize: `14px`}}>
                 <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                   <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
-    overflow: `scroll`}}>{productId.name}</Button>
+                    overflow: `scroll`}}>{productId.name}
+                  </Button>
                   {/* <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
                       {productId.name}

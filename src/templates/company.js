@@ -18,6 +18,7 @@ import { MdCheckCircle } from "react-icons/md"
 import companyPlaceHolder from '../images/company-icon-360.png'
 import companyPlaceHolderGreen from '../images/company-icon-light-green.png'
 import Button from 'react-bootstrap/Button';
+import firebase from "gatsby-plugin-firebase"
 
 
 var _ = require('lodash') 
@@ -28,6 +29,25 @@ class Company extends Component {
     this.state = {
       showCompany: true,
      };
+  }
+
+  sendFirebaseAnalytics = (type, resourceId) => {
+    if (process.env.NODE_ENV !== "development") {
+      if (type === `category`){
+        firebase
+        .analytics()
+        .logEvent(`category_clk`, {category_id: resourceId})
+      } else if (type === `product`) {
+        firebase
+        .analytics()
+        .logEvent(`product_clk`, {product_id: resourceId})
+      } else {
+        firebase
+        .analytics()
+        .logEvent(`company_clk`, {company_id: resourceId})
+      }
+    }
+    console.log(`Logging ${type} with param ${resourceId}`)
   }
 
   toggleCompanyView = (newVal) => {
@@ -56,7 +76,7 @@ class Company extends Component {
               to={`/category/${categoryEndPoint}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{company.categories[category]["name"]} &nbsp;
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{company.categories[category]["name"]} &nbsp;
           </span>
         </Link>
       )
@@ -74,7 +94,7 @@ class Company extends Component {
                 >
                   <Col xs={12} md={12} lg={12} xl={12} style={{
                     marginTop: `10px`
-                  }}>
+                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  `see_more`)}>
                     <p>See more</p>
                   </Col>
                 </Link> &nbsp;
@@ -100,7 +120,7 @@ class Company extends Component {
                     borderRightColor: `white`,
                     borderRightStyle: `solid`,
                     borderRightWidth: `2px`
-                  }}>
+                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.categories[category]["id"])} >
                   <Link
                     to={`/category/${categoryEndPoint}?isIndian=true&allc=true`}
                     style={{ textDecoration: `none`}}
@@ -121,7 +141,7 @@ class Company extends Component {
                     borderRightWidth: `2px`,
                     maxHeight: `40px`,
                     overflow: `scroll`
-                  }}>
+                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  altCompany.id)}>
                   <Link
                     to={`/company/${altCompanyEndPoint}`}
                     style={{ textDecoration: `none`, color: `#176f52`}}
@@ -131,7 +151,7 @@ class Company extends Component {
                 </Col>
                 <Col xs={4} md={4} lg={4} xl={4} style={{
                   maxHeight: `40px`
-                }}>
+                }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.id)}>
                   <Link
                     to={`/category/${categoryEndPoint}?cid=${company.id}`}
                     style={{ textDecoration: `none`, color: `#176f52`}}

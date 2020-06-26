@@ -8,6 +8,7 @@ import Col from  'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import { useSprings, animated } from 'react-spring'
 import CategoriesData from "../../content/raw data/new_brand_list.json"
+import firebase from "gatsby-plugin-firebase"
 
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.08]
@@ -15,6 +16,16 @@ const trans = (x, y, s) => `perspective(600px) scale(${s})`
 const CategoriesDataArr = Object.keys(CategoriesData.categories)
 const bgColorArr = [`#fdeae4`, `#e8eefb`, `#fff9dd`, `#e8f3dd`, `#e8e8e8`, `#fdebf9`, `#e8f3dd`, `#e8e8e8`, `#e8eefb`, `#d0efed`]
 var _ = require('lodash') 
+
+const sendFirebaseAnalytics = (event, catId) => {
+  if (process.env.NODE_ENV !== "development") {
+    firebase
+      .analytics()
+      .logEvent(event, {category_id: catId})
+  }
+  console.log(`Logging ${event} with param ${catId}`)
+}
+
 
 const PopulateCategoriesCol = (props) => {
   const {index} = props
@@ -33,7 +44,7 @@ const PopulateCategoriesCol = (props) => {
     }
     var categoryEndPoint = _.snakeCase(categorySlugName)
     col.push(
-      <Col key={categoryId.id} id={categoryId.id} style={{padding: `10px`}} xs={6} md={6} lg={2} xl={2}>
+      <Col  onClick={() => sendFirebaseAnalytics("category_clk", categoryId.id)} key={categoryId.id} id={categoryId.id} style={{padding: `10px`}} xs={6} md={6} lg={2} xl={2}>
         <Link
           to={`/category/${categoryEndPoint}`}
           style={{

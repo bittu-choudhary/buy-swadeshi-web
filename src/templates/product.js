@@ -18,9 +18,11 @@ import { MdCheckCircle } from "react-icons/md"
 import productPlaceHolder from '../images/product-placeholder-white-bg-480.png'
 import productPlaceHolderTrans from '../images/product-placeholder-light-green.png'
 import Button from 'react-bootstrap/Button';
+import firebase from "gatsby-plugin-firebase"
 
 
 var _ = require('lodash') 
+
 
 class Product extends Component {
   constructor(props) {
@@ -28,6 +30,25 @@ class Product extends Component {
     this.state = {
       showProduct: true,
      };
+  }
+
+  sendFirebaseAnalytics = (type, resourceId) => {
+    if (process.env.NODE_ENV !== "development") {
+      if (type === `category`){
+        firebase
+        .analytics()
+        .logEvent(`category_clk`, {category_id: resourceId})
+      } else if (type === `product`) {
+        firebase
+        .analytics()
+        .logEvent(`product_clk`, {product_id: resourceId})
+      } else {
+        firebase
+        .analytics()
+        .logEvent(`company_clk`, {company_id: resourceId})
+      }
+    }
+    console.log(`Logging ${type} with param ${resourceId}`)
   }
 
   toggleProductView = (newVal) => {
@@ -56,7 +77,7 @@ class Product extends Component {
               to={`/category/${categoryEndPoint}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{product.categories[category]["name"]} &nbsp;
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{product.categories[category]["name"]} &nbsp;
           </span>
         </Link>
       )
@@ -80,7 +101,8 @@ class Product extends Component {
                 >
                   <Col xs={12} md={12} lg={12} xl={12} style={{
                     marginTop: `10px`
-                  }}>
+                  }}
+                  onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
                     <p>{seeMoreText}</p>
                   </Col>
                 </Link> &nbsp;
@@ -130,7 +152,9 @@ class Product extends Component {
                       borderRightColor: `white`,
                       borderRightStyle: `solid`,
                       borderRightWidth: `2px`
-                    }}>
+                    }}
+                    onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])}
+                    >
                     <Link
                       to={`/category/${categoryEndPoint}?isIndian=true`}
                       style={{ textDecoration: `none`}}
@@ -149,7 +173,8 @@ class Product extends Component {
                       borderRightColor: `white`,
                       borderRightStyle: `solid`,
                       borderRightWidth: `2px`
-                    }}>
+                    }}
+                    onClick={() => this.sendFirebaseAnalytics(`product`,  altProduct.id)}>
                     <Link
                       to={`/product/${altProEndPoint}`}
                       style={{ textDecoration: `none`, color: `#176f52`}}
@@ -160,7 +185,8 @@ class Product extends Component {
                   <Col xs={4} md={4} lg={4} xl={4} style={{
                     maxHeight: `40px`,
                     overflow: `scroll`
-                  }}>
+                  }}
+                  onClick={() => this.sendFirebaseAnalytics(`company`,  altProCompany.id)}>
                     <Link
                       to={`/company/${altProCompanyEndPoint}`}
                       style={{ textDecoration: `none`, color: `#176f52`}}
@@ -230,7 +256,9 @@ class Product extends Component {
                 <div className={styles.productAttrKey}>
                   <span>Company</span>
                 </div>
-                <div className={styles.productAttrDesc + " " + styles.altBrand}>
+                <div className={styles.productAttrDesc + " " + styles.altBrand}
+                onClick={() => this.sendFirebaseAnalytics(`company`,  product.company.id)}
+                >
                   <Link
                     to={`/company/${companyEndPoint}`}
                     style={{ textDecoration: `none`, color: `maroon` }}

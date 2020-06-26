@@ -10,8 +10,28 @@ import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 import companyPlaceHolder from '../images/company-icon.png'
+import firebase from "gatsby-plugin-firebase"
 
 var _ = require('lodash') 
+
+const sendFirebaseAnalytics = (type, resourceId) => {
+  if (process.env.NODE_ENV !== "development") {
+    if (type === `category`){
+      firebase
+      .analytics()
+      .logEvent(`category_clk`, {category_id: resourceId})
+    } else if (type === `product`) {
+      firebase
+      .analytics()
+      .logEvent(`product_clk`, {product_id: resourceId})
+    } else {
+      firebase
+      .analytics()
+      .logEvent(`company_clk`, {company_id: resourceId})
+    }
+  }
+  console.log(`Logging ${type} with param ${resourceId}`)
+}
 
 const PopulateResultCol = (props) => {
   const {index, results} = props
@@ -53,7 +73,7 @@ const PopulateResultCol = (props) => {
     }
     var resultEndPoint = _.snakeCase(searchSlugName)
     col.push(
-      <Col style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={12} md={4} lg={4} xl={4}>
+      <Col onClick={() => sendFirebaseAnalytics(resultId.type, resultId.id)} style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={12} md={4} lg={4} xl={4}>
         <Link
           to={`/${nameSpace}/${resultEndPoint}`}
           style={{ textDecoration: `none`, color: `inherit` }}
