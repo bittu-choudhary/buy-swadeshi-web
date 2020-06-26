@@ -114,7 +114,7 @@ var bm25fIMS = function () {
     // Tokenized `text`.
     // var tkns = prepareInput( text, field );
     var tokens = []
-    myTokenizer.tokenize( text).map( ( token, i ) => {
+    myTokenizer.tokenize( String(text)).map( ( token, i ) => {
        // Note, 'i' becomes the unique id for 'doc'
        tokens.push(token["value"])
      } )
