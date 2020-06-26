@@ -50,8 +50,6 @@ class Search extends Component {
   }
 
   handleChange = (value) => {
-    console.log(value)
-    console.log("inhanfle")
     clearTimeout(this.timer);
 
     this.setState({searchQuery: value.toLowerCase() });
@@ -61,8 +59,6 @@ class Search extends Component {
   }
 
   handleKeyDown = (e) => {
-    console.log(e.target.value)
-    console.log("in keydown")
     if (e.keyCode === ENTER_KEY) {
       clearTimeout(this.timer);
       this.searchData(e.target.value)
@@ -89,10 +85,7 @@ class Search extends Component {
     // const { search } = this.state
     // const queryResult = search.search(e.target.value)
     var queryResult = []
-    console.log(Date.now())
     const results = engine.search( value.toLowerCase(), 50 )
-    console.log(Date.now())
-    console.log(results.length)
     results.map ((indexedResult) => {
       var resultObjectId = indexedResult[0].split("_type")[0]
       var resultType = indexedResult[0].split("_type")[1]
@@ -122,9 +115,7 @@ class Search extends Component {
             .logEvent("no_result", {query: value})
       }
     }
-    console.log(Date.now())
     this.setState({searchResults: queryResult })
-    console.log(Date.now())
   }
   handleSubmit = e => {
     e.preventDefault()

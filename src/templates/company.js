@@ -148,11 +148,9 @@ class Company extends Component {
           let seeMoreText = "See more"
           let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true&allc=true`
           if (altIndianCompanies.length === 0) {
-            console.log("here in another if")
             seeMoreText = "No Indian company found"
             seeMoreLink = "#"
           } else if ((altIndianCompanies.length === 10)) {
-            console.log("here in else if")
             altIndianCompanies.push(
               <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
                 <Row>
@@ -171,9 +169,6 @@ class Company extends Component {
             )
             break
           }
-          console.log(Object.keys(categoryCompanies).length)
-          console.log(index)
-          console.log(altComCount)
         }
       }
     }

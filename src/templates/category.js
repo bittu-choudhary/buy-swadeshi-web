@@ -231,10 +231,8 @@ class Category extends Component {
         namespace = "product"
       }
     }
-    console.log(productsArr)
     const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).slice(0, this.state.postsToShow)
     // const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
-    console.log(productsSortedArr[0].name)
     const rows = productsSortedArr.map((product, index) => {
       var topLeft = `0px`
       var bottomLeft = `0px`

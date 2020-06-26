@@ -169,14 +169,12 @@ class Product extends Component {
           }
 
           if ( (Object.keys(categoryProducts).length === index) ||  (altProCount === 10)) {
-            console.log(`inside if`)
             let seeMoreText = "See more"
             let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true`
             if (altIndianBrands.length === 0) {
               seeMoreText = "No Indian prduct found"
               seeMoreLink = "#"
             } else if ((altIndianBrands.length === 10)) {
-              console.log(`inside after if`)
               altIndianBrands.push(
                 <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
                   <Row>
@@ -202,15 +200,10 @@ class Product extends Component {
                 //   </Link> &nbsp;
                 // </span>
               )
-              console.log(`inside if after push`)
-              console.log(altIndianBrands[altIndianBrands.length -1])
               break
             }
           }
         }
-        console.log(Object.keys(categoryProducts).length)
-        console.log(index)
-        console.log(altProCount)
       }
       
     }
