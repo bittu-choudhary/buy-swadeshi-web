@@ -8,8 +8,13 @@ import firebase from "gatsby-plugin-firebase"
 import IndexedBrandData from "../../content/indexed-data/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
 
-
 var _ = require('lodash')
+
+const WAIT_INTERVAL = 200;
+const ENTER_KEY = 13;
+const engine = Bm25()
+engine.importJSON(IndexedBrandData)
+
 
 class Search extends Component {
   // state = {
@@ -40,13 +45,37 @@ class Search extends Component {
     // this.state = { brandList: brandData.brands }
   }
 
+  componentWillMount() {
+    this.timer = null;
+  }
+
+  handleChange = (value) => {
+    console.log(value)
+    console.log("inhanfle")
+    clearTimeout(this.timer);
+
+    this.setState({searchQuery: value.toLowerCase() });
+
+    this.timer = setTimeout(() => this.searchData(value), WAIT_INTERVAL);
+    // this.searchData(value)
+  }
+
+  handleKeyDown = (e) => {
+    console.log(e.target.value)
+    console.log("in keydown")
+    if (e.keyCode === ENTER_KEY) {
+      clearTimeout(this.timer);
+      this.searchData(e.target.value)
+    }
+  }
+
   /**
    * handles the input change and perfom a search with js-search
    * in which the results will be added to the state
    */
-  searchData = e => {
+  searchData = (value) => {
     const {toggleMessage, toggleView} =  this.props
-    if (e.target.value.length === 0) {
+    if (value.length === 0) {
       toggleView(true)
     } else {
       toggleMessage(false)
@@ -55,14 +84,15 @@ class Search extends Component {
     if (process.env.NODE_ENV !== "development") {
       firebase
           .analytics()
-          .logEvent("web_search", {query: e.target.value})
+          .logEvent("web_search", {query: value})
     }
     // const { search } = this.state
     // const queryResult = search.search(e.target.value)
     var queryResult = []
-    const engine = Bm25()
-    engine.importJSON(IndexedBrandData)
-    const results = engine.search( e.target.value.toLowerCase() )
+    console.log(Date.now())
+    const results = engine.search( value.toLowerCase(), 50 )
+    console.log(Date.now())
+    console.log(results.length)
     results.map ((indexedResult) => {
       var resultObjectId = indexedResult[0].split("_type")[0]
       var resultType = indexedResult[0].split("_type")[1]
@@ -89,10 +119,12 @@ class Search extends Component {
       if(queryResult.length === 0) {
         firebase
             .analytics()
-            .logEvent("no_result", {query: e.target.value})
+            .logEvent("no_result", {query: value})
       }
     }
-    this.setState({ searchQuery: e.target.value, searchResults: queryResult })
+    console.log(Date.now())
+    this.setState({searchResults: queryResult })
+    console.log(Date.now())
   }
   handleSubmit = e => {
     e.preventDefault()
@@ -152,7 +184,8 @@ class Search extends Component {
                 className={styles.searchbar}
                 id="Search"
                 value={searchQuery}
-                onChange={this.searchData}
+                onChange={(e) => this.handleChange(e.target.value)}
+                onKeyDown={(e) => this.handleKeyDown(e)}
                 placeholder={t('search_placeholder')}
               />
             </div>
