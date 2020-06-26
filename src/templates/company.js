@@ -72,95 +72,108 @@ class Company extends Component {
       var categoryEndPoint = _.snakeCase(categorySlugName)
       categoriesList.push(
         <Link
-              to={`/category/${categoryEndPoint}`}
+              to={`/category/${categoryEndPoint}?cid=${company.id}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{company.categories[category]["name"]} &nbsp;
-          </span>
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{company.categories[category]["name"]}, </span>
         </Link>
       )
-      let categoryCompanies = JsonData.categories[category].companies
-      let index = 0
-      for (var altCompanyId in categoryCompanies) {
-        let altCompany = categoryCompanies[altCompanyId]
-        if (index === 10) {
-          altIndianCompanies.push(
-            <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
-              <Row>
-                <Link
-                  to={`/category/${categoryEndPoint}?isIndian=true&allc=true`}
-                  style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
-                >
-                  <Col xs={12} md={12} lg={12} xl={12} style={{
-                    marginTop: `10px`
-                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  `see_more`)}>
-                    <p>See more</p>
-                  </Col>
-                </Link> &nbsp;
-              </Row>
-            </Col>
-          )
-          break
-        }
-        index = index + 1
-        if (altCompanyId === props.companyId) {
-          continue
-        }
-        if (altCompany.isIndian) {
-          var altCompanySlugName = altCompany.name
-          if (altCompanySlugName && altCompanySlugName.split(" ").length === 1){
-            altCompanySlugName = ` The ` + altCompanySlugName
+      if (company.categories[category].isParent && altIndianCompanies.length < 10) {
+        let categoryCompanies = JsonData.categories[category].companies
+        let index = 0
+        let altComCount = 0
+        for (var altCompanyId in categoryCompanies) {
+          let altCompany = categoryCompanies[altCompanyId]
+          index = index + 1
+          if (altCompanyId === props.companyId) {
+            continue
           }
-          var altCompanyEndPoint = _.snakeCase(altCompanySlugName)
-          altIndianCompanies.push(
-            <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
-              <Row>
-                <Col xs={2} md={2} lg={2} xl={2} style={{
-                    borderRightColor: `white`,
-                    borderRightStyle: `solid`,
-                    borderRightWidth: `2px`
-                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.categories[category]["id"])} >
+          if (altCompany.isIndian) {
+            altComCount =  altComCount + 1
+            var altCompanySlugName = altCompany.name
+            if (altCompanySlugName && altCompanySlugName.split(" ").length === 1){
+              altCompanySlugName = ` The ` + altCompanySlugName
+            }
+            var altCompanyEndPoint = _.snakeCase(altCompanySlugName)
+            altIndianCompanies.push(
+              <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
+                <Row>
+                  <Col xs={2} md={2} lg={2} xl={2} style={{
+                      borderRightColor: `white`,
+                      borderRightStyle: `solid`,
+                      borderRightWidth: `2px`
+                    }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.categories[category]["id"])} >
+                    <Link
+                      to={`/category/${categoryEndPoint}?isIndian=true&allc=true`}
+                      style={{ textDecoration: `none`}}
+                    >
+                      <Image  style={{
+                          border: `0px`,
+                          borderRadius: `0px`,
+                          padding: `0px`,
+                          height: `auto !important`,
+                          maxWidth: `100%`
+                          }} thumbnail src={companyPlaceHolderGreen}>
+                      </Image>
+                    </Link>
+                  </Col>
+                  <Col xs={6} md={6} lg={6} xl={6} style={{
+                      borderRightColor: `white`,
+                      borderRightStyle: `solid`,
+                      borderRightWidth: `2px`,
+                      maxHeight: `40px`,
+                      overflow: `scroll`
+                    }} onClick={() => this.sendFirebaseAnalytics(`company`,  altCompany.id)}>
+                    <Link
+                      to={`/company/${altCompanyEndPoint}`}
+                      style={{ textDecoration: `none`, color: `#176f52`}}
+                    >
+                      <p>{altCompany.name}</p>
+                    </Link>
+                  </Col>
+                  <Col xs={4} md={4} lg={4} xl={4} style={{
+                    maxHeight: `40px`
+                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.id)}>
+                    <Link
+                      to={`/category/${categoryEndPoint}?cid=${altCompany.id}`}
+                      style={{ textDecoration: `none`, color: `#176f52`}}
+                    >
+                    <p>See Products</p>
+                    </Link>
+                  </Col>
+                </Row>
+              </Col>
+            )
+          }
+          let seeMoreText = "See more"
+          let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true&allc=true`
+          if (altIndianCompanies.length === 0) {
+            console.log("here in another if")
+            seeMoreText = "No Indian company found"
+            seeMoreLink = "#"
+          } else if ((altIndianCompanies.length === 10)) {
+            console.log("here in else if")
+            altIndianCompanies.push(
+              <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
+                <Row>
                   <Link
-                    to={`/category/${categoryEndPoint}?isIndian=true&allc=true`}
-                    style={{ textDecoration: `none`}}
+                    to={seeMoreLink}
+                    style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
                   >
-                    <Image  style={{
-                        border: `0px`,
-                        borderRadius: `0px`,
-                        padding: `0px`,
-                        height: `auto !important`,
-                        maxWidth: `100%`
-                        }} thumbnail src={companyPlaceHolderGreen}>
-                    </Image>
-                  </Link>
-                </Col>
-                <Col xs={6} md={6} lg={6} xl={6} style={{
-                    borderRightColor: `white`,
-                    borderRightStyle: `solid`,
-                    borderRightWidth: `2px`,
-                    maxHeight: `40px`,
-                    overflow: `scroll`
-                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  altCompany.id)}>
-                  <Link
-                    to={`/company/${altCompanyEndPoint}`}
-                    style={{ textDecoration: `none`, color: `#176f52`}}
-                  >
-                    <p>{altCompany.name}</p>
-                  </Link>
-                </Col>
-                <Col xs={4} md={4} lg={4} xl={4} style={{
-                  maxHeight: `40px`
-                }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.id)}>
-                  <Link
-                    to={`/category/${categoryEndPoint}?cid=${company.id}`}
-                    style={{ textDecoration: `none`, color: `#176f52`}}
-                  >
-                   <p>See Products</p>
-                  </Link>
-                </Col>
-              </Row>
-            </Col>
-          )
+                    <Col xs={12} md={12} lg={12} xl={12} style={{
+                      marginTop: `10px`
+                    }} onClick={() => this.sendFirebaseAnalytics(`company`,  `see_more`)}>
+                      <p>{seeMoreText}</p>
+                    </Col>
+                  </Link> &nbsp;
+                </Row>
+              </Col>
+            )
+            break
+          }
+          console.log(Object.keys(categoryCompanies).length)
+          console.log(index)
+          console.log(altComCount)
         }
       }
     }
@@ -203,7 +216,10 @@ class Company extends Component {
                 <div className={styles.companyAttrKey}>
                   <span>Categories</span>
                 </div>
-                <div className={styles.companyAttrDesc}>
+                <div className={styles.companyAttrDesc} style={{
+                  overflow: `scroll`,
+                  maxHeight: `60px`
+                }}>
                   {categoriesList}
                 </div>
               </div>
