@@ -296,6 +296,16 @@ footer p {
 
 .product-image, .company-image {
   height: 400px;
+  padding: 14px !important;
+}
+
+.result-image, .cat-list-image, .product-image, .company-image  {
+  display: flex;
+  align-items: center;
+}
+
+.result-image img, .cat-list-image img {
+  margin-bottom: 0px
 }
 
 .product-attr, .company-attr {
