@@ -7,7 +7,7 @@ const JSONData = require("./content/raw-data/new_brand_list.json")
 var _ = require('lodash')
 const brandList = JSONData.brands
 const engine = Bm25()
-engine.defineConfig( { fldWeights: { name: 1} } )
+engine.defineConfig( { fldWeights: { name: 1, name_hi: 2} } )
 const pageObj = []
 
 for (var key in JSONData) {
@@ -42,7 +42,7 @@ for (var key in JSONData) {
         break;
     }
     var indexId =JSONData[key][dataPoints]["id"] + dataPointType
-    doc = _.pick(JSONData[key][dataPoints], ['name']) // extract name from object
+    doc = _.pick(JSONData[key][dataPoints], ['name', 'name_hi']) // extract name from object
     engine.addDoc( doc, indexId )
   }
 }
