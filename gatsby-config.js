@@ -52,6 +52,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sitemap",
     'gatsby-plugin-robots-txt',
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     {      
       resolve: "gatsby-plugin-firebase",  
        options: {      
