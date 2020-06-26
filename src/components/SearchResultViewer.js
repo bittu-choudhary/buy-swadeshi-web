@@ -81,8 +81,8 @@ const PopulateResultCol = (props) => {
             paddingRight: `0px`
           }}>
             <Row className={styles.productCardImage}>
-              <Col className={`col-12` }  style={{height: `100%`}}>
-                <div className={`container`} style={{width: `fit-content`, height: `100%`}}>
+              <Col className={`col-12`}  style={{height: `100%`}}>
+                <div className={`container`  + ` ` + styles.resultImage} style={{width: `fit-content`, height: `100%`}}>
                   <Image className={styles.productImage} style={{
                     border: `0px`,
                     borderRadius: `0px`,
