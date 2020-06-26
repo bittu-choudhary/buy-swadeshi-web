@@ -30,7 +30,7 @@ const NavMenu = (props) => {
         <a onClick={() => sendFirebaseAnalytics("play_button_click")} title="Download our Android app"  rel="noreferrer" href="https://play.google.com/store/apps/details?id=store.buyswadeshi.android" target="_blank"  >
         <Image className={styles.navAppButton + " " + styles.playStoreButton} src={GooglePlayBadge} alt="Download our Android App">
         </Image></a>      
-  <Button onClick={() => sendFirebaseAnalytics("web_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `85px`, padding: `.075rem .375rem`}}>{t('share')} <IoMdShare/></Button>
+      <Button onClick={() => sendFirebaseAnalytics("web_share")} className={styles.navButton} href={"whatsapp://send?text=" + t('share_text')} data-action="share/whatsapp/share" variant="info" style={{ width: `95px`, padding: `.075rem .375rem`}}>{t('share')} <IoMdShare/></Button>
     </>
   )
 }
