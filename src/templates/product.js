@@ -80,124 +80,127 @@ class Product extends Component {
           </span>
         </Link>
       )
-      let categoryProducts = JsonData.categories[category].products
-      let index = 0
-      for (var altProductId in categoryProducts) {
-        let altProduct = categoryProducts[altProductId]
-        if (index === 10) {
-          let seeMoreText = "See more"
-          let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true`
-          if (altIndianBrands.length === 0) {
-            seeMoreText = "No Indian prduct found"
-            seeMoreLink = "#"
-          }
-          altIndianBrands.push(
-            <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-              <Row>
-                <Link
-                  to={seeMoreLink}
-                  style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
-                >
-                  <Col xs={12} md={12} lg={12} xl={12} style={{
-                    marginTop: `10px`
-                  }}
-                  onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
-                    <p>{seeMoreText}</p>
-                  </Col>
-                </Link> &nbsp;
-              </Row>
-            </Col>
-            // <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-            //   <Link
-            //     to={`/category/${categoryEndPoint}?isIndian=true`}
-            //     style={{ textDecoration: `none`, color: `maroon` }}
-            //   >
-            //     See more
-            //   </Link> &nbsp;
-            // </span>
-          )
-          break
-        }
-        index = index + 1
-        if (altProductId === props.productId) {
-          continue
-        }
-        if (altProduct.isIndian) {
-          var altProductSlugName = altProduct.name
-          if (altProductSlugName && altProductSlugName.split(" ").length === 1){
-            altProductSlugName = ` The ` + altProductSlugName
-          }
-          var altProEndPoint = _.snakeCase(altProductSlugName)
-          var altProCompany = JsonData.products[altProduct.id].company
-          var altProCompanySlugName = altProCompany.name
-          if (altProCompanySlugName && altProCompanySlugName.split(" ").length === 1){
-            altProCompanySlugName = ` The ` + altProCompanySlugName
-          }
-          var altProCompanyEndPoint = _.snakeCase(altProCompanySlugName)
-          // altIndianBrands.push(
-          //   <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-          //     <Link
-          //       to={`/product/${altProEndPoint}`}
-          //       style={{ textDecoration: `none`, color: `maroon` }}
-          //     >
-          //       {altProduct.name},
-          //     </Link> &nbsp;
-          //   </span>
-          // )
-          altIndianBrands.push(
-            <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-              <Row>
-                  <Col xs={2} md={2} lg={2} xl={2} style={{
-                      borderRightColor: `white`,
-                      borderRightStyle: `solid`,
-                      borderRightWidth: `2px`
+      if (product.categories[category].isParent) {
+        let categoryProducts = JsonData.categories[category].products
+        let index = 0
+        for (var altProductId in categoryProducts) {
+          let altProduct = categoryProducts[altProductId]
+          if (index === 10) {
+            let seeMoreText = "See more"
+            let seeMoreLink = `/category/${categoryEndPoint}?isIndian=true`
+            if (altIndianBrands.length === 0) {
+              seeMoreText = "No Indian prduct found"
+              seeMoreLink = "#"
+            }
+            altIndianBrands.push(
+              <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                <Row>
+                  <Link
+                    to={seeMoreLink}
+                    style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+                  >
+                    <Col xs={12} md={12} lg={12} xl={12} style={{
+                      marginTop: `10px`
                     }}
-                    onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])}
-                    >
-                    <Link
-                      to={`/category/${categoryEndPoint}?isIndian=true`}
-                      style={{ textDecoration: `none`}}
-                    >
-                      <Image  style={{
-                          border: `0px`,
-                          borderRadius: `0px`,
-                          padding: `0px`,
-                          height: `auto !important`,
-                          maxWidth: `100%`
-                          }} thumbnail src={productPlaceHolderTrans}>
-                      </Image>
-                    </Link>
-                  </Col>
-                  <Col xs={6} md={6} lg={6} xl={6} style={{
-                      borderRightColor: `white`,
-                      borderRightStyle: `solid`,
-                      borderRightWidth: `2px`
+                    onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
+                      <p>{seeMoreText}</p>
+                    </Col>
+                  </Link> &nbsp;
+                </Row>
+              </Col>
+              // <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+              //   <Link
+              //     to={`/category/${categoryEndPoint}?isIndian=true`}
+              //     style={{ textDecoration: `none`, color: `maroon` }}
+              //   >
+              //     See more
+              //   </Link> &nbsp;
+              // </span>
+            )
+            break
+          }
+          index = index + 1
+          if (altProductId === props.productId) {
+            continue
+          }
+          if (altProduct.isIndian) {
+            var altProductSlugName = altProduct.name
+            if (altProductSlugName && altProductSlugName.split(" ").length === 1){
+              altProductSlugName = ` The ` + altProductSlugName
+            }
+            var altProEndPoint = _.snakeCase(altProductSlugName)
+            var altProCompany = JsonData.products[altProduct.id].company
+            var altProCompanySlugName = altProCompany.name
+            if (altProCompanySlugName && altProCompanySlugName.split(" ").length === 1){
+              altProCompanySlugName = ` The ` + altProCompanySlugName
+            }
+            var altProCompanyEndPoint = _.snakeCase(altProCompanySlugName)
+            // altIndianBrands.push(
+            //   <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
+            //     <Link
+            //       to={`/product/${altProEndPoint}`}
+            //       style={{ textDecoration: `none`, color: `maroon` }}
+            //     >
+            //       {altProduct.name},
+            //     </Link> &nbsp;
+            //   </span>
+            // )
+            altIndianBrands.push(
+              <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                <Row>
+                    <Col xs={2} md={2} lg={2} xl={2} style={{
+                        borderRightColor: `white`,
+                        borderRightStyle: `solid`,
+                        borderRightWidth: `2px`
+                      }}
+                      onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])}
+                      >
+                      <Link
+                        to={`/category/${categoryEndPoint}?isIndian=true`}
+                        style={{ textDecoration: `none`}}
+                      >
+                        <Image  style={{
+                            border: `0px`,
+                            borderRadius: `0px`,
+                            padding: `0px`,
+                            height: `auto !important`,
+                            maxWidth: `100%`
+                            }} thumbnail src={productPlaceHolderTrans}>
+                        </Image>
+                      </Link>
+                    </Col>
+                    <Col xs={6} md={6} lg={6} xl={6} style={{
+                        borderRightColor: `white`,
+                        borderRightStyle: `solid`,
+                        borderRightWidth: `2px`
+                      }}
+                      onClick={() => this.sendFirebaseAnalytics(`product`,  altProduct.id)}>
+                      <Link
+                        to={`/product/${altProEndPoint}`}
+                        style={{ textDecoration: `none`, color: `#176f52`}}
+                      >
+                        <p>{altProduct.name}</p>
+                      </Link>
+                    </Col>
+                    <Col xs={4} md={4} lg={4} xl={4} style={{
+                      maxHeight: `40px`,
+                      overflow: `scroll`
                     }}
-                    onClick={() => this.sendFirebaseAnalytics(`product`,  altProduct.id)}>
-                    <Link
-                      to={`/product/${altProEndPoint}`}
-                      style={{ textDecoration: `none`, color: `#176f52`}}
-                    >
-                      <p>{altProduct.name}</p>
-                    </Link>
-                  </Col>
-                  <Col xs={4} md={4} lg={4} xl={4} style={{
-                    maxHeight: `40px`,
-                    overflow: `scroll`
-                  }}
-                  onClick={() => this.sendFirebaseAnalytics(`company`,  altProCompany.id)}>
-                    <Link
-                      to={`/company/${altProCompanyEndPoint}`}
-                      style={{ textDecoration: `none`, color: `#176f52`}}
-                    >
-                      <p>{altProCompany.name}</p>
-                    </Link>
-                  </Col>
-              </Row>
-            </Col>
-          )
+                    onClick={() => this.sendFirebaseAnalytics(`company`,  altProCompany.id)}>
+                      <Link
+                        to={`/company/${altProCompanyEndPoint}`}
+                        style={{ textDecoration: `none`, color: `#176f52`}}
+                      >
+                        <p>{altProCompany.name}</p>
+                      </Link>
+                    </Col>
+                </Row>
+              </Col>
+            )
+          }
         }
       }
+      
     }
     if (product.isIndian) {
       remarkText = "Indian"
