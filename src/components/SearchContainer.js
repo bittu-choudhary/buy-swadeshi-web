@@ -5,15 +5,16 @@ import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from "gatsby-plugin-firebase"
-import IndexedBrandData from "../../content/indexed-data/new_indexed_data.json"
+// import IndexedBrandData from "../../content/indexed-data/new_indexed_data.json"
 import Bm25 from "../library/wink-bm25-text-search"
 
 var _ = require('lodash')
-
 const WAIT_INTERVAL = 200;
 const ENTER_KEY = 13;
 const engine = Bm25()
-engine.importJSON(IndexedBrandData)
+engine.defineConfig( { fldWeights: { name: 1, name_hi: 2} } )
+
+// engine.importJSON(IndexedBrandData)
 
 
 class Search extends Component {
@@ -42,7 +43,44 @@ class Search extends Component {
         searchQuery: ``,
       }
     }
+
     // this.state = { brandList: brandData.brands }
+  }
+  componentDidMount() {
+    console.log(engine.isConsolidated())
+    if ( !engine.isConsolidated()) {
+      console.log(`Starting indexing @ ${Date.now()}`)
+      for (var key in JSONData) {
+        if (key === "version") {
+          continue
+        }
+        for (const dataPoints in JSONData[key]) {
+          var dataPointType;
+          switch (key) {
+            case "categories":
+              if (!JSONData[key][dataPoints].isParent) {
+                continue
+              }
+              dataPointType = "_typeCategory"
+              break;
+            case "companies":
+              dataPointType = "_typeCompany"
+              break;
+            case "products":
+              dataPointType = "_typeProduct"
+              break;
+            default:
+              break;
+          }
+          var indexId =JSONData[key][dataPoints]["id"] + dataPointType
+          var doc = _.pick(JSONData[key][dataPoints], ['name', 'name_hi']) // extract name from object
+          engine.addDoc( doc, indexId )
+        }
+      }
+      engine.consolidate()
+      console.log(engine.isConsolidated())
+      console.log(`FInished indexing @ ${Date.now()}`)
+    }
   }
 
   componentWillMount() {
