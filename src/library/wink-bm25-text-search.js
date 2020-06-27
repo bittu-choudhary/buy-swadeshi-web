@@ -121,18 +121,25 @@ var bm25fIMS = function () {
      var allSubStrings = []
      tokens.map( ( token) => {
         var splitToken = token.split("")
-        splitToken.map( ( subToken, i) => {
-          allSubStrings.push(subToken.toLowerCase())
-          var lastSubString = subToken
-          var remainningTokens = splitToken.slice(i + 1)
-          remainningTokens.map((literals) => {
-            lastSubString = lastSubString + literals
-            allSubStrings.push(lastSubString.toLowerCase())
-          })
-          // lastSubString = lastSubString + subToken
-          // Note, 'i' becomes the unique id for 'doc'
-          // tokens.push(token["value"])
+        var lastSubString = splitToken[0]
+        allSubStrings.push(lastSubString.toLowerCase())
+        var remainningTokens = splitToken.slice(1)
+        remainningTokens.map((literals) => {
+          lastSubString = lastSubString + literals
+          allSubStrings.push(lastSubString.toLowerCase())
         })
+        // splitToken.map( ( subToken, i) => {
+        //   allSubStrings.push(subToken.toLowerCase())
+        //   var lastSubString = subToken
+        //   var remainningTokens = splitToken.slice(i + 1)
+        //   remainningTokens.map((literals) => {
+        //     lastSubString = lastSubString + literals
+        //     allSubStrings.push(lastSubString.toLowerCase())
+        //   })
+        //   // lastSubString = lastSubString + subToken
+        //   // Note, 'i' becomes the unique id for 'doc'
+        //   // tokens.push(token["value"])
+        // })
       } )
      var tkns =  allSubStrings
     // Temp token holder.
@@ -395,6 +402,12 @@ var bm25fIMS = function () {
     return true;
   }; // consolidate()
 
+  // Returns true if consolidated
+
+  var isConsolidated = function (){
+    return consolidated
+  }
+
   // #### Search
 
   // Searches the `text` and return `limit` results. If `limit` is not sepcified
@@ -573,6 +586,7 @@ var bm25fIMS = function () {
   methods.definePrepTasks = definePrepTasks;
   methods.defineConfig = defineConfig;
   methods.addDoc = addDoc;
+  methods.isConsolidated = isConsolidated;
   methods.consolidate = consolidate;
   methods.search = search;
   methods.exportJSON = exportJSON;
