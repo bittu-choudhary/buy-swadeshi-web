@@ -103,17 +103,5 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-lodash`,
-    {
-      resolve: `gatsby-plugin-google-fonts-v2`,
-      options: {
-        fonts: [
-          {
-            family: 'Noto Sans JP',
-            variable: true,
-            weights: ['400, 700']
-          }
-        ]
-      }
-    }
   ],
 }
