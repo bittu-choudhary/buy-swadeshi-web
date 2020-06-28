@@ -43,29 +43,29 @@ for (var key in JSONData) {
     }
     var indexId =JSONData[key][dataPoints]["id"] + dataPointType
     doc = _.pick(JSONData[key][dataPoints], ['name', 'name_hi']) // extract name from object
-    engine.addDoc( doc, indexId )
+    // engine.addDoc( doc, indexId )
   }
 }
-engine.consolidate()
-const consolidatedJson =  engine.exportJSON()
-write.sync("./content/indexed-data/new_indexed_data.json", JSON.stringify(consolidatedJson))
+// engine.consolidate()
+// const consolidatedJson =  engine.exportJSON()
+// write.sync("./content/indexed-data/new_indexed_data.json", JSON.stringify(consolidatedJson))
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 console.log(pageObj)
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
+// exports.createPages = async ({ actions }) => {
+//   const { createPage } = actions
 
-  pageObj.forEach((node) => {
-    createPage({
-      path: node.slug,
-      component: path.resolve(`./src/templates/${node.type}.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.slug,
-        id: node.id,
-      },
-    })
-  })
-}
+//   pageObj.forEach((node) => {
+//     createPage({
+//       path: node.slug,
+//       component: path.resolve(`./src/templates/${node.type}.js`),
+//       context: {
+//         // Data passed to context is available
+//         // in page queries as GraphQL variables.
+//         slug: node.slug,
+//         id: node.id,
+//       },
+//     })
+//   })
+// }
