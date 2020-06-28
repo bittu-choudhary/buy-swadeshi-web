@@ -14,7 +14,8 @@ import Col from  'react-bootstrap/Col'
 import JsonData from "../../content/raw-data/new_brand_list.json"
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
-import productPlaceHolder from '../images/product-placeholder-white-bg.png'
+import productPlaceHolder from '../images/product-96.png'
+import companyPlaceHolder from '../images/company-96.png'
 import firebase from "gatsby-plugin-firebase"
 import { withTrans } from '../i18n/withTrans'
 import i18next from 'i18next';
@@ -96,14 +97,14 @@ class Category extends Component {
 
   PopulateProductCol = (props) => {
     const {t} = this.props
-    const {index, products, namespace, param} = props
+    const {index, products, namespace, param, placeHolder} = props
     let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
     let col = []
     for (let i = index; i <= loopLength ; i++ ) {
       let fontColor = `#a52014`
       let btnColor = `#ffdeda`
       const productId = products[i]
-      let productImage = ((productId.image !== "") ? productId.image : productPlaceHolder)
+      let productImage = ((productId.image !== "") ? productId.image : placeHolder)
       let remark
       let remarkText = t('not_indian')
       let caption = `Product`
@@ -187,6 +188,7 @@ class Category extends Component {
     let namespace
     let param
     let productsArr = []
+    let placeHolder
     if (cid !== undefined) {
       products = JsonData.companies[`${cid}`].products
       for (var key in products){
@@ -198,6 +200,7 @@ class Category extends Component {
       }
       namespace = "products"
       param = "pid"
+      placeHolder = productPlaceHolder
     } else {
       if (isIndianParam !== undefined) {
         if (allc !== undefined) {
@@ -210,6 +213,7 @@ class Category extends Component {
           }
           namespace = "companies"
           param = "cid"
+          placeHolder = companyPlaceHolder
         } else {
           products = JsonData.categories[`${selectedCategory}`]["products"]
           for (var key in products){
@@ -220,6 +224,7 @@ class Category extends Component {
           }
           namespace = "products"
           param = "pid"
+          placeHolder = productPlaceHolder
         }
       } else if (allc !== undefined) {
         products = JsonData.categories[`${selectedCategory}`]["companies"]
@@ -228,6 +233,7 @@ class Category extends Component {
         }
         namespace = "companies"
         param = "cid"
+        placeHolder = companyPlaceHolder
       } else {
         const products = JsonData.categories[`${selectedCategory}`]["products"]
         for (var key in products){
@@ -235,6 +241,7 @@ class Category extends Component {
         }
         namespace = "products"
         param = "pid"
+        placeHolder = productPlaceHolder
       }
     }
     const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).slice(0, this.state.postsToShow)
@@ -267,7 +274,7 @@ class Category extends Component {
             paddingBottom: bottomPadding
           }}>
             <Row className={styles.pageContent} id={`pro_row_` + index} >
-              <PopulateProductCol param={param} namespace={namespace} index={index} products={productsSortedArr}/>
+              <PopulateProductCol placeHolder={placeHolder} param={param} namespace={namespace} index={index} products={productsSortedArr}/>
             </Row>
           </div>
         )

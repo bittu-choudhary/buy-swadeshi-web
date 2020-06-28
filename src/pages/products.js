@@ -15,8 +15,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from  'react-bootstrap/Col'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
-import productPlaceHolder from '../images/product-placeholder-white-bg-480.png'
-import productPlaceHolderTrans from '../images/product-placeholder-light-green.png'
+import productPlaceHolder from '../images/product-96.png'
+import productPlaceHolderTrans from '../images/product-96.png'
 import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
 import { withTrans } from '../i18n/withTrans'

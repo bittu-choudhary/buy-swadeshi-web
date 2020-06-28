@@ -15,8 +15,8 @@ import Col from  'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import { MdCancel } from "react-icons/md"
 import { MdCheckCircle } from "react-icons/md"
-import companyPlaceHolder from '../images/company-icon-360.png'
-import companyPlaceHolderGreen from '../images/company-icon-light-green.png'
+import companyPlaceHolder from '../images/company-96.png'
+import companyPlaceHolderGreen from '../images/company-96.png'
 import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
 import { withTrans } from '../i18n/withTrans'

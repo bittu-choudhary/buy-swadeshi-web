@@ -8,8 +8,9 @@ import Col from 'react-bootstrap/Col';
 import { Link } from "gatsby"
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
-import productPlaceHolder from '../images/product-placeholder-white-bg.png'
-import companyPlaceHolder from '../images/company-icon.png'
+import productPlaceHolder from '../images/product-96.png'
+import companyPlaceHolder from '../images/company-96.png'
+import categoryPlaceHolder from '../images/category-96.png'
 import firebase from "gatsby-plugin-firebase"
 import i18next from 'i18next';
 
@@ -52,6 +53,7 @@ const PopulateResultCol = (props) => {
       remark = <span style={{color: fontColor, bottom: `0px`}} >See Brands</span>
       nameSpace = `categories`
       param = `catid`
+      resultImage = categoryPlaceHolder
     } else {
       if (resultId.type === `product`){
         nameSpace = `products`
