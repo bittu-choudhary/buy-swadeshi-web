@@ -279,6 +279,10 @@ footer p {
   margin: 5% auto
 }
 
+.footer img {
+  margin-bottom: 0px !important;
+}
+
 .feedback-button {
   width: 85px !important;
   margin-right: 6px !important;
