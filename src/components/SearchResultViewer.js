@@ -45,14 +45,18 @@ const PopulateResultCol = (props) => {
     let fontColor = `#a52014`
     let btnColor = `#ffdeda`
     let nameSpace
+    let param
     if (resultId.type === "category") {
       remark = <span style={{color: fontColor, bottom: `0px`}} >See Brands</span>
-      nameSpace = `category`
+      nameSpace = `categories`
+      param = `catid`
     } else {
       if (resultId.type === `product`){
-        nameSpace = `product`
+        nameSpace = `products`
+        param = `pid`
       } else {
-        nameSpace = `company`
+        nameSpace = `companies`
+        param = `cid`
         resultImage = companyPlaceHolder
       }
       if (resultId.isIndian) {
@@ -73,7 +77,7 @@ const PopulateResultCol = (props) => {
     col.push(
       <Col onClick={() => sendFirebaseAnalytics(resultId.type, resultId.id)} style={{padding: `5px`}} key={resultId.id} id={resultId.id} xs={12} md={4} lg={4} xl={4}>
         <Link
-          to={`/${nameSpace}/${resultEndPoint}`}
+          to={`/${nameSpace}?${param}=${encodeURIComponent(resultId.id)}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
           <div style={{borderRadius: `0px`}} className={`container` + ` ` + styles.categoryCol + " " + styles.productCol } style={{
