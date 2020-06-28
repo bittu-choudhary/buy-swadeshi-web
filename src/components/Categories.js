@@ -45,7 +45,7 @@ const PopulateCategoriesCol = (props) => {
     col.push(
       <Col  onClick={() => sendFirebaseAnalytics("category_clk", categoryId.id)} key={categoryId.id} id={categoryId.id} style={{padding: `10px`}} xs={6} md={6} lg={2} xl={2}>
         <Link
-          to={`/category/${categoryEndPoint}`}
+          to={`/categories?catid=${encodeURIComponent(categoryId.id)}`}
           style={{
                 textDecoration: `none`,
                 color: `inherit`
