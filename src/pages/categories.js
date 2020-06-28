@@ -152,7 +152,7 @@ class Category extends Component {
               <Row style={{fontSize: `14px`}}>
                 <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                   <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
-                    overflow: `scroll`}}>{i18next.language === `en` ? productId.name : productId.name_hi}
+                    overflow: `scroll`}}>{i18next.language === `hi` ? productId.name_hi : productId.name}
                   </Button>
                   {/* <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
@@ -323,7 +323,7 @@ class Category extends Component {
             </li>
             <li style={{display: `inline-block`}}>
               <a> &nbsp;
-              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `en` ? category.name : category.name_hi)}</span>
+              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `hi` ? category.name_hi : category.name)}</span>
               </a>
             </li>
           </ul>
@@ -332,7 +332,7 @@ class Category extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(i18next.language === `en` ? category.name : category.name_hi)} <span style={{  fontSize: `12px`, color: `rgb(181, 181, 181)`}}>
+          <p>{_.startCase(i18next.language === `hi` ? category.name_hi : category.name)} <span style={{  fontSize: `12px`, color: `rgb(181, 181, 181)`}}>
             {subHeading}
           </span></p>
         </Col>

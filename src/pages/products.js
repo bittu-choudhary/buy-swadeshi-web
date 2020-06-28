@@ -79,7 +79,7 @@ class ProductPage extends Component {
               to={`/categories?catid=${encodeURIComponent(category)}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `en` ? product.categories[category]["name"] : product.categories[category]["name_hi"]}, </span>
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `hi` ? product.categories[category]["name_hi"] : product.categories[category]["name"]}, </span>
         </Link>
       )
       if (product.categories[category].isParent) {
@@ -141,7 +141,7 @@ class ProductPage extends Component {
                         to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
                         style={{ textDecoration: `none`, color: `#176f52`}}
                       >
-                        <p>{i18next.language === `en` ? altProduct.name : altProduct.name_hi}</p>
+                        <p>{i18next.language === `hi` ? altProduct.name_hi : altProduct.name}</p>
                       </Link>
                     </Col>
                     <Col xs={4} md={4} lg={4} xl={4} style={{
@@ -153,7 +153,7 @@ class ProductPage extends Component {
                         to={`/companies?cid=${encodeURIComponent(altProCompany.id)}`}
                         style={{ textDecoration: `none`, color: `#176f52`}}
                       >
-                        <p>{i18next.language === `en` ? altProCompany.name : altProCompany.name_hi}</p>
+                        <p>{i18next.language === `hi` ? altProCompany.name_hi : altProCompany.name}</p>
                       </Link>
                     </Col>
                 </Row>
@@ -236,7 +236,7 @@ class ProductPage extends Component {
                     to={`/companies?cid=${encodeURIComponent(product.company.id)}`}
                     style={{ textDecoration: `none`, color: `maroon` }}
                   >
-                    {i18next.language === `en` ? product.company.name : product.company.name_hi}
+                    {i18next.language === `hi` ? product.company.name_hi : product.company.name}
                   </Link>
                 </div>
               </div>
@@ -304,7 +304,7 @@ class ProductPage extends Component {
             </li>
             <li style={{display: `inline-block`}}>
               <a> &nbsp;
-              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `en` ? product.name : product.name_hi)}</span>
+              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `hi` ? product.name_hi : product.name)}</span>
               </a>
             </li>
           </ul>
@@ -313,7 +313,7 @@ class ProductPage extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(i18next.language === `en` ? product.name : product.name_hi)}</p>
+          <p>{_.startCase(i18next.language === `hi` ? product.name_hi : product.name)}</p>
         </Col>
       </Row>
       <DisplayProductInfo productId={pid}/>

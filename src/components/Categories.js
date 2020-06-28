@@ -62,7 +62,7 @@ const PopulateCategoriesCol = (props) => {
             style={{ backgroundColor: bgColorArr[i%10], transform: springs[i%springIndex].xys.interpolate(trans) }}
           >
             <div className={styles.categoryTitle}>
-          <p style={{textAlign: `center`}}>{i18next.language === `en` ? categoryId.name : categoryId.name_hi}</p>
+          <p style={{textAlign: `center`}}>{i18next.language === `hi` ? categoryId.name_hi : categoryId.name}</p>
               {/* <Image src={CartIcon} thumbnail /> */}
             </div>
           </animated.div>

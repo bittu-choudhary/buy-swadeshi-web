@@ -80,7 +80,7 @@ class Company extends Component {
               to={`/categories?catid=${encodeURIComponent(category)}&cid=${encodeURIComponent(company.id)}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `en` ? company.categories[category]["name"] : company.categories[category]["name_hi"]}, </span>
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `hi` ? company.categories[category]["name_hi"] : company.categories[category]["name"]}, </span>
         </Link>
       )
       if (company.categories[category].isParent && altIndianCompanies.length < 10) {
@@ -133,7 +133,7 @@ class Company extends Component {
                       to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
                       style={{ textDecoration: `none`, color: `#176f52`}}
                     >
-                      <p>{i18next.language === `en` ? altCompany.name : altCompany.name_hi}</p>
+                      <p>{i18next.language === `hi` ? altCompany.name_hi : altCompany.name}</p>
                     </Link>
                   </Col>
                   <Col xs={4} md={4} lg={4} xl={4} style={{
@@ -273,7 +273,7 @@ class Company extends Component {
             </li>
             <li style={{display: `inline-block`}}>
               <a> &nbsp;
-              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `en` ? company.name : company.name_hi)}</span>
+              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `hi` ? company.name_hi : company.name)}</span>
               </a>
             </li>
           </ul>
@@ -282,7 +282,7 @@ class Company extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(i18next.language === `en` ? company.name : company.name_hi)}</p>
+          <p>{_.startCase(i18next.language === `hi` ? company.name_hi : company.name)}</p>
         </Col>
       </Row>
       <DisplayCompanyInfo companyId={cid}/>

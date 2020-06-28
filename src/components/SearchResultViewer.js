@@ -103,7 +103,7 @@ const PopulateResultCol = (props) => {
             <Row>
               <Col style={{minHeight: `24px`}} xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
-    overflow: `scroll`}}>{i18next.language === `en` ? resultId.name : resultId.name_hi}
+    overflow: `scroll`}}>{i18next.language === `hi` ? resultId.name_hi : resultId.name}
                  <span
                     style={{
                       fontSize: `12px`,
