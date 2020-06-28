@@ -82,7 +82,7 @@ class ProductPage extends Component {
           <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `hi` ? product.categories[category]["name_hi"] : product.categories[category]["name"]}, </span>
         </Link>
       )
-      if (product.categories[category].isParent) {
+      if (product.categories[category].isParent && altIndianBrands.length < 10) {
         let categoryProducts = JsonData.categories[category].products
         let index = 0
         let altProCount = 0
@@ -162,32 +162,30 @@ class ProductPage extends Component {
             )
           }
 
-          if ( (Object.keys(categoryProducts).length === index) ||  (altProCount === 10)) {
-            let seeMoreText = t('see_more')
-            let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true`
-            if (altIndianBrands.length === 0) {
-              seeMoreText = t('no_indian_pro_found')
-              seeMoreLink = "#"
-            } else if ((altIndianBrands.length === 10)) {
-              altIndianBrands.push(
-                <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                  <Row>
-                    <Link
-                      to={seeMoreLink}
-                      style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
-                    >
-                      <Col xs={12} md={12} lg={12} xl={12} style={{
-                        marginTop: `10px`
-                      }}
-                      onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
-                        <p>{seeMoreText}</p>
-                      </Col>
-                    </Link> &nbsp;
-                  </Row>
-                </Col>
-              )
-              break
-            }
+          let seeMoreText = t('see_more')
+          let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true`
+          if (altIndianBrands.length === 0) {
+            seeMoreText = t('no_indian_pro_found')
+            seeMoreLink = "#"
+          } else if ((altIndianBrands.length === 10)) {
+            altIndianBrands.push(
+              <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+                <Row>
+                  <Link
+                    to={seeMoreLink}
+                    style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+                  >
+                    <Col xs={12} md={12} lg={12} xl={12} style={{
+                      marginTop: `10px`
+                    }}
+                    onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
+                      <p>{seeMoreText}</p>
+                    </Col>
+                  </Link> &nbsp;
+                </Row>
+              </Col>
+            )
+            break
           }
         }
       }
@@ -242,7 +240,7 @@ class ProductPage extends Component {
                 </div>
               </div>
             </Col>
-            <Col className={"float-left col-12" + " " + styles.productAttrWrapper}  md={6} style={{height: `60px`}}>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper}  md={6} style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
                   <span>{t('categories')}</span>
