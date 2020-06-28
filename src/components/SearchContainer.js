@@ -167,6 +167,11 @@ class Search extends Component {
     }
   }
 
+  toggleInput = () => {
+    this.setState({searchQuery: ``})
+    this.props.toggleView(true)
+  }
+
   render() {
     const { t } = this.props
     const {
@@ -219,7 +224,7 @@ class Search extends Component {
               />
             </div>
           </form>
-          <SearchResultViewer queryResults={queryResults}/>
+          <SearchResultViewer toggleInput={this.toggleInput} queryResults={queryResults}/>
         </div>
       </>
     )

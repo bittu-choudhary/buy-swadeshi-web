@@ -33,7 +33,7 @@ const sendFirebaseAnalytics = (type, resourceId) => {
 }
 
 const PopulateResultCol = (props) => {
-  const {index, results} = props
+  const {index, results, toggleInput} = props
   let loopLength = index + 5 <results.length ? index + 5 : (results.length - 1)
   let col = []
   for (let i = index; i <= loopLength ; i++ ) {
@@ -80,7 +80,7 @@ const PopulateResultCol = (props) => {
           to={`/${nameSpace}?${param}=${encodeURIComponent(resultId.id)}`}
           style={{ textDecoration: `none`, color: `inherit` }}
         >
-          <div style={{borderRadius: `0px`}} className={`container` + ` ` + styles.categoryCol + " " + styles.productCol } style={{
+          <div onClick={() => toggleInput()} style={{borderRadius: `0px`}} className={`container` + ` ` + styles.categoryCol + " " + styles.productCol } style={{
             paddingLeft: `0px`,
             paddingRight: `0px`
           }}>
@@ -135,7 +135,7 @@ const PopulateResultCol = (props) => {
 }
 
 const DisplayResults = (props) => {
-  const {queryResults} = props
+  const {queryResults, toggleInput} = props
   let order = { product: 1, category: 2, company: 3 };
   queryResults.sort(function (a, b) {
     return order[a.type] - order[b.type];
@@ -143,7 +143,7 @@ const DisplayResults = (props) => {
   const rows =queryResults.map((result, index) => {
     if( index%6 === 0) {
       return (<Row id={`res_row_` + index} key={`res_row_` + index} style={{paddingLeft: `15px`, paddingRight: `15px`}}>
-        <PopulateResultCol index={index} results={queryResults} />
+        <PopulateResultCol toggleInput={toggleInput} index={index} results={queryResults} />
       </Row>)
     }
   })
@@ -152,7 +152,7 @@ const DisplayResults = (props) => {
 
 export default function SearchResultViewer ( props  ) {
   const { t } = useTranslation()
-  const {queryResults} = props
+  const {queryResults, toggleInput} = props
 
   if (queryResults.length === 0) {
     return <div></div>
@@ -164,7 +164,7 @@ export default function SearchResultViewer ( props  ) {
       marginTop: `40px`,
       backgroundColor: `#f7f5f5`,
       borderRadius: `14px`}}>
-      <DisplayResults queryResults={queryResults} />
+      <DisplayResults toggleInput={toggleInput} queryResults={queryResults} />
     </div>
   )
 }
