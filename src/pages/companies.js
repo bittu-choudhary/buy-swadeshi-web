@@ -100,6 +100,7 @@ class Company extends Component {
               altCompanySlugName = ` The ` + altCompanySlugName
             }
             var altCompanyEndPoint = _.snakeCase(altCompanySlugName)
+            let altCompImage = altCompany.image === "" ? companyPlaceHolderGreen : altCompany.image
             altIndianCompanies.push(
               <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
                 <Row>
@@ -109,7 +110,7 @@ class Company extends Component {
                       borderRightWidth: `2px`
                     }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.categories[category]["id"])} >
                     <Link
-                      to={`/categories?catid=${encodeURIComponent(category)}&isIndian=true&allc=true`}
+                      to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
                       style={{ textDecoration: `none`}}
                     >
                       <Image  style={{
@@ -118,7 +119,7 @@ class Company extends Component {
                           padding: `0px`,
                           height: `auto !important`,
                           maxWidth: `100%`
-                          }} thumbnail src={companyPlaceHolderGreen}>
+                          }} thumbnail src={altCompImage}>
                       </Image>
                     </Link>
                   </Col>

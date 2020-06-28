@@ -101,6 +101,7 @@ class ProductPage extends Component {
             var altProEndPoint = _.snakeCase(altProductSlugName)
             var altProCompany = JsonData.products[altProduct.id].company
             var altProCompanySlugName = altProCompany.name
+            let altProImage = altProduct.image === "" ? productPlaceHolderTrans :  altProduct.image
             if (altProCompanySlugName && altProCompanySlugName.split(" ").length === 1){
               altProCompanySlugName = ` The ` + altProCompanySlugName
             }
@@ -116,7 +117,7 @@ class ProductPage extends Component {
                       onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])}
                       >
                       <Link
-                        to={`/categories?catid=${encodeURIComponent(category)}&isIndian=true`}
+                        to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
                         style={{ textDecoration: `none`}}
                       >
                         <Image  style={{
@@ -125,7 +126,7 @@ class ProductPage extends Component {
                             padding: `0px`,
                             height: `auto !important`,
                             maxWidth: `100%`
-                            }} thumbnail src={productPlaceHolderTrans}>
+                            }} thumbnail src={altProImage}>
                         </Image>
                       </Link>
                     </Col>
