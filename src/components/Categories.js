@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container'
 import { useSprings, animated } from 'react-spring'
 import CategoriesData from "../../content/raw-data/new_brand_list.json"
 import firebase from "gatsby-plugin-firebase"
+import i18next from 'i18next';
 
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.08]
@@ -61,7 +62,7 @@ const PopulateCategoriesCol = (props) => {
             style={{ backgroundColor: bgColorArr[i%10], transform: springs[i%springIndex].xys.interpolate(trans) }}
           >
             <div className={styles.categoryTitle}>
-          <p style={{textAlign: `center`}}>{categoryId.name}</p>
+          <p style={{textAlign: `center`}}>{i18next.language === `en` ? categoryId.name : categoryId.name_hi}</p>
               {/* <Image src={CartIcon} thumbnail /> */}
             </div>
           </animated.div>
@@ -88,10 +89,11 @@ const PopulateCategoriesRow = (props) => {
 }
 
 const CategoryList = (props) => {
+  const { t } = useTranslation()
   return (
     <>
       <h3 style={{ margin: `20px`, textAlign: `center` }}>
-        Search by Category
+        {t('search_by_category')}
       </h3>
       <PopulateCategoriesRow />
     </>

@@ -16,10 +16,8 @@ import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
 import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 import firebase from "gatsby-plugin-firebase"
-import chunk from "lodash/chunk"
-import presets from "../utils/presets"
-import { rhythm, scale } from "../utils/typography"
-
+import { withTrans } from '../i18n/withTrans'
+import i18next from 'i18next';
 
 const queryString = require('query-string');
 var _ = require('lodash')
@@ -97,6 +95,7 @@ class Category extends Component {
   }
 
   PopulateProductCol = (props) => {
+    const {t} = this.props
     const {index, products, namespace, param} = props
     let loopLength = index + 5 <products.length ? index + 5 : (products.length - 1)
     let col = []
@@ -106,7 +105,7 @@ class Category extends Component {
       const productId = products[i]
       let productImage = ((productId.image !== "") ? productId.image : productPlaceHolder)
       let remark
-      let remarkText = "Not Indian"
+      let remarkText = t('not_indian')
       let caption = `Product`
       if (isIndianParam !== undefined) {
         if (`${productId.isIndian}` !== `${isIndianParam}`) {
@@ -116,7 +115,7 @@ class Category extends Component {
       if (productId.isIndian) {
         btnColor = `#ccf6e3`
         fontColor = `#176f52`
-        remarkText = "Indian"
+        remarkText = t('indian')
       }
       remark = <span style={{color: fontColor , bottom: `0px`}} >{remarkText}
                   </span>
@@ -152,7 +151,7 @@ class Category extends Component {
               <Row style={{fontSize: `14px`}}>
                 <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                   <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
-                    overflow: `scroll`}}>{productId.name}
+                    overflow: `scroll`}}>{i18next.language === `en` ? productId.name : productId.name_hi}
                   </Button>
                   {/* <div style={{textAlign: `center`}}>
                     <p style={{textAlign: `center`, marginBottom: `0px`}}>
@@ -182,6 +181,7 @@ class Category extends Component {
 
   DisplayProducts = (props) => {
     const {selectedCategory} = props
+    const {t} = this.props
     const { PopulateProductCol} = this
     let products
     let namespace
@@ -278,7 +278,7 @@ class Category extends Component {
 
   render() {
     let subHeading
-    const {pageContext} = this.props
+    const {pageContext, t} = this.props
     const { DisplayProducts} = this
     isIndianParam = queryString.parse(this.props.location.search).isIndian
     cid = queryString.parse(this.props.location.search).cid
@@ -287,18 +287,18 @@ class Category extends Component {
     const category =  JsonData.categories[`${catid}`]
 
     if (cid !== undefined) {
-      subHeading = `All products from ${JsonData.companies[`${cid}`].name}`
+      subHeading = `${t('category.all_pro_from')} ${JsonData.companies[`${cid}`].name}`
     } else {
       if (isIndianParam !== undefined) {
         if (allc !== undefined) {
-          subHeading = "All Indian companies"
+          subHeading = t('category.all_ind_com')
         } else {
-          subHeading = "All Indian products"
+          subHeading =  t('category.all_ind_pro')
         }
       } else if (allc !== undefined) {
-        subHeading = "All companies"
+        subHeading = t('category.all_companies')
       } else {
-        subHeading = "All products"
+        subHeading = t('category.all_products')
       }
     }
     return (
@@ -311,12 +311,12 @@ class Category extends Component {
                 to={`/`}
                 style={{ textDecoration: `none`, color: `inherit` }}
               >
-                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} className={`name`}>Home</span>
+                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} className={`name`}>{t('home')}</span>
               </Link>
             </li>
             <li style={{display: `inline-block`}}>
               <a> &nbsp;
-              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(category.name)}</span>
+              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `en` ? category.name : category.name_hi)}</span>
               </a>
             </li>
           </ul>
@@ -325,7 +325,7 @@ class Category extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(category.name)} <span style={{  fontSize: `12px`, color: `rgb(181, 181, 181)`}}>
+          <p>{_.startCase(i18next.language === `en` ? category.name : category.name_hi)} <span style={{  fontSize: `12px`, color: `rgb(181, 181, 181)`}}>
             {subHeading}
           </span></p>
         </Col>
@@ -337,4 +337,4 @@ class Category extends Component {
   }
 }
 
-export default Category
+export default withTrans(Category)

@@ -9,9 +9,11 @@ const handleToggle = (val, i18n) => {
   let event = "lang_toggle"
   let new_lang = ""
   if (val){
+    localStorage.setItem("userLang", 'hi')
     i18n.changeLanguage('hi')
     new_lang = "hi"
   } else {
+    localStorage.setItem("userLang", 'en')
     i18n.changeLanguage('en')
     new_lang = "en"
   }

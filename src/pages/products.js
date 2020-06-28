@@ -19,7 +19,8 @@ import productPlaceHolder from '../images/product-placeholder-white-bg-480.png'
 import productPlaceHolderTrans from '../images/product-placeholder-light-green.png'
 import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
-
+import { withTrans } from '../i18n/withTrans'
+import i18next from 'i18next';
 
 var _ = require('lodash')
 const queryString = require('query-string');
@@ -56,14 +57,15 @@ class ProductPage extends Component {
   }
 
   DisplayProductInfo = (props) => {
+    const {t} = this.props
     let product = JsonData.products[`${props.productId}`]
     let productImage = (product.image !== "" ? product.image : productPlaceHolder)
     let icon = <MdCancel/>
-    let alt_or_other = "Alternate"
+    let alt_or_other = t('alt')
     let altIndianBrands = []
     let categoriesList = []
     let remark
-    let remarkText = "Not Indian"
+    let remarkText = t('not_indian')
     let btnColor = `#ffdeda`
     let fontColor = `#a52014`
     for (var category in product.categories) {
@@ -77,7 +79,7 @@ class ProductPage extends Component {
               to={`/categories?catid=${encodeURIComponent(category)}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{product.categories[category]["name"]}, </span>
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `en` ? product.categories[category]["name"] : product.categories[category]["name_hi"]}, </span>
         </Link>
       )
       if (product.categories[category].isParent) {
@@ -103,16 +105,6 @@ class ProductPage extends Component {
               altProCompanySlugName = ` The ` + altProCompanySlugName
             }
             var altProCompanyEndPoint = _.snakeCase(altProCompanySlugName)
-            // altIndianBrands.push(
-            //   <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-            //     <Link
-            //       to={`/product/${altProEndPoint}`}
-            //       style={{ textDecoration: `none`, color: `maroon` }}
-            //     >
-            //       {altProduct.name},
-            //     </Link> &nbsp;
-            //   </span>
-            // )
             altIndianBrands.push(
               <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
                 <Row>
@@ -149,7 +141,7 @@ class ProductPage extends Component {
                         to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
                         style={{ textDecoration: `none`, color: `#176f52`}}
                       >
-                        <p>{altProduct.name}</p>
+                        <p>{i18next.language === `en` ? altProduct.name : altProduct.name_hi}</p>
                       </Link>
                     </Col>
                     <Col xs={4} md={4} lg={4} xl={4} style={{
@@ -161,7 +153,7 @@ class ProductPage extends Component {
                         to={`/companies?cid=${encodeURIComponent(altProCompany.id)}`}
                         style={{ textDecoration: `none`, color: `#176f52`}}
                       >
-                        <p>{altProCompany.name}</p>
+                        <p>{i18next.language === `en` ? altProCompany.name : altProCompany.name_hi}</p>
                       </Link>
                     </Col>
                 </Row>
@@ -170,10 +162,10 @@ class ProductPage extends Component {
           }
 
           if ( (Object.keys(categoryProducts).length === index) ||  (altProCount === 10)) {
-            let seeMoreText = "See more"
-            let seeMoreLink = `/categories?${encodeURIComponent(category)}&isIndian=true`
+            let seeMoreText = t('see_more')
+            let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true`
             if (altIndianBrands.length === 0) {
-              seeMoreText = "No Indian prduct found"
+              seeMoreText = t('no_indian_pro_found')
               seeMoreLink = "#"
             } else if ((altIndianBrands.length === 10)) {
               altIndianBrands.push(
@@ -192,14 +184,6 @@ class ProductPage extends Component {
                     </Link> &nbsp;
                   </Row>
                 </Col>
-                // <span className={styles.altBrand} key={altProduct.name} style={{bottom: `0px`}}  >
-                //   <Link
-                //     to={`/category/${categoryEndPoint}?isIndian=true`}
-                //     style={{ textDecoration: `none`, color: `maroon` }}
-                //   >
-                //     See more
-                //   </Link> &nbsp;
-                // </span>
               )
               break
             }
@@ -209,10 +193,10 @@ class ProductPage extends Component {
       
     }
     if (product.isIndian) {
-      remarkText = "Indian"
+      remarkText = t('indian')
       btnColor = `#ccf6e3`
       fontColor = `#176f52`
-      alt_or_other = `Other`
+      alt_or_other = t('other')
     }
     remark = <span style={{color: fontColor , bottom: `0px`}} >{remarkText}
                   </span>
@@ -233,36 +217,17 @@ class ProductPage extends Component {
                 }} thumbnail src={productImage}></Image>
               </div>
             </Col>
-            {/* <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6}  style={{height: `fit-content`}}>
-              <div className={styles.productAttr}>
-                <div className={styles.productAttrKey}>
-                  <span>Key Features</span>
-                </div>
-                <div className={styles.productAttrDesc}>
-                  Made with superior quality wheat
-                  <br/>Prepares soft and delicious roti
-                  <br/>Rich source of Fibre
-                  <br/>Consists of heavier in feel quality flour
-                </div>
-              </div>
-            </Col> */}
             <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
-                {/* <div className={styles.productAttrKey}>
-                  <span>Is Indian?</span>
-                </div> */}
                 <div className={styles.productAttrDesc}>
                   <Button style={{backgroundColor: btnColor, border: btnColor, marginTop: `10px`}}>{remark}</Button>
-                  {/* <span style={{color: fontColor, fontWeight: `bold`}} >Indian &nbsp;
-                    {icon}
-                  </span> */}
                 </div>
               </div>
             </Col>
             <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
-                  <span>Company</span>
+                  <span>{t('company')}</span>
                 </div>
                 <div className={styles.productAttrDesc + " " + styles.altBrand}
                 onClick={() => this.sendFirebaseAnalytics(`company`,  product.company.id)}
@@ -271,7 +236,7 @@ class ProductPage extends Component {
                     to={`/companies?cid=${encodeURIComponent(product.company.id)}`}
                     style={{ textDecoration: `none`, color: `maroon` }}
                   >
-                    {product.company.name}
+                    {i18next.language === `en` ? product.company.name : product.company.name_hi}
                   </Link>
                 </div>
               </div>
@@ -279,7 +244,7 @@ class ProductPage extends Component {
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper}  md={6} style={{height: `60px`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
-                  <span>Categories</span>
+                  <span>{t('categories')}</span>
                 </div>
                 <div className={styles.productAttrDesc} style={{
                   overflow: `scroll`,
@@ -292,91 +257,12 @@ class ProductPage extends Component {
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={6}>
               <div className={styles.productAttr}>
                   <div className={styles.productAttrKey}>
-                    <span>{alt_or_other} Indian Brands</span>
+              <span>{alt_or_other} {t('other_indian_brands')}</span>
                   </div>
                   <Row style={{height: `200px`, overflow: `scroll`, marginRight: `0px`, marginLeft: `0px`}}>
                     {altIndianBrands}
-                    {/* <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                      <Row>
-                        <Col xs={2} md={2} lg={2} xl={2}>
-                          <Image className={styles.productImage} style={{
-                              border: `0px`,
-                              borderRadius: `0px`,
-                              padding: `0px`
-                              }} thumbnail src={productPlaceHolderTrans}>
-                          </Image>
-                        </Col>
-                        <Col xs={6} md={6} lg={6} xl={6}>
-                          <p>Traditional Chakki Grinding</p>
-                        </Col>
-                        <Col xs={4} md={4} lg={4} xl={4}>
-                          <p>Traditional Chakki</p>
-                        </Col>
-                      </Row>
-                    </Col>
-                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                      <Row>
-                        <Col xs={2} md={2} lg={2} xl={2}>
-                          <p>C11</p>
-                        </Col>
-                        <Col xs={6} md={6} lg={6} xl={6}>
-                          <p>C12</p>
-                        </Col>
-                        <Col xs={4} md={4} lg={4} xl={4}>
-                          <p>C13</p>
-                        </Col>
-                      </Row>
-                    </Col>
-                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                      <Row>
-                        <Col xs={2} md={2} lg={2} xl={2}>
-                          <p>C11</p>
-                        </Col>
-                        <Col xs={6} md={6} lg={6} xl={6}>
-                          <p>C12</p>
-                        </Col>
-                        <Col xs={4} md={4} lg={4} xl={4}>
-                          <p>C13</p>
-                        </Col>
-                      </Row>
-                    </Col>
-                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                      <Row>
-                        <Col xs={2} md={2} lg={2} xl={2}>
-                          <p>C11</p>
-                        </Col>
-                        <Col xs={6} md={6} lg={6} xl={6}>
-                          <p>C12</p>
-                        </Col>
-                        <Col xs={4} md={4} lg={4} xl={4}>
-                          <p>C13</p>
-                        </Col>
-                      </Row>
-                    </Col>
-                    <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                      <Row>
-                        <Col xs={2} md={2} lg={2} xl={2}>
-                          <p>C11</p>
-                        </Col>
-                        <Col xs={6} md={6} lg={6} xl={6}>
-                          <p>C12</p>
-                        </Col>
-                        <Col xs={4} md={4} lg={4} xl={4}>
-                          <p>C13</p>
-                        </Col>
-                      </Row>
-                    </Col> */}
                   </Row>
                 </div>
-
-              {/* <div className={styles.productAttr}>
-                <div className={styles.productAttrKey}>
-                  <span>{alt_or_other} Indian Brands</span>
-                </div>
-                <div className={styles.productAttrDesc}>
-                  {altIndianBrands}
-                </div>
-              </div> */}
             </Col>
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12}  style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
@@ -386,11 +272,9 @@ class ProductPage extends Component {
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12} style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
                 <div className={styles.productAttrKey}>
-                  <span>Disclaimer</span>
+                  <span>{t('disclaimer')}</span>
                 </div>
-                <div className={styles.productAttrDesc}>
-                  Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented.
-                </div>
+                <div className={styles.productAttrDesc}>{t('disclaimer_text')}</div>
               </div>
             </Col>
           </div>
@@ -401,6 +285,7 @@ class ProductPage extends Component {
 
   render() {
     const {pageContext} = this.props
+    const {t} = this.props
     pid = queryString.parse(this.props.location.search).pid || `everest_turmeric_powder/haldi_J7X` // default product
     const { DisplayProductInfo} = this
     const product =  JsonData.products[`${pid}`]
@@ -414,12 +299,12 @@ class ProductPage extends Component {
                 to={`/`}
                 style={{ textDecoration: `none`, color: `inherit` }}
               >
-                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} class="name">Home</span>
+                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} class="name">{t('home')}</span>
               </Link>
             </li>
             <li style={{display: `inline-block`}}>
               <a> &nbsp;
-              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(product.name)}</span>
+              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `en` ? product.name : product.name_hi)}</span>
               </a>
             </li>
           </ul>
@@ -428,7 +313,7 @@ class ProductPage extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(product.name)}</p>
+          <p>{_.startCase(i18next.language === `en` ? product.name : product.name_hi)}</p>
         </Col>
       </Row>
       <DisplayProductInfo productId={pid}/>
@@ -438,4 +323,4 @@ class ProductPage extends Component {
   }
 }
 
-export default ProductPage
+export default withTrans(ProductPage)

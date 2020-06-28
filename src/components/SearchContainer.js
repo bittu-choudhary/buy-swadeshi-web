@@ -130,15 +130,15 @@ class Search extends Component {
       var resultData = {}
       switch (resultType) {
         case "Category":
-          resultData = _.pick(JSONData.categories[resultObjectId], ['id', 'name', 'image']) // extract id, name, image from object
+          resultData = _.pick(JSONData.categories[resultObjectId], ['id', 'name', 'image', 'name_hi']) // extract id, name, image from object
           resultData["type"] = "category"
           break;
         case "Company":
-          resultData = _.pick(JSONData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian'])
+          resultData = _.pick(JSONData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian', 'name_hi'])
           resultData["type"] = "company"
           break;
         case "Product":
-          resultData = _.pick(JSONData.products[resultObjectId], ['id', 'name', 'image', 'isIndian'])
+          resultData = _.pick(JSONData.products[resultObjectId], ['id', 'name', 'image', 'isIndian', 'name_hi'])
           resultData["type"] = "product"
           break;
         default:

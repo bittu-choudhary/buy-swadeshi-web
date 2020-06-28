@@ -19,6 +19,8 @@ import companyPlaceHolder from '../images/company-icon-360.png'
 import companyPlaceHolderGreen from '../images/company-icon-light-green.png'
 import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
+import { withTrans } from '../i18n/withTrans'
+import i18next from 'i18next';
 
 
 var _ = require('lodash')
@@ -56,13 +58,14 @@ class Company extends Component {
   }
 
   DisplayCompanyInfo = (props) => {
+    const {t} = this.props
     let company = JsonData.companies[`${props.companyId}`]
     let icon = <MdCancel/>
-    let alt_or_other = "Alternate"
+    let alt_or_other = t('alt')
     let altIndianCompanies = []
     let categoriesList = []
     let remark
-    let remarkText = "Not Indian"
+    let remarkText = t('not_indian')
     let btnColor = `#ffdeda`
     let fontColor = `#a52014`
     let companyImage = ((company.image !== "") ? company.image : companyPlaceHolder)
@@ -77,7 +80,7 @@ class Company extends Component {
               to={`/categories?catid=${encodeURIComponent(category)}&cid=${encodeURIComponent(company.id)}`}
               style={{ textDecoration: `none`, color: `maroon` }}
             >
-          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{company.categories[category]["name"]}, </span>
+          <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `en` ? company.categories[category]["name"] : company.categories[category]["name_hi"]}, </span>
         </Link>
       )
       if (company.categories[category].isParent && altIndianCompanies.length < 10) {
@@ -130,7 +133,7 @@ class Company extends Component {
                       to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
                       style={{ textDecoration: `none`, color: `#176f52`}}
                     >
-                      <p>{altCompany.name}</p>
+                      <p>{i18next.language === `en` ? altCompany.name : altCompany.name_hi}</p>
                     </Link>
                   </Col>
                   <Col xs={4} md={4} lg={4} xl={4} style={{
@@ -140,17 +143,17 @@ class Company extends Component {
                       to={`/categories?catid=${encodeURIComponent(category)}&cid=${encodeURIComponent(altCompany.id)}`}
                       style={{ textDecoration: `none`, color: `#176f52`}}
                     >
-                    <p>See Products</p>
+                    <p>{t('see_products')}</p>
                     </Link>
                   </Col>
                 </Row>
               </Col>
             )
           }
-          let seeMoreText = "See more"
-          let seeMoreLink = `/categories?${encodeURIComponent(category)}&isIndian=true&allc=true`
+          let seeMoreText = t('see_more')
+          let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true&allc=true`
           if (altIndianCompanies.length === 0) {
-            seeMoreText = "No Indian company found"
+            seeMoreText = t('no_indian_com_found')
             seeMoreLink = "#"
           } else if ((altIndianCompanies.length === 10)) {
             altIndianCompanies.push(
@@ -175,11 +178,11 @@ class Company extends Component {
       }
     }
     if (company.isIndian) {
-      remarkText = "Indian"
+      remarkText = t('indian')
       btnColor = `#ccf6e3`
       fontColor = `#176f52`
       fontColor = `green`
-      alt_or_other = "Other"
+      alt_or_other = t('other')
     }
     remark = <span style={{color: fontColor , bottom: `0px`}} >{remarkText}
                   </span>
@@ -224,7 +227,7 @@ class Company extends Component {
             <Col className={"float-left col-12" + " " + styles.companyAttrWrapper}  md={6} style={{height: `fit-content`}}>
               <div className={styles.companyAttr}>
                 <div className={styles.companyAttrKey}>
-                  <span>{alt_or_other} Indian Companies</span>
+                  <span>{alt_or_other} {t('alt_indian_comp')}</span>
                 </div>
                 <Row style={{height: `200px`, overflow: `scroll`, marginRight: `0px`, marginLeft: `0px`}}>
                   {altIndianCompanies}
@@ -239,11 +242,9 @@ class Company extends Component {
             <Col className={"float-left col-12" + " " + styles.companyAttrWrapper} md={12} style={{height: `fit-content`}}>
               <div className={styles.companyAttr}>
                 <div className={styles.companyAttrKey}>
-                  <span>Disclaimer</span>
+                  <span>{t('disclaimer')}</span>
                 </div>
-                <div className={styles.companyAttrDesc}>
-                  Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented.
-                </div>
+                <div className={styles.companyAttrDesc}>{t('disclaimer_text')}</div>
               </div>
             </Col>
           </div>
@@ -253,7 +254,7 @@ class Company extends Component {
   }
 
   render() {
-    const {pageContext} = this.props
+    const {pageContext, t} = this.props
     const { DisplayCompanyInfo} = this
     cid = queryString.parse(this.props.location.search).cid || `s.narendrakumar_&_co_9Se` // default company
     const company =  JsonData.companies[`${cid}`]
@@ -267,12 +268,12 @@ class Company extends Component {
                 to={`/`}
                 style={{ textDecoration: `none`, color: `inherit` }}
               >
-                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} class="name">Home</span>
+                <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} class="name">{t('home')}</span>
               </Link>
             </li>
             <li style={{display: `inline-block`}}>
               <a> &nbsp;
-              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(company.name)}</span>
+              <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `en` ? company.name : company.name_hi)}</span>
               </a>
             </li>
           </ul>
@@ -281,7 +282,7 @@ class Company extends Component {
       </Row>
       <Row className={styles.pageTitle}>
         <Col>
-          <p>{_.startCase(company.name)}</p>
+          <p>{_.startCase(i18next.language === `en` ? company.name : company.name_hi)}</p>
         </Col>
       </Row>
       <DisplayCompanyInfo companyId={cid}/>
@@ -291,4 +292,4 @@ class Company extends Component {
   }
 }
 
-export default Company
+export default withTrans(Company)

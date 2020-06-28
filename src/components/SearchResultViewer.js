@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button'
 import productPlaceHolder from '../images/product-placeholder-white-bg.png'
 import companyPlaceHolder from '../images/company-icon.png'
 import firebase from "gatsby-plugin-firebase"
+import i18next from 'i18next';
 
 var _ = require('lodash')
 
@@ -34,13 +35,14 @@ const sendFirebaseAnalytics = (type, resourceId) => {
 
 const PopulateResultCol = (props) => {
   const {index, results, toggleInput} = props
+  const {t} = useTranslation()
   let loopLength = index + 5 <results.length ? index + 5 : (results.length - 1)
   let col = []
   for (let i = index; i <= loopLength ; i++ ) {
     let resultImage = productPlaceHolder
     const resultId = results[i]
     let remark
-    let remarkText = "Not Indian"
+    let remarkText = t('not_indian')
     let caption = ""
     let fontColor = `#a52014`
     let btnColor = `#ffdeda`
@@ -61,7 +63,7 @@ const PopulateResultCol = (props) => {
       }
       if (resultId.isIndian) {
         btnColor = `#ccf6e3`
-        remarkText = "Indian"
+        remarkText = t('indian')
         fontColor = `#176f52`
       }
       remark = <span style={{color: fontColor, bottom: `0px`}} >{remarkText}</span>
@@ -99,7 +101,7 @@ const PopulateResultCol = (props) => {
             <Row>
               <Col style={{minHeight: `24px`}} xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
                  <Button className={`btn-sm btn-block` + ` ` + styles.btnCustomBlock } style={{backgroundColor: `#fff3cc`, border: `#fff3cc`, color: `#7b5f05`, fontSize: `.85rem`, height: `29px`,
-    overflow: `scroll`}}>{resultId.name}
+    overflow: `scroll`}}>{i18next.language === `en` ? resultId.name : resultId.name_hi}
                  <span
                     style={{
                       fontSize: `12px`,

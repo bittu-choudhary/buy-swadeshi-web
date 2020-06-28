@@ -13,6 +13,28 @@
   "brand_name": "Brand Name",
   "brand_category": "Brand Category",
   "is_indian": "Is Indian?",
-  "share_text": "*Find Swadeshi* (https://www.buyswadeshi.store) helps you know which brand is Indian and which is not. You can get list of Indian brands in your favourite shopping category. *Download our app* (shorturl.at/ruFIV) to keep it handy. *Find Swadeshi is made by Indians to make India Atma Nirbhar*. #ConsumeIndianPromoteIndian"
-
+  "share_text": "*Find Swadeshi* (https://www.buyswadeshi.store) helps you know which brand is Indian and which is not. You can get list of Indian brands in your favourite shopping category. *Download our app* (shorturl.at/ruFIV) to keep it handy. *Find Swadeshi is made by Indians to make India Atma Nirbhar*. #ConsumeIndianPromoteIndian",
+  "search_by_category": "Search by Category",
+  "home": "Home",
+  "category": {
+    "all_products" : "All products",
+    "all_ind_pro": "All Indian products",
+    "all_pro_from": "All productst from",
+    "all_ind_com": "All Indian companies",
+    "all_companies": "All companies"
+  },
+  "company": "Company",
+  "categories": "Categories",
+  "other_indian_brands": "Indian brands",
+  "alt_indian_comp" : "Indian companies",
+  "alt": "Alternate",
+  "other": "Other",
+  "see_more": "See More",
+  "disclaimer": "Disclaimer",
+  "disclaimer_text": "Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented.",
+  "indian": "Indian",
+  "not_indian": "Not Indian",
+  "no_indian_pro_found": "No Indian product found",
+  "see_products": "See Products",
+  "no_indian_com_found": "No Indian company found"
 }
