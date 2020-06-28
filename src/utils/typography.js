@@ -4,7 +4,7 @@ const options = {
   googleFonts: [
     {
       name: `Noto Sans JP`,
-      styles: [`400`, `400i`, `700`, `700i`],
+      styles: [`400`, `700`,],
     },
   ],
   baseLineHeight: 1.4,
