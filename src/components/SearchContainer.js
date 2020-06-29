@@ -48,58 +48,44 @@ class Search extends Component {
     // this.state = { brandList: brandData.brands }
   }
   componentDidMount() {
-    let myFirstPromise = new Promise((resolve, reject) => {
-      // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
-      // In this example, we use setTimeout(...) to simulate async code.
-      // In reality, you will probably be using something like XHR or an HTML5 API.
-      setTimeout( function() {
-        console.log(engine.isConsolidated())
-        if ( !engine.isConsolidated()) {
-          console.log(`Starting indexing @ ${Date.now()}`)
-          var countI = 0
-          for (var key in JSONData) {
-            if (key === "version") {
-              continue
-            }
-            for (const dataPoints in JSONData[key]) {
-              countI = countI + 1
-              var dataPointType;
-              switch (key) {
-                case "categories":
-                  if (!JSONData[key][dataPoints].isParent) {
-                    continue
-                  }
-                  dataPointType = "_typeCategory"
-                  break;
-                case "companies":
-                  dataPointType = "_typeCompany"
-                  break;
-                case "products":
-                  dataPointType = "_typeProduct"
-                  break;
-                default:
-                  break;
-              }
-              var indexId =JSONData[key][dataPoints]["id"] + dataPointType
-              var doc = _.pick(JSONData[key][dataPoints], ['name', 'name_hi']) // extract name from object
-              engine.addDoc( doc, indexId )
-            }
-          }
-          engine.consolidate()
-          console.log(countI)
-          console.log(engine.isConsolidated())
-          console.log(`FInished indexing @ ${Date.now()}`)
+    console.log(engine.isConsolidated())
+    if ( !engine.isConsolidated()) {
+      console.log(`Starting indexing @ ${Date.now()}`)
+      var countI = 0
+      for (var key in JSONData) {
+        if (key === "version") {
+          continue
         }
-        resolve("Success!")  // Yay! Everything went well!
-      }, 250)
-    })
-
-    myFirstPromise.then((successMessage) => {
-      // successMessage is whatever we passed in the resolve(...) function above.
-      // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-        document.getElementById("___loader").style.display = "none"
-      console.log("Yay! " + successMessage)
-    });
+        for (const dataPoints in JSONData[key]) {
+          countI = countI + 1
+          var dataPointType;
+          switch (key) {
+            case "categories":
+              if (!JSONData[key][dataPoints].isParent) {
+                continue
+              }
+              dataPointType = "_typeCategory"
+              break;
+            case "companies":
+              dataPointType = "_typeCompany"
+              break;
+            case "products":
+              dataPointType = "_typeProduct"
+              break;
+            default:
+              break;
+          }
+          var indexId =JSONData[key][dataPoints]["id"] + dataPointType
+          var doc = _.pick(JSONData[key][dataPoints], ['name', 'name_hi']) // extract name from object
+          engine.addDoc( doc, indexId )
+        }
+      }
+      engine.consolidate()
+      console.log(countI)
+      console.log(engine.isConsolidated())
+      console.log(`FInished indexing @ ${Date.now()}`)
+      document.getElementById("___loader").style.display = "none"
+    }
   }
 
   componentWillMount() {
