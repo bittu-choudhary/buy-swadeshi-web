@@ -28,6 +28,10 @@ body {
   -webkit-transform: rotate(-45deg);
 }
 
+.home-cat-image{
+  background-color:rgba(0, 0, 0, 0) !important;
+}
+
 .card-transition {
   transition: box-shadow 0.5s;
   will-change: transform;
@@ -61,7 +65,7 @@ body {
   width:80%;
   font-size:14px;
   outline: none;
-  
+
 }
 
 tr td:first-child {
@@ -256,10 +260,7 @@ footer p {
 }
 
 .category-title {
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%,-50%);
+  padding: 2px
 }
 
 
@@ -368,6 +369,10 @@ footer p {
 }
 
 @media only screen and (min-width: 1000px) {
+
+  .home-image-card {
+    height: 70% !important
+  }
   .search-field, .search-container {
     width: 80%;
   }
@@ -379,7 +384,7 @@ footer p {
   .alert-success  p{
     font-size: 18px;
   }
-  
+
   .nav-bar-header {
     display: block !important;
   }
@@ -432,7 +437,7 @@ footer p {
 
   .is-indian-btn  {
     max-width: fit-content !important;
-    
+
   }
 
   .is-indian-btn button {
@@ -509,7 +514,7 @@ footer p {
   }
 
   .is-indian-btn {
-    padding-left: 24px !important; 
+    padding-left: 24px !important;
     padding-right: 24px !important;
   }
 
@@ -531,7 +536,7 @@ footer p {
   .product-attr-key, .company-attr-key{
     font-size: 14px;
   }
-  
+
   .product-attr-desc, .company-attr-desc{
     font-size: 14px;
   }
@@ -573,7 +578,7 @@ footer p {
   .product-attr-key, .company-attr-key{
     font-size: 12px;
   }
-  
+
   .product-attr-desc, .company-attr-desc{
     font-size: 12px;
   }
@@ -639,7 +644,7 @@ footer p {
   .search-result-indian-icon {
     font-size: 10px;
   }
-  
+
   .search-result-title p {
     font-size: 10px;
   }
