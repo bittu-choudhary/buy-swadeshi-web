@@ -10,7 +10,8 @@ import { useSprings, animated } from 'react-spring'
 import CategoriesData from "../../content/raw-data/new_brand_list.json"
 import firebase from "gatsby-plugin-firebase"
 import i18next from 'i18next';
-
+import Image from 'react-bootstrap/Image'
+import categoryPlaceHolder from '../images/category-96.png'
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.08]
 const trans = (x, y, s) => `perspective(600px) scale(${s})`
@@ -42,7 +43,15 @@ const PopulateCategoriesCol = (props) => {
     if (categorySlugName && categorySlugName.split(" ").length === 1){
       categorySlugName = ` The ` + categorySlugName
     }
+    let catImage
     var categoryEndPoint = _.snakeCase(categorySlugName)
+    try{
+        catImage = require(`../images/${_.kebabCase(categoryId.name)}.png`)
+    }
+    catch(err){
+        catImage = categoryPlaceHolder
+        //Do whatever you want when the image failed to load here
+    }
     col.push(
       <Col  onClick={() => sendFirebaseAnalytics("category_clk", categoryId.id)} key={categoryId.id} id={categoryId.id} style={{padding: `10px`}} xs={6} md={6} lg={2} xl={2}>
         <Link
@@ -61,6 +70,18 @@ const PopulateCategoriesCol = (props) => {
             onMouseLeave={() => set({ xys: [0, 0, 1] })}
             style={{ backgroundColor: bgColorArr[i%10], transform: springs[i%springIndex].xys.interpolate(trans) }}
           >
+            <Row className={styles.productCardImage + ` ` + styles.homeImageCard} >
+              <Col  className={`col-12`} style={{height: `100%`}}>
+                <div className={`container`  + ` ` + styles.catListImage} style={{width: `fit-content`, height: `100%`}}>
+                  <Image oading={`lazy`} className={styles.productImage + ` ` + styles.homeCatImage} style={{
+                    border: `0px`,
+                    borderRadius: `0px`,
+                    maxHeight: `100%`,
+                    padding: `0px !important`,
+                  }} thumbnail src={catImage}></Image>
+                </div>
+              </Col>
+            </Row>
             <div className={styles.categoryTitle}>
           <p style={{textAlign: `center`}}>{i18next.language === `hi` ? categoryId.name_hi : categoryId.name}</p>
               {/* <Image src={CartIcon} thumbnail /> */}
