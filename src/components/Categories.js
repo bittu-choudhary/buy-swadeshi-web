@@ -77,7 +77,6 @@ const PopulateCategoriesCol = (props) => {
                     border: `0px`,
                     borderRadius: `0px`,
                     maxHeight: `100%`,
-                    padding: `0px !important`,
                   }} thumbnail src={catImage}></Image>
                 </div>
               </Col>
