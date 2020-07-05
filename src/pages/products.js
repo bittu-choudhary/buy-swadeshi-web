@@ -21,6 +21,9 @@ import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
 import { withTrans } from '../i18n/withTrans'
 import i18next from 'i18next';
+import Axios from "axios"
+import LoaderSVG from '../images/loader.svg'
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 var _ = require('lodash')
 const queryString = require('query-string');
@@ -31,6 +34,9 @@ class ProductPage extends Component {
     super(props);
     this.state = {
       showProduct: true,
+      product: {},
+      isLoading: true,
+      pid: null,
      };
   }
 
@@ -56,9 +62,41 @@ class ProductPage extends Component {
     this.setState({showProduct: newVal})
   }
 
+  async componentDidMount() {
+    Axios.get(`https://buy-swadeshi-backend-prod.herokuapp.com/product.json?pid=${encodeURIComponent(this.state.pid)}`)
+      .then(result => {
+        this.setState({ product: result.data, isLoading: false })
+      })
+      .catch(err => {
+        console.log(`====================================`)
+        console.log(`Something bad happened while fetching the data\n${err}`)
+        console.log(`====================================`)
+      })
+  }
+
+  async componentDidUpdate(){
+    if (this.state.pid !== queryString.parse(this.props.location.search).pid) {
+      Axios.get(`https://buy-swadeshi-backend-prod.herokuapp.com/product.json?pid=${encodeURIComponent(queryString.parse(this.props.location.search).pid)}`)
+        .then(result => {
+          this.setState({ product: result.data, isLoading: false, pid: queryString.parse(this.props.location.search).pid })
+          // this.rebuildIndex()
+        })
+        .catch(err => {
+          // this.setState({ isError: true })
+          console.log(`====================================`)
+          console.log(`Something bad happened while fetching the data\n${err}`)
+          console.log(`====================================`)
+        })
+    }
+  }
+
+  componentWillMount(){
+    this.setState({pid: queryString.parse(this.props.location.search).pid})
+  }
+
   DisplayProductInfo = (props) => {
     const {t} = this.props
-    let product = JsonData.products[`${props.productId}`]
+    let product = this.state.product
     let productImage = (product.image !== "" ? product.image : productPlaceHolder)
     let icon = <MdCancel/>
     let alt_or_other = t('alt')
@@ -82,115 +120,95 @@ class ProductPage extends Component {
           <span onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])} className={styles.altBrand} key={product.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `hi` ? product.categories[category]["name_hi"] : product.categories[category]["name"]}, </span>
         </Link>
       )
-      if (product.categories[category].isParent && altIndianBrands.length < 10) {
-        let categoryProducts = JsonData.categories[category].products
-        let index = 0
-        let altProCount = 0
-        for (var altProductId in categoryProducts) {
-          let altProduct = categoryProducts[altProductId]
-          index = index + 1
-          if (altProductId === props.productId) {
-            continue
-          }
-          if (altProduct.isIndian) {
-            altProCount = altProCount + 1
-            var altProductSlugName = altProduct.name
-            if (altProductSlugName && altProductSlugName.split(" ").length === 1){
-              altProductSlugName = ` The ` + altProductSlugName
-            }
-            var altProEndPoint = _.snakeCase(altProductSlugName)
-            var altProCompany = JsonData.products[altProduct.id].company
-            var altProCompanySlugName = altProCompany.name
-            let altProImage = altProduct.image === "" ? productPlaceHolderTrans :  altProduct.image
-            if (altProCompanySlugName && altProCompanySlugName.split(" ").length === 1){
-              altProCompanySlugName = ` The ` + altProCompanySlugName
-            }
-            var altProCompanyEndPoint = _.snakeCase(altProCompanySlugName)
-            altIndianBrands.push(
-              <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                <Row>
-                    <Col xs={2} md={2} lg={2} xl={2} style={{
-                        borderRightColor: `white`,
-                        borderRightStyle: `solid`,
-                        borderRightWidth: `2px`
-                      }}
-                      onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])}
-                      >
-                      <Link
-                        to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
-                        style={{ textDecoration: `none`}}
-                      >
-                        <Image  style={{
-                            border: `0px`,
-                            borderRadius: `0px`,
-                            padding: `0px`,
-                            height: `auto !important`,
-                            maxWidth: `100%`
-                            }} thumbnail src={altProImage}>
-                        </Image>
-                      </Link>
-                    </Col>
-                    <Col xs={6} md={6} lg={6} xl={6} style={{
-                        borderRightColor: `white`,
-                        borderRightStyle: `solid`,
-                        borderRightWidth: `2px`,
-                        maxHeight: `40px`,
-                        overflow: `scroll`
-                      }}
-                      onClick={() => this.sendFirebaseAnalytics(`product`,  altProduct.id)}>
-                      <Link
-                        to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
-                        style={{ textDecoration: `none`, color: `#176f52`}}
-                      >
-                        <p>{i18next.language === `hi` ? altProduct.name_hi : altProduct.name}</p>
-                      </Link>
-                    </Col>
-                    <Col xs={4} md={4} lg={4} xl={4} style={{
-                      maxHeight: `40px`,
-                      overflow: `scroll`
-                    }}
-                    onClick={() => this.sendFirebaseAnalytics(`company`,  altProCompany.id)}>
-                      <Link
-                        to={`/companies?cid=${encodeURIComponent(altProCompany.id)}`}
-                        style={{ textDecoration: `none`, color: `#176f52`}}
-                      >
-                        <p>{i18next.language === `hi` ? altProCompany.name_hi : altProCompany.name}</p>
-                      </Link>
-                    </Col>
-                </Row>
-              </Col>
-            )
-          }
-
-          let seeMoreText = t('see_more')
-          let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true`
-          if (altIndianBrands.length === 0) {
-            seeMoreText = t('no_indian_pro_found')
-            seeMoreLink = "#"
-          } else if ((altIndianBrands.length === 10)) {
-            altIndianBrands.push(
-              <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
-                <Row>
-                  <Link
-                    to={seeMoreLink}
-                    style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
-                  >
-                    <Col xs={12} md={12} lg={12} xl={12} style={{
-                      marginTop: `10px`
-                    }}
-                    onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
-                      <p>{seeMoreText}</p>
-                    </Col>
-                  </Link> &nbsp;
-                </Row>
-              </Col>
-            )
-            break
-          }
-        }
-      }
-      
     }
+
+
+    for (var altProductId in product.alt_products) {
+      let altProduct = product.alt_products[altProductId]
+      var altProCompany = altProduct.company
+      let altProImage = altProduct.image === "" ? productPlaceHolderTrans :  altProduct.image
+      altIndianBrands.push(
+        <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+          <Row>
+              <Col xs={2} md={2} lg={2} xl={2} style={{
+                  borderRightColor: `white`,
+                  borderRightStyle: `solid`,
+                  borderRightWidth: `2px`
+                }}
+                onClick={() => this.sendFirebaseAnalytics(`category`,  product.categories[category]["id"])}
+                >
+                <Link
+                  to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
+                  style={{ textDecoration: `none`}}
+                >
+                  <Image  style={{
+                      border: `0px`,
+                      borderRadius: `0px`,
+                      padding: `0px`,
+                      height: `auto !important`,
+                      maxWidth: `100%`
+                      }} thumbnail src={altProImage}>
+                  </Image>
+                </Link>
+              </Col>
+              <Col xs={6} md={6} lg={6} xl={6} style={{
+                  borderRightColor: `white`,
+                  borderRightStyle: `solid`,
+                  borderRightWidth: `2px`,
+                  maxHeight: `40px`,
+                  overflow: `scroll`
+                }}
+                onClick={() => this.sendFirebaseAnalytics(`product`,  altProduct.id)}>
+                <Link
+                  to={`/products?pid=${encodeURIComponent(altProduct.id)}`}
+                  style={{ textDecoration: `none`, color: `#176f52`}}
+                >
+                  <p>{i18next.language === `hi` ? altProduct.name_hi : altProduct.name}</p>
+                </Link>
+              </Col>
+              <Col xs={4} md={4} lg={4} xl={4} style={{
+                maxHeight: `40px`,
+                overflow: `scroll`
+              }}
+              onClick={() => this.sendFirebaseAnalytics(`company`,  altProCompany.id)}>
+                <Link
+                  to={`/companies?cid=${encodeURIComponent(altProCompany.id)}`}
+                  style={{ textDecoration: `none`, color: `#176f52`}}
+                >
+                  <p>{i18next.language === `hi` ? altProCompany.name_hi : altProCompany.name}</p>
+                </Link>
+              </Col>
+          </Row>
+        </Col>
+      )
+      let seeMoreText = t('see_more')
+      let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true`
+      if (altIndianBrands.length === 0) {
+        seeMoreText = t('no_indian_pro_found')
+        seeMoreLink = "#"
+      } else if ((altIndianBrands.length === 10)) {
+        altIndianBrands.push(
+          <Col className={styles.otherBrandScroller} xs={12} md={12} lg={12} xl={12}>
+            <Row>
+              <Link
+                to={seeMoreLink}
+                style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+              >
+                <Col xs={12} md={12} lg={12} xl={12} style={{
+                  marginTop: `10px`
+                }}
+                onClick={() => this.sendFirebaseAnalytics(`product`,  `see_more`)}>
+                  <p>{seeMoreText}</p>
+                </Col>
+              </Link> &nbsp;
+            </Row>
+          </Col>
+        )
+        break
+      }
+    }
+
+
     if (product.isIndian) {
       remarkText = t('indian')
       btnColor = `#ccf6e3`
@@ -265,7 +283,7 @@ class ProductPage extends Component {
             </Col>
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12}  style={{height: `fit-content`}}>
               <div className={styles.productAttr}>
-                
+
               </div>
             </Col>
             <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12} style={{height: `fit-content`}}>
@@ -285,9 +303,80 @@ class ProductPage extends Component {
   render() {
     const {pageContext} = this.props
     const {t} = this.props
-    pid = queryString.parse(this.props.location.search).pid || `everest_turmeric_powder/haldi_J7X` // default product
+    var {isLoading} = this.state
+
     const { DisplayProductInfo} = this
-    const product =  JsonData.products[`${pid}`]
+    if (this.state.pid !== queryString.parse(this.props.location.search).pid) {
+      isLoading = true
+    }
+    const product = this.state.product
+    if (isLoading) {
+      let altIndianBrands = []
+      for (let index = 0; index < 3; index++) {
+        altIndianBrands.push(
+          <Col xs={12} md={12} lg={12} xl={12}>
+          <Row>
+            <Col xs={12} md={12} lg={12} xl={12}>
+              <Skeleton count={1} height= {`60px`}/>
+            </Col>
+          </Row>
+        </Col>
+        )
+        
+      }
+      return (
+        <Layout showMessage={false} toggleView={this.toggleProductView}>
+        <Row className={styles.homeLink}>
+          <Col>
+            <Skeleton count={1} width={150}/>
+            {/* <p style={{color: `rgb(181, 181, 181)`, marginBottom: `0px`}}>Back to home</p> */}
+          </Col>
+        </Row>
+        <Row className={styles.pageTitle}>
+          <Col>
+            <Skeleton count={1} width={80}/>
+          </Col>
+        </Row>
+        <div className={styles.pageContent + " " + `container-fluid`}>
+          <div className="row d-md-block d-block">
+            <Col  className={"float-left col-12" + " " + styles.productImage } md={6}>
+              <div className={`container`} style={{minWidth: `100%`}}>
+                <Skeleton count={1} height= {`200px`}/>
+              </div>
+            </Col>
+            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
+              <Skeleton count={1} height= {`100%`}/>
+            </Col>
+            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
+              <Skeleton count={1} height= {`100%`}/>
+            </Col>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={6}>
+              <div className={styles.productAttr}>
+                  <div className={styles.productAttrKey}>
+                  </div>
+                  <Row style={{height: `200px`, overflow: `scroll`, marginRight: `0px`, marginLeft: `0px`}}>
+                    {altIndianBrands}
+                  </Row>
+                </div>
+            </Col>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12}  style={{height: `fit-content`}}>
+              <div className={styles.productAttr}>
+
+              </div>
+            </Col>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12} style={{height: `fit-content`}}>
+              <div className={styles.productAttr}>
+                <div className={styles.productAttrKey}>
+                  <span>{t('disclaimer')}</span>
+                </div>
+                <div className={styles.productAttrDesc}>{t('disclaimer_text')}</div>
+              </div>
+            </Col>
+          </div>
+        </div>
+        </Layout>
+      )
+    }
     return (
       <Layout showMessage={false} toggleView={this.toggleProductView}>
       {this.state.showProduct && <><Row className={styles.homeLink}>
