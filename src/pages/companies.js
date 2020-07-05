@@ -21,7 +21,9 @@ import Button from 'react-bootstrap/Button';
 import firebase from "gatsby-plugin-firebase"
 import { withTrans } from '../i18n/withTrans'
 import i18next from 'i18next';
-
+import Axios from "axios"
+import LoaderSVG from '../images/loader.svg'
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 var _ = require('lodash')
 const queryString = require('query-string');
@@ -32,6 +34,9 @@ class Company extends Component {
     super(props);
     this.state = {
       showCompany: true,
+      company: {},
+      isLoading: true,
+      cid: null,
      };
   }
 
@@ -56,10 +61,42 @@ class Company extends Component {
   toggleCompanyView = (newVal) => {
     this.setState({showCompany: newVal})
   }
+  
+  async componentDidMount() {
+    Axios.get(`https://buy-swadeshi-backend-prod.herokuapp.com/company.json?cid=${encodeURIComponent(this.state.cid)}`)
+      .then(result => {
+        this.setState({ company: result.data, isLoading: false })
+      })
+      .catch(err => {
+        console.log(`====================================`)
+        console.log(`Something bad happened while fetching the data\n${err}`)
+        console.log(`====================================`)
+      })
+  }
+
+  async componentDidUpdate(){
+    if (this.state.cid !== queryString.parse(this.props.location.search).cid) {
+      Axios.get(`https://buy-swadeshi-backend-prod.herokuapp.com/company.json?cid=${encodeURIComponent(queryString.parse(this.props.location.search).cid)}`)
+        .then(result => {
+          this.setState({ company: result.data, isLoading: false, cid: queryString.parse(this.props.location.search).cid })
+          // this.rebuildIndex()
+        })
+        .catch(err => {
+          // this.setState({ isError: true })
+          console.log(`====================================`)
+          console.log(`Something bad happened while fetching the data\n${err}`)
+          console.log(`====================================`)
+        })
+    }
+  }
+
+  componentWillMount(){
+    this.setState({cid: queryString.parse(this.props.location.search).cid})
+  }
 
   DisplayCompanyInfo = (props) => {
     const {t} = this.props
-    let company = JsonData.companies[`${props.companyId}`]
+    let company = this.state.company
     let icon = <MdCancel/>
     let alt_or_other = t('alt')
     let altIndianCompanies = []
@@ -69,12 +106,11 @@ class Company extends Component {
     let btnColor = `#ffdeda`
     let fontColor = `#a52014`
     let companyImage = ((company.image !== "") ? company.image : companyPlaceHolder)
+    let parentCategory
     for (var category in company.categories) {
-      var categorySlugName = company.categories[category]["name"]
-      if (categorySlugName && categorySlugName.split(" ").length === 1){
-        categorySlugName = ` The ` + categorySlugName
+      if (company.categories[category].isParent && parentCategory === undefined) {
+        parentCategory = company.categories[category]
       }
-      var categoryEndPoint = _.snakeCase(categorySlugName)
       categoriesList.push(
         <Link
               to={`/categories?catid=${encodeURIComponent(category)}&cid=${encodeURIComponent(company.id)}`}
@@ -83,101 +119,89 @@ class Company extends Component {
           <span onClick={() => this.sendFirebaseAnalytics(`category`,  company.categories[category]["id"])} className={styles.altBrand} key={company.categories[category]["name"]} style={{bottom: `0px`}}  >{i18next.language === `hi` ? company.categories[category]["name_hi"] : company.categories[category]["name"]}, </span>
         </Link>
       )
-      if (company.categories[category].isParent && altIndianCompanies.length < 10) {
-        let categoryCompanies = JsonData.categories[category].companies
-        let index = 0
-        let altComCount = 0
-        for (var altCompanyId in categoryCompanies) {
-          let altCompany = categoryCompanies[altCompanyId]
-          index = index + 1
-          if (altCompanyId === props.companyId) {
-            continue
-          }
-          if (altCompany.isIndian) {
-            altComCount =  altComCount + 1
-            var altCompanySlugName = altCompany.name
-            if (altCompanySlugName && altCompanySlugName.split(" ").length === 1){
-              altCompanySlugName = ` The ` + altCompanySlugName
-            }
-            var altCompanyEndPoint = _.snakeCase(altCompanySlugName)
-            let altCompImage = altCompany.image === "" ? companyPlaceHolderGreen : altCompany.image
-            altIndianCompanies.push(
-              <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
-                <Row>
-                  <Col xs={2} md={2} lg={2} xl={2} style={{
-                      borderRightColor: `white`,
-                      borderRightStyle: `solid`,
-                      borderRightWidth: `2px`
-                    }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.categories[category]["id"])} >
-                    <Link
-                      to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
-                      style={{ textDecoration: `none`}}
-                    >
-                      <Image  style={{
-                          border: `0px`,
-                          borderRadius: `0px`,
-                          padding: `0px`,
-                          height: `auto !important`,
-                          maxWidth: `100%`
-                          }} thumbnail src={altCompImage}>
-                      </Image>
-                    </Link>
-                  </Col>
-                  <Col xs={6} md={6} lg={6} xl={6} style={{
-                      borderRightColor: `white`,
-                      borderRightStyle: `solid`,
-                      borderRightWidth: `2px`,
-                      maxHeight: `40px`,
-                      overflow: `scroll`
-                    }} onClick={() => this.sendFirebaseAnalytics(`company`,  altCompany.id)}>
-                    <Link
-                      to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
-                      style={{ textDecoration: `none`, color: `#176f52`}}
-                    >
-                      <p>{i18next.language === `hi` ? altCompany.name_hi : altCompany.name}</p>
-                    </Link>
-                  </Col>
-                  <Col xs={4} md={4} lg={4} xl={4} style={{
-                    maxHeight: `40px`
-                  }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.id)}>
-                    <Link
-                      to={`/categories?catid=${encodeURIComponent(category)}&cid=${encodeURIComponent(altCompany.id)}`}
-                      style={{ textDecoration: `none`, color: `#176f52`}}
-                    >
-                    <p>{t('see_products')}</p>
-                    </Link>
-                  </Col>
-                </Row>
-              </Col>
-            )
-          }
-          let seeMoreText = t('see_more')
-          let seeMoreLink = `/categories?catid=${encodeURIComponent(category)}&isIndian=true&allc=true`
-          if (altIndianCompanies.length === 0) {
-            seeMoreText = t('no_indian_com_found')
-            seeMoreLink = "#"
-          } else if ((altIndianCompanies.length === 10)) {
-            altIndianCompanies.push(
-              <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
-                <Row>
-                  <Link
-                    to={seeMoreLink}
-                    style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
-                  >
-                    <Col xs={12} md={12} lg={12} xl={12} style={{
-                      marginTop: `10px`
-                    }} onClick={() => this.sendFirebaseAnalytics(`company`,  `see_more`)}>
-                      <p>{seeMoreText}</p>
-                    </Col>
-                  </Link> &nbsp;
-                </Row>
-              </Col>
-            )
-            break
-          }
-        }
+    }
+
+
+    for (var altCompanyId in company.alt_companies) {
+      let altCompany = company.alt_companies[altCompanyId]
+      let altCompImage = altCompany.image === "" ? companyPlaceHolderGreen : altCompany.image
+      altIndianCompanies.push(
+        <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
+          <Row>
+            <Col xs={2} md={2} lg={2} xl={2} style={{
+                borderRightColor: `white`,
+                borderRightStyle: `solid`,
+                borderRightWidth: `2px`
+              }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.categories[category]["id"])} >
+              <Link
+                to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
+                style={{ textDecoration: `none`}}
+              >
+                <Image  style={{
+                    border: `0px`,
+                    borderRadius: `0px`,
+                    padding: `0px`,
+                    height: `auto !important`,
+                    maxWidth: `100%`
+                    }} thumbnail src={altCompImage}>
+                </Image>
+              </Link>
+            </Col>
+            <Col xs={6} md={6} lg={6} xl={6} style={{
+                borderRightColor: `white`,
+                borderRightStyle: `solid`,
+                borderRightWidth: `2px`,
+                maxHeight: `40px`,
+                overflow: `scroll`
+              }} onClick={() => this.sendFirebaseAnalytics(`company`,  altCompany.id)}>
+              <Link
+                to={`/companies?cid=${encodeURIComponent(altCompany.id)}`}
+                style={{ textDecoration: `none`, color: `#176f52`}}
+              >
+                <p>{i18next.language === `hi` ? altCompany.name_hi : altCompany.name}</p>
+              </Link>
+            </Col>
+            <Col xs={4} md={4} lg={4} xl={4} style={{
+              maxHeight: `40px`
+            }} onClick={() => this.sendFirebaseAnalytics(`company`,  company.id)}>
+              <Link
+                to={`/categories?catid=${encodeURIComponent(altCompany.parent_category)}&cid=${encodeURIComponent(altCompany.id)}`}
+                style={{ textDecoration: `none`, color: `#176f52`}}
+              >
+              <p>{t('see_products')}</p>
+              </Link>
+            </Col>
+          </Row>
+        </Col>
+      )
+
+      let seeMoreText = t('see_more')
+      let seeMoreLink = `/categories?catid=${encodeURIComponent(parentCategory.id)}&isIndian=true&allc=true`
+      if (altIndianCompanies.length === 0) {
+        seeMoreText = t('no_indian_com_found')
+        seeMoreLink = "#"
+      } else if ((altIndianCompanies.length === 10)) {
+        altIndianCompanies.push(
+          <Col className={styles.otherCompanyScroller} xs={12} md={12} lg={12} xl={12}>
+            <Row>
+              <Link
+                to={seeMoreLink}
+                style={{ textDecoration: `none`, color: `#176f52`, margin: `auto`}}
+              >
+                <Col xs={12} md={12} lg={12} xl={12} style={{
+                  marginTop: `10px`
+                }} onClick={() => this.sendFirebaseAnalytics(`company`,  `see_more`)}>
+                  <p>{seeMoreText}</p>
+                </Col>
+              </Link> &nbsp;
+            </Row>
+          </Col>
+        )
+        break
       }
     }
+
+
     if (company.isIndian) {
       remarkText = t('indian')
       btnColor = `#ccf6e3`
@@ -237,7 +261,7 @@ class Company extends Component {
             </Col>
             <Col className={"float-left col-12" + " " + styles.companyAttrWrapper} md={12}  style={{height: `fit-content`}}>
               <div className={styles.companyAttr}>
-                
+
               </div>
             </Col>
             <Col className={"float-left col-12" + " " + styles.companyAttrWrapper} md={12} style={{height: `fit-content`}}>
@@ -257,8 +281,78 @@ class Company extends Component {
   render() {
     const {pageContext, t} = this.props
     const { DisplayCompanyInfo} = this
-    cid = queryString.parse(this.props.location.search).cid || `s.narendrakumar_&_co_9Se` // default company
-    const company =  JsonData.companies[`${cid}`]
+    var {isLoading} = this.state
+    if (this.state.cid !== queryString.parse(this.props.location.search).cid) {
+      isLoading = true
+    }
+    const company = this.state.company
+    if (isLoading) {
+      let altIndianBrands = []
+      for (let index = 0; index < 3; index++) {
+        altIndianBrands.push(
+          <Col xs={12} md={12} lg={12} xl={12}>
+          <Row>
+            <Col xs={12} md={12} lg={12} xl={12}>
+              <Skeleton count={1} height= {`60px`}/>
+            </Col>
+          </Row>
+        </Col>
+        )
+        
+      }
+      return (
+        <Layout showMessage={false} toggleView={this.toggleProductView}>
+        <Row className={styles.homeLink}>
+          <Col>
+            <Skeleton count={1} width={150}/>
+            {/* <p style={{color: `rgb(181, 181, 181)`, marginBottom: `0px`}}>Back to home</p> */}
+          </Col>
+        </Row>
+        <Row className={styles.pageTitle}>
+          <Col>
+            <Skeleton count={1} width={80}/>
+          </Col>
+        </Row>
+        <div className={styles.pageContent + " " + `container-fluid`}>
+          <div className="row d-md-block d-block">
+            <Col  className={"float-left col-12" + " " + styles.productImage } md={6}>
+              <div className={`container`} style={{minWidth: `100%`}}>
+                <Skeleton count={1} height= {`200px`}/>
+              </div>
+            </Col>
+            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
+              <Skeleton count={1} height= {`100%`}/>
+            </Col>
+            <Col className={"float-left col-6" + " " + styles.productAttrWrapper} md={6} style={{height: `60px`}}>
+              <Skeleton count={1} height= {`100%`}/>
+            </Col>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={6}>
+              <div className={styles.productAttr}>
+                  <div className={styles.productAttrKey}>
+                  </div>
+                  <Row style={{height: `200px`, overflow: `scroll`, marginRight: `0px`, marginLeft: `0px`}}>
+                    {altIndianBrands}
+                  </Row>
+                </div>
+            </Col>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12}  style={{height: `fit-content`}}>
+              <div className={styles.productAttr}>
+
+              </div>
+            </Col>
+            <Col className={"float-left col-12" + " " + styles.productAttrWrapper} md={12} style={{height: `fit-content`}}>
+              <div className={styles.productAttr}>
+                <div className={styles.productAttrKey}>
+                  <span>{t('disclaimer')}</span>
+                </div>
+                <div className={styles.productAttrDesc}>{t('disclaimer_text')}</div>
+              </div>
+            </Col>
+          </div>
+        </div>
+        </Layout>
+      )
+    }
     return (
       <Layout showMessage={false} toggleView={this.toggleCompanyView}>
       {this.state.showCompany && <><Row className={styles.homeLink}>
