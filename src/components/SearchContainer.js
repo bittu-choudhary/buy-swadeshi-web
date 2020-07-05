@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import JSONData from "../../content/raw-data/new_brand_list.json"
+import jsonData from "../../content/raw-data/new_brand_list.json"
 import SearchResultViewer from "../components/SearchResultViewer"
 import styles from './search-container-css-modules.module.css'
 import { withTrans } from '../i18n/withTrans'
@@ -13,6 +13,7 @@ var _ = require('lodash')
 const WAIT_INTERVAL = 200;
 const ENTER_KEY = 13;
 const engine = Bm25()
+// let jsonData
 engine.defineConfig( { fldWeights: { name: 1, name_hi: 2} } )
 
 // engine.importJSON(IndexedBrandData)
@@ -33,7 +34,7 @@ class Search extends Component {
 
   constructor(props) {
     super (props)
-    const brandData = JSONData
+    const brandData = jsonData
     if (!this.state) {
       this.state = {
         brandList: brandData.brands,
@@ -47,21 +48,20 @@ class Search extends Component {
 
     // this.state = { brandList: brandData.brands }
   }
-  componentDidMount() {
+
+  async componentDidMount() {
     console.log(engine.isConsolidated())
     if ( !engine.isConsolidated()) {
       console.log(`Starting indexing @ ${Date.now()}`)
-      var countI = 0
-      for (var key in JSONData) {
+      for (var key in jsonData) {
         if (key === "version") {
           continue
         }
-        for (const dataPoints in JSONData[key]) {
-          countI = countI + 1
+        for (const dataPoints in jsonData[key]) {
           var dataPointType;
           switch (key) {
             case "categories":
-              if (!JSONData[key][dataPoints].isParent) {
+              if (!jsonData[key][dataPoints].isParent) {
                 continue
               }
               dataPointType = "_typeCategory"
@@ -75,13 +75,12 @@ class Search extends Component {
             default:
               break;
           }
-          var indexId =JSONData[key][dataPoints]["id"] + dataPointType
-          var doc = _.pick(JSONData[key][dataPoints], ['name', 'name_hi']) // extract name from object
+          var indexId =jsonData[key][dataPoints]["id"] + dataPointType
+          var doc = _.pick(jsonData[key][dataPoints], ['name', 'name_hi']) // extract name from object
           engine.addDoc( doc, indexId )
         }
       }
       engine.consolidate()
-      console.log(countI)
       console.log(engine.isConsolidated())
       console.log(`FInished indexing @ ${Date.now()}`)
       document.getElementById("___loader").style.display = "none"
@@ -135,15 +134,15 @@ class Search extends Component {
       var resultData = {}
       switch (resultType) {
         case "Category":
-          resultData = _.pick(JSONData.categories[resultObjectId], ['id', 'name', 'image', 'name_hi']) // extract id, name, image from object
+          resultData = _.pick(jsonData.categories[resultObjectId], ['id', 'name', 'image', 'name_hi']) // extract id, name, image from object
           resultData["type"] = "category"
           break;
         case "Company":
-          resultData = _.pick(JSONData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian', 'name_hi'])
+          resultData = _.pick(jsonData.companies[resultObjectId], ['id', 'name', 'image', 'isIndian', 'name_hi'])
           resultData["type"] = "company"
           break;
         case "Product":
-          resultData = _.pick(JSONData.products[resultObjectId], ['id', 'name', 'image', 'isIndian', 'name_hi'])
+          resultData = _.pick(jsonData.products[resultObjectId], ['id', 'name', 'image', 'isIndian', 'name_hi'])
           resultData["type"] = "product"
           break;
         default:
