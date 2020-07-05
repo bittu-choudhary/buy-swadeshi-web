@@ -19,6 +19,10 @@ import companyPlaceHolder from '../images/company-96.png'
 import firebase from "gatsby-plugin-firebase"
 import { withTrans } from '../i18n/withTrans'
 import i18next from 'i18next';
+import Axios from "axios"
+import LoaderSVG from '../images/loader.svg'
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+
 
 const queryString = require('query-string');
 var _ = require('lodash')
@@ -44,6 +48,9 @@ class Category extends Component {
       showCategory: true,
       showingMore: postsToShow > 12,
       postsToShow,
+      category: {},
+      isLoading: true,
+      catid: null,
      };
   }
 
@@ -62,15 +69,6 @@ class Category extends Component {
       this.ticking = true
       requestAnimationFrame(() => this.update())
     }
-  }
-
-  componentDidMount() {
-    window.addEventListener(`scroll`, this.handleScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener(`scroll`, this.handleScroll)
-    window.postsToShow = this.state.postsToShow
   }
 
   sendFirebaseAnalytics = (type, resourceId) => {
@@ -94,6 +92,53 @@ class Category extends Component {
   toggleCategoryView = (newVal) => {
     this.setState({showCategory: newVal})
   }
+
+
+    async componentDidMount() {
+      if (typeof window !== `undefined`) {
+        window.addEventListener(`scroll`, this.handleScroll)
+      }
+      Axios.get(`https://buy-swadeshi-backend-prod.herokuapp.com/category.json?catid=${encodeURIComponent(this.state.catid)}&allc=${allc}&isIndian=${isIndianParam}&cid=${cid}`)
+        .then(result => {
+          this.setState({ category: result.data, isLoading: false })
+        })
+        .catch(err => {
+          console.log(`====================================`)
+          console.log(`Something bad happened while fetching the data\n${err}`)
+          console.log(`====================================`)
+        })
+    }
+
+    async componentDidUpdate(){
+      if (this.state.catid !== queryString.parse(this.props.location.search).catid) {
+        isIndianParam = queryString.parse(this.props.location.search).isIndian
+        cid = queryString.parse(this.props.location.search).cid
+        allc = queryString.parse(this.props.location.search).allc
+        Axios.get(`https://buy-swadeshi-backend-prod.herokuapp.com/category.json?catid=${encodeURIComponent(queryString.parse(this.props.location.search).catid)}&allc=${allc}&isIndian=${isIndianParam}&cid=${cid}`)
+          .then(result => {
+            this.setState({ category: result.data, isLoading: false, catid: queryString.parse(this.props.location.search).catid })
+            // this.rebuildIndex()
+          })
+          .catch(err => {
+            // this.setState({ isError: true })
+            console.log(`====================================`)
+            console.log(`Something bad happened while fetching the data\n${err}`)
+            console.log(`====================================`)
+          })
+      }
+    }
+
+    componentWillMount(){
+      if (typeof window !== `undefined`) {
+        window.removeEventListener(`scroll`, this.handleScroll)
+        window.postsToShow = this.state.postsToShow
+      }
+      isIndianParam = queryString.parse(this.props.location.search).isIndian
+      cid = queryString.parse(this.props.location.search).cid
+      allc = queryString.parse(this.props.location.search).allc
+      catid = queryString.parse(this.props.location.search).catid || `grocery_staples_8Nj` // default category
+      this.setState({catid: catid})
+    }
 
   PopulateProductCol = (props) => {
     const {t} = this.props
@@ -181,70 +226,38 @@ class Category extends Component {
 
 
   DisplayProducts = (props) => {
-    const {selectedCategory} = props
     const {t} = this.props
     const { PopulateProductCol} = this
-    let products
     let namespace
     let param
-    let productsArr = []
+    let productsArr = this.state.category.products
     let placeHolder
     if (cid !== undefined) {
-      products = JsonData.companies[`${cid}`].products
-      for (var key in products){
-        if (JsonData.products[products[key].id].categories[selectedCategory] === undefined) {
-          continue
-        }
-        products[key]['isIndian'] = true
-        productsArr.push(products[key])
-      }
       namespace = "products"
       param = "pid"
       placeHolder = productPlaceHolder
     } else {
       if (isIndianParam !== undefined) {
         if (allc !== undefined) {
-          products = JsonData.categories[`${selectedCategory}`].companies
-          for (var key in products){
-            if (!products[key].isIndian) {
-              continue
-            }
-            productsArr.push(products[key])
-          }
           namespace = "companies"
           param = "cid"
           placeHolder = companyPlaceHolder
         } else {
-          products = JsonData.categories[`${selectedCategory}`]["products"]
-          for (var key in products){
-            if (!products[key].isIndian) {
-              continue
-            }
-            productsArr.push(products[key])
-          }
           namespace = "products"
           param = "pid"
           placeHolder = productPlaceHolder
         }
       } else if (allc !== undefined) {
-        products = JsonData.categories[`${selectedCategory}`]["companies"]
-        for (var key in products){
-          productsArr.push(products[key])
-        }
         namespace = "companies"
         param = "cid"
         placeHolder = companyPlaceHolder
       } else {
-        const products = JsonData.categories[`${selectedCategory}`]["products"]
-        for (var key in products){
-          productsArr.push(products[key])
-        }
         namespace = "products"
         param = "pid"
         placeHolder = productPlaceHolder
       }
     }
-    const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).slice(0, this.state.postsToShow)
+    const productsSortedArr = productsArr.slice(0).sort((a, b) => a.isIndian < b.isIndian ? 1 : -1).slice(0, this.state.postsToShow)
     // const productsSortedArr = productsArr.sort((a, b) => a.isIndian < b.isIndian ? 1 : -1)
     const rows = productsSortedArr.map((product, index) => {
       var topLeft = `0px`
@@ -287,14 +300,83 @@ class Category extends Component {
     let subHeading
     const {pageContext, t} = this.props
     const { DisplayProducts} = this
+    var {isLoading} = this.state
     isIndianParam = queryString.parse(this.props.location.search).isIndian
     cid = queryString.parse(this.props.location.search).cid
-    allc = queryString.parse(this.props.location.search).allc 
-    catid = queryString.parse(this.props.location.search).catid || `grocery_staples_8Nj` // default category
-    const category =  JsonData.categories[`${catid}`]
+    allc = queryString.parse(this.props.location.search).allc
+    const category =  JsonData.categories[`${queryString.parse(this.props.location.search).catid}`] || `grocery_staples_8Nj`
+    if (this.state.catid !== queryString.parse(this.props.location.search).catid) {
+      isLoading = true
+    }
+
+    if (isLoading) {
+      let skeleton = []
+      for (let index = 0; index < 6; index++) {
+        skeleton.push( <Col  style={{ padding: `5px`}} xs={12} md={4} lg={4} xl={4}
+  
+        >
+          <div style={{borderRadius: `0px`}} className={`contianer` + " " + styles.categoryCol + " " + styles.productCol } >
+            <Row className={styles.productCardImage} >
+              <Col  className={`col-12`} style={{height: `100%`}}>
+                <Skeleton count={1} height= {`90%`}/>
+              </Col>
+            </Row>
+            <Row style={{fontSize: `14px`}}>
+              <Col xs={12} md={12} lg={6} xl={6} className={`col-6` +" " + styles.searchResultTitle}>
+                <Skeleton count={1}/>
+                {/* <div style={{textAlign: `center`}}>
+                  <p style={{textAlign: `center`, marginBottom: `0px`}}>
+                    {productId.name}
+                  </p>
+                </div> */}
+              </Col>
+              <Col xs={12} md={12} lg={6} xl={6} className={styles.isIndianBtn} >
+               <Skeleton count={1}/>
+              </Col>
+            </Row>
+          </div>
+      </Col>)
+        
+      }
+      return (
+        <Layout showMessage={false} toggleView={this.toggleCategoryView}>
+        <Row className={styles.homeLink}>
+          <Col>
+            <ul  className={styles.homeNav} style={{listStyle: `none`, paddingLeft: `0`}}>
+              <li style={{display: `inline-block`}}>
+                <Link
+                  to={`/`}
+                  style={{ textDecoration: `none`, color: `inherit` }}
+                >
+                  <span style={{ fontSize: `14px` ,color: `rgb(181, 181, 181)`}} className={`name`}>{t('home')}</span>
+                </Link>
+              </li>
+              <li style={{display: `inline-block`}}>
+                <a> &nbsp;
+                <i className={styles.arrow + " " +  styles.right}></i> &nbsp; <span style={{  fontSize: `14px`, color: `rgb(181, 181, 181)`}} >{_.startCase(i18next.language === `hi` ? category.name_hi : category.name)}</span>
+                </a>
+              </li>
+            </ul>
+            {/* <p style={{color: `rgb(181, 181, 181)`, marginBottom: `0px`}}>Back to home</p> */}
+          </Col>
+        </Row>
+        <Row className={styles.pageTitle}>
+          <Col>
+            <p>{_.startCase(i18next.language === `hi` ? category.name_hi : category.name)} <span style={{  fontSize: `12px`, color: `rgb(181, 181, 181)`}}>
+              {subHeading}
+            </span></p>
+          </Col>
+        </Row>
+        <Row className={styles.pageContent} >
+          {skeleton}
+        </Row>
+          {/* <div>{this.props.pageContext.id}</div> */}
+        </Layout>
+      )
+    }
 
     if (cid !== undefined) {
-      subHeading = `${t('category.all_pro_from')} ${JsonData.companies[`${cid}`].name}`
+      subHeading = `${t('category.all_pro_from')} ${ this.state.category.companies[`${cid}`].name}`
     } else {
       if (isIndianParam !== undefined) {
         if (allc !== undefined) {
@@ -337,7 +419,7 @@ class Category extends Component {
           </span></p>
         </Col>
       </Row>
-      <DisplayProducts selectedCategory={catid}/>
+      <DisplayProducts/>
         {/* <div>{this.props.pageContext.id}</div> */}</>}
       </Layout>
     )
